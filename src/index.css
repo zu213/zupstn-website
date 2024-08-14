@@ -5,6 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: gray;
+  color: white;
+  text-align: center;
+}
+
+a:link {
+  color:aquamarine
+}
+
+a:visited {
+  color:blue
+}
+
+html, body {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 code {
