@@ -1,0 +1,14 @@
+.search-links {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: yellow;
+}
+
+.title {
+  text-align: center;
+}
+
+.body {
+  text-align: center;
+}
