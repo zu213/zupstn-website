@@ -2,7 +2,6 @@ import './Art.css';
 
 // Image imports
 import collageWall from './images/collage_wall.jpg'
-import dissertationUI from './images/di-ui.png'
 import goldenEye from './images/golden_eye.jpg'
 import magpies from './images/magpies.jpg'
 import mononokeMask from './images/mononoke_mask.jpg'

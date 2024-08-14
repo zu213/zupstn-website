@@ -64,13 +64,18 @@ function App() {
 // subpages
 function Home() {
   return (
-    <div>
+    <div class="text-holder">
+        <br/>
         I’m a recently graduated student from the University of Bath, Achieving a First class degree.
         I mainly have experience coding with ....
+        <br/>
+        <br/>
 
-        During my university degree I completed a year long palcement at BSquare an IoT solution company 
-        working both in software development and QA. While working at BSquare i gaine dexperience in..
-
+        During my university degree I completed a year long placement at BSquare a company which produces IoT solutions 
+        working both in software development and QA. While working at BSquare i gained experience in...
+        <br/>
+        <br/>
+        
         I also have expereicne in working as  abartender, mcdonalds and gardener. I also partook in cyber security camps.
         I am interested in art (expecially collage and spray painting) and gym
     </div>
@@ -93,7 +98,7 @@ function Dissertation() {
     <div>
         <a href={dissertation} download="Zachary Upstone Dissertation">Download</a>
         &nbsp; | &nbsp;
-        <a href="https://github.bath.ac.uk/zu213/Dissertation-code" target="_blank">Repo</a>
+        <a href="https://github.bath.ac.uk/zu213/Dissertation-code" target="_blank" rel="noreferrer">Repo</a>
         <br/>
         <div>
           <div  class="inline-block">                  
