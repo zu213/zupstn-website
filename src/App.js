@@ -1,18 +1,17 @@
+
+// Normal imports
+import { Route, Navigate, Routes, Link, HashRouter} from 'react-router-dom';
 import './App.css';
 
-import { Route, Navigate, Routes, Link} from 'react-router-dom';
-import { HashRouter } from 'react-router-dom';
-import { pdfjs } from 'react-pdf';
+// Page imports
+import Art from './Art.js'
+
+// document imports
 import cv from './documents/CV.pdf'
 import dissertation from  './documents/Dissertation.pdf'
+
+// Image imports
 import dissertationUI from './images/di-ui.png'
-
-// preprocess
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString();
-
 
 // main app
 function App() {
@@ -20,7 +19,6 @@ function App() {
     <HashRouter>
 
       <div>
-        
         <br/>
         <header>
           <div class="header">
@@ -32,7 +30,7 @@ function App() {
               <Link to="/zach-upstone"> Home </Link> /
               <Link to="/cv"> CV </Link> /
               <Link to="/dissertation"> Dissertation </Link> /
-              <Link to="/art"> Art </Link>
+              <Link to="/gallery"> Gallery </Link>
             </div>
           </div>
         </header>
@@ -52,7 +50,7 @@ function App() {
 
           <Route path='/dissertation' element={<Dissertation/>} />
 
-          <Route path='/art' element={<Art/>} />
+          <Route path='/gallery' element={<Art/>} />
 
           <Route path='*' element={<NotFound/>} />
         </Routes>
@@ -67,7 +65,14 @@ function App() {
 function Home() {
   return (
     <div>
-        Who is Zachary Upstone?
+        I’m a recently graduated student from the University of Bath, Achieving a First class degree.
+        I mainly have experience coding with ....
+
+        During my university degree I completed a year long palcement at BSquare an IoT solution company 
+        working both in software development and QA. While working at BSquare i gaine dexperience in..
+
+        I also have expereicne in working as  abartender, mcdonalds and gardener. I also partook in cyber security camps.
+        I am interested in art (expecially collage and spray painting) and gym
     </div>
   );
 }
@@ -86,26 +91,32 @@ function CV() {
 function Dissertation() {
   return (
     <div>
-        <a href={dissertation} download="Zachary Upstone Dissertation">Zachary Upstone's Dissertation Download</a>
-        <br/>
-        <a href="https://github.bath.ac.uk/zu213/Dissertation-code" target="_blank">Zachary Upstone's Dissertation Repo</a>
+        <a href={dissertation} download="Zachary Upstone Dissertation">Download</a>
+        &nbsp; | &nbsp;
+        <a href="https://github.bath.ac.uk/zu213/Dissertation-code" target="_blank">Repo</a>
         <br/>
         <div>
-          MODIFIED ABSTRACT HERE
-          <br />
-          <img src={dissertationUI} alt="Dissertation UI"></img>
+          <div  class="inline-block">                  
+            <img class="ui-image" src={dissertationUI} alt="Dissertation UI"></img>
+          </div>
+          <div  class="inline-block">
+            Image Synthesis within the domain of art remains a difficult task due to its complex and human
+            nature. Many current models either suffer from insufficient user control or inadequate output
+            quality. This dissertation employs Reinforcement Learning Human Feedback (RLHF) as a
+            solution to resolve both these problems simultaneously. A "feedback loop" model is presented
+            that overlays an existing model. This allows for the refinement of output images by a user,
+            thus improving control. This method also allows for the collection of losses from the user’s
+            choices to allow for further updates to the underlying network. This effectively enables the
+            model to learn from a user. The results produced by this dissertation show a quantitative
+            improvement in user control over baseline models. They also show the qualitative success of
+            the RLHF implementation. However, further analysis is required to confirm whether this RLHF
+            implementation improves output quality.
+          </div>
         </div>
     </div>
   );
 }
 
-function Art() {
-  return (
-    <div>
-        zach upstone's art
-    </div>
-  );
-}
 
 function NotFound() {
   return (

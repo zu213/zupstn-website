@@ -1,0 +1,31 @@
+.row {
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 10px; 
+    overflow-x: auto;
+    scrollbar-width: thin;
+    white-space: nowrap;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+.column {
+    display: inline-block;
+    width: 25%;
+    padding: 2vw;
+}
+
+.column img {
+    height: 100%;
+    width: 100%;    
+}
+
+.left-align {
+    text-align: left;
+    margin-left: 20%;
+    text-decoration: underline;
+}
+
+.underlined{
+    text-decoration: underline;
+}
