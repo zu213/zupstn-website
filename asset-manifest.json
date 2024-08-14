@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4c698f3c.css",
-    "main.js": "/static/js/main.503c5a87.js",
+    "main.css": "/static/css/main.85ec0f30.css",
+    "main.js": "/static/js/main.4a9c277d.js",
     "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
     "static/media/Dissertation.pdf": "/static/media/Dissertation.26d4e0b571b9e36eddb7.pdf",
     "static/media/wagtails.jpg": "/static/media/wagtails.6eca93386474ca868477.jpg",
@@ -13,12 +13,12 @@
     "static/media/di-ui.png": "/static/media/di-ui.b0ca748e0d39a4838917.png",
     "static/media/CV.pdf": "/static/media/CV.926dfd3528dd779bb24b.pdf",
     "index.html": "/index.html",
-    "main.4c698f3c.css.map": "/static/css/main.4c698f3c.css.map",
-    "main.503c5a87.js.map": "/static/js/main.503c5a87.js.map",
+    "main.85ec0f30.css.map": "/static/css/main.85ec0f30.css.map",
+    "main.4a9c277d.js.map": "/static/js/main.4a9c277d.js.map",
     "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c698f3c.css",
-    "static/js/main.503c5a87.js"
+    "static/css/main.85ec0f30.css",
+    "static/js/main.4a9c277d.js"
   ]
 }
