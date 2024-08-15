@@ -28,11 +28,17 @@ import tessaRed from './images/tessa-red.jpg'
 import tessaYellow from './images/tessa-yellow.jpg'
 import tessaBoth from './images/tessa-both.jpg'
 
+document.addEventListener("click", recordMouseCoords);
+
 var imageList = ['goldenEye1',  'goldenEye2',  'goldenEye3',  'goldenEye4' , 'goldenEye5', 'goldenEye6',
   'eyes1',  'eyes2', 'redEye', 'magpies', 'wagtails', 'yellowTree', 'mononokeMask',  'newMask', 'tenguMask',
   'goldenMask', 'collageWall',  'blueHair',  'purpleHair', 'tessaRed',  'tessaYellow', 'tessaBoth']
 
 var onGallery = true;
+var movingImage = null;
+var currentOverlay = null;
+var mouseX = 0;
+var mouseY = 0;
 
 var galleryPage = (
   <div>
@@ -217,70 +223,70 @@ var tablePage = (
       <button onClick={pagePosition}> Shuffle table </button>
     </div>
     <div class="canvas">        
-      <div class="mess-format" id="purpleHair">
+      <div class="mess-format" id="purpleHair" onClick={() => movingImage === null && movePosition('purpleHair') }>
         <img src={purpleHair} alt="Purple hair"></img>
       </div>
-      <div class="mess-format" id="blueHair">
+      <div class="mess-format" id="blueHair" onClick={() => movingImage === null && movePosition('blueHair')}>
         <img src={blueHair} alt="Blue hair"></img>
       </div>
-      <div class="mess-format" id="collageWall">
+      <div class="mess-format" id="collageWall" onClick={() => movingImage === null && movePosition('collageWall')}>
         <img src={collageWall} alt="Collage wall"></img>
       </div>
-      <div class="mess-format" id="goldenEye1">
+      <div class="mess-format" id="goldenEye1" onClick={() => movingImage === null && movePosition('goldenEye1')}>
         <img src={goldenEye1} alt="Golden eye 1"></img>
       </div>
-      <div class="mess-format" id="goldenEye2">
+      <div class="mess-format" id="goldenEye2" onClick={() => movingImage === null && movePosition('goldenEye2')}>
         <img src={goldenEye2} alt="Golden eye 2"></img>
       </div>
-      <div class="mess-format" id="goldenEye3">
+      <div class="mess-format" id="goldenEye3" onClick={() => movingImage === null && movePosition('goldenEye3')}>
         <img src={goldenEye3} alt="Golden eye 3"></img>
       </div>
-      <div class="mess-format" id="goldenEye4">
+      <div class="mess-format" id="goldenEye4" onClick={() => movingImage === null && movePosition('goldenEye4')}>
         <img src={goldenEye4} alt="Golden eye 4"></img>
       </div>
-      <div class="mess-format" id="goldenEye5">
+      <div class="mess-format" id="goldenEye5" onClick={() => movingImage === null && movePosition('goldenEye5')}>
         <img src={goldenEye5} alt="Golden eye 5"></img>
       </div>
-      <div class="mess-format" id="goldenEye6">
+      <div class="mess-format" id="goldenEye6" onClick={() => movingImage === null && movePosition('goldenEye6')}>
         <img src={goldenEye6} alt="Golden eye 6"></img>
       </div>
-      <div class="mess-format" id="eyes1">
+      <div class="mess-format" id="eyes1" onClick={() => movingImage === null && movePosition('eyes1')}>
         <img src={eyes1} alt="Eyes 1"></img>
       </div>
-      <div class="mess-format" id="eyes2">
+      <div class="mess-format" id="eyes2" onClick={() => movingImage === null && movePosition('eyes2')}>
         <img src={eyes2} alt="Eyes 1"></img>
       </div>
-      <div class="mess-format" id="redEye">
+      <div class="mess-format" id="redEye" onClick={() => movingImage === null && movePosition('redEye')}>
         <img src={redEye} alt="Red eye "></img>
       </div>
-      <div class="mess-format" id="magpies">
+      <div class="mess-format" id="magpies" onClick={() => movingImage === null && movePosition('magpies')}>
         <img src={magpies} alt="Magpies"></img>
       </div>
-      <div class="mess-format" id="wagtails">
+      <div class="mess-format" id="wagtails" onClick={() => movingImage === null && movePosition('wagtails')}>
         <img src={wagtails} alt="Wagtails"></img>
       </div>
-      <div class="mess-format" id="yellowTree">
+      <div class="mess-format" id="yellowTree" onClick={() => movingImage === null && movePosition('yellowTree')}>
         <img src={yellowTree} alt="Yellow tree"></img>
       </div>
-      <div class="mess-format" id="mononokeMask">
+      <div class="mess-format" id="mononokeMask" onClick={() => movingImage === null && movePosition('mononokeMask')}>
         <img src={mononokeMask} alt="Mononoke"></img>
       </div>
-      <div class="mess-format" id="tenguMask">
+      <div class="mess-format" id="tenguMask" onClick={() => movingImage === null && movePosition('tenguMask')}>
         <img src={tenguMask} alt="Tengu"></img>
       </div>
-      <div class="mess-format" id="newMask">
+      <div class="mess-format" id="newMask" onClick={() => movingImage === null && movePosition('newMask')}>
         <img src={newMask} alt="New"></img>
       </div>
-      <div class="mess-format" id="goldenMask">
+      <div class="mess-format" id="goldenMask" onClick={() => movingImage === null && movePosition('goldenMask')}>
         <img src={goldenMask} alt="Golden"></img>
       </div>
-      <div class="mess-format" id="tessaRed">
+      <div class="mess-format" id="tessaRed" onClick={() => movingImage === null && movePosition('tessaRed')}>
         <img src={tessaRed} alt="Tessa red"></img>
       </div>
-      <div class="mess-format" id="tessaYellow">
+      <div class="mess-format" id="tessaYellow" onClick={() =>movingImage === null &&  movePosition('tessaYellow')}>
         <img src={tessaYellow} alt="Tessa yellow"></img>
       </div>
-      <div class="mess-format" id="tessaBoth">
+      <div class="mess-format" id="tessaBoth" onClick={() => movingImage === null && movePosition('tessaBoth')}>
         <img src={tessaBoth} alt="Tessa's"></img>
       </div>
    </div> 
@@ -298,11 +304,42 @@ function pagePosition() {
     }
   }
   onGallery = false;
-
 }
 
-var currentOverlay = null
+// Functions related to moving iamges on table view
 
+function recordMouseCoords(event) {
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+  if(movingImage !== null){
+    movePosition();
+  }
+}
+
+// bad code neess fixing !!!
+function movePosition(imageToMove) {
+  var element;
+  setTimeout(() => {
+    if(movingImage === null && imageToMove !== null){
+      // they clicked an image and it is passed in.
+      element = document.getElementById(imageToMove);
+      element.style.border = "5px solid red";
+      movingImage = imageToMove;
+    }
+
+    else if(movingImage !== null){
+      //image coords become mouse coords
+      element = document.getElementById(movingImage);
+      element.style.top = mouseY - 420 +'px';
+      element.style.left = mouseX - 150 + 'px';
+      element.style.border = "0px"
+      movingImage = null;
+    }
+  }, 1);
+  console.log(mouseX, mouseY, movingImage, imageToMove);
+}
+
+// function related to overlaying iamge on gallery view
 function overlayImage(imageId) {
   if(currentOverlay === null){
     var overlayElement = document.getElementById(imageId+'-overlay');
@@ -323,6 +360,7 @@ function removeOverlay() {
   }
 }
 
+// main page
 function Art() {
       var [page, setPage] = useState(galleryPage)
 
@@ -333,8 +371,6 @@ function Art() {
 
       const toTable = () => {
         setPage(tablePage);
-
-        console.log(onGallery)
 
         if(onGallery){
           setTimeout(() => {
