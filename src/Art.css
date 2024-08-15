@@ -11,16 +11,16 @@
 
 .column {
     display: inline-block;
-    width: 25%;
+    width: 20%;
     padding: 2vw;
 }
 
-.column img {
+img {
     height: 100%;
     width: 100%;    
 }
 
-.left-align {
+.left-align-indent {
     text-align: left;
     margin-left: 20%;
     text-decoration: underline;
@@ -28,4 +28,16 @@
 
 .underlined{
     text-decoration: underline;
+}
+
+.mess-format {
+    position: absolute;
+    width: 10%;
+    height: auto;
+}
+
+.canvas {
+    width: 90%;
+    height: 50%;
+    position: fixed;
 }

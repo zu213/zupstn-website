@@ -14,11 +14,11 @@
 
 .title {
   text-align: center;
-  font-size: 4vw;
+  font-size: 3vw;
 }
 
 .pdf-viewer {
-  width: 80%;
+  width: 70%;
   height: 50vw;
 }
 
@@ -30,10 +30,19 @@
 .inline-block {
   padding: 1vw;
   display: inline-block;
-  width: 40%;
+  width: 38%;
   vertical-align: top;
 }
 
 .text-holder {
   padding: 1vw;
+}
+
+.subtitle {
+  text-decoration: underline;
+  font-size: 17px;
+}
+
+.left-align {
+  text-align: left;
 }

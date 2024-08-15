@@ -23,7 +23,7 @@ function App() {
         <header>
           <div class="header">
             <div class="title">
-              Zach Upstone's Website
+              Zach Upstone
             </div>
 
             <div class="search-links">
@@ -96,15 +96,26 @@ function CV() {
 function Dissertation() {
   return (
     <div>
-        <a href={dissertation} download="Zachary Upstone Dissertation">Download</a>
+      <div class="subtitle" >
+        Human Involvement Can Improve Current Image Synthesis Methods within the Domain of Art
+        <br />
+      </div>
+      <div>
+        <a href={dissertation} download="Zachary Upstone Dissertation">PDF</a>
         &nbsp; | &nbsp;
         <a href="https://github.bath.ac.uk/zu213/Dissertation-code" target="_blank" rel="noreferrer">Repo</a>
         <br/>
-        <div>
-          <div  class="inline-block">                  
-            <img class="ui-image" src={dissertationUI} alt="Dissertation UI"></img>
+      </div>
+      <div>
+        <div  class="inline-block">                  
+          <img class="ui-image" src={dissertationUI} alt="Dissertation UI"></img>
+        </div>
+        <div  class="inline-block">
+          <div class="underline">
+            Abstract
           </div>
-          <div  class="inline-block">
+          <br />
+          <div class="left-align">
             Image Synthesis within the domain of art remains a difficult task due to its complex and human
             nature. Many current models either suffer from insufficient user control or inadequate output
             quality. This dissertation employs Reinforcement Learning Human Feedback (RLHF) as a
@@ -118,6 +129,7 @@ function Dissertation() {
             implementation improves output quality.
           </div>
         </div>
+      </div>
     </div>
   );
 }
