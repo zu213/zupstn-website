@@ -36,7 +36,7 @@ function App() {
         </header>
 
         <br/>
-        <hr/>
+        <hr class="top-hr"/>
 
       </div>
       <body>
@@ -111,7 +111,7 @@ function Dissertation() {
           <img class="ui-image" src={dissertationUI} alt="Dissertation UI"></img>
         </div>
         <div  class="inline-block">
-          <div class="underline">
+          <div class="subtitle">
             Abstract
           </div>
           <br />

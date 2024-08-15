@@ -32,117 +32,189 @@ var imageList = ['goldenEye1',  'goldenEye2',  'goldenEye3',  'goldenEye4' , 'go
   'eyes1',  'eyes2', 'redEye', 'magpies', 'wagtails', 'yellowTree', 'mononokeMask',  'newMask', 'tenguMask',
   'goldenMask', 'collageWall',  'blueHair',  'purpleHair', 'tessaRed',  'tessaYellow', 'tessaBoth']
 
+var onGallery = true;
 
-var page1 = (
-  <div class="1">
-            <div class="left-align-indent">
-                Eyes
-            </div>
-            <hr/>
-            <br />
-            <div class="row">
-                <div class="column">
-                  <img src={goldenEye1} alt="Golden eye 1"></img>
-                </div>
-                <div class="column">
-                  <img src={goldenEye2} alt="Golden eye 2"></img>
-                </div>
-                <div class="column">
-                  <img src={goldenEye3} alt="Golden eye 3"></img>
-                </div>
-                <div class="column">
-                  <img src={goldenEye4} alt="Golden eye 4"></img>
-                </div>
-                <div class="column">
-                  <img src={goldenEye5} alt="Golden eye 5"></img>
-                </div>
-                <div class="column">
-                  <img src={goldenEye6} alt="Golden eye 6"></img>
-                </div>
-                <div class="column">
-                  <img src={eyes1} alt="Eyes 1"></img>
-                </div>
-                <div class="column">
-                  <img src={eyes2} alt="Eyes 1"></img>
-                </div>
-                <div class="column">
-                  <img src={redEye} alt="Red eye "></img>
-                </div>
+var galleryPage = (
+  <div>
+    <hr/>
+    <div class="left-align-indent">
+        Eyes
+    </div>
+    <br />
+    <div class="row">
+        <div class="column">
+          <img id="goldenEye1" src={goldenEye1} alt="Golden eye 1" onClick={() => overlayImage('goldenEye1')}></img>
+        </div>
+        <div class="column">
+          <img src={goldenEye2} alt="Golden eye 2" onClick={() => overlayImage('goldenEye2')}></img>
+        </div>
+        <div class="column">
+          <img src={goldenEye3} alt="Golden eye 3" onClick={() => overlayImage('goldenEye3')}></img>
+        </div>
+        <div class="column">
+          <img src={goldenEye4} alt="Golden eye 4" onClick={() => overlayImage('goldenEye4')}></img>
+        </div>
+        <div class="column">
+          <img src={goldenEye5} alt="Golden eye 5" onClick={() => overlayImage('goldenEye5')}></img>
+        </div>
+        <div class="column">
+          <img src={goldenEye6} alt="Golden eye 6" onClick={() => overlayImage('goldenEye6')}></img>
+        </div>
+        <div class="column">
+          <img src={eyes1} alt="Eyes 1" onClick={() => overlayImage('eyes1')}></img>
+        </div>
+        <div class="column">
+          <img src={eyes2} alt="Eyes 1" onClick={() => overlayImage('eyes2')}></img>
+        </div>
+        <div class="column">
+          <img src={redEye} alt="Red eye" onClick={() => overlayImage('redEye')}></img>
+        </div>
 
-            </div>
-            <hr/>
-            <div class="left-align-indent">
-                Nature
-            </div>
-            <hr/>
-            <br />
-            <div class="row">
-              <div class="column">
-                <img src={magpies} alt="Magpies"></img>
-              </div>
-              <div class="column">
-                <img src={wagtails} alt="Wagtails"></img>
-              </div>
-              <div class="column">
-                <img src={yellowTree} alt="Yellow tree"></img>
-              </div>
-            </div>
-            <br />
-            <hr/>
-            <div class="left-align-indent">
-                Masks
-            </div>
-            <hr/>
-            <br />
-            <div class="row">
-              <div class="column">
-                <img src={mononokeMask} alt="Mononoke"></img>
-              </div>
-              <div class="column">
-                <img src={tenguMask} alt="Tengu"></img>
-              </div>
-              <div class="column">
-                <img src={newMask} alt="New"></img>
-              </div>
-              <div class="column">
-                <img src={goldenMask} alt="Golden"></img>
-              </div>
-            </div>
-            <br />
-            <hr/>
-            <div class="left-align-indent">
-                Other
-            </div>
-            <hr/>
-            <br />
-            <div class="row">
-              <div class="column">
-                <img src={tessaRed} alt="Tessa red"></img>
-              </div>
-              <div class="column">
-                <img src={tessaYellow} alt="Tessa yellow"></img>
-              </div>
-              <div class="column">
-                <img src={tessaBoth} alt="Tessa's"></img>
-              </div>
-              <div class="column">
-                <img src={collageWall} alt="Collage wall"></img>
-              </div>
-              <div class="column">
-                <img src={blueHair} alt="Blue hair"></img>
-              </div>
-              <div class="column">
-                <img src={purpleHair} alt="Purple hair"></img>
-              </div>
-            </div>
-            <hr/>
+        </div>
+        <hr/>
+        <div class="left-align-indent">
+            Nature
+        </div>
+        <br />
+        <div class="row">
+          <div class="column">
+            <img src={magpies} alt="Magpies" onClick={() => overlayImage('magpies')}></img>
           </div>
+          <div class="column">
+            <img src={wagtails} alt="Wagtails" onClick={() => overlayImage('wagtails')}></img>
+          </div>
+          <div class="column">
+            <img src={yellowTree} alt="Yellow tree" onClick={() => overlayImage('yellowTree')}></img>
+          </div>
+        </div>
+        <br />
+        <hr/>
+        <div class="left-align-indent">
+            Masks
+        </div>
+        <br />
+        <div class="row">
+          <div class="column">
+            <img src={mononokeMask} alt="Mononoke" onClick={() => overlayImage('mononokeMask')}></img>
+          </div>
+          <div class="column">
+            <img src={tenguMask} alt="Tengu" onClick={() => overlayImage('tenguMask')}></img>
+          </div>
+          <div class="column">
+            <img src={newMask} alt="New" onClick={() => overlayImage('newMask')}></img>
+          </div>
+          <div class="column">
+            <img src={goldenMask} alt="Golden" onClick={() => overlayImage('goldenMask')}></img>
+          </div>
+        </div>
+        <br />
+        <hr/>
+        <div class="left-align-indent">
+            Other
+        </div>
+        <br />
+        <div class="row">
+          <div class="column">
+            <img src={tessaRed} alt="Tessa red" onClick={() => overlayImage('tessaRed')}></img>
+          </div>
+          <div class="column">
+            <img src={tessaYellow} alt="Tessa yellow" onClick={() => overlayImage('tessaYellow')}></img>
+          </div>
+          <div class="column">
+            <img src={tessaBoth} alt="Tessa's" onClick={() => overlayImage('tessaBoth')}></img>
+          </div>
+          <div class="column">
+            <img src={collageWall} alt="Collage wall" onClick={() => overlayImage('collageWall')}></img>
+          </div>
+          <div class="column">
+            <img src={blueHair} alt="Blue hair" onClick={() => overlayImage('blueHair')}></img>
+          </div>
+          <div class="column">
+            <img src={purpleHair} alt="Purple hair" onClick={() => overlayImage('purpleHair')}></img>
+          </div>
+        </div>
+        <hr/>
+
+
+        <div id="overlay" class="overlay" onClick={() => removeOverlay()}></div>
+
+        <div id="goldenEye1-overlay" class="overlayContent">
+          <img src={goldenEye1}></img>
+        </div>
+        <div id="goldenEye2-overlay" class="overlayContent">
+          <img src={goldenEye2}></img>
+        </div>
+        <div id="goldenEye3-overlay" class="overlayContent">
+          <img src={goldenEye3}></img>
+        </div>
+        <div id="goldenEye4-overlay" class="overlayContent">
+          <img src={goldenEye4}></img>
+        </div>
+        <div id="goldenEye5-overlay" class="overlayContent">
+          <img src={goldenEye5}></img>
+        </div>
+        <div id="goldenEye6-overlay" class="overlayContent">
+          <img src={goldenEye6}></img>
+        </div>
+        <div id="eyes1-overlay" class="overlayContent">
+          <img src={eyes1}></img>
+        </div>
+        <div id="eyes2-overlay" class="overlayContent">
+          <img src={eyes2}></img>
+        </div>
+        <div id="redEye-overlay" class="overlayContent">
+          <img src={redEye}></img>
+        </div>
+
+        <div id="wagtails-overlay" class="overlayContent">
+          <img src={wagtails}></img>
+        </div>
+        <div id="magpies-overlay" class="overlayContent">
+          <img src={magpies}></img>
+        </div>
+        <div id="yellowTree-overlay" class="overlayContent">
+          <img src={yellowTree}></img>
+        </div>
+
+        <div id="mononokeMask-overlay" class="overlayContent">
+          <img src={mononokeMask}></img>
+        </div>
+        <div id="tenguMask-overlay" class="overlayContent">
+          <img src={tenguMask}></img>
+        </div>
+        <div id="newMask-overlay" class="overlayContent">
+          <img src={newMask}></img>
+        </div>
+        <div id="goldenMask-overlay" class="overlayContent">
+          <img src={goldenMask}></img>
+        </div>
+
+        <div id="collageWall-overlay" class="overlayContent">
+          <img src={collageWall}></img>
+        </div>
+        <div id="tessaRed-overlay" class="overlayContent">
+          <img src={tessaRed}></img>
+        </div>
+        <div id="tessaYellow-overlay" class="overlayContent">
+          <img src={tessaYellow}></img>
+        </div>
+        <div id="tessaBoth-overlay" class="overlayContent">
+          <img src={tessaBoth}></img>
+        </div>
+        <div id="blueHair-overlay" class="overlayContent">
+          <img src={blueHair}></img>
+        </div>
+        <div id="purpleHair-overlay" class="overlayContent">
+          <img src={purpleHair}></img>
+        </div>
+
+      </div>
 );
 
-var page2 = (
-  <div>hiiii
+var tablePage = (
+  <div>
     <div>
-      <button onClick={pagePosition}> Click Me </button>
+      <button onClick={pagePosition}> Shuffle table </button>
     </div>
     <div class="canvas">        
       <div class="mess-format" id="purpleHair">
@@ -215,8 +287,6 @@ var page2 = (
   </div>
 )
 
-var pageNumber = true;
-
 function pagePosition() {
   for(const image of imageList){
     var randX = Math.random();
@@ -227,18 +297,51 @@ function pagePosition() {
       element.style.left = randX * 100 + '%';
     }
   }
+  onGallery = false;
+
+}
+
+var currentOverlay = null
+
+function overlayImage(imageId) {
+  if(currentOverlay === null){
+    var overlayElement = document.getElementById(imageId+'-overlay');
+    overlayElement.style.display = 'block';
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'block';
+    currentOverlay = imageId;
+  }
+}
+
+function removeOverlay() {
+  if(currentOverlay !== null){
+    var overlayElement = document.getElementById(currentOverlay+'-overlay');
+    overlayElement.style.display = 'none';
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+    currentOverlay = null;
+  }
 }
 
 function Art() {
-      var [page, setPage] = useState(page1)
-      const doFunction = () => {
-        if(pageNumber){
-          setPage(page2);
-          pageNumber = false;
-        }else{
-          setPage(page1);
-          pageNumber = true;
+      var [page, setPage] = useState(galleryPage)
+
+      const toGallery = () => {
+        setPage(galleryPage);
+        onGallery = true;
+      }
+
+      const toTable = () => {
+        setPage(tablePage);
+
+        console.log(onGallery)
+
+        if(onGallery){
+          setTimeout(() => {
+              pagePosition();
+          }, 1);
         }
+          
       }
 
       return (
@@ -248,10 +351,12 @@ function Art() {
           </div>
           <br />
 
-          <div>
-            <button onClick={doFunction}> Click Me </button>
+          <div class="inline-button">
+            <button onClick={toGallery}> Gallery View </button>
           </div>
-          <br />
+          <div class="inline-button">
+            <button onClick={toTable}> Table View </button>
+          </div>
 
           {page}
 

@@ -46,3 +46,11 @@
 .left-align {
   text-align: left;
 }
+
+hr {
+  color: white;
+}
+
+.top-hr {
+  color: black;
+}
