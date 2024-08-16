@@ -31,8 +31,7 @@ function App() {
               <Link id="home" to="/zach-upstone"> Home </Link> /
               <Link id="cv" to="/cv"> CV </Link> /
               <Link id="dissertation" to="/dissertation"> Dissertation </Link> /
-              <Link id="gallery" to="/gallery"> Gallery </Link> / 
-              <Link id="Charts" to="/charts"> Charts </Link>
+              <Link id="gallery" to="/gallery"> Gallery </Link>
             </div>
           </div>
         </header>

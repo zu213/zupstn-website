@@ -1,6 +1,6 @@
 import moment from "moment";
 
-export const data = [
+export const deadliftData = [
     {
         date: moment(new Date(2023, 9, 2)).unix(),
         ORM: 125,
@@ -103,4 +103,64 @@ export const data = [
         date: moment(new Date(2024, 4, 27)).unix(),
         ORM: 140,
     },
+];
+
+export const squatData = [
+    {
+        date: moment(new Date(2024, 1, 4)).unix(),
+        ORM: 100,
+    },
+    {
+        date: moment(new Date(2024, 4, 7)).unix(),
+        ORM: 100,
+    },
+    {
+        date: moment(new Date(2024, 4, 19)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 4, 28)).unix(),
+        ORM: 100,
+    },
+    {
+        date: moment(new Date(2024, 5, 5)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 5, 23)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 6, 4)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 6, 7)).unix(),
+        ORM: 80,
+    },
+    
+    {
+        date: moment(new Date(2024, 6, 11)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 6, 14)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 8, 16)).unix(),
+        ORM: 80,
+    },
+];
+
+export const benchData = [
+    {
+        date: moment(new Date(2024, 1, 4)).unix(),
+        ORM: 60,
+    },
+    {
+        date: moment(new Date(2024, 1, 5)).unix(),
+        ORM: 60,
+    },
+
 ];

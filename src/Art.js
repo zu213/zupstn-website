@@ -296,6 +296,7 @@ var tablePage = (
   </div>
 )
 
+// function to randomly place pictures
 function pagePosition() {
   for(const image of imageList){
     var randX = Math.random();
