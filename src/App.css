@@ -36,6 +36,8 @@
 
 .text-holder {
   padding: 1vw;
+  padding-left: 3vw;
+  text-align: left;
 }
 
 .subtitle {

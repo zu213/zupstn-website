@@ -145,73 +145,73 @@ var galleryPage = (
         <div id="overlay" class="overlay" onClick={() => removeOverlay()}></div>
 
         <div id="goldenEye1-overlay" class="overlayContent">
-          <img src={goldenEye1}></img>
+          <img alt="" src={goldenEye1}></img>
         </div>
         <div id="goldenEye2-overlay" class="overlayContent">
-          <img src={goldenEye2}></img>
+          <img alt="" src={goldenEye2}></img>
         </div>
         <div id="goldenEye3-overlay" class="overlayContent">
-          <img src={goldenEye3}></img>
+          <img alt="" src={goldenEye3}></img>
         </div>
         <div id="goldenEye4-overlay" class="overlayContent">
-          <img src={goldenEye4}></img>
+          <img alt="" src={goldenEye4}></img>
         </div>
         <div id="goldenEye5-overlay" class="overlayContent">
-          <img src={goldenEye5}></img>
+          <img alt="" src={goldenEye5}></img>
         </div>
         <div id="goldenEye6-overlay" class="overlayContent">
-          <img src={goldenEye6}></img>
+          <img alt="" src={goldenEye6}></img>
         </div>
         <div id="eyes1-overlay" class="overlayContent">
-          <img src={eyes1}></img>
+          <img alt="" src={eyes1}></img>
         </div>
         <div id="eyes2-overlay" class="overlayContent">
-          <img src={eyes2}></img>
+          <img alt="" src={eyes2}></img>
         </div>
         <div id="redEye-overlay" class="overlayContent">
-          <img src={redEye}></img>
+          <img alt="" src={redEye}></img>
         </div>
 
         <div id="wagtails-overlay" class="overlayContent">
-          <img src={wagtails}></img>
+          <img alt="" src={wagtails}></img>
         </div>
         <div id="magpies-overlay" class="overlayContent">
-          <img src={magpies}></img>
+          <img alt="" src={magpies}></img>
         </div>
         <div id="yellowTree-overlay" class="overlayContent">
-          <img src={yellowTree}></img>
+          <img alt="" src={yellowTree}></img>
         </div>
 
         <div id="mononokeMask-overlay" class="overlayContent">
-          <img src={mononokeMask}></img>
+          <img alt="" src={mononokeMask}></img>
         </div>
         <div id="tenguMask-overlay" class="overlayContent">
-          <img src={tenguMask}></img>
+          <img alt="" src={tenguMask}></img>
         </div>
         <div id="newMask-overlay" class="overlayContent">
-          <img src={newMask}></img>
+          <img alt="" src={newMask}></img>
         </div>
         <div id="goldenMask-overlay" class="overlayContent">
-          <img src={goldenMask}></img>
+          <img alt="" src={goldenMask}></img>
         </div>
 
         <div id="collageWall-overlay" class="overlayContent">
-          <img src={collageWall}></img>
+          <img alt="" src={collageWall}></img>
         </div>
         <div id="tessaRed-overlay" class="overlayContent">
-          <img src={tessaRed}></img>
+          <img alt="" src={tessaRed}></img>
         </div>
         <div id="tessaYellow-overlay" class="overlayContent">
-          <img src={tessaYellow}></img>
+          <img alt="" src={tessaYellow}></img>
         </div>
         <div id="tessaBoth-overlay" class="overlayContent">
-          <img src={tessaBoth}></img>
+          <img alt="" src={tessaBoth}></img>
         </div>
         <div id="blueHair-overlay" class="overlayContent">
-          <img src={blueHair}></img>
+          <img alt="" src={blueHair}></img>
         </div>
         <div id="purpleHair-overlay" class="overlayContent">
-          <img src={purpleHair}></img>
+          <img alt="" src={purpleHair}></img>
         </div>
 
       </div>
@@ -219,7 +219,10 @@ var galleryPage = (
 
 var tablePage = (
   <div>
+    <hr />
     <div>
+      Click and image to pick it up and click again to drop it anywhere below the white line.
+      <br />
       <button onClick={pagePosition}> Shuffle table </button>
     </div>
     <div class="canvas">        
@@ -325,18 +328,31 @@ function movePosition(imageToMove) {
       element = document.getElementById(imageToMove);
       element.style.border = "5px solid red";
       movingImage = imageToMove;
+      // Also need to disable other dangerous buttons
+      document.getElementById("galleryButton").disabled = true;
+      document.getElementById("home").style.pointerEvents = "none";
+      document.getElementById("cv").style.pointerEvents = "none";
+      document.getElementById("dissertation").style.pointerEvents = "none";
+
     }
 
     else if(movingImage !== null){
       //image coords become mouse coords
       element = document.getElementById(movingImage);
-      element.style.top = mouseY - 420 +'px';
-      element.style.left = mouseX - 150 + 'px';
+      element.style.position = "fixed"
+      element.style.top = (mouseY / window.innerHeight * 100 - 10) + '%';
+      element.style.left =(mouseX / window.innerWidth * 100 - 5) + '%';
       element.style.border = "0px"
       movingImage = null;
+
+      // renable buttons
+      document.getElementById("galleryButton").disabled = false;
+      document.getElementById("home").style.pointerEvents = "auto";
+      document.getElementById("cv").style.pointerEvents = "auto";
+      document.getElementById("dissertation").style.pointerEvents = "auto";
+
     }
   }, 1);
-  console.log(mouseX, mouseY, movingImage, imageToMove);
 }
 
 // function related to overlaying iamge on gallery view
@@ -363,6 +379,7 @@ function removeOverlay() {
 // main page
 function Art() {
       var [page, setPage] = useState(galleryPage)
+      onGallery = true;
 
       const toGallery = () => {
         setPage(galleryPage);
@@ -371,7 +388,6 @@ function Art() {
 
       const toTable = () => {
         setPage(tablePage);
-
         if(onGallery){
           setTimeout(() => {
               pagePosition();
@@ -387,8 +403,8 @@ function Art() {
           </div>
           <br />
 
-          <div class="inline-button">
-            <button onClick={toGallery}> Gallery View </button>
+          <div class="inline-button" >
+            <button id="galleryButton" onClick={toGallery}> Gallery View </button>
           </div>
           <div class="inline-button">
             <button onClick={toTable}> Table View </button>

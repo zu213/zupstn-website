@@ -5,6 +5,7 @@ import './App.css';
 
 // Page imports
 import Art from './Art.js'
+import Charts from './Charts.js';
 
 // document imports
 import cv from './documents/CV.pdf'
@@ -27,10 +28,11 @@ function App() {
             </div>
 
             <div class="search-links">
-              <Link to="/zach-upstone"> Home </Link> /
-              <Link to="/cv"> CV </Link> /
-              <Link to="/dissertation"> Dissertation </Link> /
-              <Link to="/gallery"> Gallery </Link>
+              <Link id="home" to="/zach-upstone"> Home </Link> /
+              <Link id="cv" to="/cv"> CV </Link> /
+              <Link id="dissertation" to="/dissertation"> Dissertation </Link> /
+              <Link id="gallery" to="/gallery"> Gallery </Link> / 
+              <Link id="Charts" to="/charts"> Charts </Link>
             </div>
           </div>
         </header>
@@ -52,6 +54,8 @@ function App() {
 
           <Route path='/gallery' element={<Art/>} />
 
+          <Route path='/charts' element={<Charts/>} />
+
           <Route path='*' element={<NotFound/>} />
         </Routes>
       </body>
@@ -64,20 +68,58 @@ function App() {
 // subpages
 function Home() {
   return (
-    <div class="text-holder">
+    <div>
+      <a href="mailto:Zac.upstone@gmail.com">Email</a> &nbsp; | &nbsp;
+      <a href="https://www.linkedin.com/in/zachary-upstone-076218214/">LinkedIn</a> &nbsp; | &nbsp;
+      <a href="https://github.com/zu213">Github</a>
+
+      <div  class="text-holder">
+        <u>Graduate:</u>
         <br/>
         I’m a recently graduated student from the University of Bath, Achieving a First class degree.
-        I mainly have experience coding with ....
+        From my degree I mainly have experience coding with <b>Python, Java and C++</b>. During my 
+        final year I completed a dissertation on image synthesis with RLHF this can be found <Link to="/dissertation">here</Link>. As can be seen I have experience with AI
+        specifically Reinforcement Learning and Image synthesis.
         <br/>
+        During my degree units I completed include:
         <br/>
+        Sem 2 year 3:
+        Logic and semantics of programming languages, Graphs and Networks: Theory and Applications and
+        Entrepreneurship.
+        <br/>
+        Sem 1 year 3:
+        Reinforcement Learning,  Advanced computer graphics and Safety-critical systems.
+        <br/>
+        Sem 2 year 2:
+        Comparitive programming, Functional programming, Human Computer interaction, Machine Learning II 
+        and Experimental systems project II.
+        <br/>
+        Sem 1 year 2:
+        Visual computing, Mathematics of computation, Data structures and algorithms , Machine Learning I 
+        and Experimental systems project I.
 
+        <br/>
+        <br/>
+        <u>Programmer:</u>
+        <br/>
         During my university degree I completed a year long placement at BSquare a company which produces IoT solutions 
-        working both in software development and QA. While working at BSquare i gained experience in...
+        working both in software development and QA. While working at BSquare I gained experience in <b>Angular(TS, HTML CSS)</b> as
+        well as <b>Gherkin, Selenium and Lua</b>.
+
+        This website is all made by me :), it runs using Github pages and a React framework.
+
         <br/>
         <br/>
-        
-        I also have expereicne in working as  abartender, mcdonalds and gardener. I also partook in cyber security camps.
-        I am interested in art (expecially collage and spray painting) and gym
+        <u>Artist:</u>
+        <br/>
+        All my art stuff can be seen on the <Link to="/gallery">gallery</Link> page.
+
+        <br/>
+        <br/>
+        <u>Fitness enthusiast:</u>
+        <br/>
+        Gym charts for fun can be seen on the <Link to="/charts">charts</Link> page.
+      </div>
     </div>
   );
 }
@@ -107,8 +149,11 @@ function Dissertation() {
         <br/>
       </div>
       <div>
-        <div  class="inline-block">                  
-          <img class="ui-image" src={dissertationUI} alt="Dissertation UI"></img>
+        <div  class="inline-block">
+          <figure>
+            <img class="ui-image" src={dissertationUI} alt="Dissertation UI"></img>
+            <figcaption>The UI I created to allow the utlisation of RLHF</figcaption>
+          </figure>
         </div>
         <div  class="inline-block">
           <div class="subtitle">
