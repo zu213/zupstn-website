@@ -2,60 +2,109 @@ import moment from "moment";
 
 export const deadliftData = [
     {
-        date: moment(new Date(2023, 9, 2)).unix(),
-        ORM: 125,
+        date: moment(new Date(2023, 7, 27)).unix(),
+        ORM: 105,
     },
     {
-        date: moment(new Date(2023, 9, 5)).unix(),
+        date: moment(new Date(2023, 8, 3)).unix(),
+        ORM: 110,
+    },
+    {
+        date: moment(new Date(2023, 8, 7)).unix(),
+        ORM: 110,
+    },
+    {
+        date: moment(new Date(2023, 8, 11)).unix(),
+        ORM: 110,
+    },
+    {
+        date: moment(new Date(2023, 8, 16)).unix(),
+        ORM: 115,
+    },
+    {
+        date: moment(new Date(2023, 8, 30)).unix(),
         ORM: 120,
     },
-    {
-        date: moment(new Date(2023, 9, 13)).unix(),
-        ORM: 125,
+        {
+        date: moment(new Date(2023, 9, 10)).unix(),
+        ORM: 115,
     },
-    {
+        {
+        date: moment(new Date(2023, 9, 15)).unix(),
+        ORM: 120,
+    },
+        {
         date: moment(new Date(2023, 9, 18)).unix(),
-        ORM: 125,
+        ORM: 130,
+    },
+        {
+        date: moment(new Date(2023, 9, 20)).unix(),
+        ORM: 80,
     },
     {
         date: moment(new Date(2023, 9, 25)).unix(),
         ORM: 125,
     },
+        {
+        date: moment(new Date(2023, 9, 27)).unix(),
+        ORM: 110,
+    },
+    
     {
-        date: moment(new Date(2023, 9, 30)).unix(),
-        ORM: 130,
+        date: moment(new Date(2023, 10, 2)).unix(),
+        ORM: 125,
     },
     {
-        date: moment(new Date(2023, 10, 4)).unix(),
-        ORM: 130,
-    },
-    {
-        date: moment(new Date(2023, 10, 8)).unix(),
+        date: moment(new Date(2023, 10, 5)).unix(),
         ORM: 120,
     },
     {
-        date: moment(new Date(2023, 10, 14)).unix(),
-        ORM: 135,
+        date: moment(new Date(2023, 10, 13)).unix(),
+        ORM: 125,
     },
     {
-        date: moment(new Date(2023, 10, 20)).unix(),
-        ORM: 135,
+        date: moment(new Date(2023, 10, 18)).unix(),
+        ORM: 125,
     },
     {
         date: moment(new Date(2023, 10, 25)).unix(),
-        ORM: 90,
+        ORM: 125,
     },
     {
-        date: moment(new Date(2023, 11, 12)).unix(),
+        date: moment(new Date(2023, 10, 30)).unix(),
         ORM: 130,
     },
     {
-        date: moment(new Date(2023, 11, 18)).unix(),
+        date: moment(new Date(2023, 11, 4)).unix(),
+        ORM: 130,
+    },
+    {
+        date: moment(new Date(2023, 11, 8)).unix(),
+        ORM: 120,
+    },
+    {
+        date: moment(new Date(2023, 11, 14)).unix(),
+        ORM: 135,
+    },
+    {
+        date: moment(new Date(2023, 11, 20)).unix(),
+        ORM: 135,
+    },
+    {
+        date: moment(new Date(2023, 11, 25)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2023, 12, 12)).unix(),
+        ORM: 130,
+    },
+    {
+        date: moment(new Date(2023, 12, 18)).unix(),
         ORM: 135,
     },
     
     {
-        date: moment(new Date(2023, 11, 23)).unix(),
+        date: moment(new Date(2023, 12, 23)).unix(),
         ORM: 120,
     },
     {
@@ -107,9 +156,167 @@ export const deadliftData = [
 
 export const squatData = [
     {
-        date: moment(new Date(2024, 1, 4)).unix(),
+        date: moment(new Date(2023, 7, 7)).unix(),
+        ORM: 80,
+    },
+        {
+        date: moment(new Date(2023, 7, 19)).unix(),
+        ORM: 87.5,
+    },
+        {
+        date: moment(new Date(2023, 7, 25)).unix(),
+        ORM: 75,
+    },
+        {
+        date: moment(new Date(2023, 7, 28)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2023, 8, 2)).unix(),
+        ORM: 87.5,
+    },
+    {
+        date: moment(new Date(2023, 8, 9)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2023, 8, 14)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2023, 8, 18)).unix(),
+        ORM: 85,
+    },
+    {
+        date: moment(new Date(2023, 8, 27)).unix(),
+        ORM: 85,
+    },
+    
+    {
+        date: moment(new Date(2023, 9, 5)).unix(),
+        ORM: 85,
+    }, 
+    {
+        date: moment(new Date(2023, 9, 12)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2023, 9, 17)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2023, 9, 18)).unix(),
+        ORM: 95,
+    },
+    {
+        date: moment(new Date(2023, 9, 24)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2023, 9, 29)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2023, 10, 6)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2023, 10, 11)).unix(),
+        ORM: 70,
+    },
+    {
+        date: moment(new Date(2023, 10, 17)).unix(),
+        ORM: 85,
+    },
+        {
+        date: moment(new Date(2023, 10, 20)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2023, 10, 29)).unix(),
+        ORM: 95,
+    },
+    {
+        date: moment(new Date(2023, 11, 3)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2023, 11, 7)).unix(),
+        ORM: 95,
+    },
+    {
+        date: moment(new Date(2023, 11, 15)).unix(),
         ORM: 100,
     },
+    {
+        date: moment(new Date(2023, 11, 22)).unix(),
+        ORM: 100,
+    },
+    {
+        date: moment(new Date(2023, 12, 2)).unix(),
+        ORM: 100,
+    },
+    {
+        date: moment(new Date(2023, 12, 6)).unix(),
+        ORM: 95,
+    },
+    {
+        date: moment(new Date(2023, 12, 15)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2023, 12, 20)).unix(),
+        ORM: 95,
+    },
+    {
+        date: moment(new Date(2024, 1, 7)).unix(),
+        ORM: 100,
+    },
+    {
+        date: moment(new Date(2024, 1, 16)).unix(),
+        ORM: 95,
+    },
+        {
+        date: moment(new Date(2024, 1, 22)).unix(),
+        ORM: 100,
+    },
+    {
+        date: moment(new Date(2024, 2, 1)).unix(),
+        ORM: 95,
+    },
+        {
+        date: moment(new Date(2024, 2, 7)).unix(),
+        ORM: 100,
+    },
+    {
+        date: moment(new Date(2024, 2, 13)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 2, 22)).unix(),
+        ORM: 95,
+    },
+    {
+        date: moment(new Date(2024, 2, 27)).unix(),
+        ORM: 105,
+    },
+        {
+        date: moment(new Date(2024, 3, 5)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 3, 17)).unix(),
+        ORM: 100,
+    },
+        {
+        date: moment(new Date(2024, 3, 23)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 4, 3)).unix(),
+        ORM: 100,
+    },
+    
     {
         date: moment(new Date(2024, 4, 7)).unix(),
         ORM: 100,
@@ -155,12 +362,81 @@ export const squatData = [
 
 export const benchData = [
     {
-        date: moment(new Date(2024, 1, 4)).unix(),
+        date: moment(new Date(2023, 7, 2)).unix(),
+        ORM: 70,
+    },
+    {
+        date: moment(new Date(2023, 7, 26)).unix(),
         ORM: 60,
     },
     {
-        date: moment(new Date(2024, 1, 5)).unix(),
+        date: moment(new Date(2023, 8, 31)).unix(),
+        ORM: 70,
+    },
+    {
+        date: moment(new Date(2023, 11, 5)).unix(),
+        ORM: 70,
+    },
+        {
+        date: moment(new Date(2023, 12, 3)).unix(),
+        ORM: 75,
+    },
+        {
+        date: moment(new Date(2024, 1, 8)).unix(),
+        ORM: 70,
+    },
+    {
+        date: moment(new Date(2024, 1, 12)).unix(),
+        ORM: 70,
+    },
+    {
+        date: moment(new Date(2024, 2, 2)).unix(),
         ORM: 60,
     },
+    {
+        date: moment(new Date(2024, 2, 28)).unix(),
+        ORM: 60,
+    },
+        {
+        date: moment(new Date(2024, 3, 6)).unix(),
+        ORM: 70,
+    },
+        {
+        date: moment(new Date(2024, 3, 19)).unix(),
+        ORM: 60,
+    },
+    {
+        date: moment(new Date(2024, 3, 30)).unix(),
+        ORM: 60,
+    },
+    {
+        date: moment(new Date(2024, 4, 4)).unix(),
+        ORM: 70,
+    },
+        {
+        date: moment(new Date(2024, 4, 10)).unix(),
+        ORM: 60,
+    },
+    {
+        date: moment(new Date(2024, 4, 25)).unix(),
+        ORM: 70,
+    },
+    {
+        date: moment(new Date(2024, 5, 25)).unix(),
+        ORM: 70,
+    },
+    {
+        date: moment(new Date(2024, 6, 13)).unix(),
+        ORM: 75,
+    },
+        {
+        date: moment(new Date(2024, 7, 7)).unix(),
+        ORM: 75,
+    },
+        {
+        date: moment(new Date(2024, 8, 15)).unix(),
+        ORM: 70,
+    },
+    
 
 ];

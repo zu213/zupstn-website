@@ -46,7 +46,6 @@ var galleryPage = (
     <div class="left-align-indent">
         Eyes
     </div>
-    <br />
     <div class="row">
         <div class="column">
           <img id="goldenEye1" src={goldenEye1} alt="Golden eye 1" onClick={() => overlayImage('goldenEye1')}></img>
@@ -81,7 +80,6 @@ var galleryPage = (
         <div class="left-align-indent">
             Nature
         </div>
-        <br />
         <div class="row">
           <div class="column">
             <img src={magpies} alt="Magpies" onClick={() => overlayImage('magpies')}></img>
@@ -98,7 +96,6 @@ var galleryPage = (
         <div class="left-align-indent">
             Masks
         </div>
-        <br />
         <div class="row">
           <div class="column">
             <img src={mononokeMask} alt="Mononoke" onClick={() => overlayImage('mononokeMask')}></img>
@@ -118,7 +115,6 @@ var galleryPage = (
         <div class="left-align-indent">
             Other
         </div>
-        <br />
         <div class="row">
           <div class="column">
             <img src={tessaRed} alt="Tessa red" onClick={() => overlayImage('tessaRed')}></img>
@@ -402,7 +398,6 @@ function Art() {
           <div class="underlined">
               Art Gallery
           </div>
-          <br />
 
           <div class="inline-button" >
             <button id="galleryButton" onClick={toGallery}> Gallery View </button>
