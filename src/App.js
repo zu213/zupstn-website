@@ -1,7 +1,9 @@
 
 // Normal imports
-import { Route, Navigate, Routes, Link, HashRouter} from 'react-router-dom';
+import { Route, Navigate, Routes, Link, useLocation, useNavigate} from 'react-router-dom';
 import './App.css';
+import { useState } from 'react';
+
 
 // Page imports
 import Art from './Art.js'
@@ -13,39 +15,37 @@ import dissertation from  './documents/Dissertation.pdf'
 
 // Image imports
 import dissertationUI from './images/di-ui.png'
+import { useEffect } from 'react';
+
 
 // main app
 function App() {
+  let navigate = useNavigate();
+  const location = useLocation()
+  const defaultBackButton = <button id="back-button" className="back-button" onClick={() => navigate(-1)}>Back</button>;
+  var [backButton, setBackButton] = useState(defaultBackButton)
+
+
+  useEffect(() => {
+    if(location.pathname ===  "/zach-upstone" || location.pathname ===  "/" ) {
+      setBackButton(null);
+    }else{
+      setBackButton(defaultBackButton);
+    }
+  })
+
+
   return(
-    <HashRouter>
-
       <div>
-        <br/>
-        <header>
-          <div class="header">
-            <div class="title">
-              Zach Upstone
-            </div>
-
-            <div class="search-links">
-              <Link id="home" to="/zach-upstone"> Home </Link> /
-              <Link id="cv" to="/cv"> CV </Link> /
-              <Link id="dissertation" to="/dissertation"> Dissertation </Link> /
-              <Link id="gallery" to="/gallery"> Gallery </Link>
-            </div>
-          </div>
-        </header>
-
-        <br/>
-        <hr class="top-hr"/>
-
-      </div>
-      <body>
-
+        <br />
+        {backButton}
+        <br />
         <Routes>
           <Route exact path='/' element={<Navigate to='/zach-upstone' />} />
 
           <Route path='/zach-upstone' element={<Home/>} />
+          
+          <Route path='/me' element={<Me/>} />
 
           <Route path='/cv' element={<CV/>} />
 
@@ -57,9 +57,7 @@ function App() {
 
           <Route path='*' element={<NotFound/>} />
         </Routes>
-      </body>
-      </HashRouter>
-
+      </div>
   )
 }
 
@@ -68,11 +66,41 @@ function App() {
 function Home() {
   return (
     <div>
-      <a href="mailto:Zac.upstone@gmail.com">Email</a> &nbsp; | &nbsp;
-      <a href="https://www.linkedin.com/in/zachary-upstone-076218214/">LinkedIn</a> &nbsp; | &nbsp;
-      <a href="https://github.com/zu213">Github</a>
+        <header>
+          <div className="header">
+            <Link className="title" to="/me">
+              <div id="title" className="title">
+                 Zach Upstone             
+              </div>
+            </Link>
+          </div>
+        </header>
+        <br/>
 
-      <div  class="text-holder">
+
+      <div className="search-links-left">
+        <Link id="cv" to="/cv">CV</Link><br/><br/>
+        <Link id="dissertation" to="/dissertation">Dissertation</Link><br/><br/>
+        <Link id="gallery" to="/gallery">Gallery</Link>
+      </div>
+      <div className="search-links-right">
+        <a href="mailto:Zac.upstone@gmail.com"  target="_blank" rel="noreferrer">Email</a><br/><br/>
+        <a href="https://www.linkedin.com/in/zachary-upstone-076218214/"  target="_blank" rel="noreferrer">LinkedIn</a><br/><br/>
+        <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
+      </div>
+    </div>
+  );
+}
+
+function Me() {
+  return (
+    <div>
+      <a href="mailto:Zac.upstone@gmail.com" target="_blank" rel="noreferrer">Email</a> &nbsp; | &nbsp;
+      <a href="https://www.linkedin.com/in/zachary-upstone-076218214/" target="_blank" rel="noreferrer">LinkedIn</a> &nbsp; | &nbsp;
+      <a href="https://github.com/zu213" target="_blank" rel="noreferrer">Github</a>
+
+      <div  className="text-holder">
+        <br/>
         <u>Graduate:</u>
         <br/>
         I’m a recently graduated student from the University of Bath, Achieving a First class degree.
@@ -126,10 +154,10 @@ function Home() {
 function CV() {
   return (
       <div>
-        <a href={cv} download="Zachary Upstone CV">Zachary Upstone's CV Download</a>
+        <a href={cv} download="Zachary Upstone CV">Download</a>
         <br/>
         <br/>
-        <embed src={cv} class="pdf-viewer" />
+        <embed src={cv} className="pdf-viewer" />
       </div>
   );
 }
@@ -137,7 +165,7 @@ function CV() {
 function Dissertation() {
   return (
     <div>
-      <div class="subtitle" >
+      <div className="subtitle" >
         Human Involvement Can Improve Current Image Synthesis Methods within the Domain of Art
         <br />
       </div>
@@ -148,18 +176,18 @@ function Dissertation() {
         <br/>
       </div>
       <div>
-        <div  class="inline-block">
+        <div  className="inline-block">
           <figure>
-            <img class="ui-image" src={dissertationUI} alt="Dissertation UI"></img>
-            <figcaption>The UI I created to allow the utlisation of RLHF</figcaption>
+            <img className="ui-image" src={dissertationUI} alt="Dissertation UI"></img>
+            <figcaption>Figure: The UI I created to allow the utlisation of RLHF</figcaption>
           </figure>
         </div>
-        <div  class="inline-block">
-          <div class="subtitle">
+        <div  className="inline-block">
+          <div className="subtitle">
             Abstract
           </div>
           <br />
-          <div class="left-align">
+          <div className="left-align">
             Image Synthesis within the domain of art remains a difficult task due to its complex and human
             nature. Many current models either suffer from insufficient user control or inadequate output
             quality. This dissertation employs Reinforcement Learning Human Feedback (RLHF) as a

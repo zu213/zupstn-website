@@ -1,3 +1,5 @@
+/* gallery view */
+
 .row {
     width: 100%;
     table-layout: fixed;
@@ -14,10 +16,6 @@
     padding: 2vw;
 }
 
-img {
-    height: 100%;
-    width: 100%;    
-}
 
 .left-align-indent {
     text-align: left;
@@ -27,23 +25,6 @@ img {
 
 .underlined{
     text-decoration: underline;
-}
-
-.mess-format {
-    position: absolute;
-    width: 10%;
-    height: auto;
-}
-
-.canvas {
-    padding-left: 10%;
-    width: 80%;
-    height: 35%;
-    position: fixed;
-}
-
-.inline-button {
-    display: inline-block;
 }
 
 .overlay{
@@ -62,11 +43,47 @@ img {
 
 .overlayContent{
     position: fixed; 
-    width: 20%;
-    top: 30%;
-    left: 40%;
+    width: 25%;
+    top: 15%;
+    left: 37.5%;
     
     display: none;
     overflow: hidden;
     z-index: 100;
 }
+
+/*table view */
+
+.mess-format img {
+    border: solid 3px transparent;
+}
+
+.mess-format {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    transition: background-position 2s;
+}
+
+.mess-format img:hover {
+    border: 3px dashed blue;
+}
+
+.canvas {
+    padding-left: 10%;
+    width: 80%;
+    height: 35%;
+    position: fixed;
+}
+
+/* other */
+
+
+img {
+    height: 100%;
+    width: 100%;    
+}
+
+.inline-button {
+    display: inline-block;
+}   

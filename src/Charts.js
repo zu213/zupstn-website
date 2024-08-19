@@ -26,21 +26,21 @@ function Charts() {
     return (
       <div>
         <div>
-            <div class="button holder">
-                <div class="inline-button">
+            <div className="button holder">
+                <div className="inline-button">
                     <button  onClick={() => setData(deadliftData)}>Deadlift data</button>
                 </div>
-                <div class="inline-button">
+                <div className="inline-button">
                     <button  onClick={() => setData(squatData)}>Squat data</button>
                 </div>
-                <div class="inline-button" >
+                <div className="inline-button" >
                     <button onClick={() => setData(benchData)}>Bench data</button>
                 </div>
             </div>
         </div>
         <br></br>
 
-        <div class="chart">
+        <div className="chart">
             <div id="deadlift">
                 <ResponsiveContainer width="100%" aspect={3}>
                     <LineChart data={data} margin={{ right: 30 }}>
