@@ -11,14 +11,15 @@
   text-align: left;
   font-size: 3vw;
   text-decoration: none;
-  padding-left: 10%;
+  padding-left: 7%;
   bottom: -2vw;
   position: relative;
+  user-select: none; /* Standard syntax */
 }
 
 /* home page */
 .search-links-left {
-  padding-left: 10%;
+  padding-left: 7%;
   text-align: left;
   display: inline-block;
   font-size: 2vw;
@@ -27,7 +28,7 @@
 }
 
 .search-links-right {
-  padding-right: 10%;
+  padding-right: 7%;
   text-align: right;
   display: inline-block;
   font-size: 2vw;
@@ -35,18 +36,44 @@
   position: fixed;
 }
 
+.ascii-art {
+  position: absolute;
+  bottom: 0%;
+  left: 33%;
+}
+
+pre {
+white-space: pre-wrap;
+}
+
 /* me page */
 
 .text-holder {
   padding: 1vw;
-  padding-left: 3vw;
+  padding-left: 5%;
+  padding-right: 5%;
   text-align: left;
+}
+
+.small-link:link  {
+  color:rgb(254, 75, 120) !important;
+}
+.small-link:visited {
+  color:rgb(211, 3, 103) !important;
+}
+.small-link:hover {
+  color: rgb(290, 14, 61) !important;
+  text-decoration: underline;
 }
 /* cv page */
 
 .pdf-viewer {
   width: 70%;
   height: 50vw;
+}
+
+.download-image {
+  width: 1%
 }
 /* diss page */
 
@@ -57,10 +84,10 @@
 
 /* other */
 
-.inline-block {
+.inline-structure {
   padding: 1vw;
   display: inline-block;
-  width: 38%;
+  width: 40%;
   vertical-align: top;
 }
 
@@ -75,19 +102,11 @@
 
 .back-button {
   left: 4%;
-  position: fixed;
+  position: absolute;
   display: inline-block;
 }
 
 /* General css writes */
-
-a:hover {
-  color: black;
-}
-
-Link:hover {
-  color: black;
-}
 
 hr {
   color: white;
@@ -122,4 +141,8 @@ button:hover {
 button:active {
   transform: scale(0.98); 
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+}
+
+* {
+  caret-color: transparent;
 }

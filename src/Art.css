@@ -8,12 +8,14 @@
     scrollbar-width: thin;
     white-space: nowrap;
     padding-right: 0vw;
+    text-align: left;
+    padding-left: 8%;
   }
 
 .column {
     display: inline-block;
     width: 10%;
-    padding: 2vw;
+    padding: 2%;
 }
 
 
@@ -66,7 +68,8 @@
 }
 
 .mess-format img:hover {
-    border: 3px dashed blue;
+    border: 3px dashed rgb(290, 14, 61);
+    cursor: -webkit-grab; cursor: grab;
 }
 
 .canvas {
@@ -86,4 +89,8 @@ img {
 
 .inline-button {
     display: inline-block;
-}   
+}
+
+.galleryButton {
+    color: rgb(110,110,110)
+}

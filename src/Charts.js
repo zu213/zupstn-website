@@ -26,6 +26,10 @@ function Charts() {
     return (
       <div>
         <div>
+            <br />
+            <div>
+            Graphs showing my ORM(one rep max) on each day I recorded data.
+            </div>
             <div className="button holder">
                 <div className="inline-button">
                     <button  onClick={() => setData(deadliftData)}>Deadlift data</button>

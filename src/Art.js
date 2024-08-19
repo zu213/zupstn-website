@@ -43,7 +43,7 @@ var currentZ = 0;
 
 var galleryPage = (
   <div>
-    <hr/>
+    Click to enlarge images
     <div className="left-align-indent">
         Eyes
     </div>
@@ -66,6 +66,8 @@ var galleryPage = (
         <div className="column">
           <img src={goldenEye6} alt="Golden eye 6" onClick={() => overlayImage('goldenEye6')}></img>
         </div>
+      </div>
+      <div className="row">
         <div className="column">
           <img src={eyes1} alt="Eyes 1" onClick={() => overlayImage('eyes1')}></img>
         </div>
@@ -76,27 +78,11 @@ var galleryPage = (
           <img src={redEye} alt="Red eye" onClick={() => overlayImage('redEye')}></img>
         </div>
 
-        </div>
-        <hr/>
-        <div className="left-align-indent">
-            Nature
-        </div>
-        <div className="row">
-          <div className="column">
-            <img src={magpies} alt="Magpies" onClick={() => overlayImage('magpies')}></img>
-          </div>
-          <div className="column">
-            <img src={wagtails} alt="Wagtails" onClick={() => overlayImage('wagtails')}></img>
-          </div>
-          <div className="column">
-            <img src={yellowTree} alt="Yellow tree" onClick={() => overlayImage('yellowTree')}></img>
-          </div>
-        </div>
-        <br />
-        <hr/>
-        <div className="left-align-indent">
-            Masks
-        </div>
+      </div>
+      
+      <div className="left-align-indent">
+          Masks
+      </div>
         <div className="row">
           <div className="column">
             <img src={mononokeMask} alt="Mononoke" onClick={() => overlayImage('mononokeMask')}></img>
@@ -112,7 +98,7 @@ var galleryPage = (
           </div>
         </div>
         <br />
-        <hr/>
+        
         <div className="left-align-indent">
             Other
         </div>
@@ -136,7 +122,19 @@ var galleryPage = (
             <img src={purpleHair} alt="Purple hair" onClick={() => overlayImage('purpleHair')}></img>
           </div>
         </div>
-        <hr/>
+
+        <div className="row">
+          <div className="column">
+            <img src={magpies} alt="Magpies" onClick={() => overlayImage('magpies')}></img>
+          </div>
+          <div className="column">
+            <img src={wagtails} alt="Wagtails" onClick={() => overlayImage('wagtails')}></img>
+          </div>
+          <div className="column">
+            <img src={yellowTree} alt="Yellow tree" onClick={() => overlayImage('yellowTree')}></img>
+          </div>
+      </div>
+        
 
 
         <div id="overlay" className="overlay" onClick={() => removeOverlay()}></div>
@@ -217,7 +215,7 @@ var galleryPage = (
 var tablePage = (
   <div>
     <div>
-      Click and image to pick it up and click again to drop it anywhere.
+      Click and image to pick it up and click again to put it back down where the cursor is.
       <br />
       <button onClick={pagePosition}> Shuffle table </button>
     </div>
@@ -323,13 +321,16 @@ function movePosition(imageToMove) {
     if(movingImage === null && imageToMove !== null){
       // they clicked an image and it is passed in.
       element = document.getElementById(imageToMove);
-      //element.style.border = "5px solid red";
       movingImage = imageToMove;
       // Also need to disable other dangerous buttons
       document.getElementById("galleryButton").disabled = true;
       document.getElementById("back-button").disabled = true;
+
+      // cahnge styles
+      const body = document.getElementById("all");
+      body.style.cursor = "grabbing"
       const img = element.getElementsByTagName("img")[0]
-      img.style.border = "3px solid blue";
+      img.style.border = "3px solid rgb(290, 14, 61)";
       currentZ += 1;
       element.style.zIndex = currentZ;
 
@@ -342,9 +343,13 @@ function movePosition(imageToMove) {
       element.style.position = "fixed"
       element.style.top = (mouseY / window.innerHeight * 100 - 10) + '%';
       element.style.left =(mouseX / window.innerWidth * 100 - 5) + '%';
+      movingImage = null;
+
+      //change styles
+      const body = document.getElementById("all");
+      body.style.cursor = "context-menu"
       const img = element.getElementsByTagName("img")[0]
       img.style.border = "3px solid transparent";
-      movingImage = null;
 
       // renable buttons
       document.getElementById("galleryButton").disabled = false;
@@ -381,13 +386,23 @@ function Art() {
       var [page, setPage] = useState(galleryPage)
       onGallery = true;
 
+    // the colouring is a work around for disable the buttons not working properly
       const toGallery = () => {
         setPage(galleryPage);
+        const galleryButton = document.getElementById("galleryButton")
+        galleryButton.disabled = true;
+        galleryButton.style.color = "rgb(110,110,110)"
+        document.getElementById("tableButton").disabled = false;
+
         onGallery = true;
       }
 
       const toTable = () => {
         setPage(tablePage);
+        const galleryButton = document.getElementById("galleryButton")
+        galleryButton.disabled = false;
+        galleryButton.style.color = "rgb(4,4,4)"
+        document.getElementById("tableButton").disabled = true;
         if(onGallery){
           setTimeout(() => {
               pagePosition();
@@ -403,10 +418,10 @@ function Art() {
           </div>
 
           <div className="inline-button" >
-            <button id="galleryButton" onClick={toGallery}> Gallery View </button>
+            <button id="galleryButton" className='galleryButton' onClick={toGallery}> Gallery View </button>
           </div>
           <div className="inline-button">
-            <button onClick={toTable}> Table View </button>
+            <button id="tableButton" onClick={toTable}> Table View </button>
           </div>
 
           {page}

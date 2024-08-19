@@ -6,18 +6,22 @@ body {
   font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: gray;
+  background-color: rgb(42, 40, 52);
   color: white;
   text-align: center;
   font-size: 15px;
 }
 
 a:link {
-  color:aquamarine
+  color:white
 }
 
 a:visited {
-  color:blue
+  color:white
+}
+
+a:hover {
+  color: rgb(190,190,190)
 }
 
 html, body {

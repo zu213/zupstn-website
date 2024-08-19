@@ -3,7 +3,7 @@
 import { Route, Navigate, Routes, Link, useLocation, useNavigate} from 'react-router-dom';
 import './App.css';
 import { useState } from 'react';
-
+import { useEffect } from 'react';
 
 // Page imports
 import Art from './Art.js'
@@ -15,7 +15,7 @@ import dissertation from  './documents/Dissertation.pdf'
 
 // Image imports
 import dissertationUI from './images/di-ui.png'
-import { useEffect } from 'react';
+import download from './images/white-download.png'
 
 
 // main app
@@ -32,11 +32,11 @@ function App() {
     }else{
       setBackButton(defaultBackButton);
     }
-  })
+  }, [location.pathname, defaultBackButton])
 
 
   return(
-      <div>
+      <div id="all">
         <br />
         {backButton}
         <br />
@@ -88,6 +88,17 @@ function Home() {
         <a href="https://www.linkedin.com/in/zachary-upstone-076218214/"  target="_blank" rel="noreferrer">LinkedIn</a><br/><br/>
         <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
       </div>
+
+      <div className='ascii-art'>
+      <pre>
+            ###### #    #   ##   #    # #####  #      ######<br />
+            #       #  #   #  #  ##  ## #    # #      #      <br />
+            #####    ##   #    # # ## # #    # #      ##### <br />
+            #        ##   ###### #    # #####  #      #     <br />
+            #       #  #  #    # #    # #      #      #      <br />
+            ###### #    # #    # #    # #      ###### ######<br />
+        </pre>
+      </div>
     </div>
   );
 }
@@ -101,13 +112,16 @@ function Me() {
 
       <div  className="text-holder">
         <br/>
-        <u>Graduate:</u>
+        Graduate:
         <br/>
         I’m a recently graduated student from the University of Bath, Achieving a First class degree.
         From my degree I mainly have experience coding with <b>Python, Java and C++</b>. During my 
-        final year I completed a dissertation on image synthesis with RLHF this can be found <Link to="/dissertation">here</Link>. As can be seen I have experience with AI
-        specifically Reinforcement Learning and Image synthesis.
+        final year I completed a dissertation on image synthesis with RLHF this can be found on 
+        the <Link className="small-link" to="/dissertation">Dissertation page</Link>. As can be 
+        seen I have experience with AI specifically Reinforcement Learning and Image synthesis.
         <br/>
+        <br/>
+
         During my degree units I completed include:
         <br/>
         Sem 2 year 3:
@@ -127,7 +141,7 @@ function Me() {
 
         <br/>
         <br/>
-        <u>Programmer:</u>
+        Programmer:
         <br/>
         During my university degree I completed a year long placement at BSquare a company which produces IoT solutions 
         working both in software development and QA. While working at BSquare I gained experience in <b>Angular(TS, HTML CSS)</b> as
@@ -137,15 +151,15 @@ function Me() {
 
         <br/>
         <br/>
-        <u>Artist:</u>
+        Artist:
         <br/>
-        All my art stuff can be seen on the <Link to="/gallery">gallery</Link> page.
+        All my art stuff can be seen on the <Link className="small-link" to="/gallery">Gallery page</Link>.
 
         <br/>
         <br/>
-        <u>Fitness enthusiast:</u>
+        Fitness enthusiast:
         <br/>
-        Gym charts for fun can be seen on the <Link to="/charts">charts</Link> page.
+        Gym charts for fun can be seen on the <Link className="small-link" to="/charts">Charts page</Link>.
       </div>
     </div>
   );
@@ -154,7 +168,10 @@ function Me() {
 function CV() {
   return (
       <div>
-        <a href={cv} download="Zachary Upstone CV">Download</a>
+        <br/>
+        <a className="small-link" href={cv} download="Zachary Upstone CV">
+          Download <img className="download-image" src={download} alt="Download"></img>
+        </a>
         <br/>
         <br/>
         <embed src={cv} className="pdf-viewer" />
@@ -170,19 +187,19 @@ function Dissertation() {
         <br />
       </div>
       <div>
-        <a href={dissertation} download="Zachary Upstone Dissertation">PDF</a>
+        <a href={dissertation} className="small-link" download="Zachary Upstone Dissertation">PDF</a>
         &nbsp; | &nbsp;
-        <a href="https://github.bath.ac.uk/zu213/Dissertation-code" target="_blank" rel="noreferrer">Repo</a>
+        <a href="https://github.bath.ac.uk/zu213/Dissertation-code" className="small-link" target="_blank" rel="noreferrer">Repo</a>
         <br/>
       </div>
       <div>
-        <div  className="inline-block">
+        <div  className="inline-structure">
           <figure>
             <img className="ui-image" src={dissertationUI} alt="Dissertation UI"></img>
             <figcaption>Figure: The UI I created to allow the utlisation of RLHF</figcaption>
           </figure>
         </div>
-        <div  className="inline-block">
+        <div  className="inline-structure">
           <div className="subtitle">
             Abstract
           </div>
