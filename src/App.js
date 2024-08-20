@@ -1,7 +1,7 @@
 
 // Normal imports
 import { Route, Navigate, Routes, Link, useLocation, useNavigate} from 'react-router-dom';
-import './App.css';
+import './styleFiles/App.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -20,15 +20,18 @@ import download from './images/white-download.png'
 
 // main app
 function App() {
+  // declare important variables
   let navigate = useNavigate();
   const location = useLocation()
-  const defaultBackButton = <button id="back-button" className="back-button" onClick={() => navigate(-1)}>Back</button>;
-  const defaultSmallBackButton = <button id="back-button" className="small-back-button" onClick={() => navigate(-1)}> &#60; </button>;
+  const defaultBackButton = <button id="back-button" className="back-button"
+   onClick={() => navigate(-1)}>Back</button>;
+  const defaultSmallBackButton = <button id="back-button" className="small-back-button"
+   onClick={() => navigate(-1)}> &#60; </button>;
 
   var [backButton, setBackButton] = useState(defaultBackButton)
   var [smallBackButton, setSmallBackButton] = useState(defaultSmallBackButton)
 
-
+  // listeners 
   useEffect(() => {
     if(location.pathname ===  "/zach-upstone" || location.pathname ===  "/" ) {
       setBackButton(null);
@@ -39,12 +42,6 @@ function App() {
       setSmallBackButton(defaultSmallBackButton);
     }
   }, [location.pathname, defaultBackButton, defaultSmallBackButton]);
-
-  const onresize = ((event) => {});
-
-  window.addEventListener("resize", onresize);
-
-
 
 
   return(
@@ -75,34 +72,32 @@ function App() {
 }
 
 
-// subpages
+// subpages that are small enough to not justify their own page
 function Home() {
   return (
     <div>
-        <header>
-          <div className="header">
-            <Link className="title" to="/me">
-              <div id="title" className="title">
-                 Zach Upstone             
-              </div>
-            </Link>
+          <div className="titleContainer">
+            <div className="title">
+              <Link to="/me">
+                  Zach Upstone             
+              </Link>
+            </div>
           </div>
-        </header>
         <br/>
 
 
-      <div className="search-links-left">
-        <Link id="cv" to="/cv">CV</Link><br/><br/>
-        <Link id="dissertation" to="/dissertation">Dissertation</Link><br/><br/>
-        <Link id="gallery" to="/gallery">Gallery</Link>
+      <div className="searchLinksLeft">
+        <Link to="/cv">CV</Link><br/><br/>
+        <Link to="/dissertation">Dissertation</Link><br/><br/>
+        <Link to="/gallery">Gallery</Link>
       </div>
-      <div className="search-links-right">
+      <div className="searchLinksRight">
         <a href="mailto:Zac.upstone@gmail.com"  target="_blank" rel="noreferrer">Email</a><br/><br/>
         <a href="https://www.linkedin.com/in/zachary-upstone-076218214/"  target="_blank" rel="noreferrer">LinkedIn</a><br/><br/>
         <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
       </div>
 
-      <div className='ascii-art'>
+      <div className='asciiArt'>
       <pre>
             ------ <br />
             | 0 0 |  <br />
@@ -119,20 +114,20 @@ function Home() {
 function Me() {
   return (
     <div>
-      <div class="link-holder">
+      <div class="linkHolder">
         <a href="mailto:Zac.upstone@gmail.com" target="_blank" rel="noreferrer">Email</a> &nbsp; | &nbsp;
         <a href="https://www.linkedin.com/in/zachary-upstone-076218214/" target="_blank" rel="noreferrer">LinkedIn</a> &nbsp; | &nbsp;
         <a href="https://github.com/zu213" target="_blank" rel="noreferrer">Github</a>
       </div>
 
-      <div  className="text-holder">
+      <div  className="textHolder">
         <br/>
         Graduate:
         <br/>
         I’m a recently graduated student from the University of Bath, Achieving a First class degree.
         From my degree I mainly have experience coding with <b>Python, Java</b> and <b>C++</b>. During my 
         final year I completed a dissertation on image synthesis with RLHF this can be found on 
-        the <Link className="small-link" to="/dissertation">Dissertation page</Link>. As can be 
+        the <Link className="smallLink" to="/dissertation">Dissertation page</Link>. As can be 
         seen I have experience with AI specifically Reinforcement Learning and Image synthesis.
         <br/>
         <br/>
@@ -168,13 +163,13 @@ function Me() {
         <br/>
         Artist:
         <br/>
-        All my art stuff can be seen on the <Link className="small-link" to="/gallery">Gallery page</Link>.
+        All my art stuff can be seen on the <Link className="smallLink" to="/gallery">Gallery page</Link>.
 
         <br/>
         <br/>
         Fitness enthusiast:
         <br/>
-        Gym charts for fun can be seen on the <Link className="small-link" to="/charts">Charts page</Link>.
+        Gym charts for fun can be seen on the <Link className="smallLink" to="/charts">Charts page</Link>.
       </div>
     </div>
   );
@@ -184,12 +179,12 @@ function CV() {
   return (
       <div>
         <br/>
-        <a className="small-link" href={cv} download="Zachary Upstone CV">
-          Download <img className="download-image" src={download} alt="Download"></img>
+        <a className="smallLink" href={cv} download="Zachary Upstone CV">
+          Download <img className="downloadImage" src={download} alt="Download"></img>
         </a>
         <br/>
         <br/>
-        <div className='too-small'> Screen size is too small to display pdf, download to view.</div>
+        <div className='tooSmallCV'> Screen size is too small to display pdf, download to view.</div>
         <embed src={cv+'#view=FitH'} className="pdf-viewer" />
       </div>
   );
@@ -198,29 +193,29 @@ function CV() {
 function Dissertation() {
   return (
     <div>
-      <div className="subtitle" >
+      <div className="dissSubtitle" >
         Human Involvement Can Improve Current Image Synthesis Methods within the Domain of Art
         <br />
       </div>
       <div>
-        <a href={dissertation} className="small-link" download="Zachary Upstone Dissertation">PDF</a>
+        <a href={dissertation} className="smallLink" download="Zachary Upstone Dissertation">PDF</a>
         &nbsp; | &nbsp;
-        <a href="https://github.bath.ac.uk/zu213/Dissertation-code" className="small-link" target="_blank" rel="noreferrer">Repo</a>
+        <a href="https://github.bath.ac.uk/zu213/Dissertation-code" className="smallLink" target="_blank" rel="noreferrer">Repo</a>
         <br/>
       </div>
       <div>
-        <div  className="inline-structure">
+        <div  className="dissInlineStructure">
           <figure>
-            <img className="ui-image" src={dissertationUI} alt="Dissertation UI"></img>
+            <img src={dissertationUI} alt="Dissertation UI"></img>
             <figcaption>Figure: The UI I created to allow the utlisation of RLHF</figcaption>
           </figure>
         </div>
-        <div  className="inline-structure">
+        <div  className="dissInlineStructure">
           <div className="underlined">
             Abstract
           </div>
           <br />
-          <div className="left-align">
+          <div className="leftAlign">
             Image Synthesis within the domain of art remains a difficult task due to its complex and human
             nature. Many current models either suffer from insufficient user control or inadequate output
             quality. This dissertation employs Reinforcement Learning Human Feedback (RLHF) as a

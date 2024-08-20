@@ -4,31 +4,27 @@
     position: relative;
 }
 
-.inline-button {
-    padding: 1vw;
-    display: inline-block;
-    vertical-align: top;
-  }
-
-.too-small-charts {
+.tooSmallCharts {
     display: none;
     padding: 3vw;
     padding-top: 10vw;
 }
 
 @media (max-width: 800px) {
-    .intro {
+    .chartIntro {
         padding-top: 5vw;
     }
 }
 
+/* If page size gets too small remove the charts */
+
 @media (max-width: 650px) {
 
-    .too-small-charts {
+    .tooSmallCharts {
         display: block;
     }
 
-    .chart-container {
+    .chartContainer {
         display: none;
     }
 }

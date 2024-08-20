@@ -1,8 +1,8 @@
-import './Charts.css';
+import './styleFiles/Charts.css';
 import moment from "moment";
 import { useState } from 'react';
 
-import {benchData, deadliftData, squatData} from './chartData.js'
+import {benchData, deadliftData, squatData} from './subJS/chartData.js'
 
 import {
     LineChart,
@@ -13,6 +13,7 @@ import {
     XAxis,
     YAxis,
     CartesianGrid,
+    Label,
   } from "recharts";
 
 const formatXAxis = (tickFormat) => {
@@ -25,24 +26,24 @@ function Charts() {
 
     return (
       <div>
-        <div className='too-small-charts'>
+        <div className='tooSmallCharts'>
             Page width is too small to display graphs please try
              rotating if on phone or expanding window if on computer
         </div>
-        <div className='chart-container'>
+        <div className='chartContainer'>
             <div>
                 <br />
-                <div className='intro'>
+                <div className='chartIntro'>
                 Graphs showing my ORM(one rep max) on each day I recorded data.
                 </div>
-                <div className="button holder">
-                    <div className="inline-button">
+                <div >
+                    <div className="inlineButton">
                         <button  onClick={() => setData(deadliftData)}>Deadlift data</button>
                     </div>
-                    <div className="inline-button">
+                    <div className="inlineButton">
                         <button  onClick={() => setData(squatData)}>Squat data</button>
                     </div>
-                    <div className="inline-button" >
+                    <div className="inlineButton" >
                         <button onClick={() => setData(benchData)}>Bench data</button>
                     </div>
                 </div>
@@ -50,7 +51,7 @@ function Charts() {
             <br></br>
 
             <div className="chart">
-                <div id="deadlift">
+                <div>
                     <ResponsiveContainer width="100%" aspect={3}>
                         <LineChart data={data} margin={{ right: 30 }}>
                             <CartesianGrid fill='white'></CartesianGrid>
@@ -63,7 +64,7 @@ function Charts() {
                             <YAxis
                             tick={{ fill: 'white' }}
                             domain={['auto','auto']}/>
-                            <Legend />
+                            <Legend align='center' />
                             <Tooltip />
                             <Line
                                 dataKey="ORM"

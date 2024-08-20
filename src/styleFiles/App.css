@@ -1,20 +1,21 @@
-/* header */
-.header {
+/* title */
+.titleContainer {
   position: relative;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  user-select: none; 
   height: 12vw;
 }
 
 .title {
   text-align: left;
   font-size: 3vw;
+  width: auto;
+  display: block;
   text-decoration: none;
   padding-left: 7%;
-  bottom: -2vw;
+  bottom: -6vw;
   position: relative;
-  user-select: none; /* Standard syntax */
 }
 
 @media only screen and (max-width: 600px) {
@@ -24,7 +25,7 @@
 }
 
 /* home page */
-.search-links-left {
+.searchLinksLeft {
   padding-left: 7%;
   text-align: left;
   display: inline-block;
@@ -33,7 +34,7 @@
   position: fixed;
 }
 
-.search-links-right {
+.searchLinksRight {
   padding-right: 7%;
   text-align: right;
   display: inline-block;
@@ -42,24 +43,20 @@
   position: fixed;
 }
 
-.ascii-art {
+.asciiArt {
   position: absolute;
   bottom: 0%;
   left: 33%;
 }
 
-pre {
-white-space: pre-wrap;
-}
-
 @media only screen and (max-width: 600px) {
-  .search-links-left {
+  .searchLinksLeft {
     font-size: 4vw;
     padding-top: 5vw;
 
   }
   
-  .search-links-right {
+  .searchLinksRight {
     font-size: 4vw;
     padding-top: 5vw;
 
@@ -68,26 +65,15 @@ white-space: pre-wrap;
 
 /* me page */
 
-.text-holder {
+.textHolder {
   padding: 1vw;
   padding-left: 5%;
   padding-right: 5%;
   text-align: left;
 }
 
-.small-link:link  {
-  color:rgb(254, 75, 120) !important;
-}
-.small-link:visited {
-  color:rgb(211, 3, 103) !important;
-}
-.small-link:hover {
-  color: rgb(290, 14, 61) !important;
-  text-decoration: underline;
-}
-
 @media only screen and (max-width: 400px) {
-  .link-holder {
+  .linkHolder {
     padding-top: 10vw;
   }
 }
@@ -99,22 +85,22 @@ white-space: pre-wrap;
   height: 50vw;
 }
 
-.download-image {
+.downloadImage {
   width: 2vw
 }
 
-.too-small {
+.tooSmallCV {
   display: none;
 }
 
 @media only screen and (max-width: 400px) {
-  .download-image {
+  .downloadImage {
     width: 4vw;
   }
   .pdf-viewer {
     display: none;
   }
-  .too-small {
+  .tooSmallCV {
     display: block;
   }
 }
@@ -127,18 +113,18 @@ white-space: pre-wrap;
 
 /* diss page */
 
-.ui-image {
-  width: 100%;
-  height: 100%;
-}
-
-.subtitle {
+.dissSubtitle {
   text-decoration: underline;
   font-size: 17px;
 }
 
+.inlineButton {
+  padding: 1vw;
+  display: inline-block;
+  vertical-align: top;
+}
 
-.inline-structure {
+.dissInlineStructure {
   padding: 1vw;
   display: inline-block;
   width: 40%;
@@ -146,13 +132,13 @@ white-space: pre-wrap;
 }
 
 @media only screen and (max-width: 1100px) {
-  .subtitle {
+  .dissSubtitle {
     padding-top: 10vw;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .inline-structure {
+  .dissInlineStructure {
     display: block;
     width: 90%;
     left: 5%;
@@ -161,23 +147,31 @@ white-space: pre-wrap;
   }
 }
 
-/* other */
+/* reused classes */
 
-
-.left-align {
+.leftAlign {
   text-align: left;
+}
+
+.underlined{
+  text-decoration: underline;
+}
+
+.smallLink:link  {
+  color:rgb(254, 75, 120) !important;
+}
+.smallLink:visited {
+  color:rgb(211, 3, 103) !important;
+}
+.smallLink:hover {
+  color: rgb(290, 14, 61) !important;
+  text-decoration: underline;
 }
 
 .back-button {
   left: 4%;
   position: absolute;
   display: inline-block;
-}
-
-@media only screen and (max-width: 420px) {
-  .back-button {
-    display: none;
-  }
 }
 
 .small-back-button {
@@ -187,15 +181,22 @@ white-space: pre-wrap;
 }
 
 @media only screen and (max-width: 420px) {
+  .back-button {
+    display: none;
+  }
+
   .small-back-button {
     display: inline-block;
     padding: 5px 10px;
   }
 }
 
-
-
 /* General css writes */
+
+img {
+  height: 100%;
+  width: 100%;    
+}
 
 hr {
   color: white;
@@ -203,6 +204,10 @@ hr {
 
 a {
   text-decoration: none;
+}
+
+pre {
+  white-space: pre-wrap;
 }
 
 button {
