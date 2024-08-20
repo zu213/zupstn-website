@@ -9,3 +9,26 @@
     display: inline-block;
     vertical-align: top;
   }
+
+.too-small-charts {
+    display: none;
+    padding: 3vw;
+    padding-top: 10vw;
+}
+
+@media (max-width: 800px) {
+    .intro {
+        padding-top: 5vw;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .too-small-charts {
+        display: block;
+    }
+
+    .chart-container {
+        display: none;
+    }
+}

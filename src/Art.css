@@ -54,6 +54,26 @@
     z-index: 100;
 }
 
+@media only screen and (max-width: 600px) {
+
+    .column {
+        display: inline-block;
+        width: 20%;
+        padding: 6%;
+    }
+
+    .row {
+        padding-left: 0%;
+      }
+
+
+    .overlayContent {
+        width: 60%;
+        top: 15%;
+        left: 20%;
+    }
+  }
+
 /*table view */
 
 .mess-format img {
@@ -78,6 +98,25 @@
     height: 35%;
     position: fixed;
 }
+
+.too-short {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .mess-format {
+        width: 20%;
+    }
+  }
+
+@media only screen and (max-height: 300px) {
+    .tablePage {
+        display: none;
+    }
+    .too-short {
+        display: block;
+    }
+  }
 
 /* other */
 

@@ -23,22 +23,35 @@ function App() {
   let navigate = useNavigate();
   const location = useLocation()
   const defaultBackButton = <button id="back-button" className="back-button" onClick={() => navigate(-1)}>Back</button>;
+  const defaultSmallBackButton = <button id="back-button" className="small-back-button" onClick={() => navigate(-1)}> &#60; </button>;
+
   var [backButton, setBackButton] = useState(defaultBackButton)
+  var [smallBackButton, setSmallBackButton] = useState(defaultSmallBackButton)
 
 
   useEffect(() => {
     if(location.pathname ===  "/zach-upstone" || location.pathname ===  "/" ) {
       setBackButton(null);
+      setSmallBackButton(null);
+
     }else{
       setBackButton(defaultBackButton);
+      setSmallBackButton(defaultSmallBackButton);
     }
-  }, [location.pathname, defaultBackButton])
+  }, [location.pathname, defaultBackButton, defaultSmallBackButton]);
+
+  const onresize = ((event) => {});
+
+  window.addEventListener("resize", onresize);
+
+
 
 
   return(
       <div id="all">
         <br />
         {backButton}
+        {smallBackButton}
         <br />
         <Routes>
           <Route exact path='/' element={<Navigate to='/zach-upstone' />} />
@@ -106,16 +119,18 @@ function Home() {
 function Me() {
   return (
     <div>
-      <a href="mailto:Zac.upstone@gmail.com" target="_blank" rel="noreferrer">Email</a> &nbsp; | &nbsp;
-      <a href="https://www.linkedin.com/in/zachary-upstone-076218214/" target="_blank" rel="noreferrer">LinkedIn</a> &nbsp; | &nbsp;
-      <a href="https://github.com/zu213" target="_blank" rel="noreferrer">Github</a>
+      <div class="link-holder">
+        <a href="mailto:Zac.upstone@gmail.com" target="_blank" rel="noreferrer">Email</a> &nbsp; | &nbsp;
+        <a href="https://www.linkedin.com/in/zachary-upstone-076218214/" target="_blank" rel="noreferrer">LinkedIn</a> &nbsp; | &nbsp;
+        <a href="https://github.com/zu213" target="_blank" rel="noreferrer">Github</a>
+      </div>
 
       <div  className="text-holder">
         <br/>
         Graduate:
         <br/>
         I’m a recently graduated student from the University of Bath, Achieving a First class degree.
-        From my degree I mainly have experience coding with <b>Python, Java and C++</b>. During my 
+        From my degree I mainly have experience coding with <b>Python, Java</b> and <b>C++</b>. During my 
         final year I completed a dissertation on image synthesis with RLHF this can be found on 
         the <Link className="small-link" to="/dissertation">Dissertation page</Link>. As can be 
         seen I have experience with AI specifically Reinforcement Learning and Image synthesis.
@@ -145,7 +160,7 @@ function Me() {
         <br/>
         During my university degree I completed a year long placement at BSquare a company which produces IoT solutions 
         working both in software development and QA. While working at BSquare I gained experience in <b>Angular(TS, HTML CSS)</b> as
-        well as <b>Gherkin, Selenium and Lua</b>.
+        well as <b>Gherkin, Selenium</b> and <b>Lua</b>.
 
         This website is all made by me :), it runs using Github pages and a React framework.
 
@@ -174,7 +189,8 @@ function CV() {
         </a>
         <br/>
         <br/>
-        <embed src={cv} className="pdf-viewer" />
+        <div className='too-small'> Screen size is too small to display pdf, download to view.</div>
+        <embed src={cv+'#view=FitH'} className="pdf-viewer" />
       </div>
   );
 }
@@ -200,7 +216,7 @@ function Dissertation() {
           </figure>
         </div>
         <div  className="inline-structure">
-          <div className="subtitle">
+          <div className="underlined">
             Abstract
           </div>
           <br />

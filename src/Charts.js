@@ -25,50 +25,56 @@ function Charts() {
 
     return (
       <div>
-        <div>
-            <br />
+        <div className='too-small-charts'>
+            Page width is too small to display graphs please try
+             rotating if on phone or expanding window if on computer
+        </div>
+        <div className='chart-container'>
             <div>
-            Graphs showing my ORM(one rep max) on each day I recorded data.
+                <br />
+                <div className='intro'>
+                Graphs showing my ORM(one rep max) on each day I recorded data.
+                </div>
+                <div className="button holder">
+                    <div className="inline-button">
+                        <button  onClick={() => setData(deadliftData)}>Deadlift data</button>
+                    </div>
+                    <div className="inline-button">
+                        <button  onClick={() => setData(squatData)}>Squat data</button>
+                    </div>
+                    <div className="inline-button" >
+                        <button onClick={() => setData(benchData)}>Bench data</button>
+                    </div>
+                </div>
             </div>
-            <div className="button holder">
-                <div className="inline-button">
-                    <button  onClick={() => setData(deadliftData)}>Deadlift data</button>
-                </div>
-                <div className="inline-button">
-                    <button  onClick={() => setData(squatData)}>Squat data</button>
-                </div>
-                <div className="inline-button" >
-                    <button onClick={() => setData(benchData)}>Bench data</button>
-                </div>
-            </div>
-        </div>
-        <br></br>
+            <br></br>
 
-        <div className="chart">
-            <div id="deadlift">
-                <ResponsiveContainer width="100%" aspect={3}>
-                    <LineChart data={data} margin={{ right: 30 }}>
-                        <CartesianGrid fill='white'></CartesianGrid>
-                        <XAxis 
-                        dataKey="date"
-                        tick={{ fill: 'white' }}
-                        tickFormatter={(tick) => formatXAxis(tick)}
-                        type="number"
-                        domain={['auto','auto']}/>
-                        <YAxis
-                        tick={{ fill: 'white' }}
-                        domain={['auto','auto']}/>
-                        <Legend />
-                        <Tooltip />
-                        <Line
-                            dataKey="ORM"
-                            stroke="red"
-                            activeDot={{ r: 8 }}
-                        />
-                    </LineChart>
-                </ResponsiveContainer>
+            <div className="chart">
+                <div id="deadlift">
+                    <ResponsiveContainer width="100%" aspect={3}>
+                        <LineChart data={data} margin={{ right: 30 }}>
+                            <CartesianGrid fill='white'></CartesianGrid>
+                            <XAxis 
+                            dataKey="date"
+                            tick={{ fill: 'white' }}
+                            tickFormatter={(tick) => formatXAxis(tick)}
+                            type="number"
+                            domain={['auto','auto']}/>
+                            <YAxis
+                            tick={{ fill: 'white' }}
+                            domain={['auto','auto']}/>
+                            <Legend />
+                            <Tooltip />
+                            <Line
+                                dataKey="ORM"
+                                stroke="red"
+                                activeDot={{ r: 8 }}
+                            />
+                        </LineChart>
+                    </ResponsiveContainer>
+                </div>
             </div>
-        </div>
+          </div>
       </div>
     )
   }

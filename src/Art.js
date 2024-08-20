@@ -214,79 +214,84 @@ var galleryPage = (
 
 var tablePage = (
   <div>
-    <div>
-      Click and image to pick it up and click again to put it back down where the cursor is.
-      <br />
-      <button onClick={pagePosition}> Shuffle table </button>
+    <div className='too-short'>
+      Page is too short please adjust !
     </div>
-    <div className="canvas">        
-      <div className="mess-format" id="purpleHair" onClick={() => movingImage === null && movePosition('purpleHair') }>
-        <img src={purpleHair} alt="Purple hair"></img>
+    <div className='tablePage'>
+      <div>
+        Click and image to pick it up and click again to put it back down where the cursor is.
+        <br />
+        <button onClick={pagePosition}> Shuffle table </button>
       </div>
-      <div className="mess-format" id="blueHair" onClick={() => movingImage === null && movePosition('blueHair')}>
-        <img src={blueHair} alt="Blue hair"></img>
-      </div>
-      <div className="mess-format" id="collageWall" onClick={() => movingImage === null && movePosition('collageWall')}>
-        <img src={collageWall} alt="Collage wall"></img>
-      </div>
-      <div className="mess-format" id="goldenEye1" onClick={() => movingImage === null && movePosition('goldenEye1')}>
-        <img src={goldenEye1} alt="Golden eye 1"></img>
-      </div>
-      <div className="mess-format" id="goldenEye2" onClick={() => movingImage === null && movePosition('goldenEye2')}>
-        <img src={goldenEye2} alt="Golden eye 2"></img>
-      </div>
-      <div className="mess-format" id="goldenEye3" onClick={() => movingImage === null && movePosition('goldenEye3')}>
-        <img src={goldenEye3} alt="Golden eye 3"></img>
-      </div>
-      <div className="mess-format" id="goldenEye4" onClick={() => movingImage === null && movePosition('goldenEye4')}>
-        <img src={goldenEye4} alt="Golden eye 4"></img>
-      </div>
-      <div className="mess-format" id="goldenEye5" onClick={() => movingImage === null && movePosition('goldenEye5')}>
-        <img src={goldenEye5} alt="Golden eye 5"></img>
-      </div>
-      <div className="mess-format" id="goldenEye6" onClick={() => movingImage === null && movePosition('goldenEye6')}>
-        <img src={goldenEye6} alt="Golden eye 6"></img>
-      </div>
-      <div className="mess-format" id="eyes1" onClick={() => movingImage === null && movePosition('eyes1')}>
-        <img src={eyes1} alt="Eyes 1"></img>
-      </div>
-      <div className="mess-format" id="eyes2" onClick={() => movingImage === null && movePosition('eyes2')}>
-        <img src={eyes2} alt="Eyes 1"></img>
-      </div>
-      <div className="mess-format" id="redEye" onClick={() => movingImage === null && movePosition('redEye')}>
-        <img src={redEye} alt="Red eye "></img>
-      </div>
-      <div className="mess-format" id="magpies" onClick={() => movingImage === null && movePosition('magpies')}>
-        <img src={magpies} alt="Magpies"></img>
-      </div>
-      <div className="mess-format" id="wagtails" onClick={() => movingImage === null && movePosition('wagtails')}>
-        <img src={wagtails} alt="Wagtails"></img>
-      </div>
-      <div className="mess-format" id="yellowTree" onClick={() => movingImage === null && movePosition('yellowTree')}>
-        <img src={yellowTree} alt="Yellow tree"></img>
-      </div>
-      <div className="mess-format" id="mononokeMask" onClick={() => movingImage === null && movePosition('mononokeMask')}>
-        <img src={mononokeMask} alt="Mononoke"></img>
-      </div>
-      <div className="mess-format" id="tenguMask" onClick={() => movingImage === null && movePosition('tenguMask')}>
-        <img src={tenguMask} alt="Tengu"></img>
-      </div>
-      <div className="mess-format" id="newMask" onClick={() => movingImage === null && movePosition('newMask')}>
-        <img src={newMask} alt="New"></img>
-      </div>
-      <div className="mess-format" id="goldenMask" onClick={() => movingImage === null && movePosition('goldenMask')}>
-        <img src={goldenMask} alt="Golden"></img>
-      </div>
-      <div className="mess-format" id="tessaRed" onClick={() => movingImage === null && movePosition('tessaRed')}>
-        <img src={tessaRed} alt="Tessa red"></img>
-      </div>
-      <div className="mess-format" id="tessaYellow" onClick={() =>movingImage === null &&  movePosition('tessaYellow')}>
-        <img src={tessaYellow} alt="Tessa yellow"></img>
-      </div>
-      <div className="mess-format" id="tessaBoth" onClick={() => movingImage === null && movePosition('tessaBoth')}>
-        <img src={tessaBoth} alt="Tessa's"></img>
-      </div>
-   </div> 
+      <div className="canvas">        
+        <div className="mess-format" id="purpleHair" onClick={() => movingImage === null && movePosition('purpleHair') }>
+          <img src={purpleHair} alt="Purple hair"></img>
+        </div>
+        <div className="mess-format" id="blueHair" onClick={() => movingImage === null && movePosition('blueHair')}>
+          <img src={blueHair} alt="Blue hair"></img>
+        </div>
+        <div className="mess-format" id="collageWall" onClick={() => movingImage === null && movePosition('collageWall')}>
+          <img src={collageWall} alt="Collage wall"></img>
+        </div>
+        <div className="mess-format" id="goldenEye1" onClick={() => movingImage === null && movePosition('goldenEye1')}>
+          <img src={goldenEye1} alt="Golden eye 1"></img>
+        </div>
+        <div className="mess-format" id="goldenEye2" onClick={() => movingImage === null && movePosition('goldenEye2')}>
+          <img src={goldenEye2} alt="Golden eye 2"></img>
+        </div>
+        <div className="mess-format" id="goldenEye3" onClick={() => movingImage === null && movePosition('goldenEye3')}>
+          <img src={goldenEye3} alt="Golden eye 3"></img>
+        </div>
+        <div className="mess-format" id="goldenEye4" onClick={() => movingImage === null && movePosition('goldenEye4')}>
+          <img src={goldenEye4} alt="Golden eye 4"></img>
+        </div>
+        <div className="mess-format" id="goldenEye5" onClick={() => movingImage === null && movePosition('goldenEye5')}>
+          <img src={goldenEye5} alt="Golden eye 5"></img>
+        </div>
+        <div className="mess-format" id="goldenEye6" onClick={() => movingImage === null && movePosition('goldenEye6')}>
+          <img src={goldenEye6} alt="Golden eye 6"></img>
+        </div>
+        <div className="mess-format" id="eyes1" onClick={() => movingImage === null && movePosition('eyes1')}>
+          <img src={eyes1} alt="Eyes 1"></img>
+        </div>
+        <div className="mess-format" id="eyes2" onClick={() => movingImage === null && movePosition('eyes2')}>
+          <img src={eyes2} alt="Eyes 1"></img>
+        </div>
+        <div className="mess-format" id="redEye" onClick={() => movingImage === null && movePosition('redEye')}>
+          <img src={redEye} alt="Red eye "></img>
+        </div>
+        <div className="mess-format" id="magpies" onClick={() => movingImage === null && movePosition('magpies')}>
+          <img src={magpies} alt="Magpies"></img>
+        </div>
+        <div className="mess-format" id="wagtails" onClick={() => movingImage === null && movePosition('wagtails')}>
+          <img src={wagtails} alt="Wagtails"></img>
+        </div>
+        <div className="mess-format" id="yellowTree" onClick={() => movingImage === null && movePosition('yellowTree')}>
+          <img src={yellowTree} alt="Yellow tree"></img>
+        </div>
+        <div className="mess-format" id="mononokeMask" onClick={() => movingImage === null && movePosition('mononokeMask')}>
+          <img src={mononokeMask} alt="Mononoke"></img>
+        </div>
+        <div className="mess-format" id="tenguMask" onClick={() => movingImage === null && movePosition('tenguMask')}>
+          <img src={tenguMask} alt="Tengu"></img>
+        </div>
+        <div className="mess-format" id="newMask" onClick={() => movingImage === null && movePosition('newMask')}>
+          <img src={newMask} alt="New"></img>
+        </div>
+        <div className="mess-format" id="goldenMask" onClick={() => movingImage === null && movePosition('goldenMask')}>
+          <img src={goldenMask} alt="Golden"></img>
+        </div>
+        <div className="mess-format" id="tessaRed" onClick={() => movingImage === null && movePosition('tessaRed')}>
+          <img src={tessaRed} alt="Tessa red"></img>
+        </div>
+        <div className="mess-format" id="tessaYellow" onClick={() =>movingImage === null &&  movePosition('tessaYellow')}>
+          <img src={tessaYellow} alt="Tessa yellow"></img>
+        </div>
+        <div className="mess-format" id="tessaBoth" onClick={() => movingImage === null && movePosition('tessaBoth')}>
+          <img src={tessaBoth} alt="Tessa's"></img>
+        </div>
+    </div> 
+    </div>
   </div>
 )
 
