@@ -4,6 +4,7 @@ import { Route, Navigate, Routes, Link, useLocation, useNavigate} from 'react-ro
 import './styleFiles/App.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useCallback } from 'react'
 
 // Page imports
 import Art from './Art.js'
@@ -23,10 +24,13 @@ function App() {
   // declare important variables
   let navigate = useNavigate();
   const location = useLocation()
-  const defaultBackButton = <button id="back-button" className="back-button"
-   onClick={() => navigate(-1)}>Back</button>;
-  const defaultSmallBackButton = <button id="back-button" className="small-back-button"
-   onClick={() => navigate(-1)}> &#60; </button>;
+  const defaultBackButton = useCallback(() => {
+    return(<button id="backButton" className="backButton" onClick={() => navigate(-1)}>Back</button>)},
+     [navigate]);
+  const defaultSmallBackButton = useCallback(() => {
+    return(<button id="smallBackButton" className="smallBackButton" onClick={() => navigate(-1)}> &#60; </button>)},
+     [navigate]);
+
 
   var [backButton, setBackButton] = useState(defaultBackButton)
   var [smallBackButton, setSmallBackButton] = useState(defaultSmallBackButton)
@@ -114,7 +118,7 @@ function Home() {
 function Me() {
   return (
     <div>
-      <div class="linkHolder">
+      <div className="linkHolder">
         <a href="mailto:Zac.upstone@gmail.com" target="_blank" rel="noreferrer">Email</a> &nbsp; | &nbsp;
         <a href="https://www.linkedin.com/in/zachary-upstone-076218214/" target="_blank" rel="noreferrer">LinkedIn</a> &nbsp; | &nbsp;
         <a href="https://github.com/zu213" target="_blank" rel="noreferrer">Github</a>
@@ -153,11 +157,14 @@ function Me() {
         <br/>
         Programmer:
         <br/>
-        During my university degree I completed a year long placement at BSquare a company which produces IoT solutions 
-        working both in software development and QA. While working at BSquare I gained experience in <b>Angular(TS, HTML CSS)</b> as
+        During my university degree I completed a year long placement at&nbsp;
+        <a className="smallLink" href="https://www.kontron-americas.com/" >BSquare</a> a 
+        company which produces IoT solutions working both in software development and QA. 
+        While working at BSquare I gained experience in <b>Angular(TS, HTML CSS)</b> as
         well as <b>Gherkin, Selenium</b> and <b>Lua</b>.
 
-        This website is all made by me :), it runs using Github pages and a React framework.
+        This website is all made by me :), it runs using Github pages and a React framework. 
+        My CV can be found <Link className="smallLink" to="/cv">here</Link>.
 
         <br/>
         <br/>
@@ -212,21 +219,23 @@ function Dissertation() {
         </div>
         <div  className="dissInlineStructure">
           <div className="underlined">
-            Abstract
+            Summary
           </div>
           <br />
           <div className="leftAlign">
-            Image Synthesis within the domain of art remains a difficult task due to its complex and human
-            nature. Many current models either suffer from insufficient user control or inadequate output
-            quality. This dissertation employs Reinforcement Learning Human Feedback (RLHF) as a
-            solution to resolve both these problems simultaneously. A "feedback loop" model is presented
-            that overlays an existing model. This allows for the refinement of output images by a user,
-            thus improving control. This method also allows for the collection of losses from the user’s
-            choices to allow for further updates to the underlying network. This effectively enables the
-            model to learn from a user. The results produced by this dissertation show a quantitative
-            improvement in user control over baseline models. They also show the qualitative success of
-            the RLHF implementation. However, further analysis is required to confirm whether this RLHF
-            implementation improves output quality.
+            My <a href={dissertation} className="smallLink" download="Zachary Upstone Dissertation">Dissertation</a>&nbsp;
+            focused on  Image Synthesis within the domain of art. It employed Reinforcement 
+            Learning Human Feedback (RLHF) as a potential improvement to current generative models quality 
+            and control. As can be seen by the <Link className="smallLink" to="/gallery"> Gallery page</Link> I have a keen interest in art, this
+            model presents a "feedback loop" to allow user control in hopes that artists could use this tool.
+            From this loop of user inputs the underlying model is able to improve the quality of its outputs; 
+            how this data is collected and used is explained  in dept in my dissertation. My results shwoed the 
+            quantitiative success of improved control. More details about me including contact information can be
+            found on the <Link  className="smallLink" to="/me">About Me page</Link>.
+            <br />
+            <br />
+            The tool produced by my dissertation can be found in this&nbsp;
+            <a href="https://github.bath.ac.uk/zu213/Dissertation-code" className="smallLink" target="_blank" rel="noreferrer">repository</a>.
           </div>
         </div>
       </div>

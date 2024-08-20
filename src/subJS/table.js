@@ -156,7 +156,8 @@ export const tablePage = (
 
         // Also need to disable other dangerous buttons
         document.getElementById("galleryButton").disabled = true;
-        document.getElementById("back-button").disabled = true;
+        document.getElementById("backButton").disabled = true;
+        document.getElementById("smallBackButton").disabled = true;
   
         // change styles
         const body = document.getElementById("all");
@@ -186,7 +187,9 @@ export const tablePage = (
   
         // renable buttons
         document.getElementById("galleryButton").disabled = false;
-        document.getElementById("back-button").disabled = false;
+        document.getElementById("backButton").disabled = false;
+        document.getElementById("smallBackButton").disabled = false;
+
       }
     }, 1);
   }

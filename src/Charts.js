@@ -13,7 +13,6 @@ import {
     XAxis,
     YAxis,
     CartesianGrid,
-    Label,
   } from "recharts";
 
 const formatXAxis = (tickFormat) => {

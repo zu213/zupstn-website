@@ -86,7 +86,7 @@
 }
 
 .downloadImage {
-  width: 2vw
+  width: 10px
 }
 
 .tooSmallCV {
@@ -94,9 +94,6 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .downloadImage {
-    width: 4vw;
-  }
   .pdf-viewer {
     display: none;
   }
@@ -168,24 +165,24 @@
   text-decoration: underline;
 }
 
-.back-button {
+.backButton {
   left: 4%;
   position: absolute;
   display: inline-block;
 }
 
-.small-back-button {
+.smallBackButton {
   left: 4%;
   position: absolute;
   display: none;
 }
 
 @media only screen and (max-width: 420px) {
-  .back-button {
+  .backButton {
     display: none;
   }
 
-  .small-back-button {
+  .smallBackButton {
     display: inline-block;
     padding: 5px 10px;
   }

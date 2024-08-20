@@ -200,7 +200,7 @@ function overlayImage(imageId) {
     if(currentOverlay === null){
       const overlayElement = document.getElementById(imageId+'-overlay');
       overlayElement.style.display = 'block';
-      const overlay = document.getElementById('overlay');
+      const overlay = document.getElementById("overlay");
       overlay.style.display = 'block';
       currentOverlay = imageId;
     }
@@ -210,7 +210,7 @@ function removeOverlay() {
     if(currentOverlay !== null){
       const overlayElement = document.getElementById(currentOverlay+'-overlay');
       overlayElement.style.display = 'none';
-      const overlay = document.getElementById('overlay');
+      const overlay = document.getElementById("overlay");
       overlay.style.display = 'none';
       currentOverlay = null;
     }
