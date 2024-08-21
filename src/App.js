@@ -12,12 +12,12 @@ import Charts from './Charts.js';
 
 // document imports
 import cv from './documents/CV.pdf'
-import dissertation from  './documents/Dissertation-small.pdf'
 
 // Image imports
 import dissertationUI from './images/di-ui.png'
 import download from './images/white-download.png'
 
+const dissertation = 'https://s3-eu-north-1.amazonaws.com/zudissertationbucket/Dissertation.pdf'
 
 // main app
 function App() {
