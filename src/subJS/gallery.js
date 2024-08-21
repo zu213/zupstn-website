@@ -27,6 +27,7 @@ var currentOverlay = null;
 export const galleryPage = (
     <div>
       Click on images to enlarge them.
+      <br />
       <div className="artSubtitle">
           Eyes
       </div>

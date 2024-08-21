@@ -93,7 +93,11 @@
   display: none;
 }
 
-@media only screen and (max-width: 400px) {
+.safariCV {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
   .pdf-viewer {
     display: none;
   }
@@ -106,6 +110,15 @@
   .pdf-viewer {
     height: 100vw;
   }
+}
+
+/* Safari 7.1+ */
+
+_::-webkit-full-page-media, _:future, :root .safariCV {
+  display: block;
+}
+_::-webkit-full-page-media, _:future, :root .pdf-viewer {
+  display: none;
 }
 
 /* diss page */
