@@ -1,6 +1,6 @@
 
 // Normal imports
-import { Route, Navigate, Routes, Link, useLocation, useNavigate} from 'react-router-dom';
+import { Route, Routes, Link, useLocation, useNavigate} from 'react-router-dom';
 import './styleFiles/App.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -55,9 +55,7 @@ function App() {
         {smallBackButton}
         <br />
         <Routes>
-          <Route exact path='/' element={<Navigate to='/zach-upstone' />} />
-
-          <Route path='/zach-upstone' element={<Home/>} />
+          <Route exact path='/' element={<Home/>} />
           
           <Route path='/me' element={<Me/>} />
 
@@ -125,6 +123,9 @@ function Me() {
       </div>
 
       <div  className="textHolder">
+        <br/>
+        Who am I?
+        <br/>
         <br/>
         Graduate:
         <br/>
