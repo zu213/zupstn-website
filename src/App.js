@@ -12,7 +12,7 @@ import Charts from './Charts.js';
 
 // document imports
 import cv from './documents/CV.pdf'
-import dissertation from  './documents/Dissertation.pdf'
+import dissertation from  './documents/Dissertation-small.pdf'
 
 // Image imports
 import dissertationUI from './images/di-ui.png'
