@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.24bf14d7.css",
-    "main.js": "/static/js/main.89de2fc2.js",
+    "main.css": "/static/css/main.1cd8ae5b.css",
+    "main.js": "/static/js/main.28778446.js",
     "static/media/Dissertation.pdf": "/static/media/Dissertation.26d4e0b571b9e36eddb7.pdf",
     "static/media/wagtails.jpg": "/static/media/wagtails.6eca93386474ca868477.jpg",
     "static/media/magpies.jpg": "/static/media/magpies.0de8aae73f43343a04be.jpg",
@@ -28,11 +28,11 @@
     "static/media/eyes.jpg": "/static/media/eyes.daf190b1ee304271cef2.jpg",
     "static/media/yellow-tree.jpg": "/static/media/yellow-tree.973caebb6f2d91e96ff6.jpg",
     "index.html": "/index.html",
-    "main.24bf14d7.css.map": "/static/css/main.24bf14d7.css.map",
-    "main.89de2fc2.js.map": "/static/js/main.89de2fc2.js.map"
+    "main.1cd8ae5b.css.map": "/static/css/main.1cd8ae5b.css.map",
+    "main.28778446.js.map": "/static/js/main.28778446.js.map"
   },
   "entrypoints": [
-    "static/css/main.24bf14d7.css",
-    "static/js/main.89de2fc2.js"
+    "static/css/main.1cd8ae5b.css",
+    "static/js/main.28778446.js"
   ]
 }
