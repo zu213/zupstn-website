@@ -28,6 +28,7 @@ export const galleryPage = (
     <div>
       Click on images to enlarge them.
       <br />
+      <br />
       <div className="artSubtitle">
           Eyes
       </div>
@@ -50,8 +51,6 @@ export const galleryPage = (
           <div className="imageColumn">
             <img src={goldenEye6} alt="Golden eye 6" onClick={() => overlayImage('goldenEye6')}></img>
           </div>
-        </div>
-        <div className="imageRow">
           <div className="imageColumn">
             <img src={eyes1} alt="Eyes 1" onClick={() => overlayImage('eyes1')}></img>
           </div>
@@ -105,9 +104,6 @@ export const galleryPage = (
             <div className="imageColumn">
               <img src={purpleHair} alt="Purple hair" onClick={() => overlayImage('purpleHair')}></img>
             </div>
-          </div>
-  
-          <div className="imageRow">
             <div className="imageColumn">
               <img src={magpies} alt="Magpies" onClick={() => overlayImage('magpies')}></img>
             </div>
@@ -118,6 +114,7 @@ export const galleryPage = (
               <img src={yellowTree} alt="Yellow tree" onClick={() => overlayImage('yellowTree')}></img>
             </div>
         </div>
+        <br />
           
   
   

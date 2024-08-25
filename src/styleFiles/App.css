@@ -49,6 +49,15 @@
   left: 33%;
 }
 
+
+.bigAsciiArt {
+  font-size: 3px;
+  white-space: pre-line;
+  position: absolute;
+  bottom: 0%;
+  left: 33%;
+}
+
 @media only screen and (max-width: 600px) {
   .searchLinksLeft {
     font-size: 4vw;

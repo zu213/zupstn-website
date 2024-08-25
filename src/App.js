@@ -8,6 +8,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Art from './Art.js'
 import Charts from './Charts.js';
 import Dissertation from './Dissertation.js';
+import { asciiArt, asciiArtBig } from './asciiArt.js';
 
 // document imports
 import cv from './documents/CV.pdf'
@@ -15,11 +16,13 @@ import cv from './documents/CV.pdf'
 // Image imports
 import download from './images/white-download.png'
 
+let chosenArt;
 // main app
 function App() {
   // declare important variables
   let navigate = useNavigate();
   const location = useLocation()
+
   const defaultBackButton = useCallback(() => {
     return(<button id="backButton" className="backButton" onClick={() => navigate(-1)}>Back</button>)},
      [navigate]);
@@ -43,6 +46,8 @@ function App() {
     }
   }, [location.pathname, defaultBackButton, defaultSmallBackButton]);
 
+  //pick ascii art
+  pickArt();
 
   return(
       <div id="all">
@@ -95,16 +100,8 @@ function Home() {
         <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
       </div>
 
-      <div className='asciiArt'>
-      <pre>
-            ------ <br />
-            | 0 0 |  <br />
-            |  _  |  <br />
-            ------ <br />
-            /      \ <br />
-           |       | <br />
-        </pre>
-      </div>
+      {chosenArt}
+
     </div>
   );
 }
@@ -202,6 +199,24 @@ function NotFound() {
       Subpage not found!
     </div>
   )
+}
+
+function pickArt() {
+  const chosenArtNumber = Math.floor(Math.random() * asciiArt.length)
+  chosenArt =     (
+  <div className='asciiArt'>
+    {asciiArt[chosenArtNumber]}
+  </div>
+  );
+
+  // one in a hundered chance of being tessa
+  if(Math.floor(Math.random() * 100) === 99){
+    chosenArt= (
+    <div className='bigAsciiArt'>
+      {asciiArtBig}
+    </div>
+    );
+  }
 }
 
 export default App;
