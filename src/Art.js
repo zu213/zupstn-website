@@ -47,7 +47,9 @@ function Art() {
             <button id="galleryButton" className='galleryButton' onClick={toGallery}> Gallery View </button>
           </div>
           <div className="inlineButton">
-            <button id="tableButton" onClick={toTable}> Table View </button>
+            <div className='border'>
+            <button id="tableButton" class="imgContainer" onClick={toTable}> Table View </button>
+            </div>
           </div>
 
           {page}
