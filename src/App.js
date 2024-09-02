@@ -85,6 +85,9 @@ function Home() {
                   Zach Upstone             
               </Link>
             </div>
+            <div className='tagLine'>
+              - Graduate, programmer and artist
+            </div>
           </div>
         <br/>
 

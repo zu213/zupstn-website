@@ -40,8 +40,11 @@ function Art() {
       return (
         <div>
           <div className="underlined">
-              Art Gallery
-          </div>
+              Art Gallery <br />
+          </div>              
+          <div>
+              All art is made by me (zach) <br />
+          </div>   
 
           <div className="inlineButton" >
             <button id="galleryButton" className='galleryButton' onClick={toGallery}> Gallery View </button>
