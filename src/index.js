@@ -13,6 +13,12 @@ root.render(
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
     
     <HashRouter>
+      <head>
+        <meta name="description" content="Zach Upstone's personal website" />
+        <meta name="keywords" content="Zach Upstone, Zachary Upstone, Zach, Upstone, Graduate, Porgrammer, Developer, Artist" />
+        <meta name="author" content="Zach Upstone, Zachary Upstone" />
+      </head> 
+
       <App className="no-scroll" />
     </HashRouter>
   </React.StrictMode>
