@@ -162,7 +162,7 @@ async function runDiss () {
     //const img = await fetch("https://zu-api-97613761704.europe-north1.run.app/option1");
 
     if(response.status === 200){
-      await delay(10000) 
+      await delay(5000) 
       const element = document.getElementById('imagesContainer');
       element.className = "";
       const option1 = document.getElementById("option1img")
@@ -199,7 +199,7 @@ async function makeDissChoice (choice) {
   document.getElementById('inputStyle').src = `https://zu-api-97613761704.europe-north1.run.app/option/${choice}`;
   const response = await fetch(`https://zu-api-97613761704.europe-north1.run.app/choice/${choice}`, { signal: AbortSignal.timeout(40000) });
   if(response.status === 200){
-    await delay(1000) 
+    await delay(5000) 
     const option1 = document.getElementById("option1img")
     const option2 = document.getElementById("option2img")
     const option3 = document.getElementById("option3img")
