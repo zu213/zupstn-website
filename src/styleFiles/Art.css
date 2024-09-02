@@ -72,21 +72,64 @@
 
 /*table view */
 
-.messFormat img {
-    border: solid 3px transparent;
-}
-
-.messFormat {
+.messFormat{
     position: absolute;
     width: 10%;
     height: auto;
-    transition: background-position 2s;
+    
+    }
+
+.messFormat img {
+    width: 90%;
+    padding: 10px;
 }
 
-.messFormat img:hover {
-    border: 3px dashed rgb(290, 14, 61);
-    cursor: -webkit-grab; cursor: grab;
+.messFormat img:hover{
+    background: -webkit-linear-gradient(0deg, blue 50%, transparent 50%), -webkit-linear-gradient(0deg, blue 50%, transparent 50%), -webkit-linear-gradient(90deg, blue 50%, transparent 50%), -webkit-linear-gradient(90deg, blue 50%, transparent 50%);
+    background: -moz-linear-gradient(90deg, blue 50%, transparent 50%), -moz-linear-gradient(90deg, blue 50%, transparent 50%), -moz-linear-gradient(0deg, blue 50%, transparent 50%), -moz-linear-gradient(0deg, blue 50%, transparent 50%);
+    background: linear-gradient(90deg, blue 50%, transparent 50%), linear-gradient(90deg, blue 50%, transparent 50%), linear-gradient(0deg, blue 50%, transparent 50%), linear-gradient(0deg, blue 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-position:  0% 0%, 100% 100%, 0% 100%, 100% 0%; 
+    background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
 }
+
+.messFormatAnimate {
+    position: absolute;
+    width: 10%;
+}
+
+.messFormatAnimate img {
+    width: 90%;
+    background: -webkit-linear-gradient(0deg, blue 50%, transparent 50%), -webkit-linear-gradient(0deg, blue 50%, transparent 50%), -webkit-linear-gradient(90deg, blue 50%, transparent 50%), -webkit-linear-gradient(90deg, blue 50%, transparent 50%);
+    background: -moz-linear-gradient(90deg, blue 50%, transparent 50%), -moz-linear-gradient(90deg, blue 50%, transparent 50%), -moz-linear-gradient(0deg, blue 50%, transparent 50%), -moz-linear-gradient(0deg, blue 50%, transparent 50%);
+    background: linear-gradient(90deg, blue 50%, transparent 50%), linear-gradient(90deg, blue 50%, transparent 50%), linear-gradient(0deg, blue 50%, transparent 50%), linear-gradient(0deg, blue 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
+    background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0%; 
+    padding: 10px;
+    -webkit-animation: border-dance 2s infinite linear;
+    -moz-animation: border-dance 2s infinite linear;
+    animation: border-dance 2s infinite linear;
+}
+
+@-webkit-keyframes border-dance{
+    0%{background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0%;}
+    100%{background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;}
+}
+@-moz-keyframes border-dance{
+    0%{background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0%;}
+    100%{background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;}
+}
+@keyframes border-dance{
+    0%{background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0%;}
+    100%{background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;}
+}
+ 
+.imgContainer {
+    background-color: white;
+}
+  
+  
 
 .canvas {
     padding-left: 10%;

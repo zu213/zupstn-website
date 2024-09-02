@@ -1,3 +1,5 @@
+import '../styleFiles/Art.css'
+
 // Image imports
 import goldenEye1 from '../images/golden-eye-1.jpg'
 import goldenEye2 from '../images/golden-eye-2.jpg'
@@ -162,8 +164,8 @@ export const tablePage = (
         // change styles
         const body = document.getElementById("all");
         body.style.cursor = "grabbing"
-        const img = element.getElementsByTagName("img")[0]
-        img.style.border = "3px solid rgb(290, 14, 61)";
+        
+        element.className = "messFormatAnimate";
 
         // make sure iamge comes to top
         currentZ += 1;
@@ -182,8 +184,7 @@ export const tablePage = (
         const body = document.getElementById("all");
         body.style.cursor = "context-menu"
         
-        const img = element.getElementsByTagName("img")[0]
-        img.style.border = "3px solid transparent";
+        element.className = "messFormat";
   
         // renable buttons
         document.getElementById("galleryButton").disabled = false;
