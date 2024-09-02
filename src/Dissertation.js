@@ -14,6 +14,7 @@ let sketchImg = ''
 let styleImg = ''
 let sketchUploaded = false;
 let styleUploaded = false;
+let errorResponse = ''
 
 let currentSketchFile;
 let currentStyleFile;
@@ -40,6 +41,8 @@ function clearOptions() {
   option1.className=''
   option2.className=''
   option3.className=''
+  const errorMsg = document.getElementById("errorMsg");
+  errorMsg.className = 'errorMsg'
 }
 
 function changeButton(buttonId, disable){
@@ -66,6 +69,12 @@ function hideDiv(divId, hide, button=null){
         genTick.style.left = '0.8vw'
       }
   }
+}
+
+function displayErrorMessage(e) {
+  errorResponse = e;
+  const errorMsg = document.getElementById("errorMsg");
+  errorMsg.className = ''
 }
 
 // function to let users pick an iamge from their folders and update styles accordingly
@@ -183,6 +192,7 @@ async function runDiss () {
 
     }else{
       alert(`Something went wrong trying to send your image choice. Status code: ${response.status}`);
+      displayErrorMessage(response)
     }
   }else{
     alert("Either input sketch or input style has not been properly uploaded !");
@@ -215,6 +225,8 @@ async function makeDissChoice (choice) {
 
   }else{
     alert(`Something went wrong trying to send your image choice. Status code: ${response.status}`);
+    displayErrorMessage(response)
+
   }
   hideDiv('loader', true)
 
@@ -275,7 +287,8 @@ function Dissertation() {
 
         <div className='dissContainer'>
         <div className="underlined">
-              Dissertation tool
+              Dissertation tool <br />
+              (This is currently unstable as it is experimental, if it fails refresh the page and try again)
           </div>
         <div className='dissToolText'>
           <br />
@@ -291,9 +304,8 @@ function Dissertation() {
             <div className='inlineInput'>
                 Sketch Input 
                 <br/>
-                <br/>
                 <img className='inputImage' src={sketchImg} alt='' id="inputSketch" ></img>
-                <input type="file" id="uploadSketch" onChange={uploadSketch} />
+                <input className='inputBrowse' type="file" id="uploadSketch" onChange={uploadSketch} />
                 <br />
                 <button className='submitButton' id='sketchButton' onClick={submitSketch}>
                   Submit sketch
@@ -303,9 +315,8 @@ function Dissertation() {
             <div className='inlineInput'>
                 Style Input 
                 <br/>
-                <br/>
                 <img className='inputImage' src={styleImg} alt='' id="inputStyle"></img>
-                <input type="file" id="uploadStyle" onChange={uploadStyle} />
+                <input className='inputBrowse' type="file" id="uploadStyle" onChange={uploadStyle} />
                 <br />
                 <div>
                   <button className='submitButton' id='styleButton' onClick={submitStyle}>
@@ -316,6 +327,9 @@ function Dissertation() {
             </div>
           </div>
           <button className='submitButton' id="runButton" onClick={runDiss}> Generate images </button>
+          <div className='errorMsg' id='errorMsg'>
+            Error: something went wrong during the generation process api response is {errorResponse}.
+          </div>
           <div className='inline'>
             <div id="loader" className='loader'></div>
             <img className='tick' src={tick} alt='' id="genTick"></img>
@@ -324,23 +338,18 @@ function Dissertation() {
             <div className='imageChoice'>
                 Option 1
                 <br/>
-                <br/>
                 <img  src={option1} alt='' id="option1img" onClick={() => makeDissChoice(1)}></img>
             </div>
             <div className='imageChoice'>
                 Option 2
-                <br/>
                 <br/>
                 <img src={option2} alt='' id="option2img" onClick={() => makeDissChoice(2)}></img>
             </div>
             <div className='imageChoice'>
                 Option 3 
                 <br/>
-                <br/>
                 <img src={option3} alt='' id="option3img" onClick={() => makeDissChoice(3)}></img>
             </div>
-            <br />
-            <br />
           </div>
         </div>
         </div>
