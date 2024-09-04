@@ -39,11 +39,11 @@ function Art() {
 
       return (
         <div>
-          <div className="underlined">
-              Art Gallery <br />
+          <div className="subTitle">
+              Gallery <br />
           </div>              
           <div>
-              All art is made by me (zach) <br />
+              All art is made by me (Zach) <br />
           </div>   
 
           <div className="inlineButton" >
@@ -51,7 +51,7 @@ function Art() {
           </div>
           <div className="inlineButton">
             <div className='border'>
-            <button id="tableButton" class="imgContainer" onClick={toTable}> Table View </button>
+            <button id="tableButton" className="imgContainer" onClick={toTable}> Table View </button>
             </div>
           </div>
 

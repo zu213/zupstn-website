@@ -120,11 +120,13 @@ function Me() {
 
       <div  className="textHolder">
         <br/>
+        <div className='subTitle'>
         Who am I?
+        </div>
         <br/>
-        <br/>
+        <div className='subSubTitle'>
         Graduate:
-        <br/>
+        </div>
         I’m a recently graduated student from the University of Bath, Achieving a First class degree.
         From my degree I mainly have experience coding with <b>Python, Java</b> and <b>C++</b>. During my 
         final year I completed a dissertation on image synthesis with RLHF this can be found on 
@@ -152,12 +154,13 @@ function Me() {
 
         <br/>
         <br/>
+        <div className='subSubTitle'>
         Programmer:
-        <br/>
+        </div>
         During my university degree I completed a year long placement at&nbsp;
-        <a className="smallLink" href="https://www.kontron-americas.com/" >BSquare</a> a 
+        <a className="smallLink" href="https://www.kontron-americas.com/" >BSQUARE</a> a 
         company which produces IoT solutions working both in software development and QA. 
-        While working at BSquare I gained experience in <b>Angular(TS, HTML CSS)</b> as
+        While working at BSQUARE I gained experience in <b>Angular(TS, HTML CSS)</b> as
         well as <b>Gherkin, Selenium</b> and <b>Lua</b>.
 
         This website is all made by me :), it runs using Github pages and a React framework. 
@@ -165,14 +168,16 @@ function Me() {
 
         <br/>
         <br/>
+        <div className='subSubTitle'>
         Artist:
-        <br/>
-        All my art stuff can be seen on the <Link className="smallLink" to="/gallery">Gallery page</Link>.
+        </div>
+        All my art can be seen on the <Link className="smallLink" to="/gallery">Gallery page</Link>.
 
         <br/>
         <br/>
+        <div className='subSubTitle'>
         Fitness enthusiast:
-        <br/>
+        </div>
         Gym charts for fun can be seen on the <Link className="smallLink" to="/charts">Charts page</Link>.
       </div>
     </div>

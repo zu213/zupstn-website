@@ -94,8 +94,8 @@
 
 .textHolder {
   padding: 1vw;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 7%;
+  padding-right: 7%;
   text-align: left;
 }
 
@@ -151,8 +151,7 @@ _::-webkit-full-page-media, _:future, :root .pdf-viewer {
 /* diss page */
 
 .dissSubtitle {
-  text-decoration: underline;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .inlineButton {
@@ -226,6 +225,14 @@ _::-webkit-full-page-media, _:future, :root .pdf-viewer {
     display: inline-block;
     padding: 5px 10px;
   }
+}
+
+.subTitle{
+  font-size: 17px;
+}
+
+.subSubTitle{
+  font-weight: bold;
 }
 
 

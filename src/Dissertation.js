@@ -72,9 +72,11 @@ function hideDiv(divId, hide, button=null){
 }
 
 function displayErrorMessage(e) {
-  errorResponse = e;
-  const errorMsg = document.getElementById("errorMsg");
-  errorMsg.className = ''
+  if(e !== ''){
+    errorResponse = e;
+    const errorMsg = document.getElementById("errorMsg");
+    errorMsg.className = ''
+  }
 }
 
 // function to let users pick an iamge from their folders and update styles accordingly
@@ -168,27 +170,30 @@ async function runDiss () {
   if(sketchUploaded && styleUploaded){
     const response = await fetch("https://zu-api-97613761704.europe-north1.run.app/", { signal: AbortSignal.timeout(300000) });
     console.log(response);
-    //const img = await fetch("https://zu-api-97613761704.europe-north1.run.app/option1");
 
     if(response.status === 200){
       await delay(5000) 
       const element = document.getElementById('imagesContainer');
-      element.className = "";
       const option1 = document.getElementById("option1img")
       const option2 = document.getElementById("option2img")
       const option3 = document.getElementById("option3img")
-      option1.src = 'https://zu-api-97613761704.europe-north1.run.app/option/1';
-      option2.src = 'https://zu-api-97613761704.europe-north1.run.app/option/2';
-      option3.src = 'https://zu-api-97613761704.europe-north1.run.app/option/3';
-      option1.className='imageChoiceImage'
-      option2.className='imageChoiceImage'
-      option3.className='imageChoiceImage'
-      
-      sketchUploaded = false;
-      styleUploaded = false;
-      hideDiv('genTick', false, 'runButton')
-      hideDiv('sketchTick', true, 'sketchButton')
-      hideDiv('styleTick', true, 'styleButton')
+      try{
+        // try catch in case user exits page
+        
+        element.className = "";
+        option1.src = 'https://zu-api-97613761704.europe-north1.run.app/option/1';
+        option2.src = 'https://zu-api-97613761704.europe-north1.run.app/option/2';
+        option3.src = 'https://zu-api-97613761704.europe-north1.run.app/option/3';
+        option1.className='imageChoiceImage';
+        option2.className='imageChoiceImage';
+        option3.className='imageChoiceImage';
+        
+        sketchUploaded = false;
+        styleUploaded = false;
+        hideDiv('genTick', false, 'runButton')
+        hideDiv('sketchTick', true, 'sketchButton')
+        hideDiv('styleTick', true, 'styleButton')
+      }catch(_){}
 
     }else{
       alert(`Something went wrong trying to send your image choice. Status code: ${response.status}`);
@@ -197,7 +202,9 @@ async function runDiss () {
   }else{
     alert("Either input sketch or input style has not been properly uploaded !");
   }
-  hideDiv('loader', true)
+  try{
+    hideDiv('loader', true)
+  }catch(_){}
 }
 
 // function to run image generation again if they make a choice
@@ -213,14 +220,19 @@ async function makeDissChoice (choice) {
     const option1 = document.getElementById("option1img")
     const option2 = document.getElementById("option2img")
     const option3 = document.getElementById("option3img")
-    option1.src = 'https://zu-api-97613761704.europe-north1.run.app/option/1';
-    option2.src = 'https://zu-api-97613761704.europe-north1.run.app/option/2';
-    option3.src = 'https://zu-api-97613761704.europe-north1.run.app/option/3';
-    option1.className='imageChoiceImage'
-    option2.className='imageChoiceImage'
-    option3.className='imageChoiceImage'
-    
-    hideDiv('genTick', false)
+    try{
+      // try catch in case user exits page
+
+      option1.src = 'https://zu-api-97613761704.europe-north1.run.app/option/1';
+      option2.src = 'https://zu-api-97613761704.europe-north1.run.app/option/2';
+      option3.src = 'https://zu-api-97613761704.europe-north1.run.app/option/3';
+      option1.className='imageChoiceImage'
+      option2.className='imageChoiceImage'
+      option3.className='imageChoiceImage'
+      
+      hideDiv('genTick', false)
+            
+    }catch(_){}
 
 
   }else{
@@ -228,7 +240,9 @@ async function makeDissChoice (choice) {
     displayErrorMessage(response)
 
   }
-  hideDiv('loader', true)
+  try{
+    hideDiv('loader', true)
+  }catch(_){}
 
 }
 
@@ -282,22 +296,22 @@ function Dissertation() {
             </div>
           </div>
         </div>
-
+        <br />
         <hr />
 
         <div className='dissContainer'>
+          <br />
         <div className="underlined">
               Dissertation tool <br />
-              (This is currently unstable as it is experimental, if it fails refresh the page and try again)
+              
           </div>
         <div className='dissToolText'>
           <br />
           To use: <br />
           1. Choose a sketch and style input then submit them to upload them into the program. <br />
           2. Next click generate images and wait, (this takes about 20 seconds). <br />
-          3. You'll be served with three options that you can choose from by clicking,<br />
-          4. once clicked the generation will run again,<br />
-          this can be repeated infinitely
+          3. You'll be served with three options that you can choose from by clicking.<br />
+          4. Once clicked the generation will run again, this can be repeated infinitely.
         </div>
         <div id='imagesContainer' className='imagesContainer'>
           <div>
@@ -351,11 +365,16 @@ function Dissertation() {
                 <img src={option3} alt='' id="option3img" onClick={() => makeDissChoice(3)}></img>
             </div>
           </div>
+          <div className='smallText'>
+            This is currently unstable as it is experimental, if it fails to load, refresh the page and try again
+          </div>
+        <br />
         </div>
         </div>
         <div className='dissTooSmall'>
           Screen is too small to display dissertation tool.
         </div>
+      
       </div>
 
     );

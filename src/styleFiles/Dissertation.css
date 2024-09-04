@@ -15,6 +15,7 @@
     height: 16vw;
     display: inline-block;
     padding: 6px;
+    font-size: 12px;
 }
 
 
@@ -44,10 +45,11 @@
 
 
 .inlineInput {
-    height: 17vw;
+    height: 15vw;
     display: inline-block;
-    width: 17vw;
+    width: 15vw;
     padding: 4%;
+    font-size: 12px;
   }
 
 .inputImage {
@@ -60,12 +62,21 @@
   padding: 2px;
   margin: 0%;
   border-radius: 0%;
+  font-size: 11px;
+
 }
 
 .submitButton {
     position: relative;
     margin: 5px 0;
     padding: 5px 15px;
+    margin-top: 12px;
+    font-size: 11px;
+}
+
+.smallText {
+  font-size: 10px;
+  font-style: italic;
 }
 
 .tick {
@@ -82,10 +93,10 @@
 }
 
 .dissToolText {
-    left: 33%;
+    left: 27.5%;
     position: relative;
     text-align: left;
-    width: 40%;
+    width: 45%;
 }
 
 .loader {

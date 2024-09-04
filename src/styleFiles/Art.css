@@ -1,13 +1,15 @@
 /* gallery view */
 
 .imageRow {
-    width: 100%;
+    width: 86%;
     table-layout: fixed;
     border-spacing: 10px; 
     overflow-x: auto;
     white-space: nowrap;
     padding-right: 0vw;
     text-align: left;
+    margin-left: 7%;
+    margin-right: 7%;
 
     scrollbar-color: rgb(57, 55, 69) rgb(28, 27, 35) ;
     scrollbar-width: thin;
@@ -27,7 +29,7 @@
 
 .artSubtitle {
     text-align: left;
-    margin-left: 20%;
+    margin-left: 7%;
     text-decoration: none;
 }
 
