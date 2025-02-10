@@ -10,8 +10,6 @@ import Charts from './Charts.js';
 import Projects from './Projects.js';
 import { asciiArtBig, asciiGif } from './asciiArt.js';
 
-// document imports
-import cv from './documents/CV.pdf'
 
 // Image imports
 import download from './images/white-download.png'
@@ -222,7 +220,7 @@ function CV() {
   return (
       <div>
         <br/>
-        <a className="smallLink" href={cv} download="Zachary Upstone CV">
+        <a className="smallLink" href="/documents/CV.pdf" download="Zachary Upstone CV">
           Download <img className="downloadImage" src={download} alt="Download"></img>
         </a>
         <br/>
