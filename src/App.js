@@ -229,7 +229,10 @@ function CV() {
         <br/>
         <div className='tooSmallCV'> Screen size is too small to display pdf, download to view.</div>
         <div className='safariCV'> Safari doesn't allow proper display of pdfs.</div>
-        <embed src={cv+'#view=FitH'} className="pdf-viewer" />
+
+        <object data="/documents/CV.pdf" className="pdf-viewer" type="application/pdf">
+          <div>No online PDF viewer installed</div>
+        </object>
       </div>
   );
 }
