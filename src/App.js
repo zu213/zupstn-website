@@ -7,7 +7,7 @@ import { useState, useEffect, useCallback } from 'react';
 // Page imports
 import Art from './Art.js'
 import Charts from './Charts.js';
-import Dissertation from './Dissertation.js';
+import Projects from './Projects.js';
 import { asciiArtBig, asciiGif } from './asciiArt.js';
 
 // document imports
@@ -60,7 +60,7 @@ function App() {
 
           <Route path='/cv' element={<CV/>} />
 
-          <Route path='/dissertation' element={<Dissertation/>} />
+          <Route path='/projects' element={<Projects/>} />
 
           <Route path='/gallery' element={<Art/>} />
 
@@ -114,7 +114,7 @@ function Home() {
 
       <div className="searchLinksLeft">
         <Link to="/cv">CV</Link><br/><br/>
-        <Link to="/dissertation">Dissertation</Link><br/><br/>
+        <Link to="/projects">Projects</Link><br/><br/>
         <Link to="/gallery">Gallery</Link>
       </div>
       <div className="searchLinksRight">
@@ -164,7 +164,7 @@ function Me() {
         I’m a recently graduated student from the University of Bath, Achieving a First class degree.
         From my degree I mainly have experience coding with <b>Python, Java</b> and <b>C++</b>. During my 
         final year I completed a dissertation on image synthesis with RLHF this can be found on 
-        the <Link className="smallLink" to="/dissertation">Dissertation page</Link>. As can be 
+        the <Link className="smallLink" to="/projects">Projects page</Link>. As can be 
         seen I have experience with AI specifically Reinforcement Learning and Image synthesis.
         <br/>
         <br/>
