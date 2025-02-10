@@ -8,7 +8,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Art from './Art.js'
 import Charts from './Charts.js';
 import Dissertation from './Dissertation.js';
-import { asciiArt, asciiArtBig } from './asciiArt.js';
+import { asciiArtBig, asciiGif } from './asciiArt.js';
 
 // document imports
 import cv from './documents/CV.pdf'
@@ -46,8 +46,6 @@ function App() {
     }
   }, [location.pathname, defaultBackButton, defaultSmallBackButton]);
 
-  //pick ascii art
-  pickArt();
 
   return(
       <div id="all">
@@ -77,6 +75,31 @@ function App() {
 
 // subpages that are small enough to not justify their own page
 function Home() {
+  const chosenArtNumber = Math.floor(Math.random() * asciiGif.length)
+  var asciiGifDisplay = true
+  // one in a hundered chance of being tessa
+  if(Math.floor(Math.random() * 100) === 99){
+    asciiGifDisplay = false
+  }
+  const [currentImageIndex, setCurrentImageIndex] = useState(chosenArtNumber);
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Animate the gif if mouse is hovered
+  useEffect(() => {
+    let interval;
+    
+    if (isHovered) {
+      interval = setInterval(() => {
+        setCurrentImageIndex(prevIndex => (prevIndex + 1) % asciiGif.length); // Loop back to the first image when at the end
+      }, 200);
+    } else {
+      // Clear the interval if not hovered
+      clearInterval(interval);
+    }
+
+    return () => clearInterval(interval);
+  }, [isHovered]);
+
   return (
     <div>
           <div className="titleContainer">
@@ -101,6 +124,20 @@ function Home() {
       </div>
 
       {chosenArt}
+
+      {asciiGifDisplay ? 
+        <div 
+          className='asciiArt'
+          onMouseEnter={() => setIsHovered(true)} 
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {asciiGif[currentImageIndex]}
+        </div>
+      :    
+        <div className='bigAsciiArt'>
+        {asciiArtBig}
+        </div>
+      }
 
     </div>
   );
@@ -206,22 +243,6 @@ function NotFound() {
   )
 }
 
-function pickArt() {
-  const chosenArtNumber = Math.floor(Math.random() * asciiArt.length)
-  chosenArt =     (
-  <div className='asciiArt'>
-    {asciiArt[chosenArtNumber]}
-  </div>
-  );
 
-  // one in a hundered chance of being tessa
-  if(Math.floor(Math.random() * 100) === 99){
-    chosenArt= (
-    <div className='bigAsciiArt'>
-      {asciiArtBig}
-    </div>
-    );
-  }
-}
 
 export default App;
