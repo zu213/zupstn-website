@@ -263,7 +263,7 @@ function Dissertation() {
         <div>
           <a href={dissertation} className="smallLink" download="Zachary Upstone Dissertation">PDF</a>
           &nbsp; | &nbsp;
-          <a href="https://github.bath.ac.uk/zu213/Dissertation-code" className="smallLink" target="_blank" rel="noreferrer">Repo</a>
+          <a href="https://github.com/zu213/zupstn-website-api" className="smallLink" target="_blank" rel="noreferrer">Repo</a>
           <br/>
         </div>
         
@@ -291,8 +291,9 @@ function Dissertation() {
               found on the <Link  className="smallLink" to="/me">About Me page</Link>.
               <br />
               <br />
-              The tool produced by my dissertation can be found in this&nbsp;
-              <a href="https://github.bath.ac.uk/zu213/Dissertation-code" className="smallLink" target="_blank" rel="noreferrer">repository</a>.
+              The tool produced by my dissertation can be found in this&nbsp; 
+              <a href="https://github.com/zu213/zupstn-website-api" className="smallLink" target="_blank" rel="noreferrer">repository</a>, 
+              it is important to note that this is just the finished model and doesn't include the learning features that my research focused on.
             </div>
           </div>
         </div>

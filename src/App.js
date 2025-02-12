@@ -152,54 +152,47 @@ function Me() {
 
       <div  className="textHolder">
         <br/>
+        <br/>
         <div className='subTitle'>
         Who am I?
         </div>
-        <br/>
-        <div className='subSubTitle'>
-        Graduate:
-        </div>
-        I’m a recently graduated student from the University of Bath, Achieving a First class degree.
-        From my degree I mainly have experience coding with <b>Python, Java</b> and <b>C++</b>. During my 
-        final year I completed a dissertation on image synthesis with RLHF this can be found on 
-        the <Link className="smallLink" to="/projects">Projects page</Link>. As can be 
-        seen I have experience with AI specifically Reinforcement Learning and Image synthesis.
-        <br/>
-        <br/>
 
-        During my degree units I completed include:
-        <br/>
-        Sem 2 year 3:
-        Logic and semantics of programming languages, Graphs and Networks: Theory and Applications and
-        Entrepreneurship.
-        <br/>
-        Sem 1 year 3:
-        Reinforcement Learning,  Advanced computer graphics and Safety-critical systems.
-        <br/>
-        Sem 2 year 2:
-        Comparitive programming, Functional programming, Human Computer interaction, Machine Learning II 
-        and Experimental systems project II.
-        <br/>
-        Sem 1 year 2:
-        Visual computing, Mathematics of computation, Data structures and algorithms , Machine Learning I 
-        and Experimental systems project I.
-
-        <br/>
         <br/>
         <div className='subSubTitle'>
         Programmer:
         </div>
-        During my university degree I completed a year long placement at&nbsp;
-        <a className="smallLink" href="https://www.kontron-americas.com/" >BSQUARE</a> a 
-        company which produces IoT solutions working both in software development and QA. 
-        While working at BSQUARE I gained experience in <b>Angular(TS, HTML CSS)</b> as
-        well as <b>Gherkin, Selenium</b> and <b>Lua</b>.
-
-        This website is all made by me :), it runs using Github pages and a React framework. 
-        My CV can be found <Link className="smallLink" to="/cv">here</Link>.
-
+        Find my GitHub <a className="smallLink" href="https://github.com/zu213" target="_blank" rel="noreferrer">here</a>, 
+        showcasing various personal projects on the &nbsp;  
+        <Link className="smallLink" to="/projects">Projects page</Link>.
         <br/>
         <br/>
+
+        I am a <b>Product developer</b> for&nbsp;   
+        <a className="smallLink" href="https://www.pugpig.com/" >Pugpig</a> a media publishing platform powering 
+        apps and web readers for brands like <i>The Spectator</i>, <i>The Independent</i> and <i>The Boston Globe</i>.
+        My work spans <b>Native</b> (SwiftUI, Java, Kotlin) and <b>Web</b> (Vue.js, HTML, PHP, Sass) development.
+        <br/>
+        <br/>
+        Previously, I completed a year-long placement at &nbsp;
+        <a className="smallLink" href="https://www.kontron-americas.com/" >BSQUARE</a>, an IoT solutions company, 
+        where I worked in <b>Software Development</b> and <b>QA</b>, gaining experience in <b>Angular</b> (TS, HTML, CSS),
+        Gherkin and Selenium.
+        <br/>
+        <br/>
+        This website is fully built by me using <b>React</b>, <b>Cloudflare</b>(Frontend) and <b>GoogleCloud</b>(Backend). 
+        <div className='subSubTitle'>
+        <br/>
+        Graduate:
+        </div>
+        I’m a recently graduated student from the University of Bath, Achieving a First class degree.
+        My degree focused mainly on AI and the Mathematics around Computer Science, however, it also 
+        involved Graphics processing and Moder software developmenet methodologies.
+        From within my degree I have experience coding with <b>Python, Java</b> and <b>C++</b>. During my 
+        final year I completed a dissertation on image synthesis utilising human feedback this can be found on 
+        the <Link className="smallLink" to="/projects">Projects page</Link>.
+        <br/>
+        <br/>
+
         <div className='subSubTitle'>
         Artist:
         </div>
