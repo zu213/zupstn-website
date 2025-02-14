@@ -1,9 +1,9 @@
 
 import { Link } from 'react-router-dom';
-import './styleFiles/Dissertation.css';
+import '../styleFiles/Dissertation.css';
 
-import dissertationUI from './images/di-ui.png'
-import tick from './images/tick.png'
+import dissertationUI from './media/di-ui.png'
+import tick from '../images/tick.png'
 
 const dissertation = 'https://s3-eu-north-1.amazonaws.com/zudissertationbucket/Dissertation.pdf'
 
@@ -298,8 +298,8 @@ function Dissertation() {
           </div>
         </div>
         <br />
-        <hr />
-
+        <hr className='limitedHr'/>
+        
         <div className='dissContainer'>
           <br />
         <div className="underlined">

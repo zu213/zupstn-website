@@ -1,0 +1,63 @@
+.pageHeader{
+    height: 8vh;
+    font-size: large;
+    text-decoration: underline;
+}
+
+.projectTitle {
+    font-size: large;
+    text-align: left;
+    padding: 1% 0 1% 10%;
+    text-decoration: underline;
+    height: 4vh;
+}
+
+.limitedHr {
+    width: 80%;
+}
+
+.projectInlineStructure {
+    display: inline-block;
+    width: 40%;
+    padding: 1vw;
+    vertical-align: top;
+}
+
+.tightProjectInlineStructure {
+    display: inline-block;
+    width: 24%;
+    padding: 0.5vw;
+    vertical-align: top;
+}
+
+.smallProjectFigure {
+    width: 90%;
+    padding: 5%;
+}
+
+.overlayMask {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+}
+
+.overlayFigure {
+    width: 60%;
+    top: 15%;
+    left: 20%;
+    position: fixed;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 600px) {
+    .projectInlineStructure {
+        display: block;
+        width: 90%;
+        left: 5%;
+        position: sticky;
+        
+    }
+}

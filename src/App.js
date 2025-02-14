@@ -228,7 +228,6 @@ function CV() {
   );
 }
 
-
 function NotFound() {
   return (
     <div>
@@ -236,7 +235,5 @@ function NotFound() {
     </div>
   )
 }
-
-
 
 export default App;
