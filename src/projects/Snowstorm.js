@@ -12,6 +12,7 @@ function Snowstorm(props) {
         </div>
 
         Note: GIF's can take a while to load!
+        <br />
 
         <div className='tightProjectInlineStructure'>
           <figure className='aspectClass' onClick={props.displayMask}>
