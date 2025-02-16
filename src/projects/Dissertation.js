@@ -253,7 +253,7 @@ window.onload = function() {
 }
 
 
-function Dissertation() {
+function Dissertation(props) {
     return (
       <div>
         <div className="dissSubtitle" >
@@ -269,7 +269,7 @@ function Dissertation() {
         
         <div>
           <div  className="dissInlineStructure">
-            <figure className='aspectClass'>
+            <figure className='aspectClass'onClick={props.displayMask}>
               <img src={dissertationUI} alt="Dissertation UI"></img>
               <figcaption>Figure: The UI I created to allow the utlisation of RLHF</figcaption>
             </figure>

@@ -1,10 +1,5 @@
 import scholarsGif from './media/scholars.gif'
-function UnicodeChess() {
-
-  const toggleClass = (e) => {
-    e.target.setFilter.bind(this, '')
-    // TODO IN FUTURE ADD CHESS HERE
-  }
+function UnicodeChess(props) {
 
     return (
       <div>
@@ -34,7 +29,7 @@ This project required efficient board representation and logic to enforce chess 
 
         </div>
         <div className='projectInlineStructure'>
-          <figure onClick={toggleClass} className='aspectClass'>
+          <figure onClick={props.displayMask} className='aspectClass'>
             <img src={scholarsGif} alt="scholars gif"/>
             <figcaption>Figure: Gif of Chess implemented in C</figcaption>
           </figure>

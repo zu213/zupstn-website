@@ -2,7 +2,7 @@ import join from'./media/join.png'
 import guess2 from './media/guess2.png'
 
 
-function SpotifyRoulette() {
+function SpotifyRoulette(props) {
     return (
       <div>
         <div>
@@ -12,13 +12,13 @@ function SpotifyRoulette() {
         <div>
           <div className='tightProjectInlineStructure'>
             <figure>
-              <img src={join} alt="joining screen"/>
+              <img src={join} onClick={props.displayMask} alt="joining screen"/>
               <figcaption>Figure: Joining a game fo Spotify Roulette</figcaption>
             </figure>
           </div>
           <div className='tightProjectInlineStructure'>
             <figure>
-              <img src={guess2} alt="guessing screen"/>
+              <img src={guess2}onClick={props.displayMask} alt="guessing screen"/>
               <figcaption>Figure: Playing a game of Spotify Roulette</figcaption>
             </figure>
           </div>

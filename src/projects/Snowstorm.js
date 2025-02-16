@@ -3,7 +3,7 @@ import d from './media/d.gif'
 import rust from './media/rust.gif'
 import assembly from './media/assembly.gif'
 
-function Snowstorm() {
+function Snowstorm(props) {
     return (
       <div>
        <div>
@@ -12,25 +12,25 @@ function Snowstorm() {
         </div>
 
         <div className='tightProjectInlineStructure'>
-          <figure className='aspectClass'>
+          <figure className='aspectClass' onClick={props.displayMask}>
             <img src={c} alt="Snow C"/>
             <figcaption>Figure: Snow programmed in C</figcaption>
           </figure>
         </div>
         <div className='tightProjectInlineStructure'>
-          <figure className='aspectClass'>
+          <figure className='aspectClass' onClick={props.displayMask}>
             <img src={d} alt="Snow D"/>
             <figcaption>Figure: Snow programmed in D</figcaption>
           </figure>
         </div>
         <div className='tightProjectInlineStructure'>
-          <figure className='aspectClass'>
+          <figure className='aspectClass' onClick={props.displayMask}>
             <img src={rust} alt="Snow Rust"/>
             <figcaption>Figure: Snow programmed in Rust</figcaption>
           </figure>
         </div>
         <div className='tightProjectInlineStructure'>
-          <figure className='aspectClass'>
+          <figure className='aspectClass'  onClick={props.displayMask}>
             <img src={assembly} alt="Snow Assembly"/>
             <figcaption>Figure: Snow programmed in Assembly</figcaption>
           </figure>
