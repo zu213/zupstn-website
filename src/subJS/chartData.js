@@ -152,6 +152,14 @@ export const deadliftData = [
         date: moment(new Date(2024, 4, 27)).unix(),
         ORM: 140,
     },
+    {
+        date: moment(new Date(2024, 9, 4)).unix(),
+        ORM: 130,
+    },
+    {
+        date: moment(new Date(2024, 10, 19)).unix(),
+        ORM: 140,
+    },
 ];
 
 export const squatData = [
@@ -357,6 +365,170 @@ export const squatData = [
     {
         date: moment(new Date(2024, 8, 16)).unix(),
         ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 8, 20)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 8, 25)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 9, 3)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 9, 7)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 9, 10)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 9, 14)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 9, 17)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 9, 22)).unix(),
+        ORM: 85,
+    },
+    {
+        date: moment(new Date(2024, 9, 24)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 9, 28)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 10, 1)).unix(),
+        ORM: 70,
+    },
+    {
+        date: moment(new Date(2024, 10, 5)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 10, 10)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 10, 13)).unix(),
+        ORM: 85,
+    },
+    {
+        date: moment(new Date(2024, 10, 15)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 10, 18)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 10, 22)).unix(),
+        ORM: 85,
+    },
+    {
+        date: moment(new Date(2024, 10, 25)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 10, 29)).unix(),
+        ORM: 80,
+    },
+    {
+        date: moment(new Date(2024, 11, 3)).unix(),
+        ORM: 85,
+    },
+    {
+        date: moment(new Date(2024, 11, 5)).unix(),
+        ORM: 85,
+    },
+    {
+        date: moment(new Date(2024, 11, 9)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 11, 12)).unix(),
+        ORM: 87.5,
+    },
+    {
+        date: moment(new Date(2024, 11, 16)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 11, 19)).unix(),
+        ORM: 85,
+    },
+    {
+        date: moment(new Date(2024, 11, 23)).unix(),
+        ORM: 95,
+    },
+    {
+        date: moment(new Date(2024, 11, 26)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 12, 1)).unix(),
+        ORM: 95,
+    },
+    {
+        date: moment(new Date(2024, 12, 3)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 12, 10)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 12, 17)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 12, 27)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2024, 12, 29)).unix(),
+        ORM: 95,
+    },
+    {
+        date: moment(new Date(2025, 1, 7)).unix(),
+        ORM: 92.5,
+    },
+    {
+        date: moment(new Date(2025, 1, 14)).unix(),
+        ORM: 92.5,
+    },
+    {
+        date: moment(new Date(2025, 1, 19)).unix(),
+        ORM: 95,
+    },
+    {
+        date: moment(new Date(2025, 1, 21)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2025, 1, 25)).unix(),
+        ORM: 97.5,
+    },
+    {
+        date: moment(new Date(2025, 1, 28)).unix(),
+        ORM: 90,
+    },
+    {
+        date: moment(new Date(2025, 2, 1)).unix(),
+        ORM: 95,
+    },
+    {
+        date: moment(new Date(2025, 2, 11)).unix(),
+        ORM: 92.5,
     },
 ];
 

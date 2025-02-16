@@ -269,7 +269,7 @@ function Dissertation() {
         
         <div>
           <div  className="dissInlineStructure">
-            <figure>
+            <figure className='aspectClass'>
               <img src={dissertationUI} alt="Dissertation UI"></img>
               <figcaption>Figure: The UI I created to allow the utlisation of RLHF</figcaption>
             </figure>

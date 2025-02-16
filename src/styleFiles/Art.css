@@ -24,6 +24,12 @@
     display: inline-block;
     width: 10%;
     padding: 2%;
+    aspect-ratio: 4 / 5;
+}
+
+.imageColumn img {
+    height: 100%;
+    width: 100%;
 }
 
 
