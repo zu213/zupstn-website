@@ -100,17 +100,13 @@
     .projectInlineStructure {
         display: block;
         width: 90%;
-        left: 5%;
-        position: sticky;
-        
+        left: 5%;        
     }
 
     .tightProjectInlineStructure {
         display: block;
         width: 95%;
         left: 2.5%;
-        position: sticky;
-        
     }
 
     .overlayMask {

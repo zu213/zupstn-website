@@ -129,7 +129,7 @@
     }
   
     .dissTooSmall {
-      display: block;
+      display: none; /* change back to block */
       padding: 20px;
     }
   }
