@@ -300,7 +300,7 @@ function Dissertation(props) {
         <br />
         <hr className='limitedHr'/>
         
-        <div className='dissContainer'>
+        <div className='dissContainer notFinished'>
           <br />
         <div className="underlined">
               Dissertation tool <br />

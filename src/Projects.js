@@ -13,7 +13,6 @@ function Projects() {
 
     const hideMask =() => {
       setMask(false)
-      console.log(maskItem)
       maskItem.classList.remove('overlayMask')
       setMaskItem(null)
     }

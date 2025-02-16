@@ -137,3 +137,7 @@
   .errorMsg {
     display: none;
   }
+
+  .notFinished {
+    display: none;
+  }
