@@ -245,6 +245,9 @@ img {
 
 hr {
   color: rgb(73, 67, 105);
+  border: none;
+  height: 1.5px;
+  background-color: rgb(73, 67, 105);
 }
 
 a {
