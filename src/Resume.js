@@ -99,7 +99,6 @@ function CV2() {
         <br/>
         <br/>
         <div className='tooSmallCV'> Screen size is too small to display pdf, download to view.</div>
-        <div className='safariCV'> Safari doesn't allow proper display of pdfs.</div>
         <div className='cvContainer'></div>
         <embed src={cv+'#view=FitH'} className="pdf-viewer" />
       </div>
