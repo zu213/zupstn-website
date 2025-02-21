@@ -139,6 +139,15 @@
   }
 }
 
+/* Safari 7.1+ */
+
+_::-webkit-full-page-media, _:future, :root .safariCV {
+  display: block;
+}
+_::-webkit-full-page-media, _:future, :root .pdf-viewer {
+  display: none;
+}
+
 /* diss page */
 
 .dissSubtitle {
