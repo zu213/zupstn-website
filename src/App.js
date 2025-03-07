@@ -64,6 +64,8 @@ function App() {
 
           <Route path='/charts' element={<Charts/>} />
 
+          <Route path='/fruit-lips' element={<FruitLips/>} />
+
           <Route path='*' element={<NotFound/>} />
         </Routes>
       </div>
@@ -226,6 +228,20 @@ function CV() {
         </object>
       </div>
   );
+}
+
+function FruitLips() {
+  return (
+  <div className='fruitLipsContainer'>
+    <iframe 
+    title='fruit-lips'
+    className='fruitLips'
+    src="./fruit-lips/fruit-lips.html"
+    width="100%"
+    height="100%"
+    />
+  </div>
+  )
 }
 
 function NotFound() {

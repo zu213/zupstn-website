@@ -1,0 +1,3 @@
+[submodule "public/fruit-lips"]
+	path = public/fruit-lips
+	url = https://github.com/zu213/fruit-lips
