@@ -183,6 +183,32 @@ _::-webkit-full-page-media, _:future, :root .pdf-viewer {
   }
 }
 
+/* link page */
+
+.linkTitle {
+  font-size: x-large;
+}
+
+.linksContainer {
+  text-align: left;
+  padding: 8vh 10%;
+  font-size: larger;
+}
+
+.link{
+  padding: 4vh 0%;
+}
+.link a  {
+  color:rgb(254, 75, 120);
+}
+.link:visited {
+  color:rgb(211, 3, 103);
+}
+.link:hover {
+  color: rgb(290, 14, 61);
+  text-decoration: underline;
+}
+
 /* reused classes */
 
 .leftAlign {
