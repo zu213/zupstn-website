@@ -4,5 +4,3 @@
 [submodule "public/368Squares"]
 	path = public/368Squares
 	url = https://github.com/zu213/368squares
-[submodule "public/368squares"]
-	branch = main
