@@ -66,6 +66,8 @@ function App() {
 
           <Route path='/fruit-lips' element={<FruitLips/>} />
 
+          <Route path='/368squares' element={<Squares/>} />
+
           <Route path='*' element={<NotFound/>} />
         </Routes>
       </div>
@@ -237,6 +239,20 @@ function FruitLips() {
     title='fruit-lips'
     className='fruitLips'
     src="./fruit-lips/fruit-lips.html"
+    width="100%"
+    height="100%"
+    />
+  </div>
+  )
+}
+
+function Squares() {
+  return (
+  <div className='368SquaresContainer'>
+    <iframe 
+    title='368Squares'
+    className='368Squares'
+    src="./368squares/index.html"
     width="100%"
     height="100%"
     />
