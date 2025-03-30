@@ -254,7 +254,7 @@ function Squares() {
     <iframe 
     title='368Squares'
     className='368Squares'
-    src="./368Squares/index.html"
+    src="./368squares/index.html"
     width="100%"
     height="100%"
     />
