@@ -250,7 +250,7 @@ function FruitLips() {
 
 function Squares() {
   return (
-  <div className='368SquaresContainer'>
+  <div className='squaresContainer'>
     <iframe 
     title='368Squares'
     className='368Squares'

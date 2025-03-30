@@ -1,6 +1,6 @@
 [submodule "public/fruit-lips"]
 	path = public/fruit-lips
 	url = https://github.com/zu213/fruit-lips
-[submodule "public/368Squares"]
-	path = public/368Squares
+[submodule "public/368squares"]
+	path = public/368squares
 	url = https://github.com/zu213/368squares
