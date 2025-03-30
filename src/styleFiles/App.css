@@ -270,12 +270,10 @@ _::-webkit-full-page-media, _:future, :root .pdf-viewer {
 
 .squaresContainer {
   position: fixed;
-  top: 12%;
-  height: 88%;
+  top: 11%;
+  height: 90%;
   width: 100%;
 }
-
-
 
 /* General css writes */
 
