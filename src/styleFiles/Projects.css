@@ -132,8 +132,27 @@
         left: 2.5%;
     }
 
+    .wideProjectInlineStructure {
+        display: block;
+        width: 95%;
+        left: 2.5%;
+    }
+
+    .largeProjectInlineStructure {
+        display: block;
+        width: 95%;
+        left: 2.5%;
+    }
+
     .overlayMask {
         width: 90% !important;
+    }
+
+    .indentMobile {
+        display: block;
+        position: relative;
+        width: 90%;
+        left: 5%; 
     }
 }
 

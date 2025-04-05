@@ -8,7 +8,7 @@ function TrafficSimulator(props) {
           <br/>
         </div>
 
-        <div className='tightProjectInlineStructure leftAlign topPadding'>
+        <div className='tightProjectInlineStructure leftAlign topPadding indentMobile'>
           A traffic simulator implemented in C utilising GDI for graphics display.
           <br />
           <br/>
@@ -18,7 +18,7 @@ function TrafficSimulator(props) {
           <br />
           <br />
           It utilises linking with <b>libwinpthread-1.dll</b> and management of C files by use of header files, 
-          road length is fixed by default but can be modified manually and then the code re compiled using  
+          road length is fixed by default but can be modified manually and then the code re compiled using&nbsp;  
           <b>gcc</b>.
 
         </div>

@@ -17,7 +17,7 @@ function ChromeContextControl(props) {
           </figure>
         </div>
 
-        <div className='tightProjectInlineStructure topPadding'>
+        <div className='tightProjectInlineStructure topPadding indentMobile'>
           I implemented a Chrome Extension that allows users more control over the right 
           click menu.
           <br />
@@ -27,9 +27,9 @@ function ChromeContextControl(props) {
           background scripts to intercept the right click event. 
         </div>
 
-        <div className='tightProjectInlineStructure topPadding'>
+        <div className='tightProjectInlineStructure topPadding indentMobile'>
           You also have the ability add custom code that is run by a Chrome worker, this is also down on 
-          the landing page and can be added tot eh right click menu to allow quick running of custom code. 
+          the landing page and can be added to the right click menu to allow quick running of custom code. 
           An example fo this can be found within the README in the linked repository.
    
         </div>
