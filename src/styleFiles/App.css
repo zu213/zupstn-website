@@ -273,6 +273,8 @@ _::-webkit-full-page-media, _:future, :root .pdf-viewer {
   top: 11%;
   height: 90%;
   width: 100%;
+  overflow: hidden;
+  touch-action: none;
 }
 
 /* General css writes */
