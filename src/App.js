@@ -207,9 +207,9 @@ function Me() {
         <br/>
         <br/>
         <div className='subSubTitle'>
-        Fitness enthusiast:
+        More:
         </div>
-        Gym charts for fun can be seen on the <Link className="smallLink" to="/charts">Charts page</Link>.
+        Navigate the rest of my website by visiting the <Link className="smallLink" to="/index">Index page</Link>.
       </div>
     </div>
   );
@@ -219,15 +219,19 @@ function CV() {
   return (
       <div>
         <br/>
-        <a className="smallLink" href="/documents/CV.pdf" download="Zachary Upstone CV">
+        <a className="smallLink" href="/documents/CV_short.pdf" download="Zachary Upstone CV">
           Download <img className="downloadImage" src={download} alt="Download"></img>
+        </a>
+        &nbsp; | &nbsp;
+        <a className="smallLink" href="/documents/CV.pdf" download="Zachary Upstone CV">
+          CV long <img className="downloadImage" src={download} alt="Download"></img>
         </a>
         <br/>
         <br/>
         <div className='tooSmallCV'> Screen size is too small to display pdf, download to view.</div>
         <div className='safariCV'> Safari doesn't allow proper display of pdfs.</div>
 
-        <object data="/documents/CV.pdf" className="pdf-viewer" type="application/pdf">
+        <object data="/documents/CV_short.pdf" className="pdf-viewer" type="application/pdf">
           <div>No online PDF viewer installed</div>
         </object>
       </div>

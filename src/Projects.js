@@ -2,8 +2,11 @@ import Dissertation from './projects/Dissertation.js';
 import UnicodeChess from './projects/UnicodeChess.js';
 import SpotifyRoulette from './projects/SpotifyRoulette.js';
 import Snowstorm from './projects/Snowstorm.js';
+import ChromeContextControl from './projects/ChromeContextControl.js';
+import TrafficSimulator from './projects/TrafficSimulator.js'
 import './styleFiles/Projects.css'
 import { useState } from 'react';
+
 
 
 function Projects() {
@@ -26,12 +29,27 @@ function Projects() {
     return (
       <div>
         <header className='pageHeader'>Projects</header>
+
         <hr/>
-
-        <div className={`mask ${mask ? 'opaque': ''}`} onClick={hideMask}>
-
+        <div className={`mask ${mask ? 'opaque': ''}`} onClick={hideMask}></div>
+        <div>
+          <div className='projectTitle'>
+            Traffic Simulator
+          </div>
+          <hr className='limitedHr'/>
+          <TrafficSimulator displayMask={displayMask}/>
         </div>
 
+        <hr/>
+        <div>
+          <div className='projectTitle'>
+            Chrome Context Control
+          </div>
+          <hr className='limitedHr'/>
+          <ChromeContextControl displayMask={displayMask}/>
+        </div>
+
+        <hr/>
         <div>
           <div className='projectTitle'>
             Snowstorm

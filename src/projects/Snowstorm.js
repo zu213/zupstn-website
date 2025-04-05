@@ -68,6 +68,11 @@ function Snowstorm(props) {
               Since D doesn’t automate system messages, I implemented a <i>manual timer</i> to trigger updates.
               It uses <code>CreateWindowExW</code>, similar to C.
             </li>
+
+            <li>
+              Additionally I have written code Snow code for <b>C++</b> and <b>ada</b>, this can be found in repo 
+              but I have yet to record gifs for each .exe, both rely on GDI to produce windows.
+            </li>
           </ul>
         </div>
       

@@ -43,7 +43,7 @@ function Art() {
               Gallery <br />
           </div>              
           <div>
-              All art is made by me (Zach) <br />
+              All art is made by me <br />
           </div>   
 
           <div className="inlineButton" >

@@ -22,11 +22,34 @@
     vertical-align: top;
 }
 
+.largeProjectInlineStructure {
+    width: 54%;
+    display: inline-block;
+    padding: 1vw;
+    vertical-align: top;
+}
+
+.wideProjectInlineStructure {
+    width: 54%;
+    display: inline-block;
+    padding: 1vw;
+    vertical-align: top;
+}
+
+.wideProjectInlineStructure {
+    height: 60%;
+}
+
 .tightProjectInlineStructure {
+    text-align: left;
     display: inline-block;
     width: 24%;
     padding: 0.5vw;
     vertical-align: top;
+}
+
+.topPadding {
+    padding-top: 2vw;
 }
 
 .smallProjectFigure {
@@ -112,4 +135,8 @@
     .overlayMask {
         width: 90% !important;
     }
+}
+
+.whiteBorder {
+    outline: white solid 1px;
 }
