@@ -18,16 +18,19 @@ body {
   background-size: 100% 8px; 
 }
 
-a:link {
-  color:white
-}
-
+a:link,
 a:visited {
-  color:white
+  color: rgb(245, 245, 245);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
 a:hover {
-  color: rgb(190,190,190)
+  color: rgb(245, 224, 245);
+  text-shadow:
+    0 0 5px rgb(246, 209, 246),
+    0 0 10px rgb(250, 222, 250),
+    0 0 15px rgb(245, 178, 245);
 }
 
 html, body {

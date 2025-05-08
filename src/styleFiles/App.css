@@ -99,6 +99,20 @@
   text-align: left;
 }
 
+.linkHolder a {
+  text-shadow:
+    0 0 8px rgb(244, 232, 248),
+    0 0 12px rgb(249, 218, 249);
+}
+
+.linkHolder a:hover {
+  text-shadow:
+    0 0 10px rgb(239, 218, 246),
+    0 0 15px rgb(250, 187, 250),
+    0 0 25px rgb(247, 164, 247),
+    0 0 40px rgb(249, 109, 249);
+}
+
 @media only screen and (max-width: 400px) {
   .linkHolder {
     padding-top: 10vw;
@@ -219,15 +233,28 @@ _::-webkit-full-page-media, _:future, :root .pdf-viewer {
   text-decoration: underline;
 }
 
+.smallLink {
+  text-shadow:
+    0 0 10px rgb(254, 75, 120),
+    0 0 20px rgb(254, 75, 120),
+    0 0 30px rgb(242, 3, 103);
+}
+
 .smallLink:link  {
   color:rgb(254, 75, 120) !important;
 }
 .smallLink:visited {
-  color:rgb(211, 3, 103) !important;
+  color:rgb(233, 3, 103) !important;
 }
 .smallLink:hover {
-  color: rgb(290, 14, 61) !important;
+  color: rgb(255, 14, 61) !important;
   text-decoration: underline;
+  text-shadow:
+  0 0 10px rgb(255, 20, 147),
+  0 0 20px rgb(255, 20, 147),
+  0 0 30px rgb(255, 105, 180),
+  0 0 40px rgb(255, 105, 180),
+  0 0 70px rgb(255, 20, 147);
 }
 
 .backButton {
@@ -300,30 +327,39 @@ pre {
 }
 
 button {
-  border-radius: 2px;
   font-family: 'Montserrat', sans-serif;
-  appearance: none; 
   border: none;
-  background: none;
+  appearance: none;
   outline: none;
   cursor: pointer;
   margin: 15px 0;
-  padding: 10px 20px;
-  background: #eee;
+  padding: 12px 24px;
   letter-spacing: 0.2em;
   line-height: 100%;
-  border-radius: 3px;
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
+  border-radius: 6px;
+  color: white;
+  text-shadow:
+    0 0 5px #fd54d9,
+    0 0 10px #faa2e9;
+
+  box-shadow:
+    0 0 10px #febef1;
+
+  transition: all 0.3s ease;
+  opacity: 0.95;
 }
 
 button:hover {
   opacity: 1;
+  transform: scale(1.03);
+  box-shadow:
+    0 0 10px #fb52d9,
+    0 0 20px #fc88e5;
 }
 
 button:active {
-  transform: scale(0.98); 
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+  transform: scale(0.98);
+  box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);
 }
 
 input {
