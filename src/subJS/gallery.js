@@ -1,24 +1,7 @@
-// Image imports
 
 var currentOverlay = null;
 
-function importAll(r) {
-  const images = {};
-
-  r.keys().forEach((key) => {
-    const folder = key.split('/')[1];
-    if (!images[folder]) images[folder] = [];
-    images[folder].push(r(key));
-  });
-
-  return images;
-}
-
-const images = importAll(
-  require.context('../images', true, /\.(png|jpe?g|svg)$/)
-);
-
-export const galleryPage = (
+export const galleryPage = (images) => (
     <div>
       Click on images to enlarge them.
       <br />

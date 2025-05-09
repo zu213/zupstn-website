@@ -8,7 +8,7 @@ import { useState, useEffect, useCallback } from 'react';
 import Art from './Art.js'
 import Charts from './Charts.js';
 import Projects from './Projects.js';
-import { asciiArtBig, asciiGif } from './asciiArt.js';
+import { asciiArtBig, asciiGif } from './subJS/asciiArt.js';
 
 
 // Image imports
@@ -68,7 +68,7 @@ function App() {
 
           <Route path='/368squares' element={<Squares/>} />
 
-          <Route path='/index' element={<Index/>} />
+          <Route path='/glossary' element={<Glossary/>} />
 
           <Route path='*' element={<NotFound/>} />
         </Routes>
@@ -266,7 +266,7 @@ function Squares() {
   )
 }
 
-function Index() {
+function Glossary() {
   return (
   <div>
     <div className='linkTitle'>Page links</div>
