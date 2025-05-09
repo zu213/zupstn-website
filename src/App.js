@@ -12,7 +12,7 @@ import { asciiArtBig, asciiGif } from './asciiArt.js';
 
 
 // Image imports
-import download from './images/white-download.png'
+import download from './icons/white-download.png'
 
 let chosenArt;
 // main app
@@ -217,7 +217,7 @@ function Me() {
 
 function CV() {
   return (
-      <div>
+      <div className='cvPage'>
         <br/>
         <a className="smallLink" href="/documents/CV_short.pdf" download="Zachary Upstone CV">
           Download <img className="downloadImage" src={download} alt="Download"></img>

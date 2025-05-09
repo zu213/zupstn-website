@@ -197,6 +197,12 @@ _::-webkit-full-page-media, _:future, :root .pdf-viewer {
   }
 }
 
+/* cv page */
+
+.cvPage {
+  padding-bottom: 20px;
+}
+
 /* link page */
 
 .linkTitle {
@@ -236,8 +242,7 @@ _::-webkit-full-page-media, _:future, :root .pdf-viewer {
 .smallLink {
   text-shadow:
     0 0 10px rgb(254, 75, 120),
-    0 0 20px rgb(254, 75, 120),
-    0 0 30px rgb(242, 3, 103);
+    0 0 20px rgb(254, 75, 120);
 }
 
 .smallLink:link  {
@@ -337,10 +342,7 @@ button {
   letter-spacing: 0.2em;
   line-height: 100%;
   border-radius: 6px;
-  color: white;
-  text-shadow:
-    0 0 5px #fd54d9,
-    0 0 10px #faa2e9;
+  color: rgb(60, 60, 60);
 
   box-shadow:
     0 0 10px #febef1;

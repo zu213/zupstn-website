@@ -4,7 +4,7 @@ import './styleFiles/Resume.css';
 import cv from './documents/CV.pdf'
 
 // Image imports
-import download from './images/white-download.png'
+import download from './icons/white-download.png'
 
 function Resume () {return(
 
