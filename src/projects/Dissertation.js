@@ -2,24 +2,24 @@
 import { Link } from 'react-router-dom';
 import './Dissertation.css';
 
-import dissertationUI from './media/di-ui.png'
-import tick from '../icons/tick.png'
+import dissertationUI from './media/di-ui.png';
+import tick from '../icons/tick.png';
 
-const dissertation = 'https://s3-eu-north-1.amazonaws.com/zudissertationbucket/Dissertation.pdf'
+const dissertation = 'https://s3-eu-north-1.amazonaws.com/zudissertationbucket/Dissertation.pdf';
 
-let option1 = ''
-let option2 = ''
-let option3 = ''
-let sketchImg = ''
-let styleImg = ''
+let option1 = '';
+let option2 = '';
+let option3 = '';
+let sketchImg = '';
+let styleImg = '';
 let sketchUploaded = false;
 let styleUploaded = false;
-let errorResponse = ''
+let errorResponse = '';
 
 let currentSketchFile;
 let currentStyleFile;
 
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 // function to disable button on startup
 function disableButtons() {
@@ -32,17 +32,17 @@ function disableButtons() {
 }
 
 function clearOptions() {
-  const option1 = document.getElementById("option1img")
-  const option2 = document.getElementById("option2img")
-  const option3 = document.getElementById("option3img")
+  const option1 = document.getElementById('option1img');
+  const option2 = document.getElementById('option2img');
+  const option3 = document.getElementById('option3img');
   option1.src = '';
   option2.src = '';
   option3.src = '';
-  option1.className=''
-  option2.className=''
-  option3.className=''
-  const errorMsg = document.getElementById("errorMsg");
-  errorMsg.className = 'errorMsg'
+  option1.className='';
+  option2.className='';
+  option3.className='';
+  const errorMsg = document.getElementById('errorMsg');
+  errorMsg.className = 'errorMsg';
 }
 
 function changeButton(buttonId, disable){
@@ -52,8 +52,8 @@ function changeButton(buttonId, disable){
 
 function hideDiv(divId, hide, button=null){
   if(hide){
-  const genTick= document.getElementById(divId);
-  genTick.style.display = 'none';
+    const genTick= document.getElementById(divId);
+    genTick.style.display = 'none';
   }else{
     const genTick= document.getElementById(divId);
     genTick.style.display = 'inline-block';
@@ -63,19 +63,19 @@ function hideDiv(divId, hide, button=null){
     
     if(hide){
       const genTick= document.getElementById(button);
-      genTick.style.left = '0vw'
-      }else{
-        const genTick= document.getElementById(button);
-        genTick.style.left = '0.8vw'
-      }
+      genTick.style.left = '0vw';
+    }else{
+      const genTick= document.getElementById(button);
+      genTick.style.left = '0.8vw';
+    }
   }
 }
 
 function displayErrorMessage(e) {
   if(e !== ''){
     errorResponse = e;
-    const errorMsg = document.getElementById("errorMsg");
-    errorMsg.className = ''
+    const errorMsg = document.getElementById('errorMsg');
+    errorMsg.className = '';
   }
 }
 
@@ -84,13 +84,13 @@ function uploadSketch (e) {
   if (e.target.files.length) {
     var img = document.getElementById('inputSketch');
     img.onload = () => {
-        URL.revokeObjectURL(img.src);
-    }
+      URL.revokeObjectURL(img.src);
+    };
     img.src = URL.createObjectURL(e.target.files[0]);
     currentSketchFile = e.target.files[0];
-    changeButton('sketchButton', false)
-    hideDiv('genTick', true, 'runButton')
-    hideDiv('sketchTick', true, 'sketchButton')
+    changeButton('sketchButton', false);
+    hideDiv('genTick', true, 'runButton');
+    hideDiv('sketchTick', true, 'sketchButton');
 
     clearOptions();
   }
@@ -108,15 +108,15 @@ async function submitSketch() {
     const response = await fetch('https://zu-api-97613761704.europe-north1.run.app/upload/sketch', options);
     if(response.status === 200){
       sketchUploaded = true;
-      changeButton('sketchButton', true)
-      hideDiv('sketchTick', false, 'sketchButton')
+      changeButton('sketchButton', true);
+      hideDiv('sketchTick', false, 'sketchButton');
       if(styleUploaded){
-        changeButton('runButton', false)
+        changeButton('runButton', false);
       }
     }else if(response.status === 450){
-      alert(`Image file format is incorrect, only .png, .jpg or .jpeg are accepted`);
+      alert('Image file format is incorrect, only .png, .jpg or .jpeg are accepted');
     }else{
-      alert("Sketch input has not been properly uploaded !");
+      alert('Sketch input has not been properly uploaded !');
     }
   }
 }
@@ -126,13 +126,13 @@ function uploadStyle (e) {
   if (e.target.files.length) {
     var img = document.getElementById('inputStyle');
     img.onload = () => {
-        URL.revokeObjectURL(img.src);
-    }
+      URL.revokeObjectURL(img.src);
+    };
     img.src = URL.createObjectURL(e.target.files[0]);
     currentStyleFile = e.target.files[0];
-    changeButton('styleButton', false)
-    hideDiv('genTick', true, 'runButton')
-    hideDiv('styleTick', true, 'styleButton')
+    changeButton('styleButton', false);
+    hideDiv('genTick', true, 'runButton');
+    hideDiv('styleTick', true, 'styleButton');
     clearOptions();
   }
 }
@@ -149,15 +149,15 @@ async function submitStyle () {
     const response = await fetch('https://zu-api-97613761704.europe-north1.run.app/upload/style', options);
     if(response.status === 200){
       styleUploaded = true;
-      changeButton('styleButton', true)
-      hideDiv('styleTick', false, 'styleButton')
+      changeButton('styleButton', true);
+      hideDiv('styleTick', false, 'styleButton');
       if(sketchUploaded){
-        changeButton('runButton', false)
+        changeButton('runButton', false);
       }
     }else if(response.status === 450){
-      alert(`Image file format is incorrect, only .png, .jpg or .jpeg are accepted`);
+      alert('Image file format is incorrect, only .png, .jpg or .jpeg are accepted');
     }else{
-      alert("Style input has not been properly uploaded !");
+      alert('Style input has not been properly uploaded !');
     }
   }
 
@@ -165,22 +165,22 @@ async function submitStyle () {
 
 // function to run image generation
 async function runDiss () {
-  changeButton('runButton', true)
-  hideDiv('loader', false, 'runButton')
+  changeButton('runButton', true);
+  hideDiv('loader', false, 'runButton');
   if(sketchUploaded && styleUploaded){
-    const response = await fetch("https://zu-api-97613761704.europe-north1.run.app/", { signal: AbortSignal.timeout(300000) });
+    const response = await fetch('https://zu-api-97613761704.europe-north1.run.app/', { signal: AbortSignal.timeout(300000) });
     console.log(response);
 
     if(response.status === 200){
-      await delay(5000) 
+      await delay(5000); 
       const element = document.getElementById('imagesContainer');
-      const option1 = document.getElementById("option1img")
-      const option2 = document.getElementById("option2img")
-      const option3 = document.getElementById("option3img")
+      const option1 = document.getElementById('option1img');
+      const option2 = document.getElementById('option2img');
+      const option3 = document.getElementById('option3img');
       try{
         // try catch in case user exits page
         
-        element.className = "";
+        element.className = '';
         option1.src = 'https://zu-api-97613761704.europe-north1.run.app/option/1';
         option2.src = 'https://zu-api-97613761704.europe-north1.run.app/option/2';
         option3.src = 'https://zu-api-97613761704.europe-north1.run.app/option/3';
@@ -190,58 +190,58 @@ async function runDiss () {
         
         sketchUploaded = false;
         styleUploaded = false;
-        hideDiv('genTick', false, 'runButton')
-        hideDiv('sketchTick', true, 'sketchButton')
-        hideDiv('styleTick', true, 'styleButton')
+        hideDiv('genTick', false, 'runButton');
+        hideDiv('sketchTick', true, 'sketchButton');
+        hideDiv('styleTick', true, 'styleButton');
       }catch(_){}
 
     }else{
       alert(`Something went wrong trying to send your image choice. Status code: ${response.status}`);
-      displayErrorMessage(response)
+      displayErrorMessage(response);
     }
   }else{
-    alert("Either input sketch or input style has not been properly uploaded !");
+    alert('Either input sketch or input style has not been properly uploaded !');
   }
   try{
-    hideDiv('loader', true)
+    hideDiv('loader', true);
   }catch(_){}
 }
 
 // function to run image generation again if they make a choice
 async function makeDissChoice (choice) {
   clearOptions();
-  hideDiv('genTick', true, 'runButton')
-  hideDiv('loader', false, 'runButton')
+  hideDiv('genTick', true, 'runButton');
+  hideDiv('loader', false, 'runButton');
 
   document.getElementById('inputStyle').src = `https://zu-api-97613761704.europe-north1.run.app/option/${choice}`;
   const response = await fetch(`https://zu-api-97613761704.europe-north1.run.app/choice/${choice}`, { signal: AbortSignal.timeout(40000) });
   if(response.status === 200){
-    await delay(5000) 
-    const option1 = document.getElementById("option1img")
-    const option2 = document.getElementById("option2img")
-    const option3 = document.getElementById("option3img")
+    await delay(5000); 
+    const option1 = document.getElementById('option1img');
+    const option2 = document.getElementById('option2img');
+    const option3 = document.getElementById('option3img');
     try{
       // try catch in case user exits page
 
       option1.src = 'https://zu-api-97613761704.europe-north1.run.app/option/1';
       option2.src = 'https://zu-api-97613761704.europe-north1.run.app/option/2';
       option3.src = 'https://zu-api-97613761704.europe-north1.run.app/option/3';
-      option1.className='imageChoiceImage'
-      option2.className='imageChoiceImage'
-      option3.className='imageChoiceImage'
+      option1.className='imageChoiceImage';
+      option2.className='imageChoiceImage';
+      option3.className='imageChoiceImage';
       
-      hideDiv('genTick', false)
+      hideDiv('genTick', false);
             
     }catch(_){}
 
 
   }else{
     alert(`Something went wrong trying to send your image choice. Status code: ${response.status}`);
-    displayErrorMessage(response)
+    displayErrorMessage(response);
 
   }
   try{
-    hideDiv('loader', true)
+    hideDiv('loader', true);
   }catch(_){}
 
 }
@@ -250,36 +250,36 @@ window.onload = function() {
   if (window.location.hash === '#/dissertation') {
     disableButtons();
   }
-}
+};
 
 
 function Dissertation(props) {
-    return (
-      <div>
-        <div className="dissSubtitle" >
+  return (
+    <div>
+      <div className="dissSubtitle" >
           Human Involvement Can Improve Current Image Synthesis Methods within the Domain of Art
-          <br />
-        </div>
-        <div>
-          <a href={dissertation} className="smallLink" download="Zachary Upstone Dissertation">PDF</a>
+        <br />
+      </div>
+      <div>
+        <a href={dissertation} className="smallLink" download="Zachary Upstone Dissertation">PDF</a>
           &nbsp; | &nbsp;
-          <a href="https://github.com/zu213/zupstn-website-api" className="smallLink" target="_blank" rel="noreferrer">Repo</a>
-          <br/>
-        </div>
+        <a href="https://github.com/zu213/zupstn-website-api" className="smallLink" target="_blank" rel="noreferrer">Repo</a>
+        <br/>
+      </div>
         
-        <div>
-          <div  className="dissInlineStructure">
-            <figure className='aspectClass'onClick={props.displayMask}>
-              <img src={dissertationUI} alt="Dissertation UI"></img>
-              <figcaption>Figure: The UI I created to allow the utlisation of RLHF</figcaption>
-            </figure>
-          </div>
-          <div  className="dissInlineStructure">
-            <div className="underlined">
+      <div>
+        <div  className="dissInlineStructure">
+          <figure className='aspectClass'onClick={props.displayMask}>
+            <img src={dissertationUI} alt="Dissertation UI"></img>
+            <figcaption>Figure: The UI I created to allow the utlisation of RLHF</figcaption>
+          </figure>
+        </div>
+        <div  className="dissInlineStructure">
+          <div className="underlined">
               Summary
-            </div>
-            <br />
-            <div className="leftAlign">
+          </div>
+          <br />
+          <div className="leftAlign">
               My <a href={dissertation} className="smallLink" download="Zachary Upstone Dissertation">Dissertation</a>&nbsp;
               focused on  Image Synthesis within the domain of art. It employed Reinforcement 
               Learning Human Feedback (RLHF) as a potential improvement to current generative models quality 
@@ -289,23 +289,23 @@ function Dissertation(props) {
               how this data is collected and used is explained  in dept in my dissertation. My results shwoed the 
               quantitiative success of improved control. More details about me including contact information can be
               found on the <Link  className="smallLink" to="/me">About Me page</Link>.
-              <br />
-              <br />
+            <br />
+            <br />
               The tool produced by my dissertation can be found in this&nbsp; 
-              <a href="https://github.com/zu213/zupstn-website-api" className="smallLink" target="_blank" rel="noreferrer">repository</a>, 
+            <a href="https://github.com/zu213/zupstn-website-api" className="smallLink" target="_blank" rel="noreferrer">repository</a>, 
               it is important to note that this is just the finished model and doesn't include the learning features that my research focused on.
-            </div>
           </div>
         </div>
-        <br />
-        <hr className='limitedHr'/>
+      </div>
+      <br />
+      <hr className='limitedHr'/>
         
-        <div className='dissContainer notFinished'>
-          <br />
+      <div className='dissContainer notFinished'>
+        <br />
         <div className="underlined">
               Dissertation tool <br />
               
-          </div>
+        </div>
         <div className='dissToolText'>
           <br />
           To use: <br />
@@ -318,27 +318,27 @@ function Dissertation(props) {
           <div>
             <div className='inlineInput'>
                 Sketch Input 
-                <br/>
-                <img className='inputImage' src={sketchImg} alt='' id="inputSketch" ></img>
-                <input className='inputBrowse' type="file" id="uploadSketch" onChange={uploadSketch} />
-                <br />
-                <button className='submitButton' id='sketchButton' onClick={submitSketch}>
+              <br/>
+              <img className='inputImage' src={sketchImg} alt='' id="inputSketch" ></img>
+              <input className='inputBrowse' type="file" id="uploadSketch" onChange={uploadSketch} />
+              <br />
+              <button className='submitButton' id='sketchButton' onClick={submitSketch}>
                   Submit sketch
-                </button>
-                <img className='tick' src={tick} alt='' id="sketchTick"></img>
+              </button>
+              <img className='tick' src={tick} alt='' id="sketchTick"></img>
             </div>
             <div className='inlineInput'>
                 Style Input 
-                <br/>
-                <img className='inputImage' src={styleImg} alt='' id="inputStyle"></img>
-                <input className='inputBrowse' type="file" id="uploadStyle" onChange={uploadStyle} />
-                <br />
-                <div>
-                  <button className='submitButton' id='styleButton' onClick={submitStyle}>
+              <br/>
+              <img className='inputImage' src={styleImg} alt='' id="inputStyle"></img>
+              <input className='inputBrowse' type="file" id="uploadStyle" onChange={uploadStyle} />
+              <br />
+              <div>
+                <button className='submitButton' id='styleButton' onClick={submitStyle}>
                     Submit style 
-                  </button>
-                  <img className='tick' src={tick} alt='' id="styleTick"></img>
-                </div>
+                </button>
+                <img className='tick' src={tick} alt='' id="styleTick"></img>
+              </div>
             </div>
           </div>
           <button className='submitButton' id="runButton" onClick={runDiss}> Generate images </button>
@@ -352,33 +352,33 @@ function Dissertation(props) {
           <div>
             <div className='imageChoice'>
                 Option 1
-                <br/>
-                <img  src={option1} alt='' id="option1img" onClick={() => makeDissChoice(1)}></img>
+              <br/>
+              <img  src={option1} alt='' id="option1img" onClick={() => makeDissChoice(1)}></img>
             </div>
             <div className='imageChoice'>
                 Option 2
-                <br/>
-                <img src={option2} alt='' id="option2img" onClick={() => makeDissChoice(2)}></img>
+              <br/>
+              <img src={option2} alt='' id="option2img" onClick={() => makeDissChoice(2)}></img>
             </div>
             <div className='imageChoice'>
                 Option 3 
-                <br/>
-                <img src={option3} alt='' id="option3img" onClick={() => makeDissChoice(3)}></img>
+              <br/>
+              <img src={option3} alt='' id="option3img" onClick={() => makeDissChoice(3)}></img>
             </div>
           </div>
           <div className='smallText'>
             This is currently unstable as it is experimental, if it fails to load, refresh the page and try again
           </div>
-        <br />
+          <br />
         </div>
-        </div>
-        <div className='dissTooSmall'>
-          Screen is too small to display dissertation tool.
-        </div>
-      
       </div>
+      <div className='dissTooSmall'>
+          Screen is too small to display dissertation tool.
+      </div>
+      
+    </div>
 
-    );
-  }
+  );
+}
 
 export default Dissertation;

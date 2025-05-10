@@ -1,8 +1,8 @@
 
 
 export const asciiArt = [
-    (
-        <pre>
+  (
+    <pre>
         ------ <br />
         | 0 0 |  <br />
         |  _  |  <br />
@@ -10,7 +10,7 @@ export const asciiArt = [
         /      \ <br />
         |       | <br />
     </pre>),
-    (
+  (
     <pre>
         ------ <br />
         | 0 0 |  <br />
@@ -19,7 +19,7 @@ export const asciiArt = [
       _/      \_ <br />
      / |       | \ <br />
     </pre>),
-    (
+  (
     <pre>
         ------ <br />
         | 0 0 |  <br />
@@ -29,10 +29,10 @@ export const asciiArt = [
         |       | <br />
     </pre>),
 
-]
+];
 
 export const asciiGif = [
-    (
+  (
     <pre>
         ------  <br />
         | 0 0 |  <br />
@@ -41,7 +41,7 @@ export const asciiGif = [
     /     \_/<br />
        |      |  <br />
     </pre>),
-    (
+  (
     <pre>
         ------  <br />
         | 0 0 |  <br />
@@ -50,7 +50,7 @@ export const asciiGif = [
     \ _/     \_    <br />
        |      | \<br />
     </pre>),
-    (
+  (
     <pre>
         ------  <br />
         | 0 0 |  <br />
@@ -59,8 +59,8 @@ export const asciiGif = [
       _/     \_/ <br />
      / |      |    <br />
     </pre>),
-    (
-        <pre>
+  (
+    <pre>
         ------  <br />
         | 0 0 |  <br /> 
           |  _  | /<br />
@@ -68,16 +68,16 @@ export const asciiGif = [
      \_/     \    <br />
        |      |  <br />
     </pre>),
-    (
-        <pre>
+  (
+    <pre>
             ------  <br />
             | 0 0 |  <br />
             |  _  |  <br />
             ------  <br />
           _/     \_/ <br />
          / |      |    <br />
-        </pre>),
-        (
+    </pre>),
+  (
     <pre>
         ------  <br />
         | 0 0 |  <br />
@@ -87,11 +87,11 @@ export const asciiGif = [
         |      | \<br />
     </pre>)
 
-]
+];
 
 export const asciiArtBig = (<pre>
                                                                                                         
-                                                                                          <br />                                                                                                      
+  <br />                                                                                                      
                                     &nbsp; @=<br />         
                                     @@*           @                                        <br />         
                                    @@@:  @  -*@@@@@                                        <br />         
@@ -132,5 +132,5 @@ export const asciiArtBig = (<pre>
           @= @+ .@@@@@@@@@@@@@@@@@@@@% @@@@@@@@@@@@@@@@  *@=@@@=   @@%                     <br />         
         .@@@ #@@:@@@@@@@@@@@@@@@@@@ .  :@@@@@@@@@@@@@@@   =+ @@   @@     .                 <br />         
          @@@. @@@@@@@@@@@@@@@@@@@@.   @@@@@@@@@@@@@@@@@@@@@@@@@%@@@@ *@@@@@@@     <br />
-         </pre>      
+</pre>      
 );

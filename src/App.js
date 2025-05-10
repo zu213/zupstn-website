@@ -5,7 +5,7 @@ import './App.css';
 import { useState, useEffect, useCallback } from 'react';
 
 // Page imports
-import Art from './art/Art.js'
+import Art from './art/Art.js';
 import Charts from './charts/Charts.js';
 import Projects from './projects/Projects.js';
 import Me from './myself/Myself.js';
@@ -18,17 +18,17 @@ let chosenArt;
 function App() {
   // declare important variables
   let navigate = useNavigate();
-  const location = useLocation()
+  const location = useLocation();
 
   const defaultBackButton = useCallback(() => (<button id="backButton" className="backButton" onClick={() => navigate(-1)}>Back</button>), [navigate]);
   const defaultSmallBackButton = useCallback(() => (<button id="smallBackButton" className="smallBackButton" onClick={() => navigate(-1)}> &#60; </button>), [navigate]);
 
-  var [backButton, setBackButton] = useState(defaultBackButton)
-  var [smallBackButton, setSmallBackButton] = useState(defaultSmallBackButton)
+  var [backButton, setBackButton] = useState(defaultBackButton);
+  var [smallBackButton, setSmallBackButton] = useState(defaultSmallBackButton);
 
   // listeners 
   useEffect(() => {
-    if(location.pathname ===  "/zach-upstone" || location.pathname ===  "/" ) {
+    if(location.pathname ===  '/zach-upstone' || location.pathname ===  '/' ) {
       setBackButton(null);
       setSmallBackButton(null);
     } else {
@@ -39,31 +39,31 @@ function App() {
 
 
   return(
-      <div id="all" className='app'>
-        <div>
-          {backButton}
-          {smallBackButton}
-        </div>
-        <Routes>
-          <Route exact path='/' element={<Home/>} />
-          <Route path='/me' element={<Me/>} />
-          <Route path='/cv' element={<CV/>} />
-          <Route path='/projects' element={<Projects/>} />
-          <Route path='/gallery' element={<Art/>} />
-          <Route path='/charts' element={<Charts/>} />
-          <Route path='/fruit-lips' element={<FruitLips/>} />
-          <Route path='/368squares' element={<Squares/>} />
-          <Route path='/glossary' element={<Glossary/>} />
-          <Route path='*' element={<NotFound/>} />
-        </Routes>
+    <div id="all" className='app'>
+      <div>
+        {backButton}
+        {smallBackButton}
       </div>
-  )
+      <Routes>
+        <Route exact path='/' element={<Home/>} />
+        <Route path='/me' element={<Me/>} />
+        <Route path='/cv' element={<CV/>} />
+        <Route path='/projects' element={<Projects/>} />
+        <Route path='/gallery' element={<Art/>} />
+        <Route path='/charts' element={<Charts/>} />
+        <Route path='/fruit-lips' element={<FruitLips/>} />
+        <Route path='/368squares' element={<Squares/>} />
+        <Route path='/glossary' element={<Glossary/>} />
+        <Route path='*' element={<NotFound/>} />
+      </Routes>
+    </div>
+  );
 }
 
 function Home() {
-  const chosenArtNumber = Math.floor(Math.random() * asciiGif.length)
+  const chosenArtNumber = Math.floor(Math.random() * asciiGif.length);
   // one in a hundered chance of being tessa
-  const asciiGifDisplay = Math.floor(Math.random() * 100) !== 99
+  const asciiGifDisplay = Math.floor(Math.random() * 100) !== 99;
 
   const [currentImageIndex, setCurrentImageIndex] = useState(chosenArtNumber);
   const [isHovered, setIsHovered] = useState(false);
@@ -122,7 +122,7 @@ function Home() {
         <div className='asciiArt' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
           {asciiGif[currentImageIndex]}
         </div>
-      :    
+        :    
         <div className='bigAsciiArt'>
           {asciiArtBig}
         </div>
@@ -134,30 +134,30 @@ function Home() {
 // Sub modules
 function FruitLips() {
   return (
-  <div className='fruitLipsContainer'>
-    <iframe 
-      title='fruit-lips'
-      className='fruitLips'
-      src="./fruit-lips/fruit-lips.html"
-      width="100%"
-      height="100%"
-    />
-  </div>
-  )
+    <div className='fruitLipsContainer'>
+      <iframe 
+        title='fruit-lips'
+        className='fruitLips'
+        src="./fruit-lips/fruit-lips.html"
+        width="100%"
+        height="100%"
+      />
+    </div>
+  );
 }
 
 function Squares() {
   return (
-  <div className='squaresContainer'>
-    <iframe 
-      title='368Squares'
-      className='368Squares'
-      src="./squares/squares.html"
-      width="100%"
-      height="100%"
-    />
-  </div>
-  )
+    <div className='squaresContainer'>
+      <iframe 
+        title='368Squares'
+        className='368Squares'
+        src="./squares/squares.html"
+        width="100%"
+        height="100%"
+      />
+    </div>
+  );
 }
 
 function NotFound() {
@@ -165,7 +165,7 @@ function NotFound() {
     <div>
       Subpage not found!
     </div>
-  )
+  );
 }
 
 export default App;

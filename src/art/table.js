@@ -1,6 +1,6 @@
-import './Art.css'
+import './Art.css';
 
-document.addEventListener("click", detectMouseCoords);
+document.addEventListener('click', detectMouseCoords);
 
 var movingImage = null;
 var mouseX = 0;
@@ -30,14 +30,14 @@ export function tablePage(images) {
         </div> 
       </div>
     </div>
-  )
+  );
 }
   
 // function to randomly place pictures
 export function pagePosition() {
   var randX;
   var randY;
-  const imageList = document.querySelectorAll('.messFormat')
+  const imageList = document.querySelectorAll('.messFormat');
   for(const image of imageList){
     randX = Math.random();
     randY = Math.random();
@@ -64,15 +64,15 @@ function movePosition(imageToMove) {
       movingImage = imageToMove;
 
       // Also need to disable other dangerous buttons
-      document.getElementById("galleryButton").disabled = true;
-      document.getElementById("backButton").disabled = true;
-      document.getElementById("smallBackButton").disabled = true;
+      document.getElementById('galleryButton').disabled = true;
+      document.getElementById('backButton').disabled = true;
+      document.getElementById('smallBackButton').disabled = true;
 
       // change styles
-      const body = document.getElementById("all");
-      body.style.cursor = "grabbing"
+      const body = document.getElementById('all');
+      body.style.cursor = 'grabbing';
       
-      imageToMove.classList.add("messFormatAnimate");
+      imageToMove.classList.add('messFormatAnimate');
 
       // make sure iamge comes to top
       currentZ += 1;
@@ -81,22 +81,22 @@ function movePosition(imageToMove) {
 
     else if(movingImage !== null){
       //image coords become mouse coords when they drop the image
-      imageToMove = movingImage
-      imageToMove.style.position = "fixed"
+      imageToMove = movingImage;
+      imageToMove.style.position = 'fixed';
       imageToMove.style.top = (mouseY / window.innerHeight * 100 - 10) + '%';
       imageToMove.style.left =(mouseX / window.innerWidth * 100 - 5) + '%';
       movingImage = null;
 
       //change styles
-      const body = document.getElementById("all");
-      body.style.cursor = "context-menu"
+      const body = document.getElementById('all');
+      body.style.cursor = 'context-menu';
       
-      imageToMove.classList.remove("messFormatAnimate")
+      imageToMove.classList.remove('messFormatAnimate');
 
       // renable buttons
-      document.getElementById("galleryButton").disabled = false;
-      document.getElementById("backButton").disabled = false;
-      document.getElementById("smallBackButton").disabled = false;
+      document.getElementById('galleryButton').disabled = false;
+      document.getElementById('backButton').disabled = false;
+      document.getElementById('smallBackButton').disabled = false;
 
     }
   }, 1);

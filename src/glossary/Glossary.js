@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import './Glossary.css'
+import './Glossary.css';
 
 function Glossary() {
-    return (
+  return (
     <div>
       <div className='linkTitle'>Page links</div>
       <div className='linksContainer'>
@@ -17,7 +17,7 @@ function Glossary() {
   
       </div>
     </div>
-    )
+  );
 }
 
 export default Glossary;
