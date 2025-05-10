@@ -29,7 +29,6 @@
     width: 90%;
     left: 5%;
     position: sticky;
-    
   }
 }
 
@@ -144,34 +143,34 @@
     left: 1.6vw;
     position: relative;
     display: none;
-  }
+}
   
-  @keyframes spin {
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
+}
 
     
+.dissTooSmall {
+    display: none;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .dissContainer {
+    display: none;
+  }
+
   .dissTooSmall {
     display: none;
+    padding: 20px;
   }
+}
 
+.errorMsg {
+  display: none;
+}
 
-  @media only screen and (max-width: 900px) {
-    .dissContainer {
-      display: none;
-    }
-  
-    .dissTooSmall {
-      display: none; /* change back to block */
-      padding: 20px;
-    }
-  }
-
-  .errorMsg {
-    display: none;
-  }
-
-  .notFinished {
-    display: none;
-  }
+.notFinished {
+  display: none;
+}
