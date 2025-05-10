@@ -23,7 +23,7 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'indent': ['error', 2, { SwitchCase: 1 }],
-      'linebreak-style': ['error', 'unix'],
+      'linebreak-style': ['error', 'windows'],
       'quotes': ['error', 'single'],
       'semi': ['error', 'always'],
     },

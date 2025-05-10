@@ -18,7 +18,7 @@
 
 .scoll-pane::-webkit-scrollbar { 
     display: none;
-  }
+}
 
 .imageColumn {
     display: inline-block;
@@ -55,6 +55,10 @@
     left: 37.5%;
     overflow: hidden;
     z-index: 100;
+}
+
+.leftButton, .rightButton {
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {

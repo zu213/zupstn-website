@@ -13,6 +13,7 @@ export const galleryPage = (images) => (
           {rowName}
         </div>
         <div className="imageRow">
+          <div className="leftButton" onClick={() => scrollRow(-30)}> left </div>
           {   
             rowImages.map((image, index) => (
               <div className="imageColumn" key={`image-${index}`}>
@@ -20,6 +21,7 @@ export const galleryPage = (images) => (
               </div>
             ))
           }
+          <div className="rightButton" onClick={() => scrollRow(30)}> right </div>
         </div>
       </div>
     )
@@ -46,4 +48,8 @@ function removeOverlay() {
     currentOverlay = null;
     document.querySelector('.overlay').style.display = 'none';
   }
+}
+
+function scrollRow(scrollBy){
+  // TBD
 }

@@ -159,6 +159,11 @@
   touch-action: none;
 }
 
+.pageHeader{
+  height: 8vh;
+  font-size: large;
+}
+
 /* General css writes */
 
 img {

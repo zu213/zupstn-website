@@ -4,6 +4,7 @@ import SpotifyRoulette from './SpotifyRoulette.js';
 import Snowstorm from './Snowstorm.js';
 import ChromeContextControl from './ChromeContextControl.js';
 import TrafficSimulator from './TrafficSimulator.js';
+import SquarePaint from './SquarePaint.js';
 import './Projects.css';
 import { useState } from 'react';
 
@@ -29,6 +30,16 @@ function Projects() {
   return (
     <div>
       <header className='pageHeader'>Projects</header>
+
+      <hr/>
+      <div className={`mask ${mask ? 'opaque': ''}`} onClick={hideMask}></div>
+      <div>
+        <div className='projectTitle'>
+            SquarePaint
+        </div>
+        <hr className='limitedHr'/>
+        <SquarePaint displayMask={displayMask}/>
+      </div>
 
       <hr/>
       <div className={`mask ${mask ? 'opaque': ''}`} onClick={hideMask}></div>

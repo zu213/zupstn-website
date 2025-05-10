@@ -39,9 +39,7 @@ function SpotifyRoulette(props) {
           </ul>
         </div>
       </div>
-
     </div>
-
   );
 }
 

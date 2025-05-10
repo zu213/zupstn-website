@@ -56,7 +56,7 @@ function Art() {
 
   return (
     <div>
-      <div className="subTitle">
+      <div className="pageHeader">
               Gallery <br />
       </div>              
 
