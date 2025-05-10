@@ -1,10 +1,10 @@
-import Dissertation from './projects/Dissertation.js';
-import UnicodeChess from './projects/UnicodeChess.js';
-import SpotifyRoulette from './projects/SpotifyRoulette.js';
-import Snowstorm from './projects/Snowstorm.js';
-import ChromeContextControl from './projects/ChromeContextControl.js';
-import TrafficSimulator from './projects/TrafficSimulator.js'
-import './styleFiles/Projects.css'
+import Dissertation from './Dissertation.js';
+import UnicodeChess from './UnicodeChess.js';
+import SpotifyRoulette from './SpotifyRoulette.js';
+import Snowstorm from './Snowstorm.js';
+import ChromeContextControl from './ChromeContextControl.js';
+import TrafficSimulator from './TrafficSimulator.js'
+import './Projects.css'
 import { useState } from 'react';
 
 

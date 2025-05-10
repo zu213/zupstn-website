@@ -1,4 +1,4 @@
-import './styleFiles/Resume.css';
+import './Resume.css';
 
 // document imports
 import cv from './documents/CV.pdf'

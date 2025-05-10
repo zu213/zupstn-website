@@ -1,4 +1,4 @@
-import '../styleFiles/Art.css'
+import './Art.css'
 
 document.addEventListener("click", detectMouseCoords);
 

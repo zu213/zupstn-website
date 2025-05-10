@@ -274,7 +274,7 @@ _::-webkit-full-page-media, _:future, :root .pdf-viewer {
   display: none;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 520px) {
   .backButton {
     display: none;
   }
@@ -362,6 +362,12 @@ button:hover {
 button:active {
   transform: scale(0.98);
   box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);
+}
+
+@media only screen and (max-width: 420px) {
+  button {
+    margin: 7px 3px;
+  }
 }
 
 input {

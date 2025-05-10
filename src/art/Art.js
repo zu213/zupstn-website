@@ -1,8 +1,8 @@
-import './styleFiles/Art.css';
+import './Art.css';
 import { useState } from 'react';
 
-import {galleryPage} from './subJS/gallery.js'
-import {tablePage, pagePosition} from './subJS/table.js'
+import {galleryPage} from './gallery.js'
+import {tablePage, pagePosition} from './table.js'
 
 var onGallery = true;
 

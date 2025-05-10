@@ -1,14 +1,14 @@
 
 // Normal imports
 import { Route, Routes, Link, useLocation, useNavigate} from 'react-router-dom';
-import './styleFiles/App.css';
+import './App.css';
 import { useState, useEffect, useCallback } from 'react';
 
 // Page imports
-import Art from './Art.js'
-import Charts from './Charts.js';
-import Projects from './Projects.js';
-import { asciiArtBig, asciiGif } from './subJS/asciiArt.js';
+import Art from './art/Art.js'
+import Charts from './charts/Charts.js';
+import Projects from './projects/Projects.js';
+import { asciiArtBig, asciiGif } from './other/asciiArt.js';
 
 
 // Image imports
@@ -209,7 +209,7 @@ function Me() {
         <div className='subSubTitle'>
         More:
         </div>
-        Navigate the rest of my website by visiting the <Link className="smallLink" to="/index">Index page</Link>.
+        Navigate the rest of my website by visiting the <Link className="smallLink" to="/glossary">Glossary page</Link>.
       </div>
     </div>
   );

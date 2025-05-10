@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import '../styleFiles/Dissertation.css';
+import './Dissertation.css';
 
 import dissertationUI from './media/di-ui.png'
 import tick from '../icons/tick.png'

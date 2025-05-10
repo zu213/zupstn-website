@@ -1,8 +1,8 @@
-import './styleFiles/Charts.css';
+import './Charts.css';
 import moment from "moment";
 import { useState } from 'react';
 
-import {benchData, deadliftData, squatData} from './subJS/chartData.js'
+import {benchData, deadliftData, squatData} from './chartData.js'
 
 import {
     LineChart,
