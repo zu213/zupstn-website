@@ -31,7 +31,6 @@ function ChromeContextControl(props) {
           You also have the ability add custom code that is run by a Chrome worker, this is also down on 
           the landing page and can be added to the right click menu to allow quick running of custom code. 
           An example fo this can be found within the README in the linked repository.
-   
       </div>
 
       <div className='wideProjectInlineStructure'>
@@ -40,7 +39,6 @@ function ChromeContextControl(props) {
           <figcaption>Figure: New modified context menu</figcaption>
         </figure>
       </div>
- 
     </div>
 
   );

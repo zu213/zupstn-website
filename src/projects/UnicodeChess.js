@@ -7,7 +7,6 @@ function UnicodeChess(props) {
         <a href="https://github.com/zu213/unicode-chess" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
         <br/>
       </div>
-
       <div className='projectInlineStructure leftAlign'>
           I implemented a complete <a href="https://en.wikipedia.org/wiki/Chess" className="smallLink">Chess</a> game in <b>C</b>,
           handling everything from <b>input validation</b> to <b>checkmate detection</b>.
@@ -24,8 +23,8 @@ function UnicodeChess(props) {
             </ol>
           </li>
         </ul>
-
-This project required efficient board representation and logic to enforce chess mechanics entirely within a text-based console environment. ♜♞♛
+        This project required efficient board representation and logic to enforce chess mechanics entirely within
+         a text-based console environment. ♜♞♛
 
       </div>
       <div className='projectInlineStructure'>

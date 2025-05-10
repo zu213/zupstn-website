@@ -60,7 +60,6 @@ function hideDiv(divId, hide, button=null){
   }
 
   if(button){
-    
     if(hide){
       const genTick= document.getElementById(button);
       genTick.style.left = '0vw';
@@ -83,9 +82,7 @@ function displayErrorMessage(e) {
 function uploadSketch (e) {
   if (e.target.files.length) {
     var img = document.getElementById('inputSketch');
-    img.onload = () => {
-      URL.revokeObjectURL(img.src);
-    };
+    img.onload = () => URL.revokeObjectURL(img.src);
     img.src = URL.createObjectURL(e.target.files[0]);
     currentSketchFile = e.target.files[0];
     changeButton('sketchButton', false);
@@ -160,7 +157,6 @@ async function submitStyle () {
       alert('Style input has not been properly uploaded !');
     }
   }
-
 }
 
 // function to run image generation
@@ -170,7 +166,6 @@ async function runDiss () {
   if(sketchUploaded && styleUploaded){
     const response = await fetch('https://zu-api-97613761704.europe-north1.run.app/', { signal: AbortSignal.timeout(300000) });
     console.log(response);
-
     if(response.status === 200){
       await delay(5000); 
       const element = document.getElementById('imagesContainer');
@@ -179,7 +174,6 @@ async function runDiss () {
       const option3 = document.getElementById('option3img');
       try{
         // try catch in case user exits page
-        
         element.className = '';
         option1.src = 'https://zu-api-97613761704.europe-north1.run.app/option/1';
         option2.src = 'https://zu-api-97613761704.europe-north1.run.app/option/2';
@@ -194,7 +188,6 @@ async function runDiss () {
         hideDiv('sketchTick', true, 'sketchButton');
         hideDiv('styleTick', true, 'styleButton');
       }catch(_){}
-
     }else{
       alert(`Something went wrong trying to send your image choice. Status code: ${response.status}`);
       displayErrorMessage(response);
@@ -222,7 +215,6 @@ async function makeDissChoice (choice) {
     const option3 = document.getElementById('option3img');
     try{
       // try catch in case user exits page
-
       option1.src = 'https://zu-api-97613761704.europe-north1.run.app/option/1';
       option2.src = 'https://zu-api-97613761704.europe-north1.run.app/option/2';
       option3.src = 'https://zu-api-97613761704.europe-north1.run.app/option/3';
@@ -231,19 +223,15 @@ async function makeDissChoice (choice) {
       option3.className='imageChoiceImage';
       
       hideDiv('genTick', false);
-            
     }catch(_){}
-
 
   }else{
     alert(`Something went wrong trying to send your image choice. Status code: ${response.status}`);
     displayErrorMessage(response);
-
   }
   try{
     hideDiv('loader', true);
   }catch(_){}
-
 }
 
 window.onload = function() {

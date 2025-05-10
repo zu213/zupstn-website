@@ -7,7 +7,6 @@ function TrafficSimulator(props) {
         <a href="https://github.com/zu213/traffic-sim" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
         <br/>
       </div>
-
       <div className='tightProjectInlineStructure leftAlign topPadding indentMobile'>
           A traffic simulator implemented in C utilising GDI for graphics display.
         <br />
@@ -20,7 +19,6 @@ function TrafficSimulator(props) {
           It utilises linking with <b>libwinpthread-1.dll</b> and management of C files by use of header files, 
           road length is fixed by default but can be modified manually and then the code re compiled using&nbsp;  
         <b>gcc</b>.
-
       </div>
       <div className='largeProjectInlineStructure'>
         <figure onClick={props.displayMask} className='aspectClass'>
