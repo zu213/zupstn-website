@@ -1,3 +1,37 @@
+/* diss page */
+
+.dissSubtitle {
+  font-size: 18px;
+}
+
+.inlineButton {
+  padding: 1vw;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.dissInlineStructure {
+  padding: 1vw;
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+}
+
+@media only screen and (max-width: 1100px) {
+  .dissSubtitle {
+    padding-top: 10vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .dissInlineStructure {
+    display: block;
+    width: 90%;
+    left: 5%;
+    position: sticky;
+    
+  }
+}
 
 .dissContainer {
     height: 48vw;

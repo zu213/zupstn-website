@@ -37,7 +37,7 @@ function Me() {
           Gherkin and Selenium.
           <br/>
           <br/>
-          This website is fully built by me using <b>React</b>, <b>Cloudflare</b>(Frontend) and <b>GoogleCloud</b>(Backend). 
+          This website is fully built by me using <b>React</b> and <b>Cloudflare</b>(Hosting). 
           <div className='subSubTitle'>
           <br/>
             Graduate:

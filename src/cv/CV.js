@@ -1,5 +1,6 @@
 // Image imports
 import download from '../icons/white-download.png'
+import './CV.css'
 
 function CV() {
     return (

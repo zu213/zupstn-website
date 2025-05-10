@@ -92,17 +92,28 @@ function Home() {
           </Link>
         </div>
       </div>
-      <br/>
 
       <div className="searchLinksLeft">
-        <Link to="/cv">CV</Link><br/><br/>
-        <Link to="/projects">Projects</Link><br/><br/>
-        <Link to="/gallery">Gallery</Link>
+        <div>
+          <Link to="/cv">CV</Link>
+        </div>
+        <div>
+          <Link to="/projects">Projects</Link>
+        </div>
+        <div>
+          <Link to="/gallery">Gallery</Link>
+        </div>
       </div>
       <div className="searchLinksRight">
-        <a href="mailto:Zac.upstone@gmail.com"  target="_blank" rel="noreferrer">Email</a><br/><br/>
-        <a href="https://www.linkedin.com/in/zachary-upstone-076218214/"  target="_blank" rel="noreferrer">LinkedIn</a><br/><br/>
-        <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
+        <div>
+          <a href="mailto:Zac.upstone@gmail.com"  target="_blank" rel="noreferrer">Email</a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/zachary-upstone-076218214/"  target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+        <div>
+          <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
+        </div>
       </div>
 
       {chosenArt}

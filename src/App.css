@@ -4,6 +4,7 @@
 
 /* title */
 .titleContainer {
+  padding-bottom: 15px;
   position: relative;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -47,6 +48,10 @@
   position: fixed;
 }
 
+.searchLinksLeft div, .searchLinksRight div {
+  padding-bottom: 5vh;
+}
+
 .asciiArt {
   position: absolute;
   bottom: 0%;
@@ -73,116 +78,6 @@
     padding-top: 5vw;
 
   }
-}
-
-/* cv page */
-
-.pdf-viewer {
-  width: 70%;
-  height: 50vw;
-}
-
-.downloadImage {
-  width: 10px
-}
-
-.tooSmallCV {
-  display: none;
-}
-
-.safariCV {
-  display: none;
-}
-
-@media only screen and (max-width: 500px) {
-  .pdf-viewer {
-    display: none;
-  }
-  .tooSmallCV {
-    display: block;
-  }
-}
-
-@media (max-aspect-ratio: 3/2) {
-  .pdf-viewer {
-    height: 100vw;
-  }
-}
-
-/* Safari 7.1+ */
-
-_::-webkit-full-page-media, _:future, :root .safariCV {
-  display: block;
-}
-_::-webkit-full-page-media, _:future, :root .pdf-viewer {
-  display: none;
-}
-
-/* diss page */
-
-.dissSubtitle {
-  font-size: 18px;
-}
-
-.inlineButton {
-  padding: 1vw;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.dissInlineStructure {
-  padding: 1vw;
-  display: inline-block;
-  width: 40%;
-  vertical-align: top;
-}
-
-@media only screen and (max-width: 1100px) {
-  .dissSubtitle {
-    padding-top: 10vw;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .dissInlineStructure {
-    display: block;
-    width: 90%;
-    left: 5%;
-    position: sticky;
-    
-  }
-}
-
-/* cv page */
-
-.cvPage {
-  padding-bottom: 20px;
-}
-
-/* link page */
-
-.linkTitle {
-  font-size: x-large;
-}
-
-.linksContainer {
-  text-align: left;
-  padding: 8vh 10%;
-  font-size: larger;
-}
-
-.link{
-  padding: 4vh 0%;
-}
-.link a  {
-  color:rgb(254, 75, 120);
-}
-.link:visited {
-  color:rgb(211, 3, 103);
-}
-.link:hover {
-  color: rgb(290, 14, 61);
-  text-decoration: underline;
 }
 
 /* reused classes */
