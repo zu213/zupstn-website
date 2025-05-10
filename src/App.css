@@ -1,3 +1,7 @@
+.app {
+  padding-top: 6vh;
+}
+
 /* title */
 .titleContainer {
   position: relative;
@@ -21,24 +25,6 @@
 @media only screen and (max-width: 600px) {
   .title {
     font-size: 5vw;
-  }
-}
-
-.tagLine {
-  text-align: left;
-  font-size: 1.2vw;
-  width: auto;
-  display: block;
-  font-style: italic;
-  text-decoration: none;
-  padding-left: 8%;
-  bottom: -6vw;
-  position: relative;
-}
-
-@media only screen and (max-width: 600px) {
-  .tagLine {
-    font-size: 2vw;
   }
 }
 
@@ -80,42 +66,12 @@
   .searchLinksLeft {
     font-size: 4vw;
     padding-top: 5vw;
-
   }
   
   .searchLinksRight {
     font-size: 4vw;
     padding-top: 5vw;
 
-  }
-}
-
-/* me page */
-
-.textHolder {
-  padding: 1vw;
-  padding-left: 7%;
-  padding-right: 7%;
-  text-align: left;
-}
-
-.linkHolder a {
-  text-shadow:
-    0 0 8px rgb(244, 232, 248),
-    0 0 12px rgb(249, 218, 249);
-}
-
-.linkHolder a:hover {
-  text-shadow:
-    0 0 10px rgb(239, 218, 246),
-    0 0 15px rgb(250, 187, 250),
-    0 0 25px rgb(247, 164, 247),
-    0 0 40px rgb(249, 109, 249);
-}
-
-@media only screen and (max-width: 400px) {
-  .linkHolder {
-    padding-top: 10vw;
   }
 }
 
@@ -262,15 +218,14 @@ _::-webkit-full-page-media, _:future, :root .pdf-viewer {
   0 0 70px rgb(255, 20, 147);
 }
 
-.backButton {
+.backButton, .smallBackButton {
+  margin-top: 1px;
   left: 4%;
   position: absolute;
   display: inline-block;
 }
 
 .smallBackButton {
-  left: 4%;
-  position: absolute;
   display: none;
 }
 
@@ -302,8 +257,8 @@ _::-webkit-full-page-media, _:future, :root .pdf-viewer {
 
 .squaresContainer {
   position: fixed;
-  top: 11%;
-  height: 90%;
+  top: 0%;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   touch-action: none;
