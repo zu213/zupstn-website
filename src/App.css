@@ -80,6 +80,24 @@
   }
 }
 
+.tagLine {
+  text-align: left;
+  font-size: 1.2vw;
+  width: auto;
+  display: block;
+  font-style: italic;
+  text-decoration: none;
+  padding-left: 8%;
+  bottom: -6vw;
+  position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  .tagLine {
+    font-size: 2vw;
+  }
+}
+
 /* reused classes */
 
 .leftAlign {

