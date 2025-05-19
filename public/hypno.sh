@@ -4,89 +4,77 @@ ROWS=$(tput lines)
 COLS=$(tput cols)
 CENTER_ROW=$((ROWS / 2))
 CENTER_COL=$((COLS / 2))
-declare -a FRAMEBUFFER
-for ((i = 0; i < ROWS * COLS; i++)); do
-    FRAMEBUFFER[$i]=" "
-done
 tput civis
 trap "tput cnorm; exit" INT
 
-# Set a pixel at (row, col)
-set_pixel() {
-  local row=$1
-  local col=$2
-  local char=$3
-  if ((row >= 0 && row < ROWS && col >= 0 && col < COLS)); then
-    FRAMEBUFFER[$((row * COLS + col))]="="
-    if [ "$DIRECTION" -eq 1 ] ||[ "$DIRECTION" -eq 3 ]; then
-        FRAMEBUFFER[$((row * COLS + col + 1))]="="
-    fi
-  fi
-}
 
-# Render the framebuffer
 render() {
-    tput cup $CURRENT_ROW 0
-    line=""
-    for ((j = 0; j < COLS; j++)); do
-      line+="${FRAMEBUFFER[$((CURRENT_ROW * COLS + j))]}"
+    for ((k = 0; k < 3; k++)); do
+        row=${CURRENT_ROWS[$k]}
+        col=${CURRENT_COLS[$k]}
+        color=${COLOURS[$k]}
+        
+        # ANSI: \033[row;colH moves cursor, \033[3Xm sets color
+        printf "\033[%s;%sH\033[3%sm==\033[0m" "$row" "$col" "$color"
     done
-    echo -ne "$line"
 }
 
 # Spiral drawing into buffer
 
-start_spiral() {
-    if [ "$DIRECTION" -eq 0 ]; then
-        CURRENT_COL=$((CURRENT_COL + 1))
-        set_pixel $CURRENT_ROW $CURRENT_COL
-        if (( CURRENT_COL - CENTER_COL >= 2 * COUNT  )); then
-            set_pixel $CURRENT_ROW $((CURRENT_COL + 1))
-            ((DIRECTION++))
+animate_spiral() {
+    local spiral=$1
+    local count=${COUNTS[$spiral]}
+    local direction=${DIRECTIONS[$spiral]}
+
+    if [ "$direction" -eq 0 ]; then
+        ((CURRENT_COLS[$spiral]+=2))
+        if (( CURRENT_COLS[$spiral] - CENTER_COL >= 2 * count  )); then
+            ((DIRECTIONS[$spiral]++))
         fi
-    elif [ "$DIRECTION" -eq 1 ]; then
-        CURRENT_ROW=$((CURRENT_ROW - 1))
-        set_pixel $CURRENT_ROW $CURRENT_COL
-        if (( CENTER_ROW - CURRENT_ROW >= COUNT )); then
-            ((DIRECTION++))
+    elif [ "$direction" -eq 1 ]; then
+        ((CURRENT_ROWS[$spiral]--))
+        if (( CENTER_ROW - CURRENT_ROWS[$spiral] >= count )); then
+            ((DIRECTIONS[$spiral]++))
         fi
-    elif [ "$DIRECTION" -eq 2 ]; then
-        CURRENT_COL=$((CURRENT_COL - 1))
-        set_pixel $CURRENT_ROW $CURRENT_COL
-        if (( CENTER_COL - CURRENT_COL >= 2 * COUNT )); then
-            ((DIRECTION++))
+    elif [ "$direction" -eq 2 ]; then
+        ((CURRENT_COLS[$spiral]-=2))
+        if (( CENTER_COL - CURRENT_COLS[$spiral] >= 2 * count )); then
+            ((DIRECTIONS[$spiral]++))
         fi
-    elif [ "$DIRECTION" -eq 3 ]; then
-        CURRENT_ROW=$((CURRENT_ROW + 1))
-        set_pixel $CURRENT_ROW $CURRENT_COL
-        if (( CURRENT_ROW - CENTER_ROW >= COUNT )); then
-            ((DIRECTION++))
+    elif [ "$direction" -eq 3 ]; then
+        ((CURRENT_ROWS[$spiral]++))
+        if (( CURRENT_ROWS[$spiral] - CENTER_ROW >= count )); then
+            ((DIRECTIONS[$spiral]++))
         fi
     else
-        COUNT=$((COUNT + 1))
-        CURRENT_ROW=$((CURRENT_ROW + 1))
-        if (( COUNT > CENTER_ROW )); then
-            COUNT=0
-            CURRENT_ROW=$CENTER_ROW
+        COUNTS[$spiral]=$((count + 1))
+        ((CURRENT_ROWS[$spiral]++))
+        if (( CURRENT_ROWS[spiral] > ROWS )); then
+            COUNTS[$spiral]=0
+            CURRENT_ROWS[$spiral]=$CENTER_ROW
         fi
-        set_pixel $CURRENT_ROW $CURRENT_COL
-        DIRECTION=0
+        DIRECTIONS[$spiral]=0
     fi
+
 }
 
 # Main loop
 tput civis
 trap "tput cnorm; exit" INT
 
-CURRENT_ROW=$CENTER_ROW
-CURRENT_COL=$CENTER_COL
-DIRECTION=0
-COUNT=1
+CURRENT_ROWS=($((CENTER_ROW)) $((CENTER_ROW + 2)) $((CENTER_ROW + 5)))
+CURRENT_COLS=($CENTER_COL $CENTER_COL $CENTER_COL)
+DIRECTIONS=(0 0 0)
+COUNTS=(0 2 5)
 COLOURS=(1 2 3)
 
 while true; do
-    start_spiral
+    animate_spiral 0
+    animate_spiral 1
+    animate_spiral 2
+    
     render
+    sleep 0.01
 done
 
 tput cnorm
