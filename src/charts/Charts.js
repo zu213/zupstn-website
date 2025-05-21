@@ -2,8 +2,6 @@ import './Charts.css';
 import moment from 'moment';
 import { useState } from 'react';
 
-import {benchData, deadliftData, squatData} from './chartData.js';
-
 import {
   LineChart,
   ResponsiveContainer,
@@ -20,8 +18,35 @@ const formatXAxis = (tickFormat) => {
 };
 
 
+async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const json = await response.json();
+    const newObj = {};
+    for (const [key, value] of Object.entries(json)) {
+      newObj[key] = value.map(obj => ({ ...obj, date: moment(new Date(obj.date)).unix(), }));
+    }
+    return newObj;
+    
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
 function Charts() {
-  var [data, setData] = useState(deadliftData);
+  var allData;
+  var [data, setData] = useState(null);
+
+  const graphEndpoint = 'https://zu213-backend-2mtn5ps3z-hcaz-enotspus-projects.vercel.app/api/graph';
+  fetchData(graphEndpoint).then(data => {
+    allData = data;
+    document.querySelector('.spinner')?.classList.add('chartLoaded');
+    setData(allData?.deadlift);
+  });
 
   return (
     <div>
@@ -37,19 +62,20 @@ function Charts() {
           </div>
           <div >
             <div className="inlineButton">
-              <button  onClick={() => setData(deadliftData)}>Deadlift data</button>
+              <button  onClick={() => setData(allData?.deadlift)}>Deadlift data</button>
             </div>
             <div className="inlineButton">
-              <button  onClick={() => setData(squatData)}>Squat data</button>
+              <button  onClick={() => setData(allData?.squat)}>Squat data</button>
             </div>
             <div className="inlineButton" >
-              <button onClick={() => setData(benchData)}>Bench data</button>
+              <button onClick={() => setData(allData?.bench)}>Bench data</button>
             </div>
           </div>
         </div>
         <br></br>
 
         <div className="chart">
+          <span className="spinner"></span>
           <div>
             <ResponsiveContainer width="100%" aspect={3}>
               <LineChart data={data} margin={{ right: 30 }}>
