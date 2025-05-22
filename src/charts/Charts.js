@@ -1,6 +1,6 @@
 import './Charts.css';
 import moment from 'moment';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import {
   LineChart,
@@ -26,11 +26,11 @@ async function fetchData(url) {
     }
 
     const json = await response.json();
-    const newObj = {};
+    const dataObj = {};
     for (const [key, value] of Object.entries(json)) {
-      newObj[key] = value.map(obj => ({ ...obj, date: moment(new Date(obj.date)).unix(), }));
+      dataObj[key] = value.map(unProcessedData => ({ ...unProcessedData, date: moment(new Date(unProcessedData.date)).unix(), }));
     }
-    return newObj;
+    return dataObj;
     
   } catch (error) {
     console.error(error.message);
@@ -38,15 +38,17 @@ async function fetchData(url) {
 }
 
 function Charts() {
-  var allData;
+  var [allData, setAllData] = useState(null);
   var [data, setData] = useState(null);
 
-  const graphEndpoint = 'https://zu213-backend-fixc1tr7h-hcaz-enotspus-projects.vercel.app/api/graph';
-  fetchData(graphEndpoint).then(data => {
-    allData = data;
-    document.querySelector('.spinner')?.classList.add('chartLoaded');
-    setData(allData?.deadlift);
-  });
+  useEffect(() => {
+    const graphEndpoint = 'https://zu213-backend-fixc1tr7h-hcaz-enotspus-projects.vercel.app/api/graph';
+    fetchData(graphEndpoint).then(data => {
+      setAllData(data);
+      document.querySelector('.spinner')?.classList.add('chartLoaded');
+      setData(data?.deadlift);
+    });
+  }, []);
 
   return (
     <div>
