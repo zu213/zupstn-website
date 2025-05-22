@@ -42,7 +42,7 @@ function Charts() {
   var [data, setData] = useState(null);
 
   useEffect(() => {
-    const graphEndpoint = 'https://zu213-backend-fixc1tr7h-hcaz-enotspus-projects.vercel.app/api/graph';
+    const graphEndpoint = 'https://zu213-backend.vercel.app/api/graph';
     fetchData(graphEndpoint).then(data => {
       setAllData(data);
       document.querySelector('.spinner')?.classList.add('chartLoaded');
