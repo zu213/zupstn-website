@@ -41,7 +41,7 @@ function Charts() {
   var allData;
   var [data, setData] = useState(null);
 
-  const graphEndpoint = 'https://zu213-backend-2mtn5ps3z-hcaz-enotspus-projects.vercel.app/api/graph';
+  const graphEndpoint = 'https://zu213-backend-fixc1tr7h-hcaz-enotspus-projects.vercel.app/api/graph';
   fetchData(graphEndpoint).then(data => {
     allData = data;
     document.querySelector('.spinner')?.classList.add('chartLoaded');
