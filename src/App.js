@@ -92,7 +92,7 @@ function Home() {
           </Link>
         </div>
         <div className='tagLine'>
-          - Try running "curl https://zupstn.com/hypno.sh | bash" in bash  
+          - Try running "curl https://zupstn.com/hypno.sh | bash" (in bash) or "npx zachupstone" (with npm)
         </div>
       </div>
 
