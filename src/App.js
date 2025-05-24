@@ -65,6 +65,8 @@ function Home() {
   // one in a hundered chance of being tessa
   const asciiGifDisplay = Math.floor(Math.random() * 100) !== 99;
 
+  const taglineTextOptions = ['- Try running "curl https://zupstn.com/hypno.sh | bash"', '- Try running "npx zachupstone" (with npm)'];
+  const taglineText = taglineTextOptions[Math.floor(Math.random() * taglineTextOptions.length)];
   const [currentImageIndex, setCurrentImageIndex] = useState(chosenArtNumber);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -92,7 +94,7 @@ function Home() {
           </Link>
         </div>
         <div className='tagLine'>
-          - Try running "curl https://zupstn.com/hypno.sh | bash" (in bash) <br /> or "npx zachupstone" (with npm)
+          {taglineText}
         </div>
       </div>
 
