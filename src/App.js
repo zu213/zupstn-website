@@ -14,7 +14,7 @@ import Glossary from './glossary/Glossary.js';
 import { asciiArtBig, asciiGif } from './other/asciiArt.js';
 
 // Declare static tagline
-const taglineTextOptions = ['- Try running "curl https://zupstn.com/hypno.sh | bash"', '- Try running "npx zachupstone" (with npm)'];
+const taglineTextOptions = ['- Try running "curl https://zupstn.com/hypno.sh | bash"', '- Try running "npx zachupstone"'];
 const taglineChoice = Math.floor(Math.random() * taglineTextOptions.length);
 // one in a hundered chance of being tessa
 const asciiGifDisplay = Math.floor(Math.random() * 100) !== 99;
