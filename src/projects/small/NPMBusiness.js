@@ -1,21 +1,21 @@
 
-import squarePaintGif from './media/square-paint-tree.gif';
+import squarePaintGif from '../media/square-paint-tree.gif';
 
-function SquarePaint(props) {
+function NPMBusiness(props) {
   return (
     <div>
-      <div>
-        <a href="https://github.com/zu213/square-paint" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
-        <br/>
-      </div>
-    
-      <div className='largeProjectInlineStructure'>
+      <div className=''>
         <figure onClick={props.displayMask} className='aspectClass'>
           <img src={squarePaintGif} alt="squarepaint gif"/>
           <figcaption>Figure: Gif of the SquarePaint in use</figcaption>
         </figure>
       </div>
-      <div className='tightProjectInlineStructure topPadding leftAlign indentMobile'>
+      <div>
+        <a href="https://github.com/zu213/square-paint" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+      </div>
+    
+     
+      <div className=''>
         A painting tool implemented in C++, you can paint by dividing a grid into colours to create a cool and blocky artistic effect.
         <br />
         <br />
@@ -30,4 +30,4 @@ function SquarePaint(props) {
   );
 }
 
-export default SquarePaint;
+export default NPMBusiness;

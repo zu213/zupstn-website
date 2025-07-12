@@ -1,7 +1,7 @@
-import c from './media/c.gif';
-import d from './media/d.gif';
-import rust from './media/rust.gif';
-import assembly from './media/assembly.gif';
+import c from '../media/c.gif';
+import d from '../media/d.gif';
+import rust from '../media/rust.gif';
+import assembly from '../media/assembly.gif';
 
 function Snowstorm(props) {
   return (

@@ -1,9 +1,15 @@
+/* Large project */
+
 .projectTitle {
     font-size: large;
     text-align: left;
     padding: 1% 0 1% 10%;
     text-decoration: underline;
     height: 4vh;
+}
+
+.projectSwitchButton {
+    margin: 1em 3em;
 }
 
 .limitedHr {
@@ -43,6 +49,14 @@
     vertical-align: top;
 }
 
+.laptop {
+    .aspectClass {
+        aspect-ratio: 16/9;
+        margin: 5%;
+        padding: 0;
+    }
+}
+
 .topPadding {
     padding-top: 2vw;
 }
@@ -51,6 +65,45 @@
     width: 90%;
     padding: 5%;
 }
+
+.inlineList {
+    padding: 1% 2% 1% 5%;
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+/* small projects */
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.projectGridElement {
+    padding: 3% 8%;
+    font-size: small;
+}
+
+.projectGrid .projectTitle {
+    text-align: center;
+    padding: 0;
+}
+
+@media only screen and (max-width: 700px) {
+    .projectGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .projectGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*general */
 
 .overlayMask {
     width: 100%;
@@ -78,7 +131,7 @@
     height: 100%;
 }
 /*snow*/
-.snowText {
+.snowText, .storeyText {
     padding-left: 8%;
     padding-right: 8%;
     text-align: left;

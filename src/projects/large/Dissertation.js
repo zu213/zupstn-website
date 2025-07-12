@@ -2,8 +2,8 @@
 import { Link } from 'react-router-dom';
 import './Dissertation.css';
 
-import dissertationUI from './media/di-ui.png';
-import tick from '../icons/tick.png';
+import dissertationUI from '../media/di-ui.png';
+import tick from '../../icons/tick.png';
 
 const dissertation = 'https://s3-eu-north-1.amazonaws.com/zudissertationbucket/Dissertation.pdf';
 

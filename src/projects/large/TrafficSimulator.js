@@ -1,4 +1,4 @@
-import trafficGif from './media/traffic.gif';
+import trafficGif from '../media/traffic.gif';
 function TrafficSimulator(props) {
 
   return (

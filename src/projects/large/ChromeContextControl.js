@@ -1,5 +1,5 @@
-import contextMenu from './media/ccc_contextmenu.png';
-import dragScreen from './media/ccc_dragscreen.png';
+import contextMenu from '../media/ccc_contextmenu.png';
+import dragScreen from '../media/ccc_dragscreen.png';
 
 function ChromeContextControl(props) {
 

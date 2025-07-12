@@ -1,4 +1,4 @@
-import scholarsGif from './media/scholars.gif';
+import scholarsGif from '../media/scholars.gif';
 function UnicodeChess(props) {
 
   return (
