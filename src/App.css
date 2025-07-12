@@ -216,10 +216,7 @@ button {
   line-height: 100%;
   border-radius: 6px;
   color: rgb(60, 60, 60);
-
-  box-shadow:
-    0 0 10px #febef1;
-
+  box-shadow: 0 0 10px #febef1;
   transition: all 0.3s ease;
   opacity: 0.95;
 }

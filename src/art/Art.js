@@ -1,7 +1,7 @@
 import './Art.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-import {galleryPage} from './gallery.js';
+import Gallery from './gallery.js';
 import {tablePage, pagePosition} from './table.js';
 
 var onGallery = true;
@@ -24,16 +24,22 @@ const images = importAll(
 
 // main page
 function Art() {
-  var [page, setPage] = useState(galleryPage(images));
+  var [page, setPage] = useState(Gallery(images));
   onGallery = true;
+
+  useEffect(() => {
+    document.getElementById('galleryButton').disabled = true;
+  }, []);
 
   // the colouring is a work around for disable the buttons not working properly
   const toGallery = () => {
-    setPage(galleryPage(images));
+    setPage(Gallery(images));
     const galleryButton = document.getElementById('galleryButton');
     galleryButton.disabled = true;
     galleryButton.style.color = 'rgb(110,110,110)';
-    document.getElementById('tableButton').disabled = false;
+    const tableButton = document.getElementById('tableButton');
+    tableButton.disabled = false;
+    tableButton.style.color = 'rgb(4,4,4)';
 
     onGallery = true;
   };
@@ -43,7 +49,9 @@ function Art() {
     const galleryButton = document.getElementById('galleryButton');
     galleryButton.disabled = false;
     galleryButton.style.color = 'rgb(4,4,4)';
-    document.getElementById('tableButton').disabled = true;
+    const tableButton = document.getElementById('tableButton');
+    tableButton.disabled = true;
+    tableButton.style.color = 'rgb(110,110,110)';
         
     if(onGallery){
       setTimeout(() => {
@@ -65,7 +73,7 @@ function Art() {
       </div>
       <div className="inlineButton">
         <div className='border'>
-          <button id="tableButton" className="imgContainer" onClick={toTable}> Table View </button>
+          <button id="tableButton" className="tableButton" onClick={toTable}> Table View </button>
         </div>
       </div>
 

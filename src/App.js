@@ -14,7 +14,7 @@ import Glossary from './glossary/Glossary.js';
 import { asciiArtBig, asciiGif } from './other/asciiArt.js';
 
 // Declare static tagline
-const taglineTextOptions = ['- Try running "curl https://zupstn.com/hypno.sh | bash"', '- Try running "npx zachupstone"'];
+const taglineTextOptions = ['- Try "curl https://zupstn.com/hypno.sh | bash"', '- Try running "npx zachupstone"'];
 const taglineChoice = Math.floor(Math.random() * taglineTextOptions.length);
 // one in a hundered chance of being tessa
 const asciiGifDisplay = Math.floor(Math.random() * 100) !== 99;
@@ -115,13 +115,10 @@ function Home() {
       </div>
       <div className="searchLinksRight">
         <div>
-          <a href="mailto:Zac.upstone@gmail.com"  target="_blank" rel="noreferrer">Email</a>
+          <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
         </div>
         <div>
           <a href="https://www.linkedin.com/in/zachary-upstone-076218214/"  target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-        <div>
-          <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
         </div>
       </div>
 
