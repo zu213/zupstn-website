@@ -59,6 +59,7 @@ function App() {
         <Route path='/charts' element={<Charts/>} />
         <Route path='/fruit-lips' element={<FruitLips/>} />
         <Route path='/368squares' element={<Squares/>} />
+        <Route path='/llm-compare' element={<LLMCompare/>} />
         <Route path='/glossary' element={<Glossary/>} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
@@ -161,6 +162,21 @@ function Squares() {
         title='368Squares'
         className='368Squares'
         src="./squares/squares.html"
+        width="100%"
+        height="100%"
+      />
+    </div>
+  );
+}
+
+function LLMCompare() {
+  return (
+    <div className='llmCompareContainer'>
+      <iframe 
+        title='LLMCompare'
+        data-class='llmCompare'
+        className='llmCompare'
+        src="./llm-compare/src/index.html"
         width="100%"
         height="100%"
       />

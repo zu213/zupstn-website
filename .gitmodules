@@ -4,3 +4,6 @@
 [submodule "public/squares"]
 	path = public/squares
 	url = https://github.com/zu213/368squares
+[submodule "public/llm-compare"]
+	path = public/llm-compare
+	url = https://github.com/zu213/llm-compare

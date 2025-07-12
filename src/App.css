@@ -161,14 +161,14 @@
   font-weight: bold;
 }
 
-.fruitLipsContainer{
+.fruitLipsContainer {
   position: fixed;
   top: 15%;
   height: 80%;
   width: 100%;
 }
 
-.squaresContainer {
+.squaresContainer, .llmCompareContainer {
   position: fixed;
   top: 0%;
   height: 100%;
