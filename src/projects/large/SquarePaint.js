@@ -1,5 +1,5 @@
 
-import squarePaintGif from '../media/square-paint-tree.gif';
+import squarePaintGif from './media/square-paint-tree.gif';
 
 function SquarePaint(props) {
   return (

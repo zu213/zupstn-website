@@ -21,14 +21,11 @@ function Projects() {
   };
 
   const toSP = () => {
-    // Disabled for now
-    /*
     setPageComponent(() => SmallProjects);
     const galleryButton = document.getElementById('lpButton');
     galleryButton.disabled = false;
     const tableButton = document.getElementById('spButton');
     tableButton.disabled = true;
-    */
           
   };
 
@@ -39,7 +36,7 @@ function Projects() {
       <hr/>
       <div>
         <button className='projectSwitchButton' id='lpButton' onClick={toLP}>Large</button>
-        <button className='projectSwitchButton' disabled id='spButton' onClick={toSP}>Small</button>
+        <button className='projectSwitchButton' id='spButton' onClick={toSP}>Small</button>
       </div>
       <PageComponent />
     </div>

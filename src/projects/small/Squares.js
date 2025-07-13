@@ -1,29 +1,27 @@
 
-import squarePaintGif from '../media/square-paint-tree.gif';
+import squares from './media/squares.png';
 
 function Squares(props) {
   return (
     <div>
-      <div className=''>
-        <figure onClick={props.displayMask} className='aspectClass'>
-          <img src={squarePaintGif} alt="squarepaint gif"/>
-          <figcaption>Figure: Gif of the SquarePaint in use</figcaption>
+      <div>
+        <figure onClick={props.displayMask}>
+          <img src={squares} alt="Squares photo"/>
+          <figcaption>Figure: Screenshot of the 368 Squares game</figcaption>
         </figure>
       </div>
-      <div>
-        <a href="https://github.com/zu213/square-paint" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+      <div className='smallRepoLink'>
+        <a href="https://github.com/zu213/square-paint" className="smallLink" target="_blank" rel="noreferrer">Repository</a>&nbsp;
+         | <a href="https://zupstn.com/#/368squares" className="smallLink">Website</a>
       </div>
     
      
-      <div className=''>
-        A painting tool implemented in C++, you can paint by dividing a grid into colours to create a cool and blocky artistic effect.
+      <div>
+        Small js game based on <a href="https://368chickens.com/" className='smallLink'>368 Chickens</a>.
         <br />
         <br />
-        The grid starts divided into 3x3 but can be divided infinitely further by use of scrolling. This tool includes the ability to change the colour you're painting, the colour of the grid, zoom in and out, pan the camera and hide the grid entirely.
-        Is programmed utilising <a className="smallLink" href="https://github.com/markkilgard/glut">GLUT</a>, the grids redraw recursively upon user actions. 
-        <br />
-        <br />
-        <b>Note:</b> the gif distorts the cursor's position
+        The premise of the game is to get rid of all 368 squares. Squares are removed by having three or more in a row.
+        However, if you are no longer able to place squares in the grid you lose.
       </div>
     </div>
 

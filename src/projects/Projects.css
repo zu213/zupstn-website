@@ -103,6 +103,15 @@
     }
 }
 
+.smallRepoLink {
+    margin-bottom: 7px;
+}
+
+.topTracksImage {
+    width: 60%;
+    height: 60%;
+}
+
 /*general */
 
 .overlayMask {

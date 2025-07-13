@@ -1,7 +1,7 @@
-import ratingsPage from '../media/ratingsPage.PNG';
-import profilePage from '../media/profilePage.PNG';
-import storiesPage from '../media/storiesPage.PNG';
-import storyPage from '../media/storyPage.PNG';
+import ratingsPage from './media/ratingsPage.PNG';
+import profilePage from './media/profilePage.PNG';
+import storiesPage from './media/storiesPage.PNG';
+import storyPage from './media/storyPage.PNG';
 
 function ShortStorey(props) {
   return (
@@ -15,13 +15,13 @@ function ShortStorey(props) {
       <div className='tightProjectInlineStructure laptop'>
         <figure className='aspectClass' onClick={props.displayMask}>
           <img src={storiesPage} alt="Stories Page"/>
-          <figcaption>Figure: Main stories naviagation page</figcaption>
+          <figcaption>Figure: Main stories navigation page</figcaption>
         </figure>
       </div>
       <div className='tightProjectInlineStructure laptop'>
         <figure className='aspectClass' onClick={props.displayMask}>
-          <img src={storyPage} alt="Sotry page"/>
-          <figcaption>Figure: Indiividual story page with ability to leave ratings</figcaption>
+          <img src={storyPage} alt="Story page"/>
+          <figcaption>Figure: Individual story page with ability to leave ratings</figcaption>
         </figure>
       </div>
       <div className='tightProjectInlineStructure laptop'>
@@ -38,8 +38,8 @@ function ShortStorey(props) {
       </div>
 
       <div className='storeyText'>
-          A complete <b>CRUD</b> app for sharing short storeys and rating them. Includes profile creation, story creation, story viewing and a rating system which is dynamic and users ratings are based on how they are rated themselves making the backend more complex and require propagating updates.
-          
+          A complete <b>CRUD</b> app for sharing short storeys and rating them. Includes profile creation, story creation, story viewing and a rating system which is dynamic, A user's rating is weighted based on how they are rated themselves making the backend more complex and require propagating updates.
+
 
         <br/>
         <br/>
@@ -48,13 +48,13 @@ function ShortStorey(props) {
           <h4>Frontend</h4>
           <ul className='snowList'>
             <li>
-              <b>Vue</b> - Tidy, modern and easy to use framework, working with vite, also allowed me to hit the same port for the backend with <i>proxy</i>.
+              <b>Vue</b> - Tidy, modern and easy to use framework, working with vite, also allowed me to hit the same port for the backend with <i>proxy</i> config.
             </li>
             <li>
-              <b>scss</b> - Modern extension of CSS allowing nesting and mixins for easiest management in larger projects.
+              <b>scss</b> - Modern extension of CSS allowing nesting and mixins for easier management of style in larger projects.
             </li>
             <li>
-              <b>Lint</b> - Useful autoamted rule checker for keeping code clean.
+              <b>Lint</b> - Useful automated rule checker for keeping code clean.
             </li>
             <li>
               <b>Pinia</b> - Used for session storage management, helpful with managing tokens on user side.
@@ -65,7 +65,7 @@ function ShortStorey(props) {
           <h4>Backend</h4>
           <ul className='snowList'>
             <li>
-              <b>Typescript</b> - Types help make js more secure and avoid errors occuring in larger code bases.
+              <b>Typescript</b> - Types help make the code more secure and avoid errors occuring in larger code bases.
             </li>
             <li>
               <b>Prisma</b> - Database software that allows relations within tables to be easily defined.
@@ -74,7 +74,7 @@ function ShortStorey(props) {
               <b>Jest</b> - Testing software used here for checking the servers endpoints.
             </li>
             <li>
-              <b>Fastify</b> - Main server software used with shot storey. 
+              <b>Fastify</b> - Main server software used with Short Storey. 
             </li>
             <li>
               <b>bcrypt</b> - Password encryption tool to make sure passwords aren't stored in plain text.

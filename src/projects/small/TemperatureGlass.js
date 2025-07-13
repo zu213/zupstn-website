@@ -1,29 +1,21 @@
 
-import squarePaintGif from '../media/square-paint-tree.gif';
+import tempGlass from './media/tempglass.png';
 
 function TemperatureGlass(props) {
   return (
     <div>
-      <div className=''>
-        <figure onClick={props.displayMask} className='aspectClass'>
-          <img src={squarePaintGif} alt="squarepaint gif"/>
-          <figcaption>Figure: Gif of the SquarePaint in use</figcaption>
+      <div>
+        <figure onClick={props.displayMask}>
+          <img src={tempGlass} alt="Temperature glass overlay"/>
+          <figcaption>Figure: Picture of the overlay</figcaption>
         </figure>
       </div>
-      <div>
-        <a href="https://github.com/zu213/square-paint" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+      <div className='smallRepoLink'>
+        <a href="https://github.com/zu213/temperature-glass" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
       </div>
     
-     
-      <div className=''>
-        A painting tool implemented in C++, you can paint by dividing a grid into colours to create a cool and blocky artistic effect.
-        <br />
-        <br />
-        The grid starts divided into 3x3 but can be divided infinitely further by use of scrolling. This tool includes the ability to change the colour you're painting, the colour of the grid, zoom in and out, pan the camera and hide the grid entirely.
-        Is programmed utilising <a className="smallLink" href="https://github.com/markkilgard/glut">GLUT</a>, the grids redraw recursively upon user actions. 
-        <br />
-        <br />
-        <b>Note:</b> the gif distorts the cursor's position
+      <div>
+        Small C# project that on startup adds an overlay that reports the CPU tempreature live. It fetches this data via <i>OpenHardwareMonitorLib.dll</i>.
       </div>
     </div>
 
