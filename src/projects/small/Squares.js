@@ -6,7 +6,7 @@ function Squares(props) {
     <div>
       <div>
         <figure onClick={props.displayMask}>
-          <img src={squares} alt="Squares photo"/>
+          <img src={squares} alt="368 Squares game"/>
           <figcaption>Figure: Screenshot of the 368 Squares game</figcaption>
         </figure>
       </div>
