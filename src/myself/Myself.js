@@ -28,7 +28,7 @@ function Me() {
           I am a <b>Product developer</b> for&nbsp;   
         <a className="smallLink" href="https://www.pugpig.com/" >Pugpig</a> a media publishing platform powering 
           apps and web readers for brands like <i>The Spectator</i>, <i>The Independent</i> and <i>The Boston Globe</i>.
-          My work spans <b>Native</b> (SwiftUI, Java, Kotlin) and <b>Web</b> (Vue.js, HTML, PHP, Sass) development.
+          My work spans <b>Native</b> (SwiftUI, Swift, ObjC, Java, Kotlin) and <b>Web</b> (Vue, PHP, Sass) development.
         <br/>
         <br/>
           Previously, I completed a year-long placement at &nbsp;
