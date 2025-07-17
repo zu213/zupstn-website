@@ -33,7 +33,6 @@ function Projects() {
     <div>
       <header className='pageHeader'>Projects</header>
 
-      <hr/>
       <div>
         <button className='projectSwitchButton' id='lpButton' onClick={toLP}>Large</button>
         <button className='projectSwitchButton' id='spButton' onClick={toSP}>Small</button>
