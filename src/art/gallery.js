@@ -1,15 +1,9 @@
-import { useEffect, useRef } from 'react';
 
 var currentOverlay = null;
 
-function Gallery (images) {
-  const scrollInterval = useRef(null);
+function galleryPage (images) {
 
-  useEffect(() => {
-    document.querySelectorAll('.imageRow').forEach(e => {
-      checkToHideButtons(e);
-    });
-  }, []);
+  var scrollInterval;
 
   const scrollRowLeft = (e, scrollBy) => {
     e.stopPropagation();
@@ -17,7 +11,7 @@ function Gallery (images) {
     const rowElement = e.currentTarget.nextSibling;
     rowElement.scrollLeft -= scrollBy;
     checkToHideButtons(rowElement);
-    scrollInterval.current = setInterval(() => {
+    scrollInterval = setInterval(() => {
       rowElement.scrollLeft -= scrollBy;
       checkToHideButtons(rowElement);
     }, 75);
@@ -29,7 +23,7 @@ function Gallery (images) {
     const rowElement = e.currentTarget.previousSibling;
     rowElement.scrollLeft += scrollBy;
     checkToHideButtons(rowElement);
-    scrollInterval.current = setInterval(() => {
+    scrollInterval = setInterval(() => {
       rowElement.scrollLeft += scrollBy;
       checkToHideButtons(rowElement);
     }, 75);
@@ -37,26 +31,27 @@ function Gallery (images) {
 
 
   const stopScrolling = () => {
-    clearInterval(scrollInterval.current);
+    clearInterval(scrollInterval);
 
   };
 
-  const checkToHideButtons = (el) => {
-    if(el.nextSibling){
-      if(el.scrollLeft + el.clientWidth >= el.scrollWidth - 1){
-        el.nextSibling.classList.add('hidden');
-      }else if(el.nextSibling.classList.contains('hidden')){
-        el.nextSibling.classList.remove('hidden');
-      }
+  // function related to overlaying iamge on gallery view
+  function overlayImage(e) {
+    if(currentOverlay === null){
+      console.log(e.target);
+      e.target.classList.add('overlayContent');
+      currentOverlay = e.target;
+      document.querySelector('.overlay').style.display = 'block';
     }
-    if(el.previousSibling){
-      if(el.scrollLeft  < 1) {
-        el.previousSibling.classList.add('hidden');
-      }else if(el.previousSibling.classList.contains('hidden')){
-        el.previousSibling.classList.remove('hidden');
-      }
+  }
+    
+  function removeOverlay() {
+    if(currentOverlay !== null){
+      currentOverlay.classList.remove('overlayContent');
+      currentOverlay = null;
+      document.querySelector('.overlay').style.display = 'none';
     }
-  };
+  }
 
   return (
     <div>
@@ -75,8 +70,8 @@ function Gallery (images) {
             onMouseUp={stopScrolling}
             onMouseLeave={stopScrolling}>
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="20" r="19" stroke="#00000000" stroke-width="2" fill="#ffffffee" />
-              <path d="M24 12l-8 8 8 8" stroke="#606060" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="20" cy="20" r="19" stroke="#00000000" strokeWidth="2" fill="#ffffffee" />
+              <path d="M24 12l-8 8 8 8" stroke="#606060" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
           <div className="imageRow">
@@ -94,8 +89,8 @@ function Gallery (images) {
             onMouseUp={stopScrolling}
             onMouseLeave={stopScrolling}>
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="20" r="19" stroke="#00000000" stroke-width="2" fill="#ffffffee" />
-              <path d="M16 12l8 8-8 8" stroke="#606060" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="20" cy="20" r="19" stroke="#00000000" strokeWidth="2" fill="#ffffffee" />
+              <path d="M16 12l8 8-8 8" stroke="#606060" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
         </div>
@@ -107,22 +102,23 @@ function Gallery (images) {
     </div>
   );};
 
-// function related to overlaying iamge on gallery view
-function overlayImage(e) {
-  if(currentOverlay === null){
-    console.log(e.target);
-    e.target.classList.add('overlayContent');
-    currentOverlay = e.target;
-    document.querySelector('.overlay').style.display = 'block';
-  }
-}
-  
-function removeOverlay() {
-  if(currentOverlay !== null){
-    currentOverlay.classList.remove('overlayContent');
-    currentOverlay = null;
-    document.querySelector('.overlay').style.display = 'none';
-  }
-}
+export const checkToHideButtons = (el) => {
+  console.log(el, el.previousSibling, el.nextSibling, el.scrollLeft, el.scrollLeft + el.clientWidth, el.scrollWidth);
 
-export default Gallery;
+  if(el.nextSibling){
+    if(el.scrollLeft + el.clientWidth >= el.scrollWidth - 1){
+      el.nextSibling.classList.add('hidden');
+    }else if(el.nextSibling.classList.contains('hidden')){
+      el.nextSibling.classList.remove('hidden');
+    }
+  }
+  if(el.previousSibling){
+    if(el.scrollLeft  < 1) {
+      el.previousSibling.classList.add('hidden');
+    }else if(el.previousSibling.classList.contains('hidden')){
+      el.previousSibling.classList.remove('hidden');
+    }
+  }
+};
+
+export default galleryPage;

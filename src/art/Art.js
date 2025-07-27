@@ -1,7 +1,8 @@
 import './Art.css';
 import { useState, useEffect } from 'react';
 
-import Gallery from './gallery.js';
+import galleryPage from './gallery.js';
+import { checkToHideButtons } from './gallery.js';
 import {tablePage, pagePosition} from './table.js';
 
 var onGallery = true;
@@ -24,16 +25,48 @@ const images = importAll(
 
 // main page
 function Art() {
-  var [page, setPage] = useState(Gallery(images));
+  var [page, setPage] = useState(galleryPage(images));
   onGallery = true;
 
   useEffect(() => {
     document.getElementById('galleryButton').disabled = true;
   }, []);
 
+  useEffect(() => {
+    if (!onGallery) return;
+
+    const imageRows = document.querySelectorAll('.imageRow img');
+    let loadedCount = 0;
+
+    const onLoad = () => {
+      loadedCount++;
+      if (loadedCount === imageRows.length) {
+        document.querySelectorAll('.imageRow').forEach(e => checkToHideButtons(e));
+      }
+    };
+
+    imageRows.forEach(img => {
+      if (img.complete) {
+        onLoad();
+      } else {
+        img.addEventListener('load', onLoad);
+        img.addEventListener('error', onLoad);
+      }
+    });
+
+    return () => {
+      imageRows.forEach(img => {
+        img.removeEventListener('load', onLoad);
+        img.removeEventListener('error', onLoad);
+      });
+    };
+
+  }, [page]);
+
+
   // the colouring is a work around for disable the buttons not working properly
   const toGallery = () => {
-    setPage(Gallery(images));
+    setPage(galleryPage(images));
     const galleryButton = document.getElementById('galleryButton');
     galleryButton.disabled = true;
     galleryButton.style.color = 'rgb(110,110,110)';
