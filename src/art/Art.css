@@ -64,6 +64,11 @@
     z-index: 100;
 }
 
+.minimise {
+    width: 0;
+    height: 0;
+}
+
 .leftButton, .rightButton {
     display: block;
     position: absolute;

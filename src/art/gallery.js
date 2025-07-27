@@ -39,6 +39,7 @@ function galleryPage (images) {
   function overlayImage(e) {
     if(currentOverlay === null){
       e.target.classList.add('overlayContent');
+      e.target.parentElement.classList.add('minimise');
       currentOverlay = e.target;
       document.querySelector('.overlay').style.display = 'block';
     }
@@ -47,6 +48,7 @@ function galleryPage (images) {
   function removeOverlay() {
     if(currentOverlay !== null){
       currentOverlay.classList.remove('overlayContent');
+      currentOverlay.parentElement.classList.remove('minimise');
       currentOverlay = null;
       document.querySelector('.overlay').style.display = 'none';
     }
