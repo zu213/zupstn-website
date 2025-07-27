@@ -38,7 +38,6 @@ function galleryPage (images) {
   // function related to overlaying iamge on gallery view
   function overlayImage(e) {
     if(currentOverlay === null){
-      console.log(e.target);
       e.target.classList.add('overlayContent');
       currentOverlay = e.target;
       document.querySelector('.overlay').style.display = 'block';
@@ -103,8 +102,6 @@ function galleryPage (images) {
   );};
 
 export const checkToHideButtons = (el) => {
-  console.log(el, el.previousSibling, el.nextSibling, el.scrollLeft, el.scrollLeft + el.clientWidth, el.scrollWidth);
-
   if(el.nextSibling){
     if(el.scrollLeft + el.clientWidth >= el.scrollWidth - 1){
       el.nextSibling.classList.add('hidden');

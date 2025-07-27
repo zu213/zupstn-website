@@ -165,7 +165,6 @@ async function runDiss () {
   hideDiv('loader', false, 'runButton');
   if(sketchUploaded && styleUploaded){
     const response = await fetch('https://zu-api-97613761704.europe-north1.run.app/', { signal: AbortSignal.timeout(300000) });
-    console.log(response);
     if(response.status === 200){
       await delay(5000); 
       const element = document.getElementById('imagesContainer');
