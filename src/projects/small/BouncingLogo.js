@@ -11,7 +11,8 @@ function BouncingLogo(props) {
         </figure>
       </div>
       <div className='smallRepoLink'>
-        <a href="https://github.com/zu213/bouncing-logo" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/bouncing-logo" className="smallLink" target="_blank" rel="noreferrer">Repo</a> |&nbsp;
+        <a href="/exes/BouncingLogo.exe" className="smallLink" download>Windows Download</a>
       </div>
      
       <div>

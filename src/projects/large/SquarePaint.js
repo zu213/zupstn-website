@@ -5,7 +5,8 @@ function SquarePaint(props) {
   return (
     <div>
       <div>
-        <a href="https://github.com/zu213/square-paint" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/square-paint" className="smallLink" target="_blank" rel="noreferrer">Repo</a> |&nbsp;
+        <a href="/exes/SquarePaint.exe" className="smallLink" download>Windows Download</a>
         <br/>
       </div>
     
