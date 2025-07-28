@@ -1,16 +1,17 @@
 /* me page */
 
-.textHolder {
-    padding: 10vh 7% 1vh 7%;
-    text-align: left;
-  }
-  
+.myself {
+  .textHolder {
+      padding: 7vh 7% 1vh 7%;
+      text-align: left;
+    }
+    
   .linkHolder a {
     text-shadow:
       0 0 8px rgb(244, 232, 248),
       0 0 12px rgb(249, 218, 249);
   }
-  
+
   .linkHolder a:hover {
     text-shadow:
       0 0 10px rgb(239, 218, 246),
@@ -18,10 +19,15 @@
       0 0 25px rgb(247, 164, 247),
       0 0 40px rgb(249, 109, 249);
   }
-  
+
   @media only screen and (max-width: 400px) {
     .linkHolder {
       padding-top: 10vw;
     }
   }
-  
+    
+  .pageHeader {
+    height: unset;
+    padding: 5px;
+  }
+}

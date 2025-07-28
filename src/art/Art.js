@@ -98,7 +98,7 @@ function Art() {
   return (
     <div>
       <div className="pageHeader">
-              Gallery <br />
+        Gallery <br />
       </div>              
 
       <div className="inlineButton" >

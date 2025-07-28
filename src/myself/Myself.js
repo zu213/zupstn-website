@@ -3,7 +3,10 @@ import './Myself.css';
 
 function Me() {
   return (
-    <div>
+    <div className='myself'>
+      <div className="pageHeader">
+        Zach Upstone
+      </div>   
       <div className="linkHolder">
         <a href="https://www.linkedin.com/in/zachary-upstone-076218214/" target="_blank" rel="noreferrer">LinkedIn</a> &nbsp; | &nbsp;
         <a href="https://github.com/zu213" target="_blank" rel="noreferrer">Github</a>
