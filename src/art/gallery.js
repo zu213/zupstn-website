@@ -66,7 +66,7 @@ function galleryPage (images) {
             {rowName}
           </div>
           <div 
-            className="leftButton"
+            className="leftButton hidden"
             onMouseDown={(e) => scrollRowLeft(e, 30)}
             onMouseUp={stopScrolling}
             onMouseLeave={stopScrolling}>
@@ -85,7 +85,7 @@ function galleryPage (images) {
             }
           </div>
           <div 
-            className="rightButton"
+            className="rightButton hidden"
             onMouseDown={(e) => scrollRowRight(e, 30)}
             onMouseUp={stopScrolling}
             onMouseLeave={stopScrolling}>

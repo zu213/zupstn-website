@@ -5,7 +5,6 @@ function Me() {
   return (
     <div>
       <div className="linkHolder">
-        <a href="mailto:Zac.upstone@gmail.com" target="_blank" rel="noreferrer">Email</a> &nbsp; | &nbsp;
         <a href="https://www.linkedin.com/in/zachary-upstone-076218214/" target="_blank" rel="noreferrer">LinkedIn</a> &nbsp; | &nbsp;
         <a href="https://github.com/zu213" target="_blank" rel="noreferrer">Github</a>
       </div>
