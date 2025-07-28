@@ -1,7 +1,6 @@
 import ratingsPage from './media/ratingsPage.PNG';
 import profilePage from './media/profilePage.PNG';
 import storiesPage from './media/storiesPage.PNG';
-import storyPage from './media/storyPage.PNG';
 
 function ShortStorey(props) {
   return (
@@ -16,12 +15,6 @@ function ShortStorey(props) {
         <figure className='aspectClass' onClick={props.displayMask}>
           <img src={storiesPage} alt="Stories Page"/>
           <figcaption>Figure: Main stories navigation page</figcaption>
-        </figure>
-      </div>
-      <div className='tightProjectInlineStructure laptop'>
-        <figure className='aspectClass' onClick={props.displayMask}>
-          <img src={storyPage} alt="Story page"/>
-          <figcaption>Figure: Individual story page with ability to leave ratings</figcaption>
         </figure>
       </div>
       <div className='tightProjectInlineStructure laptop'>

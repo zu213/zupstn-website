@@ -50,6 +50,8 @@
 }
 
 .laptop {
+    width: 30%;
+
     .aspectClass {
         aspect-ratio: 16/9;
         margin: 5%;
