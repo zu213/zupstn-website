@@ -16,6 +16,13 @@ function DissertationTool() {
   const [generatedError, setGeneratedError] = useState(false);
   
   function clearOptions() {
+    
+    // Dummy uses
+    uploadSketch('a');
+    uploadStyle('b');
+    makeDissChoice('c');
+    // Dummy uses end
+
     const option1 = document.getElementById('option1img');
     const option2 = document.getElementById('option2img');
     const option3 = document.getElementById('option3img');
@@ -70,6 +77,8 @@ function DissertationTool() {
 
   // function to run image generation
   async function  runDiss() {
+
+
     setLoading(true);
 
     if (currentSketchFile && currentStyleFile) {
