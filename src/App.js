@@ -11,6 +11,7 @@ import Projects from './projects/Projects.js';
 import Me from './myself/Myself.js';
 import CV from './cv/CV.js';
 import Glossary from './glossary/Glossary.js';
+import DissertationTool from './projects/large/DissertationTool.js';
 import { asciiArtBig, asciiGif } from './other/asciiArt.js';
 
 // Declare static tagline
@@ -57,6 +58,7 @@ function App() {
         <Route path='/projects' element={<Projects/>} />
         <Route path='/gallery' element={<Art/>} />
         <Route path='/charts' element={<Charts/>} />
+        <Route path='/dissertation-tool' element={<DissertationTool/>} />
         <Route path='/fruit-lips' element={<FruitLips/>} />
         <Route path='/368squares' element={<Squares/>} />
         <Route path='/llm-compare' element={<LLMCompare/>} />
