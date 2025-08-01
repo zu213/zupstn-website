@@ -17,6 +17,7 @@ function Glossary() {
           <div className='link'> <Link to="/charts">/charts</Link></div>
           <div className='link'> <Link to="/dissertation-tool">/dissertation-tool (inactive)</Link></div>
           <div className='link'> <Link to="/fruit-lips">/fruit-lips</Link></div>
+          <div className='link'> <Link to="/fruit-lips2">/fruit-lips2</Link></div>
           <div className='link'> <Link to="/368squares">/368squares</Link></div>
           <div className='link'> <Link to="/llm-compare">/llm-compare</Link></div>
         </div>

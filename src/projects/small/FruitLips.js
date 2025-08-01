@@ -12,7 +12,8 @@ function FruitLips(props) {
       </div>
       <div className='smallRepoLink'>
         <a href="https://github.com/zu213/square-paint" className="smallLink" target="_blank" rel="noreferrer">Repository</a>&nbsp;
-         | <a href="https://zupstn.com/#/fruit-lips" className="smallLink">Website</a>
+         | <a href="https://zupstn.com/#/fruit-lips" className="smallLink">Website</a>&nbsp;
+         | <a href="https://zupstn.com/#/fruit-lips2" className="smallLink">Website 2</a>
       </div>
     
      

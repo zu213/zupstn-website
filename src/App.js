@@ -60,6 +60,7 @@ function App() {
         <Route path='/charts' element={<Charts/>} />
         <Route path='/dissertation-tool' element={<DissertationTool/>} />
         <Route path='/fruit-lips' element={<FruitLips/>} />
+        <Route path='/fruit-lips2' element={<FruitLips2/>} />
         <Route path='/368squares' element={<Squares/>} />
         <Route path='/llm-compare' element={<LLMCompare/>} />
         <Route path='/glossary' element={<Glossary/>} />
@@ -147,6 +148,20 @@ function FruitLips() {
         title='fruit-lips'
         className='fruitLips'
         src="./fruit-lips/fruit-lips.html"
+        width="100%"
+        height="100%"
+      />
+    </div>
+  );
+}
+
+function FruitLips2() {
+  return (
+    <div className='fruitLipsContainer'>
+      <iframe 
+        title='fruit-lips'
+        className='fruitLips'
+        src="./fruit-lips/fruit-lips2.html"
         width="100%"
         height="100%"
       />
