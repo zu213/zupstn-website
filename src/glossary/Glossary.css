@@ -4,9 +4,15 @@
     font-size: x-large;
 }
 
-.linksContainer {
-    text-align: left;
+.linksListContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 8vh 10%;
+}
+
+.linksContainer {
+    display: inline-block;
+    text-align: left;
     font-size: larger;
 }
 
