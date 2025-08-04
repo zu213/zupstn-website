@@ -15,7 +15,7 @@ function CV() {
       </a>
           &nbsp; | &nbsp;
       <a className="smallLink" href="/documents/CV.pdf" download="Zachary Upstone CV">
-            CV long <img className="downloadImage" src={download} alt="Download"></img>
+            Extended CV <img className="downloadImage" src={download} alt="Download"></img>
       </a>
       <br/>
       <br/>

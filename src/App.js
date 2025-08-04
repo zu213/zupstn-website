@@ -107,10 +107,10 @@ function Home() {
 
       <div className="searchLinksLeft">
         <div>
-          <Link to="/cv">CV</Link>
+          <Link to="/projects">Projects</Link>
         </div>
         <div>
-          <Link to="/projects">Projects</Link>
+          <Link to="/cv">CV</Link>
         </div>
         <div>
           <Link to="/gallery">Gallery</Link>
