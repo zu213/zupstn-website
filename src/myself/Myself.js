@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { BreadcrumbLink } from '../BreadcrumbContext.js';
 import './Myself.css';
 
 function Me() {
@@ -23,7 +23,7 @@ function Me() {
         </div>
           Find my GitHub <a className="smallLink" href="https://github.com/zu213" target="_blank" rel="noreferrer">here</a>, 
           showcasing various personal projects on the &nbsp;  
-        <Link className="smallLink" to="/projects">Projects page</Link>.
+        <BreadcrumbLink className="smallLink" to="/projects">Projects page</BreadcrumbLink>.
         <br/>
         <br/>
     
@@ -49,21 +49,21 @@ function Me() {
           involved Graphics processing and Moder software developmenet methodologies.
           From within my degree I have experience coding with <b>Python, Java</b> and <b>C++</b>. During my 
           final year I completed a dissertation on image synthesis utilising human feedback this can be found on 
-          the <Link className="smallLink" to="/projects">Projects page</Link>.
+          the <BreadcrumbLink className="smallLink" to="/projects">Projects page</BreadcrumbLink>.
         <br/>
         <br/>
   
         <div className='subSubTitle'>
             Artist:
         </div>
-          All my art can be seen on the <Link className="smallLink" to="/gallery">Gallery page</Link>.
+          All my art can be seen on the <BreadcrumbLink className="smallLink" to="/gallery">Gallery page</BreadcrumbLink>.
   
         <br/>
         <br/>
         <div className='subSubTitle'>
           More:
         </div>
-          Navigate the rest of my website by visiting the <Link className="smallLink" to="/glossary">Glossary page</Link>.
+          Navigate the rest of my website by visiting the <BreadcrumbLink className="smallLink" to="/glossary">Glossary page</BreadcrumbLink>.
       </div>
     </div>
   );

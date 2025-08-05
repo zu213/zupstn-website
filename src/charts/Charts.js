@@ -51,7 +51,7 @@ function Charts() {
   }, []);
 
   return (
-    <div>
+    <div className='charts'>
       <div className='tooSmallCharts'>
             Page width is too small to display graphs please try
              rotating if on phone or expanding window if on computer
