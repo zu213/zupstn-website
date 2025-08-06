@@ -1,8 +1,8 @@
 
 // Normal imports
-import { Route, Routes, Link, useLocation, useNavigate, useNavigationType } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import './App.css';
-import { BreadcrumbContext, BreadcrumbLink } from './BreadcrumbContext.js';
+import { BreadcrumbProvider, BreadcrumbLink, DropBreadcrumbs } from './BreadcrumbContext.js';
 import { useState, useEffect, useCallback,  } from 'react';
 
 // Page imports
@@ -32,7 +32,6 @@ function App() {
   const defaultSmallBackButton = useCallback(() => (<button id="smallBackButton" className="smallBackButton" onClick={() => navigate(-1)}> &#60; </button>), [navigate]);
 
   var [backButton, setBackButton] = useState(defaultBackButton);
-  var [breadcrumbsList, setBreadcrumbsList] = useState(['/']);
   var [smallBackButton, setSmallBackButton] = useState(defaultSmallBackButton);
 
   // listeners 
@@ -46,76 +45,13 @@ function App() {
     }
   }, [location.pathname, defaultBackButton, defaultSmallBackButton]);
 
-  function useBackButton() {
-    const navigationType = useNavigationType(); // 'POP', 'PUSH', or 'REPLACE'
-
-    useEffect(() => {
-      if (navigationType === 'POP' && breadcrumbsList.length > 1) {
-        removeBreadcrumbsAfter(breadcrumbsList.length - 2);
-      }
-    }, [navigationType]);
-  }
-
-  useBackButton();
-  
-
-  function useWindowWidth() {
-    const [width, setWidth] = useState(window.innerWidth);
-    useEffect(() => {
-      const onResize = () => setWidth(window.innerWidth);
-      window.addEventListener('resize', onResize);
-      return () => window.removeEventListener('resize', onResize);
-    }, []);
-    return width;
-  }
-
-  const DropBreadcrumbs = () => {
-
-    const width = 0.4 * useWindowWidth();
-    const allowedCrumbs = Math.floor(width / 60);
-
-    const processedCrumbs = breadcrumbsList.length > allowedCrumbs ? [breadcrumbsList[0], '...', ...breadcrumbsList.slice(-allowedCrumbs + 1)] : breadcrumbsList;
-
-    return (
-      <div className='breadcrumbs'>
-        {processedCrumbs.map((crumb, index) => (
-          <span>
-            {crumb === '...' ? '/...' :
-              <Link className='smallLink breadcrumb' to={crumb} onClick={() => removeBreadcrumbsAfter(index)}>
-                {crumb === '/' ? index === 0 ? 'Home' : '/Home' : processCrumbString(crumb)}
-              </Link>
-            } 
-          </span>
-        ))}
-      </div>
-    );
-  };
-
-  function addBreadcrumb(newCrumb) {
-    setBreadcrumbsList(prevList => [...prevList, newCrumb]);
-  }
-
-  function removeBreadcrumbsAfter(index) {
-    setBreadcrumbsList(prevList => prevList.slice(0, index + 1));
-  }
-
-  function processCrumbString(crumb) {
-    if (!crumb) return '';
-
-    return crumb.replace(
-      /([a-zA-Z])/,
-      (match) => match.toUpperCase()
-    );
-  }
-
-
   return(
     <div id="all" className='app'>
-      <BreadcrumbContext.Provider value={{ breadcrumbsList, addBreadcrumb }}>
-        <div>
+      <BreadcrumbProvider>
+        <div className='crumbHolder'>
           {backButton}
           {smallBackButton}
-          {DropBreadcrumbs()}
+          <DropBreadcrumbs />
         </div>
         <Routes>
           <Route exact path='/' element={<Home/>} />
@@ -132,7 +68,7 @@ function App() {
           <Route path='/glossary' element={<Glossary/>} />
           <Route path='*' element={<NotFound/>} />
         </Routes>
-      </BreadcrumbContext.Provider>
+      </BreadcrumbProvider>
     </div>
   );
 }
