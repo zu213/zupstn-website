@@ -1,5 +1,5 @@
 
-import { BreadcrumbLink } from '../../BreadcrumbContext.js';
+import { BreadcrumbLink } from '../../util/Breadcrumbs.js';
 import './Dissertation.css';
 
 import dissertationUI from './media/di-ui.png';

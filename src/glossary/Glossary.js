@@ -1,4 +1,4 @@
-import { BreadcrumbLink } from '../BreadcrumbContext.js';
+import { BreadcrumbLink } from '../util/Breadcrumbs.js';
 import './Glossary.css';
 
 function Glossary() {

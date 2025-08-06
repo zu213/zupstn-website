@@ -41,34 +41,6 @@ export function BreadcrumbProvider({ children }) {
   );
 }
 
-// wtach window width for truncation
-export function useWindowWidth() {
-  const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
-  useEffect(() => {
-    const onResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, []);
-  return width;
-}
-
-// Detect back/forward navigation
-export function useBackButton(popHandler) {
-  const location = useLocation();
-  const navigationType = useNavigationType();
-  const handlerRef = useRef(popHandler);
-
-  useEffect(() => {
-    handlerRef.current = popHandler;
-  }, [popHandler]);
-
-  useEffect(() => {
-    if (navigationType === 'POP') {
-      handlerRef.current();
-    }
-  }, [navigationType, location]);
-}
-
 // External breadcrumb link to add to list
 export function BreadcrumbLink({ to, crumbLabel, children, ...props }) {
   const { addBreadcrumb } = useBreadcrumbs();
@@ -81,16 +53,6 @@ export function BreadcrumbLink({ to, crumbLabel, children, ...props }) {
     >
       {children}
     </Link>
-  );
-}
-
-function processCrumbString(crumb) {
-  if (!crumb) return '';
-  if(crumb === '/cv') return '/CV';
-
-  return crumb.replace(
-    /([a-zA-Z])/,
-    (match) => match.toUpperCase()
   );
 }
 
@@ -147,3 +109,42 @@ export function DropBreadcrumbs() {
     </nav>
   );
 }
+
+// watch window width for truncation
+function useWindowWidth() {
+  const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
+  useEffect(() => {
+    const onResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+  return width;
+}
+
+// Detect back/forward navigation
+function useBackButton(popHandler) {
+  const location = useLocation();
+  const navigationType = useNavigationType();
+  const handlerRef = useRef(popHandler);
+
+  useEffect(() => {
+    handlerRef.current = popHandler;
+  }, [popHandler]);
+
+  useEffect(() => {
+    if (navigationType === 'POP') {
+      handlerRef.current();
+    }
+  }, [navigationType, location]);
+}
+
+function processCrumbString(crumb) {
+  if (!crumb) return '';
+  if(crumb === '/cv') return '/CV';
+
+  return crumb.replace(
+    /([a-zA-Z])/,
+    (match) => match.toUpperCase()
+  );
+}
+
