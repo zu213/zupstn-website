@@ -15,7 +15,7 @@ export function BreadcrumbProvider({ children }) {
   const [breadcrumbsList, setBreadcrumbsList] = useState(initialSet);
 
   useEffect(() => {
-    const path = location.pathname; // or location.hash if using HashRouter
+    const path = window.location.hash.split('#')[1]; // or location.hash if using HashRouter
     setBreadcrumbsList((prev) => [...prev, path]);
   }, []);
 
@@ -23,7 +23,7 @@ export function BreadcrumbProvider({ children }) {
     setBreadcrumbsList(prevList => [...prevList, newCrumb]);
   }
 
-  function removeBreadcrumbsAfter(index, addToLost=false) {
+  function removeBreadcrumbsAfter(index) {
     setBreadcrumbsList(prev => prev.slice(0, index + 1));
   }
 
@@ -55,12 +55,16 @@ export function useWindowWidth() {
 // Detect back/forward navigation
 export function useBackButton(popHandler) {
   const location = useLocation();
-  const navigationType = useNavigationType(); // 'POP' | 'PUSH' | 'REPLACE'
+  const navigationType = useNavigationType();
+  const handlerRef = useRef(popHandler);
 
-  // run when navigationType or location.key changes
+  useEffect(() => {
+    handlerRef.current = popHandler;
+  }, [popHandler]);
+
   useEffect(() => {
     if (navigationType === 'POP') {
-      popHandler();
+      handlerRef.current();
     }
   }, [navigationType, location]);
 }
@@ -82,7 +86,7 @@ export function BreadcrumbLink({ to, crumbLabel, children, ...props }) {
 
 function processCrumbString(crumb) {
   if (!crumb) return '';
-  if(crumb == '/cv') return '/CV';
+  if(crumb === '/cv') return '/CV';
 
   return crumb.replace(
     /([a-zA-Z])/,
