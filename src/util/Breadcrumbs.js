@@ -10,13 +10,12 @@ export function useBreadcrumbs() {
 // contains all the state of the breadcrumbs
 export function BreadcrumbProvider({ children }) {
 
-  const location = useLocation();
-  const initialSet = location.pathname !== '/' ? ['/', location.pathname] : ['/'];
+  const initialSet = ['/'];
   const [breadcrumbsList, setBreadcrumbsList] = useState(initialSet);
 
   useEffect(() => {
     const path = window.location.hash.split('#')[1]; // or location.hash if using HashRouter
-    setBreadcrumbsList((prev) => [...prev, path]);
+    setBreadcrumbsList((prev) => path !== '/' && prev.length < 2  ?  [...prev, path] : prev);
   }, []);
 
   function addBreadcrumb(newCrumb) {
@@ -72,7 +71,7 @@ export function DropBreadcrumbs() {
   useBackButton(
     () => {
       if (breadcrumbsList.length > 1) {
-        removeBreadcrumbsAfter(breadcrumbsList.length - 2, true);
+        removeBreadcrumbsAfter(breadcrumbsList.length - 2);
       }
     });
 
@@ -90,6 +89,8 @@ export function DropBreadcrumbs() {
             </span>
           );
         }
+
+        if(!crumb) return '';
 
         const to = crumb === '/' ? '/' : (crumb.startsWith('/') ? crumb : `/${crumb}`);
         const label = crumb === '/' ? `${idx === 0 ? '' : '/'}Home` : processCrumbString(crumb);

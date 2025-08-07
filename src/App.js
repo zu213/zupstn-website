@@ -21,7 +21,8 @@ const taglineChoice = Math.floor(Math.random() * taglineTextOptions.length);
 // one in a hundered chance of being tessa
 const asciiGifDisplay = Math.floor(Math.random() * 100) !== 99;
 
-let chosenArt;
+const validRoutes = [ '/me', '/cv', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary'];
+
 // main app
 function App() {
   // declare important variables
@@ -75,6 +76,7 @@ function App() {
 
 function Home() {
   const chosenArtNumber = Math.floor(Math.random() * asciiGif.length);
+  const chosenLink = validRoutes[Math.floor(Math.random() * validRoutes.length)];
 
   const taglineText = taglineTextOptions[taglineChoice];
   const [currentImageIndex, setCurrentImageIndex] = useState(chosenArtNumber);
@@ -128,11 +130,20 @@ function Home() {
         </div>
       </div>
 
-      {chosenArt}
+      {asciiGifDisplay ?
+        <div className='artHolder'>
+          <div className="speechBubble">
 
-      {asciiGifDisplay ? 
-        <div className='asciiArt' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-          {asciiGif[currentImageIndex]}
+            <BreadcrumbLink 
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              to={chosenLink}
+              className='smallLink'
+            >I'm feeling lucky</BreadcrumbLink>
+          </div>
+          <div className='asciiArt' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+            {asciiGif[currentImageIndex]}
+          </div>
         </div>
         :    
         <div className='bigAsciiArt'>

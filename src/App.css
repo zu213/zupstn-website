@@ -52,10 +52,20 @@
   padding-bottom: 5vh;
 }
 
-.asciiArt {
+.artHolder {
   position: absolute;
   bottom: 0%;
-  left: 33%;
+  left: 35%;
+}
+
+.asciiArt {
+  position: relative;
+}
+
+@media only screen and (max-width: 300px) {
+  .artHolder {
+    left: 10%;
+  }
 }
 
 
@@ -68,15 +78,9 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .searchLinksLeft {
+  .searchLinksLeft, .searchLinksRight {
     font-size: 4vw;
     padding-top: 5vw;
-  }
-  
-  .searchLinksRight {
-    font-size: 4vw;
-    padding-top: 5vw;
-
   }
 }
 
@@ -192,6 +196,70 @@
 .pageHeader{
   height: 8vh;
   font-size: large;
+}
+
+.speechBubble {
+  position: relative;
+  left: 20%;
+  background: #c0baba;
+  border-radius: 0.5em;
+  padding: 15px 30px;
+  max-width: 250px;
+  font-size: 1vw;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 20px;
+
+  .smallLink:hover {
+    color: rgb(255, 14, 61) !important;
+    text-decoration: underline;
+    text-shadow:
+    0 0 10px rgb(255, 20, 147),
+    0 0 20px rgb(255, 20, 147);
+  }
+}
+
+/* The triangle "tail" */
+.speechBubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #a49d9d;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+@media only screen and (max-width: 1250px) {
+  .speechBubble:after {
+    left: 30%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .speechBubble {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .speechBubble:after {
+    left: 50%;
+  }
+
+  .speechBubble {
+    left: 0;
+    padding: 8px 16px;
+    font-size: 6px;
+  }
+
+  .asciiArt{
+    font-size: xx-small;
+  }
 }
 
 /* General css writes */
