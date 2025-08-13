@@ -2,9 +2,11 @@
 // Normal imports
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { BreadcrumbProvider, BreadcrumbLink, DropBreadcrumbs } from './util/Breadcrumbs.js';
+
+// Util import
+import { BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
 import { BackButton } from './util/BackButtons.js';
-import { useState, useEffect } from 'react';
+import { FruitLips, FruitLips2, Squares, LLMCompare } from './submodules/submodules.js';
 
 // Page imports
 import Art from './art/Art.js';
@@ -14,15 +16,8 @@ import Me from './myself/Myself.js';
 import CV from './cv/CV.js';
 import Glossary from './glossary/Glossary.js';
 import DissertationTool from './projects/large/DissertationTool.js';
-import { asciiArtBig, asciiGif } from './other/asciiArt.js';
-
-// Declare static tagline
-const taglineTextOptions = ['- Try "curl https://zupstn.com/hypno.sh | bash"', '- Try "npx zachupstone"'];
-const taglineChoice = Math.floor(Math.random() * taglineTextOptions.length);
-// one in a hundered chance of being tessa
-const asciiGifDisplay = Math.floor(Math.random() * 100) !== 99;
-
-const validRoutes = [ '/me', '/cv', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary'];
+import Home from './home/Home.js';
+import NotFound from './util/NotFound.js';
 
 // main app
 function App() {
@@ -53,155 +48,5 @@ function App() {
     </div>
   );
 }
-
-function Home() {
-  const chosenArtNumber = Math.floor(Math.random() * asciiGif.length);
-  const chosenLink = validRoutes[Math.floor(Math.random() * validRoutes.length)];
-
-  const taglineText = taglineTextOptions[taglineChoice];
-  const [currentImageIndex, setCurrentImageIndex] = useState(chosenArtNumber);
-  const [isHovered, setIsHovered] = useState(false);
-
-  // Animate the gif if mouse is hovered
-  useEffect(() => {
-    let interval;
-    
-    if (isHovered) {
-      interval = setInterval(() => {
-        setCurrentImageIndex(prevIndex => (prevIndex + 1) % asciiGif.length); // Loop back to the first image when at the end
-      }, 200);
-    } else {
-      clearInterval(interval);
-    }
-
-    return () => clearInterval(interval);
-  }, [isHovered]);
-
-  return (
-    <div>
-      <div className="titleContainer">
-        <div className="title">
-          <BreadcrumbLink to="/me">
-              Zach Upstone             
-          </BreadcrumbLink>
-        </div>
-        <div className='tagLine'>
-          {taglineText}
-        </div>
-      </div>
-
-      <div className="searchLinksLeft">
-        <div>
-          <BreadcrumbLink to="/projects">Projects</BreadcrumbLink>
-        </div>
-        <div>
-          <BreadcrumbLink to="/cv">CV</BreadcrumbLink>
-        </div>
-        <div>
-          <BreadcrumbLink to="/gallery">Gallery</BreadcrumbLink>
-        </div>
-      </div>
-      <div className="searchLinksRight">
-        <div>
-          <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
-        </div>
-        <div>
-          <a href="https://www.linkedin.com/in/zachary-upstone-076218214/"  target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-      </div>
-
-      {asciiGifDisplay ?
-        <div className='artHolder'>
-          <div className="speechBubble">
-
-            <BreadcrumbLink 
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              to={chosenLink}
-              className='smallLink'
-            >I'm feeling lucky</BreadcrumbLink>
-          </div>
-          <div className='asciiArt' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-            {asciiGif[currentImageIndex]}
-          </div>
-        </div>
-        :    
-        <div className='bigAsciiArt'>
-          {asciiArtBig}
-        </div>
-      }
-    </div>
-  );
-}
-
-// Sub modules
-function FruitLips() {
-  return (
-    <div className='fruitLipsContainer'>
-      <iframe 
-        title='fruit-lips'
-        className='fruitLips'
-        src="./fruit-lips/fruit-lips.html"
-        width="100%"
-        height="100%"
-      />
-    </div>
-  );
-}
-
-function FruitLips2() {
-  return (
-    <div className='fruitLipsContainer'>
-      <iframe 
-        title='fruit-lips'
-        className='fruitLips'
-        src="./fruit-lips/fruit-lips2.html"
-        width="100%"
-        height="100%"
-      />
-    </div>
-  );
-}
-
-function Squares() {
-  return (
-    <div className='squaresContainer'>
-      <iframe 
-        title='368Squares'
-        className='368Squares'
-        src="./squares/squares.html"
-        width="100%"
-        height="100%"
-      />
-    </div>
-  );
-}
-
-function LLMCompare() {
-  return (
-    <div className='llmCompareContainer'>
-      <iframe 
-        title='LLMCompare'
-        data-class='llmCompare'
-        className='llmCompare'
-        src="./llm-compare/src/index.html"
-        width="100%"
-        height="100%"
-      />
-    </div>
-  );
-}
-
-function NotFound() {
-  return (
-    <div>
-      Subpage not found!
-    </div>
-  );
-}
-
-// Helper functions 
-
-
 
 export default App;

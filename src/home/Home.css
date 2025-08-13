@@ -1,0 +1,162 @@
+/* Home page */
+.titleContainer {
+  padding-bottom: 15px;
+  position: relative;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+  height: 12vw;
+}
+
+.title {
+  text-align: left;
+  font-size: 3vw;
+  width: auto;
+  display: block;
+  text-decoration: none;
+  padding-left: 7%;
+  bottom: -6vw;
+  position: relative;
+}
+
+.searchLinksLeft {
+  padding-left: 7%;
+  text-align: left;
+  display: inline-block;
+  font-size: 2vw;
+  left: 0%;
+  position: fixed;
+}
+
+.searchLinksRight {
+  padding-right: 7%;
+  text-align: right;
+  display: inline-block;
+  font-size: 2vw;
+  right: 0%;
+  position: fixed;
+}
+
+.searchLinksLeft div, .searchLinksRight div {
+  padding-bottom: 5vh;
+}
+
+.artHolder {
+  position: absolute;
+  bottom: 0%;
+  left: 35%;
+}
+
+.asciiArt {
+  position: relative;
+}
+
+.bigAsciiArt {
+  font-size: 3px;
+  white-space: pre-line;
+  position: absolute;
+  bottom: 0%;
+  left: 33%;
+}
+
+.tagLine {
+  text-align: left;
+  font-size: 1.2vw;
+  width: auto;
+  display: block;
+  font-style: italic;
+  text-decoration: none;
+  padding-left: 8%;
+  bottom: -6vw;
+  position: relative;
+}
+
+.speechBubble {
+  position: relative;
+  left: 20%;
+  background: #c0baba;
+  border-radius: 0.5em;
+  padding: 15px 30px;
+  max-width: 250px;
+  font-size: 1vw;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 20px;
+
+  .smallLink:hover {
+    color: rgb(255, 14, 61) !important;
+    text-decoration: underline;
+    text-shadow:
+    0 0 20px rgb(255, 20, 147),
+    0 0 32px rgb(255, 20, 147);
+  }
+}
+
+/* The triangle "tail" */
+.speechBubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 30%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #a49d9d;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+@media only screen and (max-width: 1250px) {
+  .speechBubble:after {
+    left: 30%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .speechBubble {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tagLine {
+    font-size: 2vw;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .searchLinksLeft, .searchLinksRight {
+    font-size: 4vw;
+    padding-top: 5vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .speechBubble:after {
+    left: 50%;
+  }
+
+  .speechBubble {
+    left: 0;
+    padding: 8px 16px;
+    font-size: 6px;
+  }
+
+  .asciiArt{
+    font-size: xx-small;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .artHolder {
+    left: 10%;
+  }
+}

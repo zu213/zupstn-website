@@ -43,3 +43,84 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* General css writes */
+
+img {
+  height: 100%;
+  width: 100%;    
+}
+
+hr {
+  color: rgb(73, 67, 105);
+  border: none;
+  height: 1.5px;
+  background-color: rgb(73, 67, 105);
+}
+
+a {
+  text-decoration: none;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 12px 24px;
+  letter-spacing: 0.2em;
+  line-height: 100%;
+  border-radius: 6px;
+  color: rgb(60, 60, 60);
+  box-shadow: 0 0 10px #febef1;
+  transition: all 0.3s ease;
+  opacity: 0.95;
+}
+
+button:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  box-shadow:
+    0 0 10px #fb52d9,
+    0 0 20px #fc88e5;
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);
+}
+
+@media only screen and (max-width: 420px) {
+  button {
+    margin: 7px 3px;
+  }
+}
+
+input {
+  border-radius: 2px;
+  font-family: 'Montserrat', sans-serif;
+  appearance: none; 
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 10px 0px;
+  letter-spacing: 0.2em;
+  line-height: 100%;
+  border-radius: 3px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  width: 20vw;
+}
+
+* {
+  caret-color: transparent;
+}
