@@ -1,5 +1,5 @@
-import ratingsPage from './media/ratingsPage.PNG';
 import profilePage from './media/profilePage.PNG';
+import ratingsPage from './media/ratingsPage.PNG';
 import storiesPage from './media/storiesPage.PNG';
 
 function ShortStorey(props) {

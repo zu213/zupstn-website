@@ -1,7 +1,8 @@
+import { useState, useRef } from 'react';
+
 // Image imports
 import download from '../icons/white-download.png';
 import './CV.css';
-import { useState, useRef } from 'react';
 
 function CV() {
   const [loading, setLoading] = useState(true);

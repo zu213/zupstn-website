@@ -4,19 +4,19 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
 // Util import
-import { BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
-import { BackButton } from './util/BackButtons.js';
-import { FruitLips, FruitLips2, Squares, LLMCompare } from './submodules/submodules.js';
 
 // Page imports
 import Art from './art/Art.js';
 import Charts from './charts/Charts.js';
-import Projects from './projects/Projects.js';
-import Me from './myself/Myself.js';
 import CV from './cv/CV.js';
 import Glossary from './glossary/Glossary.js';
-import DissertationTool from './projects/large/DissertationTool.js';
 import Home from './home/Home.js';
+import Me from './myself/Myself.js';
+import DissertationTool from './projects/large/DissertationTool.js';
+import Projects from './projects/Projects.js';
+import { FruitLips, FruitLips2, Squares, LLMCompare } from './submodules/submodules.js';
+import { BackButton } from './util/BackButtons.js';
+import { BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
 import NotFound from './util/NotFound.js';
 
 // main app

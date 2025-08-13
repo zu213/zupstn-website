@@ -1,7 +1,8 @@
 
 import './Dissertation.css';
-import tick from '../../icons/tick.png';
 import { useState } from 'react';
+
+import tick from '../../icons/tick.png';
 
 let options = [];
 let sketchImg = '';

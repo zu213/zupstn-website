@@ -1,5 +1,5 @@
-import join from'./media/join.png';
 import guess2 from './media/guess2.png';
+import join from'./media/join.png';
 
 
 function SpotifyRoulette(props) {

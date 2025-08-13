@@ -1,7 +1,7 @@
 import './Charts.css';
-import moment from 'moment';
 import { useState, useEffect } from 'react';
 
+import moment from 'moment';
 import {
   LineChart,
   ResponsiveContainer,

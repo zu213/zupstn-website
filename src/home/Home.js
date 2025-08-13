@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
 
-import { BreadcrumbLink } from '../util/Breadcrumbs.js';
 import { asciiArtBig, asciiGif } from '../util/asciiArt.js';
+import { BreadcrumbLink } from '../util/Breadcrumbs.js';
 
 //static consts
 const validRoutes = [ '/me', '/cv', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary'];

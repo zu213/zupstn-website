@@ -1,15 +1,14 @@
 import './Projects.css';
 import { useState } from 'react';
+
+import BouncingLogo from './small/BouncingLogo.js';
 import FruitLips from './small/FruitLips.js';
 import LLMCompare from './small/LLMCompare.js';
-import TopTracks from './small/TopTracks.js';
 import NPMBusiness from './small/NPMBusiness.js';
-import Squares from './small/Squares.js';
-import BouncingLogo from './small/BouncingLogo.js';
 import Peer2Peer from './small/Peer2Peer.js';
+import Squares from './small/Squares.js';
 import TemperatureGlass from './small/TemperatureGlass.js';
-
-
+import TopTracks from './small/TopTracks.js';
 
 function SmallProjects() {
 

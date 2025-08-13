@@ -1,13 +1,14 @@
-import Dissertation from './large/Dissertation.js';
-import UnicodeChess from './large/UnicodeChess.js';
-import SpotifyRoulette from './large/SpotifyRoulette.js';
-import Snowstorm from './large/Snowstorm.js';
-import ChromeContextControl from './large/ChromeContextControl.js';
-import TrafficSimulator from './large/TrafficSimulator.js';
-import SquarePaint from './large/SquarePaint.js';
 import './Projects.css';
 import { useState } from 'react';
+
+import ChromeContextControl from './large/ChromeContextControl.js';
+import Dissertation from './large/Dissertation.js';
 import ShortStorey from './large/ShortStorey.js';
+import Snowstorm from './large/Snowstorm.js';
+import SpotifyRoulette from './large/SpotifyRoulette.js';
+import SquarePaint from './large/SquarePaint.js';
+import TrafficSimulator from './large/TrafficSimulator.js';
+import UnicodeChess from './large/UnicodeChess.js';
 
 function LargeProjects() {
 
