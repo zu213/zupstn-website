@@ -1,9 +1,44 @@
+import { useEffect, useRef, useState } from 'react';
 
-var currentOverlay = null;
+function GalleryPage (images) {
+  const [currentOverlay, setCurrentOverlay] = useState(null);
+  const overlay = useRef(null);
+  const rowRefs = useRef([]);
+  const scrollInterval = useRef(null);
 
-function galleryPage (images) {
+  useEffect(() => {
+    rowRefs.current.forEach((row, _) => {
+      if (!row) return;
+      const imgs = Array.from(row.querySelectorAll('img'));
+      let loadedCount = 0;
 
-  var scrollInterval;
+      const onLoad = () => {
+        loadedCount++;
+        if (loadedCount === imgs.length) {
+          checkToHideButtons(row);
+        }
+        console.log(loadedCount);
+      };
+
+      imgs.forEach(img => {
+        if (img.complete) {
+          onLoad();
+        } else {
+          img.addEventListener('load', onLoad);
+          img.addEventListener('error', onLoad);
+        }
+      });
+
+      return () => {
+        imgs.forEach(img => {
+          img.removeEventListener('load', onLoad);
+          img.removeEventListener('error', onLoad);
+        });
+      };
+    });
+    console.log(images, rowRefs);
+  }, [images]);
+
 
   const scrollRowLeft = (e, scrollBy) => {
     e.stopPropagation();
@@ -11,7 +46,7 @@ function galleryPage (images) {
     const rowElement = e.currentTarget.nextSibling;
     rowElement.scrollLeft -= scrollBy;
     checkToHideButtons(rowElement);
-    scrollInterval = setInterval(() => {
+    scrollInterval.current = setInterval(() => {
       rowElement.scrollLeft -= scrollBy;
       checkToHideButtons(rowElement);
     }, 75);
@@ -23,7 +58,7 @@ function galleryPage (images) {
     const rowElement = e.currentTarget.previousSibling;
     rowElement.scrollLeft += scrollBy;
     checkToHideButtons(rowElement);
-    scrollInterval = setInterval(() => {
+    scrollInterval.current = setInterval(() => {
       rowElement.scrollLeft += scrollBy;
       checkToHideButtons(rowElement);
     }, 75);
@@ -31,8 +66,7 @@ function galleryPage (images) {
 
 
   const stopScrolling = () => {
-    clearInterval(scrollInterval);
-
+    clearInterval(scrollInterval.current);
   };
 
   // function related to overlaying iamge on gallery view
@@ -40,8 +74,8 @@ function galleryPage (images) {
     if(currentOverlay === null){
       e.target.classList.add('overlayContent');
       e.target.parentElement.classList.add('minimise');
-      currentOverlay = e.target;
-      document.querySelector('.overlay').style.display = 'block';
+      setCurrentOverlay(e.target);
+      overlay.current.style.display = 'block';
     }
   }
     
@@ -49,8 +83,8 @@ function galleryPage (images) {
     if(currentOverlay !== null){
       currentOverlay.classList.remove('overlayContent');
       currentOverlay.parentElement.classList.remove('minimise');
-      currentOverlay = null;
-      document.querySelector('.overlay').style.display = 'none';
+      setCurrentOverlay(null);
+      overlay.current.style.display = 'none';
     }
   }
 
@@ -75,7 +109,7 @@ function galleryPage (images) {
               <path d="M24 12l-8 8 8 8" stroke="#606060" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
-          <div className="imageRow">
+          <div className="imageRow" ref={el => rowRefs.current[rowIndex] = el}>
             {   
               rowImages.map((image, index) => (
                 <div className="imageColumn" key={`image-${index}`}>
@@ -99,11 +133,11 @@ function galleryPage (images) {
       )}
       <br />
 
-      <div id="overlay" className="overlay" onClick={removeOverlay}></div>
+      <div ref={overlay} className="overlay" onClick={removeOverlay}></div>
     </div>
   );};
 
-export const checkToHideButtons = (el) => {
+const checkToHideButtons = (el) => {
   if(el.nextSibling){
     if(el.scrollLeft + el.clientWidth >= el.scrollWidth - 1){
       el.nextSibling.classList.add('hidden');
@@ -120,4 +154,4 @@ export const checkToHideButtons = (el) => {
   }
 };
 
-export default galleryPage;
+export default GalleryPage;

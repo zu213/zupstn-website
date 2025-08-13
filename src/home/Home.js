@@ -5,7 +5,7 @@ import { asciiArtBig, asciiGif } from '../util/asciiArt.js';
 import { BreadcrumbLink } from '../util/Breadcrumbs.js';
 
 //static consts
-const validRoutes = [ '/me', '/cv', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary'];
+const validRoutes = [ '/me', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary'];
 const taglineTextOptions = ['- Try "curl https://zupstn.com/hypno.sh | bash"', '- Try "npx zachupstone"'];
 const taglineChoice = Math.floor(Math.random() * taglineTextOptions.length);
 // one in a hundered chance of being tessa
