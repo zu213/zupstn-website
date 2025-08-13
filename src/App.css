@@ -136,39 +136,6 @@
   0 0 70px rgb(255, 20, 147);
 }
 
-.backButton, .smallBackButton, .breadcrumbs {
-  margin-top: 1px;
-  left: 4%;
-  position: absolute;
-  display: inline-block;
-}
-
-.breadcrumbs {
-  position: absolute;
-}
-
-.crumbHolder {
-  text-align: left;
-  left: 4%;
-  width: 40%;
-  position: relative;
-}
-
-.smallBackButton, .backButton {
-  display: none;
-}
-
-@media only screen and (max-width: 520px) {
-  .backButton, .breadcrumbs {
-    display: none;
-  }
-
-  .smallBackButton {
-    display: inline-block;
-    padding: 5px 10px;
-  }
-}
-
 .subTitle{
   font-size: 17px;
 }
@@ -213,8 +180,8 @@
     color: rgb(255, 14, 61) !important;
     text-decoration: underline;
     text-shadow:
-    0 0 10px rgb(255, 20, 147),
-    0 0 20px rgb(255, 20, 147);
+    0 0 20px rgb(255, 20, 147),
+    0 0 32px rgb(255, 20, 147);
   }
 }
 

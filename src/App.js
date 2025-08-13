@@ -1,9 +1,10 @@
 
 // Normal imports
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { BreadcrumbProvider, BreadcrumbLink, DropBreadcrumbs } from './util/Breadcrumbs.js';
-import { useState, useEffect, useCallback,  } from 'react';
+import { BackButton } from './util/BackButtons.js';
+import { useState, useEffect } from 'react';
 
 // Page imports
 import Art from './art/Art.js';
@@ -16,7 +17,7 @@ import DissertationTool from './projects/large/DissertationTool.js';
 import { asciiArtBig, asciiGif } from './other/asciiArt.js';
 
 // Declare static tagline
-const taglineTextOptions = ['- Try "curl https://zupstn.com/hypno.sh | bash"', '- Try running "npx zachupstone"'];
+const taglineTextOptions = ['- Try "curl https://zupstn.com/hypno.sh | bash"', '- Try "npx zachupstone"'];
 const taglineChoice = Math.floor(Math.random() * taglineTextOptions.length);
 // one in a hundered chance of being tessa
 const asciiGifDisplay = Math.floor(Math.random() * 100) !== 99;
@@ -25,33 +26,12 @@ const validRoutes = [ '/me', '/cv', '/projects', '/gallery','/charts','/fruit-li
 
 // main app
 function App() {
-  // declare important variables
-  let navigate = useNavigate();
-  const location = useLocation();
-
-  const defaultBackButton = useCallback(() => (<button id="backButton" className="backButton" onClick={() => navigate(-1)}>Back</button>), [navigate]);
-  const defaultSmallBackButton = useCallback(() => (<button id="smallBackButton" className="smallBackButton" onClick={() => navigate(-1)}> &#60; </button>), [navigate]);
-
-  var [backButton, setBackButton] = useState(defaultBackButton);
-  var [smallBackButton, setSmallBackButton] = useState(defaultSmallBackButton);
-
-  // listeners 
-  useEffect(() => {
-    if(location.pathname ===  '/zach-upstone' || location.pathname ===  '/' ) {
-      setBackButton(null);
-      setSmallBackButton(null);
-    } else {
-      setBackButton(defaultBackButton);
-      setSmallBackButton(defaultSmallBackButton);
-    }
-  }, [location.pathname, defaultBackButton, defaultSmallBackButton]);
 
   return(
     <div id="all" className='app'>
       <BreadcrumbProvider>
         <div className='crumbHolder'>
-          {backButton}
-          {smallBackButton}
+          <BackButton />
           <DropBreadcrumbs />
         </div>
         <Routes>
