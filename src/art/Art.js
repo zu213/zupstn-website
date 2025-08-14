@@ -18,13 +18,14 @@ function importAll(r) {
   return images;
 }
 
-const images = importAll(
+const imagesInit = importAll(
   require.context('./images', true, /\.(png|jpe?g|svg)$/)
 );
 
 // main page
 function Art() {
-  var [artPage, setPage] = useState(GalleryPage(images));
+  var [images, setImages] = useState(imagesInit);
+  var [artPage, setPage] = useState(<GalleryPage images={images} />);
   onGallery = true;
   const galleryButton = useRef(null);
   const tableButton = useRef(null);
@@ -33,11 +34,14 @@ function Art() {
     if(galleryButton) {
       galleryButton.current.disabled = true;
     }
+    setImages(importAll(
+      require.context('./images', true, /\.(png|jpe?g|svg)$/)
+    ));
   }, []);
 
   // the colouring is a work around for disable the buttons not working properly
   const toGallery = () => {
-    setPage(GalleryPage(images));
+    setPage(<GalleryPage images={images} />);
     galleryButton.current.disabled = true;
     galleryButton.current.style.color = 'rgb(110,110,110)';
     tableButton.current.disabled = false;
@@ -69,11 +73,11 @@ function Art() {
       </div>              
 
       <div className="inlineButton" >
-        <button ref={galleryButton} className='galleryButton' onClick={toGallery}> Gallery View </button>
+        <button id='galleryButton' ref={galleryButton} className='galleryButton' onClick={toGallery}> Gallery View </button>
       </div>
       <div className="inlineButton">
         <div className='border'>
-          <button id={tableButton} className="tableButton" onClick={toTable}> Table View </button>
+          <button id='tableButton' ref={tableButton} className="tableButton" onClick={toTable}> Table View </button>
         </div>
       </div>
 

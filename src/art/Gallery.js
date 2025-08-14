@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 
-function GalleryPage (images) {
+function GalleryPage ({ images }) {
   const [currentOverlay, setCurrentOverlay] = useState(null);
-  const overlay = useRef(null);
   const rowRefs = useRef([]);
   const scrollInterval = useRef(null);
+  console.log(images);
 
   useEffect(() => {
     rowRefs.current.forEach((row, _) => {
@@ -17,7 +17,6 @@ function GalleryPage (images) {
         if (loadedCount === imgs.length) {
           checkToHideButtons(row);
         }
-        console.log(loadedCount);
       };
 
       imgs.forEach(img => {
@@ -36,7 +35,6 @@ function GalleryPage (images) {
         });
       };
     });
-    console.log(images, rowRefs);
   }, [images]);
 
 
@@ -71,21 +69,12 @@ function GalleryPage (images) {
 
   // function related to overlaying iamge on gallery view
   function overlayImage(e) {
-    if(currentOverlay === null){
-      e.target.classList.add('overlayContent');
-      e.target.parentElement.classList.add('minimise');
-      setCurrentOverlay(e.target);
-      overlay.current.style.display = 'block';
-    }
+    const img = e.target;
+    setCurrentOverlay(img.src);
   }
-    
+
   function removeOverlay() {
-    if(currentOverlay !== null){
-      currentOverlay.classList.remove('overlayContent');
-      currentOverlay.parentElement.classList.remove('minimise');
-      setCurrentOverlay(null);
-      overlay.current.style.display = 'none';
-    }
+    setCurrentOverlay(null);
   }
 
   return (
@@ -94,7 +83,7 @@ function GalleryPage (images) {
       <br />
       <br />
 
-      {Object.entries(images).map(([rowName, rowImages], rowIndex) => (
+      {images && Object.entries(images).map(([rowName, rowImages], rowIndex) => (
         <div className='image-category' key={`folder-${rowName || rowIndex}`}>
           <div className="artSubtitle">
             {rowName}
@@ -133,7 +122,13 @@ function GalleryPage (images) {
       )}
       <br />
 
-      <div ref={overlay} className="overlay" onClick={removeOverlay}></div>
+      {currentOverlay && (
+        <div>
+          <div className="overlay" onClick={removeOverlay}>
+          </div>
+          <img src={currentOverlay} alt="overlay" className="overlayContent" />
+        </div>
+      )}
     </div>
   );};
 
