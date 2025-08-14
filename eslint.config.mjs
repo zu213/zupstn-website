@@ -1,6 +1,5 @@
 import pluginReact from 'eslint-plugin-react';
 import pluginImport from 'eslint-plugin-import';
-import pluginClassnames from 'eslint-plugin-classnames';
 
 export default [
   {
@@ -21,7 +20,6 @@ export default [
     plugins: {
       react: pluginReact,
       import: pluginImport,
-      classnames: pluginClassnames,
     },
     rules: {
       'react/react-in-jsx-scope': 'off',
@@ -46,6 +44,7 @@ export default [
           'newlines-between': 'always'
         }
       ],
+      "indent": ["error", 2]
     },
     settings: {
       react: {

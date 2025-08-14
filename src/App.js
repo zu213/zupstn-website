@@ -27,7 +27,7 @@ function App() {
       <BreadcrumbProvider>
         <BackButtonProvider>
           <BackButton />
-          <div className='crumbHolder'>
+          <div className='crumb-holder'>
             <DropBreadcrumbs />
           </div>
           <Routes>

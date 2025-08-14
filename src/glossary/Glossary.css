@@ -1,42 +1,53 @@
 /* link page */
 
-.linkTitle {
-    font-size: x-large;
+.link-title {
+  font-size: x-large;
 }
 
-.linksListContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 7vh 10%;
+.links-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 7vh 10%;
 }
 
-.linksContainer {
-    display: inline-block;
-    text-align: left;
-    font-size: larger;
+.links-container {
+  display: inline-block;
+  text-align: left;
+  font-size: larger;
 }
 
-.link{
-    padding: 4vh 0%;
-    text-shadow:
-        0 0 10px rgb(254, 75, 120),
-        0 0 20px rgb(254, 75, 120);
+.link {
+  padding: 4vh 0%;
+  text-shadow:
+    0 0 10px rgb(254 75 120),
+    0 0 20px rgb(254 75 120);
 }
-.link a  {
-    color:rgb(254, 75, 120);
+
+.link a {
+  color: rgb(254 75 120);
 }
+
 .link:visited {
-    color:rgb(211, 3, 103);
+  color: rgb(211 3 103);
 }
+
 .link:hover {
-    color: rgb(290, 14, 61);
-    text-decoration: underline;
+  color: rgb(290 14 61);
+  text-decoration: underline;
 }
+
 .link a:hover {
-    text-shadow:
-        0 0 10px rgb(255, 20, 147),
-        0 0 20px rgb(255, 20, 147),
-        0 0 30px rgb(255, 105, 180),
-        0 0 40px rgb(255, 105, 180),
-        0 0 70px rgb(255, 20, 147);
+  text-shadow:
+    0 0 10px rgb(255 20 147),
+    0 0 20px rgb(255 20 147),
+    0 0 30px rgb(255 105 180),
+    0 0 40px rgb(255 105 180),
+    0 0 70px rgb(255 20 147);
+}
+
+@media only screen and (width <= 400px) {
+  .links-list-container {
+    grid-template-columns: 1fr;
+    padding: 7vh 20%;
+  }
 }

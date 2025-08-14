@@ -1,214 +1,215 @@
 /* Large project */
 
 .projectTitle {
-    font-size: large;
-    text-align: left;
-    padding: 1% 0 1% 10%;
-    text-decoration: underline;
-    height: 4vh;
+  font-size: large;
+  text-align: left;
+  padding: 1% 0 1% 10%;
+  text-decoration: underline;
+  height: 4vh;
 }
 
 .projectSwitchButton {
-    margin: 1em 3em;
+  margin: 1em 3em;
 }
 
 .limitedHr {
-    width: 80%;
+  width: 80%;
 }
 
 .projectInlineStructure {
-    display: inline-block;
-    width: 40%;
-    padding: 1vw;
-    vertical-align: top;
+  display: inline-block;
+  width: 40%;
+  padding: 1vw;
+  vertical-align: top;
 }
 
 .largeProjectInlineStructure {
-    width: 54%;
-    display: inline-block;
-    padding: 1vw;
-    vertical-align: top;
+  width: 54%;
+  display: inline-block;
+  padding: 1vw;
+  vertical-align: top;
 }
 
 .wideProjectInlineStructure {
-    width: 54%;
-    display: inline-block;
-    padding: 1vw;
-    vertical-align: top;
+  width: 54%;
+  display: inline-block;
+  padding: 1vw;
+  vertical-align: top;
 }
 
 .wideProjectInlineStructure {
-    height: 60%;
+  height: 60%;
 }
 
 .tightProjectInlineStructure {
-    text-align: left;
-    display: inline-block;
-    width: 24%;
-    padding: 0.5vw;
-    vertical-align: top;
+  text-align: left;
+  display: inline-block;
+  width: 24%;
+  padding: 0.5vw;
+  vertical-align: top;
 }
 
 .laptop {
-    width: 30%;
+  width: 30%;
 
-    .aspectClass {
-        aspect-ratio: 16/9;
-        margin: 5%;
-        padding: 0;
-    }
+  .aspectClass {
+    aspect-ratio: 16/9;
+    margin: 5%;
+    padding: 0;
+  }
 }
 
 .topPadding {
-    padding-top: 2vw;
+  padding-top: 2vw;
 }
 
 .smallProjectFigure {
-    width: 90%;
-    padding: 5%;
+  width: 90%;
+  padding: 5%;
 }
 
 .inlineList {
-    padding: 1% 2% 1% 5%;
-    display: inline-block;
-    width: 40%;
-    vertical-align: top;
+  padding: 1% 2% 1% 5%;
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
 }
 
-@media only screen and (max-width: 600px) {
-    .inlineList {
-        display: block;
-        width: unset;
-    }
+@media only screen and (width <= 600px) {
+  .inlineList {
+    display: block;
+    width: unset;
+  }
 }
 
 /* small projects */
 
 .projectGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .projectGridElement {
-    padding: 3% 8%;
-    font-size: small;
+  padding: 3% 8%;
+  font-size: small;
 }
 
 .projectGrid .projectTitle {
-    text-align: center;
-    padding: 0;
+  text-align: center;
+  padding: 0;
 }
 
-@media only screen and (max-width: 700px) {
-    .projectGrid {
-        grid-template-columns: 1fr 1fr;
-    }
+@media only screen and (width <= 700px) {
+  .projectGrid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-@media only screen and (max-width: 500px) {
-    .projectGrid {
-        grid-template-columns: 1fr;
-    }
+@media only screen and (width <= 500px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .smallRepoLink {
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .topTracksImage {
-    width: 60%;
-    height: 60%;
+  width: 60%;
+  height: 60%;
 }
 
-/*general */
+/* general */
 
 .overlayMask {
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    background-color: black;
-    position: fixed;
-    z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: black;
+  position: fixed;
+  z-index: 1;
 }
 
-.aspectClass{
-    aspect-ratio: 7/5;
+.aspectClass {
+  aspect-ratio: 7/5;
 }
 
 .aspectClass img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-/*snow*/
-.snowText, .storeyText {
-    padding-left: 8%;
-    padding-right: 8%;
-    text-align: left;
 
+/* snow */
+.snowText,
+.storeyText {
+  padding-left: 8%;
+  padding-right: 8%;
+  text-align: left;
 }
 
 /* mask */
 .mask {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
-    opacity: 0;
-    background-color: rgb(35, 35, 35);
-    top: 0px; 
-    left: 0px; 
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  background-color: rgb(35 35 35);
+  top: 0;
+  left: 0;
 }
 
 .overlayMask {
-    z-index: 100;
-    position: fixed;
-    height: auto !important;
-    width: 40% !important;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1;
+  z-index: 100;
+  position: fixed;
+  height: auto !important;
+  width: 40% !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
 }
 
-@media only screen and (max-width: 600px) {
-    .projectInlineStructure {
-        display: block;
-        position: relative;
-        width: 90%;
-        left: 5%;        
-    }
+@media only screen and (width <= 600px) {
+  .projectInlineStructure {
+    display: block;
+    position: relative;
+    width: 90%;
+    left: 5%;
+  }
 
-    .tightProjectInlineStructure {
-        display: block;
-        width: 95%;
-        left: 2.5%;
-    }
+  .tightProjectInlineStructure {
+    display: block;
+    width: 95%;
+    left: 2.5%;
+  }
 
-    .wideProjectInlineStructure {
-        display: block;
-        width: 95%;
-        left: 2.5%;
-    }
+  .wideProjectInlineStructure {
+    display: block;
+    width: 95%;
+    left: 2.5%;
+  }
 
-    .largeProjectInlineStructure {
-        display: block;
-        width: 95%;
-        left: 2.5%;
-    }
+  .largeProjectInlineStructure {
+    display: block;
+    width: 95%;
+    left: 2.5%;
+  }
 
-    .overlayMask {
-        width: 90% !important;
-    }
+  .overlayMask {
+    width: 90% !important;
+  }
 
-    .indentMobile {
-        display: block;
-        position: relative;
-        width: 90%;
-        left: 5%; 
-    }
+  .indentMobile {
+    display: block;
+    position: relative;
+    width: 90%;
+    left: 5%;
+  }
 }
 
 .whiteBorder {
-    outline: white solid 1px;
+  outline: white solid 1px;
 }

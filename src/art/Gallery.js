@@ -84,11 +84,11 @@ function GalleryPage ({ images }) {
 
       {images && Object.entries(images).map(([rowName, rowImages], rowIndex) => (
         <div className='image-category' key={`folder-${rowName || rowIndex}`}>
-          <div className="artSubtitle">
+          <div className="art-subtitle">
             {rowName}
           </div>
           <div 
-            className="leftButton hidden"
+            className="left-button hidden"
             onMouseDown={(e) => scrollRowLeft(e, 30)}
             onMouseUp={stopScrolling}
             onMouseLeave={stopScrolling}>
@@ -97,17 +97,17 @@ function GalleryPage ({ images }) {
               <path d="M24 12l-8 8 8 8" stroke="#606060" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
-          <div className="imageRow" ref={el => rowRefs.current[rowIndex] = el}>
+          <div className="image-row" ref={el => rowRefs.current[rowIndex] = el}>
             {   
               rowImages.map((image, index) => (
-                <div className="imageColumn" key={`image-${index}`}>
+                <div className="image-column" key={`image-${index}`}>
                   <img src={image} alt={image} onClick={overlayImage}></img>
                 </div>
               ))
             }
           </div>
           <div 
-            className="rightButton hidden"
+            className="right-button hidden"
             onMouseDown={(e) => scrollRowRight(e, 30)}
             onMouseUp={stopScrolling}
             onMouseLeave={stopScrolling}>
@@ -125,7 +125,7 @@ function GalleryPage ({ images }) {
         <div>
           <div className="overlay" onClick={removeOverlay}>
           </div>
-          <img src={currentOverlay} alt="overlay" className="overlayContent" />
+          <img src={currentOverlay} alt="overlay" className="overlay-content" />
         </div>
       )}
     </div>

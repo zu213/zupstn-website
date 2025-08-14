@@ -1,15 +1,17 @@
-.backButton, .smallBackButton {
+.backButton,
+.smallBackButton {
   margin-top: 1px;
   left: 4%;
   position: absolute;
   display: inline-block;
 }
 
-.smallBackButton, .backButton {
+.smallBackButton,
+.backButton {
   display: none;
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (width <= 520px) {
   .backButton {
     display: none;
   }

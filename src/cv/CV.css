@@ -1,87 +1,109 @@
 /* cv page */
 
-.cvPage {
-    padding-bottom: 20px;
-    min-height: 40vh;
+.cv-page {
+  padding-bottom: 20px;
+  min-height: 40vh;
 }
 
 /* cv page */
 
 .pdf-viewer {
-    padding-top: 20px;
-    width: 70%;
-    height: 50vw;
+  padding-top: 20px;
+  width: 70%;
+  height: 50vw;
 }
 
-.toLoad {
-    display: none;
+.to-load {
+  display: none;
 }
-  
-.downloadImage {
-    width: 10px
+
+.download-image {
+  width: 10px;
 }
-  
-.tooSmallCV {
-    display: none;
+
+.too-small-cv {
+  display: none;
 }
-  
-.safariCV {
-    display: none;
+
+.safari-cv {
+  display: none;
 }
 
 .loader {
-    display: block;
-    position: relative;
-    left: calc(50% - 24px);
-    top: 10vh;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    position: relative;
-    animation: rotate 1s linear infinite
+  display: block;
+  left: calc(50% - 24px);
+  top: 10vh;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite;
 }
+
 .loader::before {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    inset: 0px;
-    border-radius: 50%;
-    border: 5px solid #FFF;
-    animation: prixClipFix 2s linear infinite ;
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  animation: prix-clip-fix 2s linear infinite;
 }
 
 @keyframes rotate {
-    100%   {transform: rotate(360deg)}
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-@keyframes prixClipFix {
-    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
-    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
-    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
-    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
-    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+@keyframes prix-clip-fix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
 }
-  
-@media only screen and (max-width: 500px) {
-    .pdf-viewer {
-        display: none;
-    }
-    .tooSmallCV {
-        display: block;
-    }
-}
-  
-@media (max-aspect-ratio: 3/2) {
-    .pdf-viewer {
-      height: 100vw;
-    }
-}
-  
-/* Safari 7.1+ */
-  
-_::-webkit-full-page-media, _:future, :root .safariCV {
-    display: block;
-}
-_::-webkit-full-page-media, _:future, :root .pdf-viewer {
+
+@media only screen and (width <= 500px) {
+  .pdf-viewer {
     display: none;
+  }
+
+  .too-small-cv {
+    display: block;
+  }
+}
+
+@media (aspect-ratio <= 3/2) {
+  .pdf-viewer {
+    height: 100vw;
+  }
+}
+
+/* Safari 7.1+ */
+
+_::-webkit-full-page-media,
+_:future,
+:root .safari-cv {
+  display: block;
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root .pdf-viewer {
+  display: none;
 }

@@ -30,9 +30,6 @@ function DissertationTool() {
     makeDissChoice('c');
     // Dummy uses end
 
-    const option1 = option1.current;
-    const option2 = option2.current;
-    const option3 = option3.current;
     option1.src = '';
     option2.src = '';
     option3.src = '';

@@ -1,62 +1,62 @@
 .charts {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .chart {
-    width: 80%;
-    left: 10%;
-    position: relative;
+  width: 80%;
+  left: 10%;
+  position: relative;
 }
 
-.tooSmallCharts {
-    display: none;
-    padding: 3vw;
-    padding-top: 10vw;
+.too-small-charts {
+  display: none;
+  padding: 3vw;
+  padding-top: 10vw;
 }
 
-@media (max-width: 800px) {
-    .chartIntro {
-        padding-top: 5vw;
-    }
+@media (width <= 800px) {
+  .chart-intro {
+    padding-top: 5vw;
+  }
 }
 
 /* If page size gets too small remove the charts */
 
-@media (max-width: 650px) {
+@media (width <= 650px) {
+  .too-small-charts {
+    display: block;
+  }
 
-    .tooSmallCharts {
-        display: block;
-    }
-
-    .chartContainer {
-        display: none;
-    }
+  .chart-container {
+    display: none;
+  }
 }
 
-.spinner {  
-    width: 48px;
-    height: 48px;
-    border: 5px solid #535353;
-    border-bottom-color: #FF3D00;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    z-index: 9;
-    position: absolute;
-    top: calc(50% - 48px);
-    left: calc(50% - 12px);
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #535353;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  z-index: 9;
+  position: absolute;
+  top: calc(50% - 48px);
+  left: calc(50% - 12px);
 }
 
 @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.chartLoaded {
-    display: none;
+.chart-loaded {
+  display: none;
 }

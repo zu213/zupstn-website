@@ -47,21 +47,21 @@ function Charts() {
     const graphEndpoint = 'https://zu213-backend.vercel.app/api/graph';
     fetchData(graphEndpoint).then(data => {
       setAllData(data);
-      spinner.current?.classList.add('chartLoaded');
+      spinner.current?.classList.add('chart-loaded');
       setData(data?.deadlift);
     });
   }, []);
 
   return (
     <div className='charts'>
-      <div className='tooSmallCharts'>
+      <div className='too-small-charts'>
             Page width is too small to display graphs please try
              rotating if on phone or expanding window if on computer
       </div>
-      <div className='chartContainer'>
+      <div className='chart-container'>
         <div>
           <br />
-          <div className='chartIntro'>
+          <div className='chart-intro'>
                 Graphs showing my ORM(one rep max) on each day I recorded data.
           </div>
           <div >

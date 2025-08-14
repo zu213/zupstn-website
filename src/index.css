@@ -1,35 +1,48 @@
 body {
   margin: 0;
-  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;    -webkit-font-smoothing: antialiased;
+  font-family:
+    Montserrat,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(42, 40, 52);
+  background-color: rgb(42 40 52);
   color: white;
   text-align: center;
   font-size: 14.5px;
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.03) 1px,
+    rgb(255 255 255 / 3%) 1px,
     transparent 5px
   );
-  background-size: 100% 8px; 
+  background-size: 100% 8px;
+}
+
+a {
+  text-decoration: none;
 }
 
 a:link,
 a:visited {
-  color: rgb(245, 245, 245);
+  color: rgb(245 245 245);
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 
 a:hover {
-  color: rgb(245, 224, 245);
+  color: rgb(245 224 245);
   text-shadow:
-    0 0 5px rgb(246, 209, 246),
-    0 0 10px rgb(250, 222, 250),
-    0 0 15px rgb(245, 178, 245);
+    0 0 5px rgb(246 209 246),
+    0 0 10px rgb(250 222 250),
+    0 0 15px rgb(245 178 245);
 }
 
-html, body {
+html,
+body {
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -40,27 +53,22 @@ body::-webkit-scrollbar {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-
 
 /* General css writes */
 
 img {
   height: 100%;
-  width: 100%;    
+  width: 100%;
 }
 
 hr {
-  color: rgb(73, 67, 105);
+  color: rgb(73 67 105);
   border: none;
   height: 1.5px;
-  background-color: rgb(73, 67, 105);
-}
-
-a {
-  text-decoration: none;
+  background-color: rgb(73 67 105);
 }
 
 pre {
@@ -68,7 +76,7 @@ pre {
 }
 
 button {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat, sans-serif;
   border: none;
   appearance: none;
   outline: none;
@@ -78,7 +86,7 @@ button {
   letter-spacing: 0.2em;
   line-height: 100%;
   border-radius: 6px;
-  color: rgb(60, 60, 60);
+  color: rgb(60 60 60);
   box-shadow: 0 0 10px #febef1;
   transition: all 0.3s ease;
   opacity: 0.95;
@@ -94,25 +102,24 @@ button:hover {
 
 button:active {
   transform: scale(0.98);
-  box-shadow: 0 0 10px rgba(255, 0, 204, 0.5);
+  box-shadow: 0 0 10px rgb(255 0 204 / 50%);
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (width <= 420px) {
   button {
     margin: 7px 3px;
   }
 }
 
 input {
-  border-radius: 2px;
-  font-family: 'Montserrat', sans-serif;
-  appearance: none; 
+  font-family: Montserrat, sans-serif;
+  appearance: none;
   border: none;
   background: none;
   outline: none;
   cursor: pointer;
   margin: 15px 0;
-  padding: 10px 0px;
+  padding: 10px 0;
   letter-spacing: 0.2em;
   line-height: 100%;
   border-radius: 3px;

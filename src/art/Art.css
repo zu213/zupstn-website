@@ -1,190 +1,241 @@
 /* gallery view */
 
 .image-category {
-    position: relative;
+  position: relative;
 }
 
-.imageRow {
-    width: 86%;
-    table-layout: fixed;
-    border-spacing: 10px; 
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-right: 0vw;
-    text-align: left;
-    margin-left: 7%;
-    margin-right: 7%;
-    scrollbar-color: rgb(57, 55, 69) rgb(28, 27, 35) ;
-    scrollbar-width: thin;
-    -ms-overflow-style: scroll;
+.image-row {
+  width: 86%;
+  table-layout: fixed;
+  border-spacing: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-right: 0;
+  text-align: left;
+  margin-left: 7%;
+  margin-right: 7%;
+  scrollbar-color: rgb(57 55 69) rgb(28 27 35);
+  scrollbar-width: thin;
+  -ms-overflow-style: scrollbar;
 }
 
-.scoll-pane::-webkit-scrollbar { 
-    display: none;
+.scoll-pane::-webkit-scrollbar {
+  display: none;
 }
 
-.imageColumn {
-    object-fit: contain;
-    width: auto;
-    height: 150px;
-    display: inline-block;
-    padding: 2%;
+.image-column {
+  object-fit: contain;
+  width: auto;
+  height: 150px;
+  display: inline-block;
+  padding: 2%;
 }
 
-
-.artSubtitle {
-    text-align: left;
-    margin-left: 7%;
-    margin-top: 1%;
-    font-size: 1.1em;;
-    text-decoration: none;
+.art-subtitle {
+  text-align: left;
+  margin-left: 7%;
+  margin-top: 1%;
+  font-size: 1.1em;
+  text-decoration: none;
 }
 
-.overlayContent{
-    position: fixed; 
-    width: 25vw;
-    height: auto;
-    top: 15%;
-    left: 37.5%;
-    overflow: hidden;
-    z-index: 100;
-    opacity: 1;
+.overlay-content {
+  position: fixed;
+  width: 25vw;
+  height: auto;
+  top: 15%;
+  left: 37.5%;
+  overflow: hidden;
+  z-index: 100;
+  opacity: 1;
 }
 
 .minimise {
-    width: 0;
-    height: 0;
+  width: 0;
+  height: 0;
 }
 
-.leftButton, .rightButton {
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -30%);
-    z-index: 2;
+.left-button,
+.right-button {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -30%);
+  z-index: 2;
 }
 
-.rightButton {
-    right: 7%;
+.right-button {
+  right: 7%;
 }
 
-.leftButton {
-    left: 7%;
+.left-button {
+  left: 7%;
 }
 
-
-.rightButton svg, .leftButton svg {
-    opacity: 0.8;
+.right-button svg,
+.left-button svg {
+  opacity: 0.8;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-@media only screen and (max-width: 600px) {
-
-    .imageColumn {
-        display: inline-block;
-        padding: 6%;
-    }
-
-    .imageRow {
-        padding-left: 0%;
-    }
-
-    .overlayContent {
-        width: 60%;
-        top: 15%;
-        left: 20%;
-    }
+@media only screen and (width <= 600px) {
+  .image-column {
+    display: inline-block;
+    padding: 6%;
   }
 
-/*table view */
+  .image-row {
+    padding-left: 0%;
+  }
 
-.messFormat{
-    position: absolute;
-    width: 10%;
-    height: auto;
-    
-    }
-
-.messFormat img {
-    width: 90%;
-    padding: 10px;
+  .overlay-content {
+    width: 60%;
+    top: 15%;
+    left: 20%;
+  }
 }
 
-.messFormat img:hover{
-    background: -webkit-linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%), -webkit-linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%), -webkit-linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%), -webkit-linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%);
-    background: -moz-linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%), -moz-linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%), -moz-linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%), -moz-linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%);
-    background: linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%), linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%), linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%), linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-    background-position:  0% 0%, 100% 100%, 0% 100%, 100% 0%; 
-    background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
+/* table view */
+.mess-format {
+  position: absolute;
+  width: 10%;
+  height: auto;
 }
 
-.messFormatAnimate {
-    position: absolute;
-    width: 10%;
+.mess-format img {
+  width: 90%;
+  padding: 10px;
 }
 
-.messFormatAnimate img {
-    width: 90%;
-    background: -webkit-linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%), -webkit-linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%), -webkit-linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%), -webkit-linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%);
-    background: -moz-linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%), -moz-linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%), -moz-linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%), -moz-linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%);
-    background: linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%), linear-gradient(90deg, rgb(211, 3, 103) 50%, transparent 50%), linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%), linear-gradient(0deg, rgb(211, 3, 103) 50%, transparent 50%);
-    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-    background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
-    background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0%; 
-    padding: 10px;
-    -webkit-animation: border-dance 2s infinite linear;
-    -moz-animation: border-dance 2s infinite linear;
-    animation: border-dance 2s infinite linear;
+.mess-format-animate {
+  position: absolute;
+  width: 10%;
 }
 
-@-webkit-keyframes border-dance{
-    0%{background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0%;}
-    100%{background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;}
+.mess-format-animate img {
+  width: 90%;
+  background:
+    linear-gradient(90deg, rgb(211 3 103) 50%, transparent 50%),
+    linear-gradient(90deg, rgb(211 3 103) 50%, transparent 50%),
+    linear-gradient(0deg, rgb(211 3 103) 50%, transparent 50%),
+    linear-gradient(0deg, rgb(211 3 103) 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size:
+    16px 4px,
+    16px 4px,
+    4px 16px,
+    4px 16px;
+  background-position:
+    0% 0%,
+    100% 100%,
+    0% 100%,
+    100% 0%;
+  padding: 10px;
+  animation: border-dance 2s infinite linear;
 }
-@-moz-keyframes border-dance{
-    0%{background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0%;}
-    100%{background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;}
+
+.mess-format img:hover {
+  background:
+    linear-gradient(90deg, rgb(211 3 103) 50%, transparent 50%),
+    linear-gradient(90deg, rgb(211 3 103) 50%, transparent 50%),
+    linear-gradient(0deg, rgb(211 3 103) 50%, transparent 50%),
+    linear-gradient(0deg, rgb(211 3 103) 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-position:
+    0% 0%,
+    100% 100%,
+    0% 100%,
+    100% 0%;
+  background-size:
+    16px 4px,
+    16px 4px,
+    4px 16px,
+    4px 16px;
 }
-@keyframes border-dance{
-    0%{background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0%;}
-    100%{background-position: 100% 0%, 0% 100%, 0% 0%, 100% 100%;}
+
+@keyframes border-dance {
+  0% {
+    background-position:
+      0% 0%,
+      100% 100%,
+      0% 100%,
+      100% 0%;
+  }
+
+  100% {
+    background-position:
+      100% 0%,
+      0% 100%,
+      0% 0%,
+      100% 100%;
+  }
 }
- 
-.imgContainer {
-    background-color: white;
+
+@keyframes border-dance {
+  0% {
+    background-position:
+      0% 0%,
+      100% 100%,
+      0% 100%,
+      100% 0%;
+  }
+
+  100% {
+    background-position:
+      100% 0%,
+      0% 100%,
+      0% 0%,
+      100% 100%;
+  }
 }
-  
-  
+
+@keyframes border-dance {
+  0% {
+    background-position:
+      0% 0%,
+      100% 100%,
+      0% 100%,
+      100% 0%;
+  }
+
+  100% {
+    background-position:
+      100% 0%,
+      0% 100%,
+      0% 0%,
+      100% 100%;
+  }
+}
 
 .canvas {
-    padding-left: 10%;
-    width: 80%;
-    height: 35%;
-    position: fixed;
+  padding-left: 10%;
+  width: 80%;
+  height: 35%;
+  position: fixed;
 }
 
-.artTableTooShort {
+.art-table-too-short {
+  display: none;
+}
+
+@media only screen and (width <= 400px) {
+  .mess-format {
+    width: 20%;
+  }
+}
+
+@media only screen and (height <= 450px) {
+  .table-page {
     display: none;
+  }
+
+  .art-table-too-short {
+    display: block;
+  }
 }
-
-@media only screen and (max-width: 400px) {
-    .messFormat {
-        width: 20%;
-    }
-  }
-
-@media only screen and (max-height: 450px) {
-    .tablePage {
-        display: none;
-    }
-    .artTableTooShort {
-        display: block;
-    }
-  }
 
 /* other */
 
