@@ -4,12 +4,12 @@ function UnicodeChess(props) {
   return (
     <div>
       <div>
-        <a href="https://github.com/zu213/unicode-chess" className="smallLink" target="_blank" rel="noreferrer">Repo</a> |&nbsp;
-        <a href="/exes/chess.exe" className="smallLink" download>Windows Download</a>
+        <a href="https://github.com/zu213/unicode-chess" className="small-link" target="_blank" rel="noreferrer">Repo</a> |&nbsp;
+        <a href="/exes/chess.exe" className="small-link" download>Windows Download</a>
         <br/>
       </div>
-      <div className='projectInlineStructure leftAlign'>
-          I implemented a complete <a href="https://en.wikipedia.org/wiki/Chess" className="smallLink">Chess</a> game in <b>C</b>,
+      <div className='projectInlineStructure left-align'>
+          I implemented a complete <a href="https://en.wikipedia.org/wiki/Chess" className="small-link">Chess</a> game in <b>C</b>,
           handling everything from <b>input validation</b> to <b>checkmate detection</b>.
         <br />
         <br/>

@@ -7,7 +7,7 @@ function Snowstorm(props) {
   return (
     <div>
       <div>
-        <a href="https://github.com/zu213/snowstorm" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/snowstorm" className="small-link" target="_blank" rel="noreferrer">Repository</a>
         <br/>
       </div>
 

@@ -89,7 +89,7 @@ export function DropBreadcrumbs() {
 
         if (crumb === '...') {
           return (
-            <span className="smallLink" key={key}>
+            <span className="small-link" key={key}>
               /&hellip;
             </span>
           );
@@ -103,7 +103,7 @@ export function DropBreadcrumbs() {
         return (
           <span key={key}>
             <Link
-              className={`smallLink ${crumbsDisabled ? 'disabled' : ''}`}
+              className={`small-link ${crumbsDisabled ? 'disabled' : ''}`}
               to={crumbsDisabled ? '#' : to}
               onClick={() => removeBreadcrumbsAfter(idx)}
             >

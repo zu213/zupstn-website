@@ -1,0 +1,16 @@
+.fruit-lips-container {
+  position: fixed;
+  top: 15%;
+  height: 80%;
+  width: 100%;
+}
+
+.squares-container, .llm-compare-container {
+  position: fixed;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  touch-action: none;
+  z-index: 1000;
+}

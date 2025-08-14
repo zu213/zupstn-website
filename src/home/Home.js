@@ -35,18 +35,18 @@ function Home() {
 
   return (
     <div>
-      <div className="titleContainer">
+      <div className="title-container">
         <div className="title">
           <BreadcrumbLink to="/me">
               Zach Upstone             
           </BreadcrumbLink>
         </div>
-        <div className='tagLine'>
+        <div className='tag-line'>
           {taglineText}
         </div>
       </div>
 
-      <div className="searchLinksLeft">
+      <div className="search-links-left">
         <div>
           <BreadcrumbLink to="/projects">Projects</BreadcrumbLink>
         </div>
@@ -57,7 +57,7 @@ function Home() {
           <BreadcrumbLink to="/gallery">Gallery</BreadcrumbLink>
         </div>
       </div>
-      <div className="searchLinksRight">
+      <div className="search-links-right">
         <div>
           <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
         </div>
@@ -67,22 +67,22 @@ function Home() {
       </div>
 
       {asciiGifDisplay ?
-        <div className='artHolder'>
-          <div className="speechBubble">
+        <div className='art-holder'>
+          <div className="speech-bubble">
 
             <BreadcrumbLink 
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               to={chosenLink}
-              className='smallLink'
+              className='small-link'
             >I'm feeling lucky</BreadcrumbLink>
           </div>
-          <div className='asciiArt' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+          <div className='ascii-art' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             {asciiGif[currentImageIndex]}
           </div>
         </div>
         :    
-        <div className='bigAsciiArt'>
+        <div className='big-ascii-art'>
           {asciiArtBig}
         </div>
       }

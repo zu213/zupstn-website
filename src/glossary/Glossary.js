@@ -4,16 +4,16 @@ import './Glossary.css';
 function Glossary() {
   return (
     <div>
-      <div className='pageHeader'>Page links</div>
-      <div className='linksListContainer'>
-        <div className='linksContainer'>
+      <div className='page-header'>Page links</div>
+      <div className='links-list-container'>
+        <div className='links-container'>
           <div className='link'> <BreadcrumbLink to="/">/home</BreadcrumbLink></div>
           <div className='link'> <BreadcrumbLink to="/me">/me</BreadcrumbLink></div>
           <div className='link'> <BreadcrumbLink to="/cv">/cv</BreadcrumbLink></div>
           <div className='link'> <BreadcrumbLink to="/projects">/projects</BreadcrumbLink></div>
           <div className='link'> <BreadcrumbLink to="/gallery">/gallery</BreadcrumbLink></div>
         </div>
-        <div className='linksContainer'>
+        <div className='links-container'>
           <div className='link'> <BreadcrumbLink to="/charts">/charts</BreadcrumbLink></div>
           <div className='link'> <BreadcrumbLink to="/dissertation-tool">/dissertation-tool (inactive)</BreadcrumbLink></div>
           <div className='link'> <BreadcrumbLink to="/fruit-lips">/fruit-lips</BreadcrumbLink></div>

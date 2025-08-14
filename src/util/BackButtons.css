@@ -1,22 +1,19 @@
-.backButton,
-.smallBackButton {
+.back-button,
+.small-back-button {
   margin-top: 1px;
   left: 4%;
   position: absolute;
   display: inline-block;
-}
-
-.smallBackButton,
-.backButton {
   display: none;
+  z-index: 999;
 }
 
 @media only screen and (width <= 520px) {
-  .backButton {
+  .back-button {
     display: none;
   }
 
-  .smallBackButton {
+  .small-back-button {
     display: inline-block;
     padding: 5px 10px;
   }

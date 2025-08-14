@@ -1,8 +1,9 @@
+import './submodules.css';
 
 // Sub modules
 export function FruitLips() {
   return (
-    <div className='fruitLipsContainer'>
+    <div className='fruit-lips-container'>
       <iframe 
         title='fruit-lips'
         className='fruitLips'
@@ -16,7 +17,7 @@ export function FruitLips() {
 
 export function FruitLips2() {
   return (
-    <div className='fruitLipsContainer'>
+    <div className='fruit-lips-container'>
       <iframe 
         title='fruit-lips'
         className='fruitLips'
@@ -30,7 +31,7 @@ export function FruitLips2() {
 
 export function Squares() {
   return (
-    <div className='squaresContainer'>
+    <div className='squares-container'>
       <iframe 
         title='368Squares'
         className='368Squares'
@@ -44,7 +45,7 @@ export function Squares() {
 
 export function LLMCompare() {
   return (
-    <div className='llmCompareContainer'>
+    <div className='llm-compare-container'>
       <iframe 
         title='LLMCompare'
         data-class='llmCompare'

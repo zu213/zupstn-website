@@ -117,9 +117,9 @@ function DissertationTool() {
           option2Element.src = options[1];
           option3Element.src = options[2];
 
-          option1Element.className = 'imageChoiceImage';
-          option2Element.className = 'imageChoiceImage';
-          option3Element.className = 'imageChoiceImage';
+          option1Element.className = 'image-choice-image';
+          option2Element.className = 'image-choice-image';
+          option3Element.className = 'image-choice-image';
 
           setGeneratedSuccess(true);
 
@@ -150,11 +150,11 @@ function DissertationTool() {
 
   return (
     <div>
-      <div className='dissContainer'>
-        <div className="pageHeader">
+      <div className='diss-container'>
+        <div className="page-header">
           Dissertation tool <br />  
         </div>
-        <div className='dissToolText'>
+        <div className='diss-tool-text'>
           To use: <br />
           <ol>
             <li>Choose a sketch and style input then submit them to upload them into the program.</li>
@@ -165,43 +165,43 @@ function DissertationTool() {
         </div>
         <div ref={imagesContainer} className='imagesContainer'>
           <div>
-            <div className='inlineInput'>
+            <div className='inline-input'>
               <h4>Sketch Input</h4>
-              <img className='inputImage' src={sketchImg} alt='' ref={sketchInput}></img>
-              <input disabled className='inputBrowse' type="file" id="uploadSketch" onChange={()=>{}/*uploadSketch*/} />
+              <img className='input-image' src={sketchImg} alt='' ref={sketchInput}></img>
+              <input disabled className='input-browse' type="file" id="uploadSketch" onChange={()=>{}/*uploadSketch*/} />
             </div>
-            <div className='inlineInput'>
+            <div className='inline-input'>
               <h4>Style Input</h4>
-              <img className='inputImage' src={styleImg} alt='' ref={styleInput}></img>
-              <input disabled className='inputBrowse' type="file" id="uploadStyle" onChange={()=>{}/*uploadStyle*/} />
+              <img className='input-image' src={styleImg} alt='' ref={styleInput}></img>
+              <input disabled className='input-browse' type="file" id="uploadStyle" onChange={()=>{}/*uploadStyle*/} />
             </div>
           </div>
-          {loading ? <div id="loader" className='loader dissLoader'></div> : <button className='submitButton' id="runButton" disabled onClick={()=>{}/*runDiss*/}> Generate images </button>}
+          {loading ? <div id="loader" className='loader diss-loader'></div> : <button className='submit-button' id="runButton" disabled onClick={()=>{}/*runDiss*/}> Generate images </button>}
           {generatedSuccess && <img className='tick' src={tick} alt='' id='genTick'></img>}
           {generatedError &&  <div>Error: something went wrong during the generation process please check the console.</div>}
           <div>
-            <div className='imageChoice'>
+            <div className='image-choice'>
               <h4>Option 1</h4>
               <img  src={options[0] ?? ''} alt='' ref={option1} disabled onClick={() => {/*makeDissChoice(1)*/}}></img>
             </div>
-            <div className='imageChoice'>
+            <div className='image-choice'>
               <h4>Option 2</h4>
               <img src={options[1] ?? ''} alt='' ref={option2} disabled onClick={() => {/*makeDissChoice(2)*/}}></img>
             </div>
-            <div className='imageChoice'>
+            <div className='image-choice'>
               <h4>Option 3</h4> 
               <img src={options[2] ?? ''} alt='' ref={option3} disabled onClick={() => {/*makeDissChoice(3)*/}}></img>
             </div>
           </div>
-          <div className='smallText'>
+          <div className='small-text'>
             This logic for this is complete, but doesn't have a live server setup for the backend
           </div>
         </div>
       </div>
-      <div className='dissTooSmall'>
+      <div className='diss-too-small'>
         Screen is too small to display dissertation tool.
       </div>
-      <div className='workInProgress'>
+      <div className='work-in-progress'>
         Service not active
       </div>
     </div>

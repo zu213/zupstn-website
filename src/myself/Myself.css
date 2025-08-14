@@ -1,18 +1,18 @@
 /* me page */
 
 .myself {
-  .textHolder {
+  .text-holder {
     padding: 3vh 7% 1vh;
     text-align: left;
   }
 
-  .linkHolder a {
+  .link-holder a {
     text-shadow:
       0 0 8px rgb(244 232 248),
       0 0 12px rgb(249 218 249);
   }
 
-  .linkHolder a:hover {
+  .link-holder a:hover {
     text-shadow:
       0 0 10px rgb(239 218 246),
       0 0 15px rgb(250 187 250),
@@ -21,12 +21,12 @@
   }
 
   @media only screen and (width <= 400px) {
-    .linkHolder {
+    .link-holder {
       padding-top: 10vw;
     }
   }
 
-  .pageHeader {
+  .page-header {
     height: unset;
     padding: 5px;
   }

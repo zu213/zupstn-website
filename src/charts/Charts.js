@@ -65,13 +65,13 @@ function Charts() {
                 Graphs showing my ORM(one rep max) on each day I recorded data.
           </div>
           <div >
-            <div className="inlineButton">
+            <div className="inline-button">
               <button  onClick={() => setData(allData?.deadlift)}>Deadlift data</button>
             </div>
-            <div className="inlineButton">
+            <div className="inline-button">
               <button  onClick={() => setData(allData?.squat)}>Squat data</button>
             </div>
-            <div className="inlineButton" >
+            <div className="inline-button" >
               <button onClick={() => setData(allData?.bench)}>Bench data</button>
             </div>
           </div>

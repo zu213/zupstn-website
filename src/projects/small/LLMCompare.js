@@ -11,8 +11,8 @@ function LLMCompare(props) {
         </figure>
       </div>
       <div className='smallRepoLink'>
-        <a href="https://github.com/zu213/llm-compare" className="smallLink" target="_blank" rel="noreferrer">Repository</a>&nbsp;
-         | <a href="https://zupstn.com/#/llm-compare" className="smallLink">Website</a>
+        <a href="https://github.com/zu213/llm-compare" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;
+         | <a href="https://zupstn.com/#/llm-compare" className="small-link">Website</a>
       </div>
     
      

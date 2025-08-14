@@ -4,11 +4,11 @@ function TrafficSimulator(props) {
   return (
     <div>
       <div>
-        <a href="https://github.com/zu213/traffic-sim" className="smallLink" target="_blank" rel="noreferrer">Repo</a> |&nbsp;
-        <a href="/exes/traffic.exe" className="smallLink" download>Windows Download</a>
+        <a href="https://github.com/zu213/traffic-sim" className="small-link" target="_blank" rel="noreferrer">Repo</a> |&nbsp;
+        <a href="/exes/traffic.exe" className="small-link" download>Windows Download</a>
         <br/>
       </div>
-      <div className='tightProjectInlineStructure leftAlign topPadding indentMobile'>
+      <div className='tightProjectInlineStructure left-align topPadding indentMobile'>
           A traffic simulator implemented in C utilising GDI for graphics display.
         <br />
         <br/>

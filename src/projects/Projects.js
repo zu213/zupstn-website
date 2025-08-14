@@ -28,7 +28,7 @@ function Projects() {
 
   return (
     <div>
-      <header className='pageHeader'>Projects</header>
+      <header className='page-header'>Projects</header>
 
       <div>
         <button className='projectSwitchButton' ref={largeProjectsButton} onClick={toLP}>Large</button>

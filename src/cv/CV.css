@@ -86,6 +86,10 @@
   .too-small-cv {
     display: block;
   }
+
+  .cv-page {
+    padding-top: 5vh;
+  }
 }
 
 @media (aspect-ratio <= 3/2) {

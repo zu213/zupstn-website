@@ -58,14 +58,14 @@ function Art() {
 
   return (
     <div>
-      <div className="pageHeader">
+      <div className="page-header">
         Gallery <br />
       </div>              
 
-      <div className="inlineButton" >
+      <div className="inline-button" >
         <button id='galleryButton' ref={galleryButton} className='galleryButton' onClick={toGallery}> Gallery View </button>
       </div>
-      <div className="inlineButton">
+      <div className="inline-button">
         <div className='border'>
           <button id='tableButton' ref={tableButton} className="tableButton" onClick={toTable}> Table View </button>
         </div>

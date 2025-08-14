@@ -11,7 +11,7 @@ function NPMBusiness(props) {
         </figure>
       </div>
       <div className='smallRepoLink'>
-        <a href="https://github.com/zu213/zachupstone-card" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/zachupstone-card" className="small-link" target="_blank" rel="noreferrer">Repository</a>
       </div>
     
      
@@ -19,7 +19,7 @@ function NPMBusiness(props) {
         A npm package that echo's my personal business card.
         <br />
         <br />
-        Utilises the <a href="https://github.com/chalk/chalk" className="smallLink" target="_blank" rel="noreferrer">Chalk</a> library to make a nice visual in the terminal, inspired by <a href="https://github.com/bnb/bitandbang" className="smallLink" target="_blank" rel="noreferrer">bitandbang</a>.
+        Utilises the <a href="https://github.com/chalk/chalk" className="small-link" target="_blank" rel="noreferrer">Chalk</a> library to make a nice visual in the terminal, inspired by <a href="https://github.com/bnb/bitandbang" className="small-link" target="_blank" rel="noreferrer">bitandbang</a>.
       </div>
     </div>
 

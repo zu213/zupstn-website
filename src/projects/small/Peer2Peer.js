@@ -11,7 +11,7 @@ function Peer2Peer(props) {
         </figure>
       </div>
       <div className='smallRepoLink'>
-        <a href="https://github.com/zu213/peer" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/peer" className="small-link" target="_blank" rel="noreferrer">Repository</a>
       </div>
     
      

@@ -6,17 +6,17 @@ body {
   overflow-y: auto;
 }
 
-.dissSubtitle {
+.disssub-title {
   font-size: 18px;
 }
 
-.inlineButton {
+.inline-button {
   padding: 1vw;
   display: inline-block;
   vertical-align: top;
 }
 
-.dissInlineStructure {
+.diss-inline-structure {
   padding: 1vw;
   display: inline-block;
   width: 40%;
@@ -24,13 +24,13 @@ body {
 }
 
 @media only screen and (width <= 1100px) {
-  .dissSubtitle {
+  .disssub-title {
     padding-top: 10vw;
   }
 }
 
 @media only screen and (width <= 600px) {
-  .dissInlineStructure {
+  .diss-inline-structure {
     display: block;
     width: 90%;
     left: 5%;
@@ -38,16 +38,16 @@ body {
   }
 }
 
-.dissContainer {
+.diss-container {
   width: 100%;
   padding-bottom: 10px;
 }
 
-.imagesContainer {
+.images-container {
   width: 100%;
 }
 
-.imageChoice {
+.image-choice {
   width: 16vw;
   height: 16vw;
   display: inline-block;
@@ -55,13 +55,13 @@ body {
   font-size: 12px;
 }
 
-.imageChoiceImage {
+.image-choice-image {
   width: 90%;
   height: 90%;
   padding: 5%;
 }
 
-.imageChoiceImage:hover {
+.image-choice-image:hover {
   background:
     linear-gradient(90deg, rgb(211 3 103) 50%, transparent 50%),
     linear-gradient(90deg, rgb(211 3 103) 50%, transparent 50%),
@@ -80,11 +80,7 @@ body {
     4px 16px;
 }
 
-.uploadedPanel {
-  display: none;
-}
-
-.inlineInput {
+.inline-input {
   height: 15vw;
   display: inline-block;
   width: 15vw;
@@ -92,19 +88,19 @@ body {
   font-size: 12px;
 }
 
-.inputImage {
+.input-image {
   width: 100%;
   height: 100%;
 }
 
-.inputBrowse {
+.input-browse {
   padding: 2px;
   margin: 0%;
   border-radius: 0%;
   font-size: 11px;
 }
 
-.submitButton {
+.submit-button {
   position: relative;
   margin: 5px 0;
   padding: 5px 15px;
@@ -112,7 +108,7 @@ body {
   font-size: 11px;
 }
 
-.smallText {
+.small-text {
   font-size: 10px;
   font-style: italic;
   padding: 10px 0;
@@ -135,7 +131,7 @@ body {
   display: none;
 }
 
-.dissToolText {
+.diss-tool-text {
   left: 27.5%;
   position: relative;
   text-align: left;
@@ -152,26 +148,22 @@ body {
   }
 }
 
-.dissTooSmall {
+.diss-too-small {
   display: none;
 }
 
 @media only screen and (width <= 900px) {
-  .dissContainer {
+  .diss-container {
     display: none;
   }
 
-  .dissTooSmall {
+  .diss-too-small {
     display: none;
     padding: 20px;
   }
 }
 
-.notFinished {
-  display: none;
-}
-
-.workInProgress {
+.work-in-progress {
   transform: translate(-50%, -50%) rotate(30deg) scale(2);
   position: fixed;
   font-size: xx-large;
@@ -185,6 +177,6 @@ h4 {
   font-style: normal;
 }
 
-.dissLoader {
+.diss-loader {
   top: 0 !important;
 }

@@ -6,7 +6,7 @@ function ShortStorey(props) {
   return (
     <div>
       <div>
-        <a href="https://github.com/zu213/shortstorey-full" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/shortstorey-full" className="small-link" target="_blank" rel="noreferrer">Repository</a>
         <br/>
       </div>
       <br />

@@ -6,7 +6,7 @@ function SpotifyRoulette(props) {
   return (
     <div>
       <div>
-        <a href="https://github.com/zu213/spotify-roulette" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/spotify-roulette" className="small-link" target="_blank" rel="noreferrer">Repository</a>
         <br/>
       </div>
       <div>
@@ -22,8 +22,8 @@ function SpotifyRoulette(props) {
             <figcaption>Figure: Playing a game of Spotify Roulette</figcaption>
           </figure>
         </div>
-        <div className='projectInlineStructure leftAlign'>
-            I developed a <b>multiplayer game</b> using the  <a href="https://developer.spotify.com/documentation/web-api" className="smallLink">Spotify API</a>, where players guess each other’s favorite songs.
+        <div className='projectInlineStructure left-align'>
+            I developed a <b>multiplayer game</b> using the  <a href="https://developer.spotify.com/documentation/web-api" className="small-link">Spotify API</a>, where players guess each other’s favorite songs.
 
           <ul>
             <li>One player creates a table, and others join.</li>

@@ -11,7 +11,7 @@ function TemperatureGlass(props) {
         </figure>
       </div>
       <div className='smallRepoLink'>
-        <a href="https://github.com/zu213/temperature-glass" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/temperature-glass" className="small-link" target="_blank" rel="noreferrer">Repository</a>
       </div>
     
       <div>

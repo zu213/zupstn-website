@@ -6,7 +6,7 @@ function ChromeContextControl(props) {
   return (
     <div>
       <div>
-        <a href="https://github.com/zu213/chrome-context-control" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/chrome-context-control" className="small-link" target="_blank" rel="noreferrer">Repository</a>
         <br/>
       </div>
 

@@ -1,5 +1,5 @@
 /* Home page */
-.titleContainer {
+.title-container {
   padding-bottom: 15px;
   position: relative;
   user-select: none;
@@ -17,7 +17,7 @@
   position: relative;
 }
 
-.searchLinksLeft {
+.search-links-left {
   padding-left: 7%;
   text-align: left;
   display: inline-block;
@@ -26,7 +26,7 @@
   position: fixed;
 }
 
-.searchLinksRight {
+.search-links-right {
   padding-right: 7%;
   text-align: right;
   display: inline-block;
@@ -35,22 +35,22 @@
   position: fixed;
 }
 
-.searchLinksLeft div,
-.searchLinksRight div {
+.search-links-left div,
+.search-links-right div {
   padding-bottom: 5vh;
 }
 
-.artHolder {
+.art-holder {
   position: absolute;
   bottom: 0%;
   left: 35%;
 }
 
-.asciiArt {
+.ascii-art {
   position: relative;
 }
 
-.bigAsciiArt {
+.big-ascii-art {
   font-size: 3px;
   white-space: pre-line;
   position: absolute;
@@ -58,7 +58,7 @@
   left: 33%;
 }
 
-.tagLine {
+.tag-line {
   text-align: left;
   font-size: 1.2vw;
   width: auto;
@@ -70,7 +70,7 @@
   position: relative;
 }
 
-.speechBubble {
+.speech-bubble {
   position: relative;
   left: 20%;
   background: #c0baba;
@@ -81,7 +81,7 @@
   box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
   margin: 20px;
 
-  .smallLink:hover {
+  .small-link:hover {
     color: rgb(255 14 61) !important;
     text-decoration: underline;
     text-shadow:
@@ -91,7 +91,7 @@
 }
 
 /* The triangle "tail" */
-.speechBubble::after {
+.speech-bubble::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -107,19 +107,19 @@
 }
 
 @media only screen and (width <= 1250px) {
-  .speechBubble::after {
+  .speech-bubble::after {
     left: 30%;
   }
 }
 
 @media only screen and (width <= 750px) {
-  .speechBubble {
+  .speech-bubble {
     font-size: 1.5vw;
   }
 }
 
 @media only screen and (width <= 600px) {
-  .tagLine {
+  .tag-line {
     font-size: 2vw;
   }
 }
@@ -131,31 +131,31 @@
 }
 
 @media only screen and (width <= 600px) {
-  .searchLinksLeft,
-  .searchLinksRight {
+  .search-links-left,
+  .search-links-right {
     font-size: 4vw;
     padding-top: 5vw;
   }
 }
 
 @media only screen and (width <= 400px) {
-  .speechBubble::after {
+  .speech-bubble::after {
     left: 50%;
   }
 
-  .speechBubble {
+  .speech-bubble {
     left: 0;
     padding: 8px 16px;
     font-size: 6px;
   }
 
-  .asciiArt {
+  .ascii-art {
     font-size: xx-small;
   }
 }
 
 @media only screen and (width <= 300px) {
-  .artHolder {
+  .art-holder {
     left: 10%;
   }
 }

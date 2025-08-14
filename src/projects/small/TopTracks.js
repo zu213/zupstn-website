@@ -11,7 +11,7 @@ function TopTracks(props) {
         </figure>
       </div>
       <div className='smallRepoLink'>
-        <a href="https://github.com/zu213/top-tracks" className="smallLink" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/top-tracks" className="small-link" target="_blank" rel="noreferrer">Repository</a>
       </div>
     
      

@@ -24,10 +24,10 @@ export function BackButton() {
   const { backButtonDisabled } = useBackButton();
 
   const defaultBackButton = useCallback(() => (
-    <button id="backButton" className="backButton" onClick={() => navigate(-1)}>Back</button>
+    <button id="backButton" className="back-button" onClick={() => navigate(-1)}>Back</button>
   ), [navigate]);
   const defaultSmallBackButton = useCallback(() => (
-    <button id="smallBackButton" className="smallBackButton" onClick={() => navigate(-1)}> &#60; </button>
+    <button id="smallBackButton" className="small-back-button" onClick={() => navigate(-1)}> &#60; </button>
   ), [navigate]);
 
   var [backButton, setBackButton] = useState(defaultBackButton);
