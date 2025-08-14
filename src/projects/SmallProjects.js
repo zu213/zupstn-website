@@ -30,7 +30,7 @@ function SmallProjects() {
   return (
     <div>
       <hr/>
-      <div className={`mask ${mask ? 'opaque': ''}`} onClick={hideMask}></div>
+      {mask && <div className='overlay' onClick={hideMask}></div>}
       <div className='projectGrid'>
         <div className='projectGridElement'>
           <div className='projectTitle'>

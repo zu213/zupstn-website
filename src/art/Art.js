@@ -2,9 +2,7 @@ import './Art.css';
 import { useState, useEffect, useRef } from 'react';
 
 import GalleryPage from './Gallery.js';
-import {tablePage, pagePosition} from './Table.js';
-
-var onGallery = true;
+import TablePage from './Table.js';
 
 function importAll(r) {
   const images = {};
@@ -26,7 +24,6 @@ const imagesInit = importAll(
 function Art() {
   var [images, setImages] = useState(imagesInit);
   var [artPage, setPage] = useState(<GalleryPage images={images} />);
-  onGallery = true;
   const galleryButton = useRef(null);
   const tableButton = useRef(null);
 
@@ -42,28 +39,21 @@ function Art() {
   // the colouring is a work around for disable the buttons not working properly
   const toGallery = () => {
     setPage(<GalleryPage images={images} />);
-    galleryButton.current.disabled = true;
-    galleryButton.current.style.color = 'rgb(110,110,110)';
+    disableGalleryButton(true);
     tableButton.current.disabled = false;
     tableButton.current.style.color = 'rgb(4,4,4)';
+  };
 
-    onGallery = true;
+  const disableGalleryButton = (disabled) => {
+    galleryButton.current.disabled = disabled;
+    galleryButton.current.style.color = disabled ? 'rgb(110,110,110)' : galleryButton.current.style.color = 'rgb(4,4,4)';;
   };
 
   const toTable = () => {
-    setPage(tablePage(images));
-    galleryButton.current.disabled = false;
-    galleryButton.current.style.color = 'rgb(4,4,4)';
+    setPage(<TablePage images={images} disableGalleryButton={disableGalleryButton}/>);
+    disableGalleryButton(false);
     tableButton.current.disabled = true;
-    tableButton.current.style.color = 'rgb(110,110,110)';
-        
-    if(onGallery){
-      setTimeout(() => {
-        onGallery = false;
-        pagePosition();
-      }, 1);
-    }
-          
+    tableButton.current.style.color = 'rgb(110,110,110)';  
   };
 
   return (

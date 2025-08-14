@@ -132,14 +132,6 @@
     z-index: 1;
 }
 
-.overlayFigure {
-    width: 60%;
-    top: 15%;
-    left: 20%;
-    position: fixed;
-    z-index: 2;
-}
-
 .aspectClass{
     aspect-ratio: 7/5;
 }
@@ -168,13 +160,8 @@
     left: 0px; 
 }
 
-.opaque {
-    opacity: 0.9;
-    z-index: 1;
-}
-
 .overlayMask {
-    z-index: 2;
+    z-index: 100;
     position: fixed;
     height: auto !important;
     width: 40% !important;

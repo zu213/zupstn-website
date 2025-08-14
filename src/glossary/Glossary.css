@@ -7,7 +7,7 @@
 .linksListContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 8vh 10%;
+    padding: 7vh 10%;
 }
 
 .linksContainer {

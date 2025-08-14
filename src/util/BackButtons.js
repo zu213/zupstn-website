@@ -1,17 +1,33 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useContext, createContext } from 'react';
 
 import { useNavigate, useLocation } from 'react-router-dom';
 import './BackButtons.css';
 
+const BackButtonContext = createContext();
+
+export function BackButtonProvider({ children }) {
+  const [backButtonDisabled, setBackButtonDisabled] = useState(false);
+  return (
+    <BackButtonContext.Provider value={{ backButtonDisabled, setBackButtonDisabled }}>
+      {children}
+    </BackButtonContext.Provider>
+  );
+}
+
+export function useBackButton() {
+  return useContext(BackButtonContext);
+}
+
 export function BackButton() {
   let navigate = useNavigate();
   const location = useLocation();
+  const { backButtonDisabled } = useBackButton();
 
   const defaultBackButton = useCallback(() => (
-    <button id="backButton" className="backButton" onClick={() => navigate(-1)}>Back</button>
+    <button id="backButton" className="backButton" disabled={backButtonDisabled} onClick={() => navigate(-1)}>Back</button>
   ), [navigate]);
   const defaultSmallBackButton = useCallback(() => (
-    <button id="smallBackButton" className="smallBackButton" onClick={() => navigate(-1)}> &#60; </button>
+    <button id="smallBackButton" className="smallBackButton" disabled={backButtonDisabled} onClick={() => navigate(-1)}> &#60; </button>
   ), [navigate]);
 
   var [backButton, setBackButton] = useState(defaultBackButton);
@@ -26,14 +42,14 @@ export function BackButton() {
       setBackButton(defaultBackButton);
       setSmallBackButton(defaultSmallBackButton);
     }
-  }, [location.pathname, defaultBackButton, defaultSmallBackButton]);
+  }, [location.pathname, defaultBackButton, defaultSmallBackButton, backButtonDisabled]);
 
-  return (
-    <div>
+  return !backButtonDisabled ?
+    (<div>
       {backButton}
       {smallBackButton}
-    </div>
-  );
+    </div>)
+    : null;
 
 }
 

@@ -1,31 +1,28 @@
 import './Projects.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import LargeProjects from './LargeProjects.js';
 import SmallProjects from './SmallProjects.js';
 
 function Projects() {
-
   const [PageComponent, setPageComponent] = useState(() => LargeProjects);
+  const largeProjectsButton = useRef(null);
+  const smallProjectsButton = useRef(null);
 
   useEffect(() => {
-    document.getElementById('lpButton').disabled = true;
+    largeProjectsButton.current.disabled = true;
   }, []);
 
   const toLP = () => {
     setPageComponent(() => LargeProjects);
-    const galleryButton = document.getElementById('lpButton');
-    galleryButton.disabled = true;
-    const tableButton = document.getElementById('spButton');
-    tableButton.disabled = false;
+    largeProjectsButton.current.disabled = true;
+    smallProjectsButton.current.disabled = false;
   };
 
   const toSP = () => {
     setPageComponent(() => SmallProjects);
-    const galleryButton = document.getElementById('lpButton');
-    galleryButton.disabled = false;
-    const tableButton = document.getElementById('spButton');
-    tableButton.disabled = true;
+    largeProjectsButton.current.disabled = false;
+    smallProjectsButton.current.disabled = true;
           
   };
 
@@ -34,8 +31,8 @@ function Projects() {
       <header className='pageHeader'>Projects</header>
 
       <div>
-        <button className='projectSwitchButton' id='lpButton' onClick={toLP}>Large</button>
-        <button className='projectSwitchButton' id='spButton' onClick={toSP}>Small</button>
+        <button className='projectSwitchButton' ref={largeProjectsButton} onClick={toLP}>Large</button>
+        <button className='projectSwitchButton' ref={smallProjectsButton} onClick={toSP}>Small</button>
       </div>
       <PageComponent />
     </div>

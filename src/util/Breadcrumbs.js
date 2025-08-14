@@ -14,6 +14,7 @@ export function BreadcrumbProvider({ children }) {
 
   const initialSet = ['/'];
   const [breadcrumbsList, setBreadcrumbsList] = useState(initialSet);
+  const [crumbsDisabled, setCrumbsDisabled] = useState(false);
 
   useEffect(() => {
     const path = window.location.hash.split('#')[1]; // or location.hash if using HashRouter
@@ -33,6 +34,8 @@ export function BreadcrumbProvider({ children }) {
     addBreadcrumb,
     removeBreadcrumbsAfter,
     setBreadcrumbsList,
+    crumbsDisabled,
+    setCrumbsDisabled,
   };
 
   return (
@@ -59,7 +62,7 @@ export function BreadcrumbLink({ to, crumbLabel, children, ...props }) {
 
 // Breadcrumb UI component
 export function DropBreadcrumbs() {
-  const { breadcrumbsList, removeBreadcrumbsAfter } = useBreadcrumbs();
+  const { breadcrumbsList, removeBreadcrumbsAfter, crumbsDisabled } = useBreadcrumbs();
   const width = 0.4 * useWindowWidth();
   const approxCrumbWidth = 60; // px for breadcrumb length
   const allowedCrumbs = Math.max(2, Math.floor(width / approxCrumbWidth));
@@ -100,8 +103,8 @@ export function DropBreadcrumbs() {
         return (
           <span key={key}>
             <Link
-              className="smallLink"
-              to={to}
+              className={`smallLink ${crumbsDisabled ? 'disabled' : ''}`}
+              to={crumbsDisabled ? '#' : to}
               onClick={() => removeBreadcrumbsAfter(idx)}
             >
               {label}

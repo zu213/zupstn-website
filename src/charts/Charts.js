@@ -1,5 +1,5 @@
 import './Charts.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import moment from 'moment';
 import {
@@ -40,12 +40,14 @@ async function fetchData(url) {
 function Charts() {
   var [allData, setAllData] = useState(null);
   var [data, setData] = useState(null);
+  const spinner = useRef(null);
+
 
   useEffect(() => {
     const graphEndpoint = 'https://zu213-backend.vercel.app/api/graph';
     fetchData(graphEndpoint).then(data => {
       setAllData(data);
-      document.querySelector('.spinner')?.classList.add('chartLoaded');
+      spinner.current?.classList.add('chartLoaded');
       setData(data?.deadlift);
     });
   }, []);
@@ -77,7 +79,7 @@ function Charts() {
         <br></br>
 
         <div className="chart">
-          <span className="spinner"></span>
+          <span ref={spinner} className="spinner"></span>
           <div>
             <ResponsiveContainer width="100%" aspect={3}>
               <LineChart data={data} margin={{ right: 30 }}>

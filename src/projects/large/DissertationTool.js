@@ -1,6 +1,6 @@
 
 import './Dissertation.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 import tick from '../../icons/tick.png';
 
@@ -15,6 +15,12 @@ function DissertationTool() {
   const [loading, setLoading] = useState(false);
   const [generatedSuccess, setGeneratedSuccess] = useState(false);
   const [generatedError, setGeneratedError] = useState(false);
+  const option1 = useRef(null);
+  const option2 = useRef(null);
+  const option3 = useRef(null);
+  const styleInput = useRef(null);
+  const sketchInput = useRef(null);
+  const imagesContainer = useRef(null);
   
   function clearOptions() {
     
@@ -24,9 +30,9 @@ function DissertationTool() {
     makeDissChoice('c');
     // Dummy uses end
 
-    const option1 = document.getElementById('option1img');
-    const option2 = document.getElementById('option2img');
-    const option3 = document.getElementById('option3img');
+    const option1 = option1.current;
+    const option2 = option2.current;
+    const option3 = option3.current;
     option1.src = '';
     option2.src = '';
     option3.src = '';
@@ -46,7 +52,7 @@ function DissertationTool() {
   // function to let users pick an iamge from their folders and update styles accordingly
   function uploadSketch (e) {
     if (e.target.files.length) {
-      var img = document.getElementById('inputSketch');
+      var img = sketchInput.current;
       img.onload = () => URL.revokeObjectURL(img.src);
       img.src = URL.createObjectURL(e.target.files[0]);
       currentSketchFile = e.target.files[0];
@@ -57,7 +63,7 @@ function DissertationTool() {
   // function to let users pick an iamge from their folders and update styles accordingly
   function uploadStyle (e) {
     if (e.target.files.length) {
-      var img = document.getElementById('inputStyle');
+      var img = styleInput.current;
       img.onload = () => URL.revokeObjectURL(img.src);
       img.src = URL.createObjectURL(e.target.files[0]);
       currentStyleFile = e.target.files[0];
@@ -104,10 +110,10 @@ function DissertationTool() {
           }
 
           //await delay(5000); // Optional delay if needed
-          document.getElementById('imagesContainer').className = '';
-          const option1Element = document.getElementById('option1img');
-          const option2Element = document.getElementById('option2img');
-          const option3Element = document.getElementById('option3img');
+          imagesContainer.current.className = '';
+          const option1Element = option1.current;
+          const option2Element = option2.current;
+          const option3Element = option3.current;
           options = result.images.map(i => `data:image/png;base64, ${i}`);
 
           option1Element.src = options[0];
@@ -138,7 +144,7 @@ function DissertationTool() {
 
   // function to run image generation again if they make a choice
   async function makeDissChoice (choice) {
-    var img = document.getElementById('inputStyle');
+    var img = styleInput.current;
     img.src = `data:image/png;base64,${options[choice]}`;
     currentStyleFile = base64ToFile(options[choice]);
     clearOptions();
@@ -160,16 +166,16 @@ function DissertationTool() {
             <li>Once clicked the generation will run again, this can be repeated infinitely.</li>
           </ol>
         </div>
-        <div id='imagesContainer' className='imagesContainer'>
+        <div ref={imagesContainer} className='imagesContainer'>
           <div>
             <div className='inlineInput'>
               <h4>Sketch Input</h4>
-              <img className='inputImage' src={sketchImg} alt='' id="inputSketch" ></img>
+              <img className='inputImage' src={sketchImg} alt='' ref={sketchInput}></img>
               <input disabled className='inputBrowse' type="file" id="uploadSketch" onChange={()=>{}/*uploadSketch*/} />
             </div>
             <div className='inlineInput'>
               <h4>Style Input</h4>
-              <img className='inputImage' src={styleImg} alt='' id="inputStyle"></img>
+              <img className='inputImage' src={styleImg} alt='' ref={styleInput}></img>
               <input disabled className='inputBrowse' type="file" id="uploadStyle" onChange={()=>{}/*uploadStyle*/} />
             </div>
           </div>
@@ -179,15 +185,15 @@ function DissertationTool() {
           <div>
             <div className='imageChoice'>
               <h4>Option 1</h4>
-              <img  src={options[0] ?? ''} alt='' id="option1img" disabled onClick={() => {/*makeDissChoice(1)*/}}></img>
+              <img  src={options[0] ?? ''} alt='' ref={option1} disabled onClick={() => {/*makeDissChoice(1)*/}}></img>
             </div>
             <div className='imageChoice'>
               <h4>Option 2</h4>
-              <img src={options[1] ?? ''} alt='' id="option2img" disabled onClick={() => {/*makeDissChoice(2)*/}}></img>
+              <img src={options[1] ?? ''} alt='' ref={option2} disabled onClick={() => {/*makeDissChoice(2)*/}}></img>
             </div>
             <div className='imageChoice'>
               <h4>Option 3</h4> 
-              <img src={options[2] ?? ''} alt='' id="option3img" disabled onClick={() => {/*makeDissChoice(3)*/}}></img>
+              <img src={options[2] ?? ''} alt='' ref={option3} disabled onClick={() => {/*makeDissChoice(3)*/}}></img>
             </div>
           </div>
           <div className='smallText'>

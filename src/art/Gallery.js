@@ -4,7 +4,6 @@ function GalleryPage ({ images }) {
   const [currentOverlay, setCurrentOverlay] = useState(null);
   const rowRefs = useRef([]);
   const scrollInterval = useRef(null);
-  console.log(images);
 
   useEffect(() => {
     rowRefs.current.forEach((row, _) => {
