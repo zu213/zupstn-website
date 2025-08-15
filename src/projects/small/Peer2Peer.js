@@ -10,7 +10,7 @@ function Peer2Peer(props) {
           <figcaption>Figure: Messaging via a setup peer connection</figcaption>
         </figure>
       </div>
-      <div className='smallRepoLink'>
+      <div className='small-repo-link'>
         <a href="https://github.com/zu213/peer" className="small-link" target="_blank" rel="noreferrer">Repository</a>
       </div>
     

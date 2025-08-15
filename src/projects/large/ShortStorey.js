@@ -11,33 +11,33 @@ function ShortStorey(props) {
       </div>
       <br />
 
-      <div className='tightProjectInlineStructure laptop'>
-        <figure className='aspectClass' onClick={props.displayMask}>
+      <div className='tight-project-inline-structure laptop'>
+        <figure className='aspect-class' onClick={props.displayMask}>
           <img src={storiesPage} alt="Stories Page"/>
           <figcaption>Figure: Main stories navigation page</figcaption>
         </figure>
       </div>
-      <div className='tightProjectInlineStructure laptop'>
-        <figure className='aspectClass' onClick={props.displayMask}>
+      <div className='tight-project-inline-structure laptop'>
+        <figure className='aspect-class' onClick={props.displayMask}>
           <img src={ratingsPage} alt="Ratings page"/>
           <figcaption>Figure: Page to review where ratings came from</figcaption>
         </figure>
       </div>
-      <div className='tightProjectInlineStructure laptop'>
-        <figure className='aspectClass'  onClick={props.displayMask}>
+      <div className='tight-project-inline-structure laptop'>
+        <figure className='aspect-class'  onClick={props.displayMask}>
           <img src={profilePage} alt="Profile page"/>
           <figcaption>Figure: Profile page including stories and account details</figcaption>
         </figure>
       </div>
 
-      <div className='storeyText'>
+      <div className='storey-text'>
           A complete <b>CRUD</b> app for sharing short storeys and rating them. Includes profile creation, story creation, story viewing and a rating system which is dynamic, A user's rating is weighted based on how they are rated themselves making the backend more complex and require propagating updates.
 
 
         <br/>
         <br/>
         <div>Thet tech stack is as follows: </div>
-        <div className='inlineList'>
+        <div className='inline-list'>
           <h4>Frontend</h4>
           <ul className='snowList'>
             <li>
@@ -54,7 +54,7 @@ function ShortStorey(props) {
             </li>
           </ul>
         </div>
-        <div className='inlineList'>
+        <div className='inline-list'>
           <h4>Backend</h4>
           <ul className='snowList'>
             <li>

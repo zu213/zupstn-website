@@ -17,13 +17,13 @@ function SmallProjects() {
 
   const hideMask =() => {
     setMask(false);
-    maskItem.classList.remove('overlayMask');
+    maskItem.classList.remove('overlay-mask');
     setMaskItem(null);
   };
 
   const displayMask = (e) =>{
     setMask(true);
-    e.target.classList.add('overlayMask');
+    e.target.classList.add('overlay-mask');
     setMaskItem(e.target);
   };
 
@@ -31,59 +31,59 @@ function SmallProjects() {
     <div>
       <hr/>
       {mask && <div className='overlay' onClick={hideMask}></div>}
-      <div className='projectGrid'>
-        <div className='projectGridElement'>
-          <div className='projectTitle'>
+      <div className='project-grid'>
+        <div className='project-grid-element'>
+          <div className='project-title'>
             LLM Compare
           </div>
           <LLMCompare displayMask={displayMask}/>
         </div>
 
-        <div className='projectGridElement'>
-          <div className='projectTitle'>
+        <div className='project-grid-element'>
+          <div className='project-title'>
             Top tracks
           </div>
           <TopTracks displayMask={displayMask}/>
         </div>
 
-        <div className='projectGridElement'>
-          <div className='projectTitle'>
+        <div className='project-grid-element'>
+          <div className='project-title'>
             NPM business card
           </div>
           <NPMBusiness displayMask={displayMask}/>
         </div>
 
-        <div className='projectGridElement'>
-          <div className='projectTitle'>
+        <div className='project-grid-element'>
+          <div className='project-title'>
             368 Squares
           </div>
           <Squares displayMask={displayMask}/>
         </div>
 
-        <div className='projectGridElement'>
-          <div className='projectTitle'>
+        <div className='project-grid-element'>
+          <div className='project-title'>
             Bouncing logo
           </div>
           <BouncingLogo displayMask={displayMask}/>
         </div>
 
 
-        <div className='projectGridElement'>
-          <div className='projectTitle'>
+        <div className='project-grid-element'>
+          <div className='project-title'>
             Tempreature glass
           </div>
           <TemperatureGlass displayMask={displayMask}/>
         </div>
 
-        <div className='projectGridElement'>
-          <div className='projectTitle'>
+        <div className='project-grid-element'>
+          <div className='project-title'>
             FruitLips
           </div>
           <FruitLips displayMask={displayMask}/>
         </div>
 
-        <div className='projectGridElement'>
-          <div className='projectTitle'>
+        <div className='project-grid-element'>
+          <div className='project-title'>
             Peer 2 Peer messaging
           </div>
           <Peer2Peer displayMask={displayMask}/>

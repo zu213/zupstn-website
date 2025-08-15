@@ -10,14 +10,14 @@ function ChromeContextControl(props) {
         <br/>
       </div>
 
-      <div className='wideProjectInlineStructure'>
+      <div className='wide-project-inline-structure'>
         <figure onClick={props.displayMask}>
           <img src={dragScreen} alt="ccc home page"/>
           <figcaption>Figure: Chrome Context Control home page</figcaption>
         </figure>
       </div>
 
-      <div className='tightProjectInlineStructure topPadding indentMobile'>
+      <div className='tight-project-inline-structure top-padding indent-mask'>
           I implemented a Chrome Extension that allows users more control over the right 
           click menu.
         <br />
@@ -27,15 +27,15 @@ function ChromeContextControl(props) {
           background scripts to intercept the right click event. 
       </div>
 
-      <div className='tightProjectInlineStructure topPadding indentMobile'>
+      <div className='tight-project-inline-structure top-padding indent-mask'>
           You also have the ability add custom code that is run by a Chrome worker, this is also down on 
           the landing page and can be added to the right click menu to allow quick running of custom code. 
           An example fo this can be found within the README in the linked repository.
       </div>
 
-      <div className='wideProjectInlineStructure'>
+      <div className='wide-project-inline-structure'>
         <figure onClick={props.displayMask}>
-          <img src={contextMenu} className='whiteBorder' alt="new context menu"/>
+          <img src={contextMenu} className='white-border' alt="new context menu"/>
           <figcaption>Figure: New modified context menu</figcaption>
         </figure>
       </div>

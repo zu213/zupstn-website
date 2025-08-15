@@ -10,7 +10,7 @@ function BouncingLogo(props) {
           <figcaption>Figure: Gif of bouncing logo</figcaption>
         </figure>
       </div>
-      <div className='smallRepoLink'>
+      <div className='small-repo-link'>
         <a href="https://github.com/zu213/bouncing-logo" className="small-link" target="_blank" rel="noreferrer">Repo</a> |&nbsp;
         <a href="/exes/BouncingLogo.exe" className="small-link" download>Windows Download</a>
       </div>

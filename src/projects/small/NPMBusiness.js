@@ -10,7 +10,7 @@ function NPMBusiness(props) {
           <figcaption>Figure: The business card in the terminal</figcaption>
         </figure>
       </div>
-      <div className='smallRepoLink'>
+      <div className='small-repo-link'>
         <a href="https://github.com/zu213/zachupstone-card" className="small-link" target="_blank" rel="noreferrer">Repository</a>
       </div>
     

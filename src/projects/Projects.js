@@ -31,8 +31,8 @@ function Projects() {
       <header className='page-header'>Projects</header>
 
       <div>
-        <button className='projectSwitchButton' ref={largeProjectsButton} onClick={toLP}>Large</button>
-        <button className='projectSwitchButton' ref={smallProjectsButton} onClick={toSP}>Small</button>
+        <button className='project-switch-button' ref={largeProjectsButton} onClick={toLP}>Large</button>
+        <button className='project-switch-button' ref={smallProjectsButton} onClick={toSP}>Small</button>
       </div>
       <PageComponent />
     </div>

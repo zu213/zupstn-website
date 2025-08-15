@@ -6,11 +6,11 @@ function TopTracks(props) {
     <div>
       <div>
         <figure onClick={props.displayMask}>
-          <img className='topTracksImage' src={topTracks} alt="top tracks graphic"/>
+          <img className='top-tracks-image' src={topTracks} alt="top tracks graphic"/>
           <figcaption>Figure: Graphic to display user's top tracks</figcaption>
         </figure>
       </div>
-      <div className='smallRepoLink'>
+      <div className='small-repo-link'>
         <a href="https://github.com/zu213/top-tracks" className="small-link" target="_blank" rel="noreferrer">Repository</a>
       </div>
     

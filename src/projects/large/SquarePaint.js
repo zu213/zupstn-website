@@ -10,13 +10,13 @@ function SquarePaint(props) {
         <br/>
       </div>
     
-      <div className='largeProjectInlineStructure'>
-        <figure onClick={props.displayMask} className='aspectClass'>
+      <div className='large-project-inline-structure'>
+        <figure onClick={props.displayMask} className='aspect-class'>
           <img src={squarePaintGif} alt="squarepaint gif"/>
           <figcaption>Figure: Gif of the SquarePaint in use</figcaption>
         </figure>
       </div>
-      <div className='tightProjectInlineStructure topPadding left-align indentMobile'>
+      <div className='tight-project-inline-structure top-padding left-align indent-mask'>
         A painting tool implemented in C++, you can paint by dividing a grid into colours to create a cool and blocky artistic effect.
         <br />
         <br />

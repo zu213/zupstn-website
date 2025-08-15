@@ -10,19 +10,19 @@ function SpotifyRoulette(props) {
         <br/>
       </div>
       <div>
-        <div className='tightProjectInlineStructure'>
+        <div className='tight-project-inline-structure'>
           <figure>
             <img src={join} onClick={props.displayMask} alt="joining screen"/>
             <figcaption>Figure: Joining a game fo Spotify Roulette</figcaption>
           </figure>
         </div>
-        <div className='tightProjectInlineStructure'>
+        <div className='tight-project-inline-structure'>
           <figure>
             <img src={guess2}onClick={props.displayMask} alt="guessing screen"/>
             <figcaption>Figure: Playing a game of Spotify Roulette</figcaption>
           </figure>
         </div>
-        <div className='projectInlineStructure left-align'>
+        <div className='project-inline-structure left-align'>
             I developed a <b>multiplayer game</b> using the  <a href="https://developer.spotify.com/documentation/web-api" className="small-link">Spotify API</a>, where players guess each other’s favorite songs.
 
           <ul>

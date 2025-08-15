@@ -8,7 +8,7 @@ function TrafficSimulator(props) {
         <a href="/exes/traffic.exe" className="small-link" download>Windows Download</a>
         <br/>
       </div>
-      <div className='tightProjectInlineStructure left-align topPadding indentMobile'>
+      <div className='tight-project-inline-structure left-align top-padding indent-mask'>
           A traffic simulator implemented in C utilising GDI for graphics display.
         <br />
         <br/>
@@ -21,8 +21,8 @@ function TrafficSimulator(props) {
           road length is fixed by default but can be modified manually and then the code re compiled using&nbsp;  
         <b>gcc</b>.
       </div>
-      <div className='largeProjectInlineStructure'>
-        <figure onClick={props.displayMask} className='aspectClass'>
+      <div className='large-project-inline-structure'>
+        <figure onClick={props.displayMask} className='aspect-class'>
           <img src={trafficGif} alt="traffic gif"/>
           <figcaption>Figure: Gif of the Traffic Simulator running</figcaption>
         </figure>

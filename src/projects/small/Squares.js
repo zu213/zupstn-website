@@ -10,7 +10,7 @@ function Squares(props) {
           <figcaption>Figure: Screenshot of the 368 Squares game</figcaption>
         </figure>
       </div>
-      <div className='smallRepoLink'>
+      <div className='small-repo-link'>
         <a href="https://github.com/zu213/square-paint" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;
          | <a href="https://zupstn.com/#/368squares" className="small-link">Website</a>
       </div>

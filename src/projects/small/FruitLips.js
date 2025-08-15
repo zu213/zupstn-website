@@ -10,7 +10,7 @@ function FruitLips(props) {
           <figcaption>Figure: Fruit lips webpage</figcaption>
         </figure>
       </div>
-      <div className='smallRepoLink'>
+      <div className='small-repo-link'>
         <a href="https://github.com/zu213/square-paint" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;
          | <a href="https://zupstn.com/#/fruit-lips" className="small-link">Website</a>&nbsp;
          | <a href="https://zupstn.com/#/fruit-lips2" className="small-link">Website 2</a>

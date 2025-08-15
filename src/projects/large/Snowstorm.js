@@ -14,32 +14,32 @@ function Snowstorm(props) {
         Note: GIF's can take a while to load!
       <br />
 
-      <div className='tightProjectInlineStructure'>
-        <figure className='aspectClass' onClick={props.displayMask}>
+      <div className='tight-project-inline-structure'>
+        <figure className='aspect-class' onClick={props.displayMask}>
           <img src={c} alt="Snow C"/>
           <figcaption>Figure: Snow programmed in C</figcaption>
         </figure>
       </div>
-      <div className='tightProjectInlineStructure'>
-        <figure className='aspectClass' onClick={props.displayMask}>
+      <div className='tight-project-inline-structure'>
+        <figure className='aspect-class' onClick={props.displayMask}>
           <img src={d} alt="Snow D"/>
           <figcaption>Figure: Snow programmed in D</figcaption>
         </figure>
       </div>
-      <div className='tightProjectInlineStructure'>
-        <figure className='aspectClass' onClick={props.displayMask}>
+      <div className='tight-project-inline-structure'>
+        <figure className='aspect-class' onClick={props.displayMask}>
           <img src={rust} alt="Snow Rust"/>
           <figcaption>Figure: Snow programmed in Rust</figcaption>
         </figure>
       </div>
-      <div className='tightProjectInlineStructure'>
-        <figure className='aspectClass'  onClick={props.displayMask}>
+      <div className='tight-project-inline-structure'>
+        <figure className='aspect-class'  onClick={props.displayMask}>
           <img src={assembly} alt="Snow Assembly"/>
           <figcaption>Figure: Snow programmed in Assembly</figcaption>
         </figure>
       </div>
 
-      <div className='snowText'>
+      <div className='snow-text'>
           Starting as an exploration of graphics in <b>Assembly</b>, where I experimented with rendering basic visuals
           at a low level. I then expanded this exploration to multiple languages, including some I had never used
           before. Each required setting up a local environment and finding the most direct way to manipulate 
