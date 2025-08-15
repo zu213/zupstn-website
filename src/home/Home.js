@@ -11,16 +11,16 @@ const taglineChoice = Math.floor(Math.random() * taglineTextOptions.length);
 // one in a hundered chance of being tessa
 const asciiGifDisplay = Math.floor(Math.random() * 100) !== 99;
 const chosenArtNumber = Math.floor(Math.random() * asciiGif.length);
-const chosenLink = validRoutes[Math.floor(Math.random() * validRoutes.length)];
 
 function Home() {
   const taglineText = taglineTextOptions[taglineChoice];
   const [currentImageIndex, setCurrentImageIndex] = useState(chosenArtNumber);
   const [isHovered, setIsHovered] = useState(false);
-
+  const [chosenLink, setChosenLink] = useState(null);
   // Animate the gif if mouse is hovered
   useEffect(() => {
     let interval;
+    if(isHovered) setChosenLink(validRoutes[Math.floor(Math.random() * validRoutes.length)]);
     
     if (isHovered) {
       interval = setInterval(() => {
