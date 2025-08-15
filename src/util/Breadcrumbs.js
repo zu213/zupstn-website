@@ -80,7 +80,7 @@ export function DropBreadcrumbs() {
       }
     });
 
-  if(processCrumbString.length < 2 && window.location.hash === '#/') return;
+  if(processCrumbString.length < 2 && (window.location.hash === '#/' || window.location.hash === '')) return;
 
   return (
     <nav className="breadcrumbs" aria-label="Breadcrumb">

@@ -25,6 +25,10 @@
   display: none;
 }
 
+.error-message {
+  padding: 10vh;
+}
+
 .safari-cv {
   display: none;
 }
