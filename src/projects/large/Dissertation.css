@@ -6,6 +6,10 @@ body {
   overflow-y: auto;
 }
 
+figcaption {
+  text-align: center;
+}
+
 .disssub-title {
   font-size: 18px;
 }
