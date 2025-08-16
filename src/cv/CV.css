@@ -1,16 +1,25 @@
 /* cv page */
-
 .cv-page {
   padding-bottom: 20px;
   min-height: 40vh;
 }
 
-/* cv page */
+.cv-page-links {
+  height: 4vh;
+  padding-bottom: 2vh;
+  vertical-align: middle;
+}
+
+.cv-page-links a img {
+  aspect-ratio: 1;
+  height: 1.5vh;
+  width: 1.5vh;
+}
 
 .pdf-viewer {
   padding-top: 20px;
   width: 70%;
-  height: 50vw;
+  height: calc(84vh - 20px);
 }
 
 .to-load {

@@ -2,6 +2,7 @@
 
 .app {
   padding-top: 6vh;
+  min-height: 94vh;
 }
 
 .left-align {
