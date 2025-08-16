@@ -27,11 +27,11 @@ function Me() {
         <br/>
     
           I am a <b>Product developer</b> for&nbsp;   
-        <a className="small-link" href="https://www.pugpig.com/" >Pugpig</a> a media publishing platform powering 
+        <a className="small-link" href="https://www.pugpig.com/" target='_blank' rel='noreferrer'>Pugpig</a> a media publishing platform powering 
           apps and web readers for brands like <i>The Spectator</i>, <i>The Independent</i> and <i>The Boston Globe</i>.
           My work here spans <b>Native</b> (SwiftUI, Swift, Objective-C, Java, Kotlin) and <b>Web</b> (Vue, PHP, Sass) development.
           Previously, I completed a year-long placement at &nbsp;
-        <a className="small-link" href="https://www.kontron-americas.com/" >BSQUARE</a>, an IoT solutions company, 
+        <a className="small-link" href="https://www.kontron-americas.com/" target='_blank' rel='noreferrer'>BSQUARE</a>, an IoT solutions company, 
           where I worked in <b>Software Development</b> and <b>QA</b>, gaining experience in <b>Angular</b> (TS, HTML, CSS),
           Gherkin and Selenium.
         <br/>
@@ -59,7 +59,7 @@ function Me() {
         <div className='subsub-title'>
           More:
         </div>
-          If you are interested professionally add me on <a className='small-link' href='https://www.linkedin.com/in/zachary-upstone-076218214/'  target='_blank' rel='noreferrer'>LinkedIn</a>. Feel free to navigate the rest of my website by visiting the <BreadcrumbLink className="small-link" to="/glossary">Glossary page</BreadcrumbLink> - many of the pages are hidden otherwise!
+          If you are interested professionally add me on <a className='small-link' href='https://www.linkedin.com/in/zachary-upstone-076218214/' target='_blank' rel='noreferrer'>LinkedIn</a>. Feel free to navigate the rest of my website by visiting the <BreadcrumbLink className="small-link" to="/glossary">Glossary page</BreadcrumbLink> - many of the pages are hidden otherwise!
       </div>
     </div>
   );

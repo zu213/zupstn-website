@@ -10,6 +10,7 @@ import Art from './art/Art.js';
 import Charts from './charts/Charts.js';
 import CV from './cv/CV.js';
 import Glossary from './glossary/Glossary.js';
+import RelatedLinks from './glossary/RelatedLinks.js';
 import Home from './home/Home.js';
 import Me from './myself/Myself.js';
 import DissertationTool from './projects/large/DissertationTool.js';
@@ -43,6 +44,7 @@ function App() {
             <Route path='/368squares' element={<Squares/>} />
             <Route path='/llm-compare' element={<LLMCompare/>} />
             <Route path='/glossary' element={<Glossary/>} />
+            <Route path='/related-links' element={<RelatedLinks/>} />
             <Route path='*' element={<NotFound/>} />
           </Routes>
         </BackButtonProvider>

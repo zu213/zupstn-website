@@ -12,6 +12,7 @@ function Glossary() {
           <div className='link'> <BreadcrumbLink to="/cv">/cv</BreadcrumbLink></div>
           <div className='link'> <BreadcrumbLink to="/projects">/projects</BreadcrumbLink></div>
           <div className='link'> <BreadcrumbLink to="/gallery">/gallery</BreadcrumbLink></div>
+          <div className='link'> <BreadcrumbLink to="/related-links">/related-links</BreadcrumbLink></div>
         </div>
         <div className='links-container'>
           <div className='link'> <BreadcrumbLink to="/charts">/charts</BreadcrumbLink></div>
