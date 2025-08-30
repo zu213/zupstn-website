@@ -110,7 +110,7 @@ function Home() {
                 onMouseLeave={() => setIsHovered(false)}
                 to={chosenLink}
                 className='small-link'
-              >I'm feeling lucky {chosenLink}</BreadcrumbLink>
+              >I'm feeling lucky</BreadcrumbLink>
             </div>
           </div>
           <div className='ascii-art' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
