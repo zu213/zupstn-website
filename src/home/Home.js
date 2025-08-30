@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Home.css';
 
 import { asciiArtBig, asciiGif } from '../util/asciiArt.js';
 import { BreadcrumbLink } from '../util/Breadcrumbs.js';
 
 //static consts
-const validRoutes = [ '/me', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary'];
+const validRoutes = ['/me', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary'];
 const taglineTextOptions = ['- Try "curl https://zupstn.com/hypno.sh | bash"', '- Try "npx zachupstone"'];
 const taglineChoice = Math.floor(Math.random() * taglineTextOptions.length);
 // one in a hundered chance of being tessa
@@ -17,6 +17,25 @@ function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(chosenArtNumber);
   const [isHovered, setIsHovered] = useState(false);
   const [chosenLink, setChosenLink] = useState(null);
+  const roadContainer = useRef(null);
+  const [roadFrames, setRoadFrames] = useState(false);
+
+  useEffect(() => {
+    async function getRoadFrames() { 
+      try {
+        const res = await fetch('https://road-animation.vercel.app/api/road-animation-html');
+        const data = await res.json();
+        setRoadFrames(data);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    setChosenLink(validRoutes[Math.floor(Math.random() * validRoutes.length)]);
+
+    getRoadFrames();
+  }, []);
+  
   // Animate the gif if mouse is hovered
   useEffect(() => {
     let interval;
@@ -32,6 +51,19 @@ function Home() {
 
     return () => clearInterval(interval);
   }, [isHovered]);
+
+  useEffect(() => {
+    let interval;
+    var frame = 0;
+
+    interval = setInterval(() => {
+      if(!roadContainer.current) return;
+      roadContainer.current.innerHTML = roadFrames[frame];
+      frame = (frame + 1) % roadFrames.length;
+    }, 200);
+
+    return () => clearInterval(interval);
+  }, [roadFrames]);
 
   return (
     <div>
@@ -64,18 +96,22 @@ function Home() {
         <div>
           <a href="https://www.linkedin.com/in/zachary-upstone-076218214/"  target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
+        <div className='feeling-lucky-inline'>
+          <BreadcrumbLink className='small-link' to={chosenLink}>I'm feeling lucky</BreadcrumbLink>
+        </div>
       </div>
 
       {asciiGifDisplay ?
         <div className='art-holder'>
           <div className="speech-bubble">
-
-            <BreadcrumbLink 
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              to={chosenLink}
-              className='small-link'
-            >I'm feeling lucky</BreadcrumbLink>
+            <div className='upright'>
+              <BreadcrumbLink 
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                to={chosenLink}
+                className='small-link'
+              >I'm feeling lucky {chosenLink}</BreadcrumbLink>
+            </div>
           </div>
           <div className='ascii-art' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
             {asciiGif[currentImageIndex]}
@@ -84,6 +120,13 @@ function Home() {
         :    
         <div className='big-ascii-art'>
           {asciiArtBig}
+        </div>
+      }
+
+      {roadFrames &&
+        <div className='road-container'>
+          <pre ref={roadContainer} className='road-animation'>
+          </pre>
         </div>
       }
     </div>
