@@ -111,7 +111,7 @@
   position: absolute;
   transform: translate(calc(-50% - 1ch), 0);
   overflow: hidden;
-  width: 65ch;
+  width: 40rem;
 }
 
 .road-animation {
@@ -179,7 +179,7 @@
   }
 
   .title-container {
-    padding: 5vh 0;
+    padding: 3vh 0;
   }
 
   .search-links-left,

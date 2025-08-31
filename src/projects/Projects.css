@@ -172,19 +172,22 @@
   .tight-project-inline-structure {
     display: block;
     width: 95%;
-    left: 2.5%;
+    padding-left: 2.5%;
+    position: relative;
   }
 
   .wide-project-inline-structure {
     display: block;
     width: 95%;
-    left: 2.5%;
+    padding-left: 2.5%;
+    position: relative;
   }
 
   .large-project-inline-structure {
     display: block;
     width: 95%;
-    left: 2.5%;
+    padding-left: 2.5%;
+    position: relative;
   }
 
   .overlay-mask {
