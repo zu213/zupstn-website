@@ -1,7 +1,7 @@
 /* Home page */
 .title-container {
   padding: 10vh 0;
-  position: relative;
+  position: static;
   user-select: none;
 }
 
@@ -12,7 +12,7 @@
   display: block;
   text-decoration: none;
   padding-left: 7%;
-  position: relative;
+  position: static;
 }
 
 .search-links-left, .search-links-right {
