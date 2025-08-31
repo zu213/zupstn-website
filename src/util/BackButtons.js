@@ -27,7 +27,12 @@ export function BackButton() {
     <button id="backButton" className="back-button" onClick={() => navigate(-1)}>Back</button>
   ), [navigate]);
   const defaultSmallBackButton = useCallback(() => (
-    <button id="smallBackButton" className="small-back-button" onClick={() => navigate(-1)}> &#60; </button>
+    <div className='small-button-container'>
+      {document.referrer.startsWith(window.location.origin) ? 
+        <button id="smallBackButton" className="small-back-button" onClick={() => navigate(-1)}> &#60; </button>
+        :<a className='home-link small-link' href='/'>Home</a>
+      }
+    </div>
   ), [navigate]);
 
   var [backButton, setBackButton] = useState(defaultBackButton);

@@ -1,9 +1,8 @@
 /* Home page */
 .title-container {
-  padding-bottom: 15px;
+  padding: 10vh 0;
   position: relative;
   user-select: none;
-  height: 12vw;
 }
 
 .title {
@@ -13,7 +12,6 @@
   display: block;
   text-decoration: none;
   padding-left: 7%;
-  bottom: -6vw;
   position: relative;
 }
 
@@ -65,7 +63,6 @@
   font-style: italic;
   text-decoration: none;
   padding-left: 8%;
-  bottom: -6vw;
   position: relative;
 }
 
@@ -120,7 +117,7 @@
 .road-animation {
   background: transparent;
   text-align: left;
-  line-height: 12px;
+  line-height: 1rem;
   -webkit-line-clamp: 50;
   line-clamp: 50;
   white-space: pre;
@@ -179,6 +176,10 @@
 
   .title {
     font-size: 5vw;
+  }
+
+  .title-container {
+    padding: 5vh 0;
   }
 
   .search-links-left,
