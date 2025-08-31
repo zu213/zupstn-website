@@ -31,3 +31,9 @@
     padding: 5px;
   }
 }
+
+@media only screen and (width <= 400px) {
+  .myself {
+    padding-bottom: 10vh;
+  }
+}
