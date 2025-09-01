@@ -151,7 +151,8 @@
   }
 
   .road-container {
-    transform: translate(calc(-50% - 1rem), 0) scaleX(0.6);
+    width: 43rem;
+    transform: translate(calc(-50% - 0.5rem), 0) scaleX(0.6);
   }
 
   .speech-bubble::after {
@@ -190,7 +191,7 @@
 }
 
 
-@media only screen and (width <= 400px) {
+@media only screen and (width <= 500px) {
   .art-holder {
     display: none;
   }
