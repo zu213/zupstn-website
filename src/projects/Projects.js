@@ -17,13 +17,16 @@ function Projects() {
     setPageComponent(() => LargeProjects);
     largeProjectsButton.current.disabled = true;
     smallProjectsButton.current.disabled = false;
+    largeProjectsButton.current.style.backgroundColor = '#b7b7b7';
+    smallProjectsButton.current.style.removeProperty('background');  
   };
 
   const toSP = () => {
     setPageComponent(() => SmallProjects);
     largeProjectsButton.current.disabled = false;
     smallProjectsButton.current.disabled = true;
-          
+    largeProjectsButton.current.style.removeProperty('background');  
+    smallProjectsButton.current.style.backgroundColor = '#b7b7b7';
   };
 
   return (

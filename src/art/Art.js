@@ -42,18 +42,23 @@ function Art() {
     disableGalleryButton(true);
     tableButton.current.disabled = false;
     tableButton.current.style.color = 'rgb(4,4,4)';
+    tableButton.current.style.removeProperty('background');  
   };
 
   const disableGalleryButton = (disabled) => {
     galleryButton.current.disabled = disabled;
-    galleryButton.current.style.color = disabled ? 'rgb(110,110,110)' : galleryButton.current.style.color = 'rgb(4,4,4)';;
+    if(disabled) {
+      galleryButton.current.style.background = '#b7b7b7';
+    } else {
+      galleryButton.current.style.removeProperty('background');  
+    }
   };
 
   const toTable = () => {
     setPage(<TablePage images={images} disableGalleryButton={disableGalleryButton}/>);
     disableGalleryButton(false);
     tableButton.current.disabled = true;
-    tableButton.current.style.color = 'rgb(110,110,110)';  
+    tableButton.current.style.background = 'rgb(110,110,110)';
   };
 
   return (
