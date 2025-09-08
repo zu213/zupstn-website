@@ -30,6 +30,7 @@ function Art() {
   useEffect(() => {
     if(galleryButton) {
       galleryButton.current.disabled = true;
+      galleryButton.current.style.backgroundColor = '#b7b7b7';
     }
     setImages(importAll(
       require.context('./images', true, /\.(png|jpe?g|svg)$/)
@@ -58,7 +59,7 @@ function Art() {
     setPage(<TablePage images={images} disableGalleryButton={disableGalleryButton}/>);
     disableGalleryButton(false);
     tableButton.current.disabled = true;
-    tableButton.current.style.background = 'rgb(110,110,110)';
+    tableButton.current.style.background = '#b7b7b7';
   };
 
   return (

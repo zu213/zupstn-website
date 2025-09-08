@@ -11,6 +11,7 @@ function Projects() {
 
   useEffect(() => {
     largeProjectsButton.current.disabled = true;
+    largeProjectsButton.current.style.backgroundColor = '#b7b7b7';
   }, []);
 
   const toLP = () => {
