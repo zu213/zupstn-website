@@ -25,7 +25,7 @@ function Dissertation(props) {
       <div>
         <div  className="diss-inline-structure">
           <figure className='aspect-class'onClick={props.displayMask}>
-            <img loading="lazy" src={dissertationUI} alt="Dissertation UI"></img>
+            <img src={dissertationUI} alt="Dissertation UI"></img>
             <figcaption>Figure: The UI I created to allow the utlisation of RLHF</figcaption>
           </figure>
         </div>

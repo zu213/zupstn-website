@@ -1,7 +1,9 @@
 html, body, #root, .root {
   height: 100vh;
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden auto;
+  scrollbar-gutter: stable;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {

@@ -8,7 +8,6 @@
   width: 86%;
   table-layout: fixed;
   border-spacing: 10px;
-  overflow-x: auto;
   white-space: nowrap;
   padding-right: 0;
   text-align: left;
@@ -16,6 +15,7 @@
   margin-right: 7%;
   scrollbar-color: rgb(57 55 69) rgb(28 27 35);
   scrollbar-width: thin;
+  overflow-x: scroll;
   -ms-overflow-style: scrollbar;
 }
 

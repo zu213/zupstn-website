@@ -12,13 +12,13 @@ function SpotifyRoulette(props) {
       <div>
         <div className='tight-project-inline-structure'>
           <figure>
-            <img src={join} loading="lazy" onClick={props.displayMask} alt="joining screen"/>
+            <img src={join} onClick={props.displayMask} alt="joining screen"/>
             <figcaption>Figure: Joining a game fo Spotify Roulette</figcaption>
           </figure>
         </div>
         <div className='tight-project-inline-structure'>
           <figure>
-            <img src={guess2} loading="lazy" onClick={props.displayMask} alt="guessing screen"/>
+            <img src={guess2} onClick={props.displayMask} alt="guessing screen"/>
             <figcaption>Figure: Playing a game of Spotify Roulette</figcaption>
           </figure>
         </div>

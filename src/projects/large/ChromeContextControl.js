@@ -12,7 +12,7 @@ function ChromeContextControl(props) {
 
       <div className='wide-project-inline-structure'>
         <figure onClick={props.displayMask}>
-          <img loading="lazy" src={dragScreen} alt="home page"/>
+          <img src={dragScreen} alt="home page"/>
           <figcaption>Figure: Chrome Context Control home page</figcaption>
         </figure>
       </div>
