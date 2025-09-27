@@ -1,13 +1,5 @@
 /* gallery view */
 
-.root {
-    scrollbar-width: none;  /* Firefox */
-}
-
-.gallery-page::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-
 .image-category {
   position: relative;
 }
