@@ -17,7 +17,7 @@ function importAll(r) {
 }
 
 const imagesInit = importAll(
-  require.context('./images', true, /\.(png|jpe?g|svg)$/)
+  require.context('./images', true, /\.(png|jpe?g|svg|webp)$/)
 );
 
 // main page
@@ -33,7 +33,7 @@ function Art() {
       galleryButton.current.style.backgroundColor = 'rgb(55 50 79);';
     }
     setImages(importAll(
-      require.context('./images', true, /\.(png|jpe?g|svg)$/)
+      require.context('./images', true, /\.(png|jpe?g|svg|webp)$/)
     ));
   }, []);
 

@@ -77,7 +77,7 @@ function GalleryPage ({ images }) {
   }
 
   return (
-    <div>
+    <div className='gallery-page'>
         Click on images to enlarge them.
       <br />
       <br />
