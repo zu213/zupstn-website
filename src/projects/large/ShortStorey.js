@@ -13,19 +13,19 @@ function ShortStorey(props) {
 
       <div className='tight-project-inline-structure laptop'>
         <figure onClick={props.displayMask}>
-          <img loading="lazy" src={storiesPage} alt="Stories Page"/>
+          <img src={storiesPage} alt="Stories Page"/>
           <figcaption>Figure: Main stories navigation page</figcaption>
         </figure>
       </div>
       <div className='tight-project-inline-structure laptop'>
         <figure onClick={props.displayMask}>
-          <img loading="lazy" src={ratingsPage} alt="Ratings page"/>
+          <img src={ratingsPage} alt="Ratings page"/>
           <figcaption>Figure: Page to review where ratings came from</figcaption>
         </figure>
       </div>
       <div className='tight-project-inline-structure laptop'>
         <figure onClick={props.displayMask}>
-          <img loading="lazy" src={profilePage} alt="Profile page"/>
+          <img src={profilePage} alt="Profile page"/>
           <figcaption>Figure: Profile page including stories and account details</figcaption>
         </figure>
       </div>

@@ -1,5 +1,5 @@
 
-import topTracks from './media/toptracks.png';
+import topTracks from './media/toptracks.webp';
 
 function TopTracks(props) {
   return (

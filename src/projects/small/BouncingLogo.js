@@ -1,12 +1,15 @@
 
-import sudowoodo from './media/sudowoodo.gif';
+import sudowoodo from './media/sudowoodo.webm';
 
 function BouncingLogo(props) {
   return (
     <div>
       <div>
         <figure onClick={props.displayMask}>
-          <img src={sudowoodo} alt="Bouncing logo gif"/>
+          <video className='sudowoodo' autoPlay loop muted playsInline>
+            <source src={sudowoodo} type="video/webm" />
+            Your browser does not support the video tag.
+          </video> 
           <figcaption>Figure: Gif of bouncing logo</figcaption>
         </figure>
       </div>

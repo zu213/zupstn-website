@@ -1,5 +1,5 @@
 
-import tempGlass from './media/tempglass.png';
+import tempGlass from './media/tempglass.webp';
 
 function TemperatureGlass(props) {
   return (

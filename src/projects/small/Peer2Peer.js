@@ -1,5 +1,5 @@
 
-import peer2peer from './media/peer.png';
+import peer2peer from './media/peer.webp';
 
 function Peer2Peer(props) {
   return (

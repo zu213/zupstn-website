@@ -1,5 +1,5 @@
 
-import squares from './media/squares.png';
+import squares from './media/squares.webp';
 
 function Squares(props) {
   return (

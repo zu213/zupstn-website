@@ -1,5 +1,5 @@
 
-import npmcard from './media/npmcard.png';
+import npmcard from './media/npmcard.webp';
 
 function NPMBusiness(props) {
   return (

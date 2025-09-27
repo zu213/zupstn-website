@@ -1,5 +1,5 @@
 
-import compare from './media/compare.PNG';
+import compare from './media/compare.webp';
 
 function LLMCompare(props) {
   return (

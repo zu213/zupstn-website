@@ -1,5 +1,5 @@
 
-import fruitLips from './media/fruitlips.png';
+import fruitLips from './media/fruitlips.webp';
 
 function FruitLips(props) {
   return (
