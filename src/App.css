@@ -68,3 +68,40 @@
   opacity: 0.8;
   z-index: 99;
 }
+
+
+.switch-button {
+  margin: 5px;
+  width: fit-content;
+  transition: transform 0.3s ease;
+  box-shadow: none;
+  padding: 9px 18px;
+  color: white;
+  background-color: rgb(55 50 79);
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background-color: rgb(75 68 109);
+  }
+
+}
+
+.switch-button-container {
+  background-color: rgb(55 50 79);
+  width: fit-content;
+  height: fit-content ;
+  position: relative;
+  margin: 8px 0 15px;
+  border-radius: 6px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media only screen and (width <= 310px) {
+  .switch-button-container{
+    width: min-content;
+  }
+}

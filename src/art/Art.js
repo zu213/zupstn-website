@@ -30,7 +30,7 @@ function Art() {
   useEffect(() => {
     if(galleryButton) {
       galleryButton.current.disabled = true;
-      galleryButton.current.style.backgroundColor = '#b7b7b7';
+      galleryButton.current.style.backgroundColor = 'rgb(55 50 79);';
     }
     setImages(importAll(
       require.context('./images', true, /\.(png|jpe?g|svg)$/)
@@ -42,14 +42,13 @@ function Art() {
     setPage(<GalleryPage images={images} />);
     disableGalleryButton(true);
     tableButton.current.disabled = false;
-    tableButton.current.style.color = 'rgb(4,4,4)';
     tableButton.current.style.removeProperty('background');  
   };
 
   const disableGalleryButton = (disabled) => {
     galleryButton.current.disabled = disabled;
     if(disabled) {
-      galleryButton.current.style.background = '#b7b7b7';
+      galleryButton.current.style.background = 'rgb(55 50 79);';
     } else {
       galleryButton.current.style.removeProperty('background');  
     }
@@ -59,7 +58,7 @@ function Art() {
     setPage(<TablePage images={images} disableGalleryButton={disableGalleryButton}/>);
     disableGalleryButton(false);
     tableButton.current.disabled = true;
-    tableButton.current.style.background = '#b7b7b7';
+    tableButton.current.style.background = 'rgb(55 50 79);';
   };
 
   return (
@@ -68,13 +67,9 @@ function Art() {
         Gallery <br />
       </div>              
 
-      <div className="inline-button" >
-        <button id='galleryButton' ref={galleryButton} className='galleryButton' onClick={toGallery}> Gallery View </button>
-      </div>
-      <div className="inline-button">
-        <div className='border'>
-          <button id='tableButton' ref={tableButton} className="tableButton" onClick={toTable}> Table View </button>
-        </div>
+      <div className='switch-button-container'>
+        <button ref={galleryButton} className='switch-button' onClick={toGallery}> Gallery View </button>
+        <button ref={tableButton} className="switch-button" onClick={toTable}> Table View </button>
       </div>
 
       {artPage}

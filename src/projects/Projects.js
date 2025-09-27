@@ -11,32 +11,32 @@ function Projects() {
 
   useEffect(() => {
     largeProjectsButton.current.disabled = true;
-    largeProjectsButton.current.style.backgroundColor = '#b7b7b7';
+    largeProjectsButton.current.style.backgroundColor = 'rgb(55 50 79);';
   }, []);
 
   const toLP = () => {
     setPageComponent(() => LargeProjects);
     largeProjectsButton.current.disabled = true;
     smallProjectsButton.current.disabled = false;
-    largeProjectsButton.current.style.backgroundColor = '#b7b7b7';
-    smallProjectsButton.current.style.removeProperty('background');  
+    smallProjectsButton.current.style.backgroundColor = 'rgb(55 50 79);';
+    largeProjectsButton.current.style.removeProperty('background');  
   };
 
   const toSP = () => {
     setPageComponent(() => SmallProjects);
     largeProjectsButton.current.disabled = false;
     smallProjectsButton.current.disabled = true;
-    largeProjectsButton.current.style.removeProperty('background');  
-    smallProjectsButton.current.style.backgroundColor = '#b7b7b7';
+    smallProjectsButton.current.style.removeProperty('background');  
+    largeProjectsButton.current.style.backgroundColor = 'rgb(55 50 79);';
   };
 
   return (
     <div>
       <header className='page-header'>Projects</header>
 
-      <div>
-        <button className='project-switch-button' ref={largeProjectsButton} onClick={toLP}>Large</button>
-        <button className='project-switch-button' ref={smallProjectsButton} onClick={toSP}>Small</button>
+      <div className='switch-button-container'>
+        <button className='switch-button' ref={largeProjectsButton} onClick={toLP}>Large</button>
+        <button className='switch-button' ref={smallProjectsButton} onClick={toSP}>Small</button>
       </div>
       <PageComponent />
     </div>

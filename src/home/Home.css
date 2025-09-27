@@ -106,6 +106,7 @@
 }
 
 .road-container {
+  z-index: -1;
   left: 50%;
   bottom: 0;
   position: absolute;
