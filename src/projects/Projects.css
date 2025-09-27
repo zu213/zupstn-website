@@ -131,6 +131,11 @@
   height: 100%;
 }
 
+.aspect-class video {
+  width: 100%;
+  height: 100%;
+}
+
 .laptop {
   width: 30%;
 

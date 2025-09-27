@@ -1,5 +1,5 @@
-import contextMenu from './media/ccc_contextmenu.png';
-import dragScreen from './media/ccc_dragscreen.png';
+import contextMenu from './media/ccc_contextmenu.webp';
+import dragScreen from './media/ccc_dragscreen.webp';
 
 function ChromeContextControl(props) {
 
@@ -12,7 +12,7 @@ function ChromeContextControl(props) {
 
       <div className='wide-project-inline-structure'>
         <figure onClick={props.displayMask}>
-          <img src={dragScreen} alt="ccc home page"/>
+          <img loading="lazy" src={dragScreen} alt="home page"/>
           <figcaption>Figure: Chrome Context Control home page</figcaption>
         </figure>
       </div>

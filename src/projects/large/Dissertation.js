@@ -2,7 +2,7 @@
 import { BreadcrumbLink } from '../../util/Breadcrumbs.js';
 import './Dissertation.css';
 
-import dissertationUI from './media/di-ui.png';
+import dissertationUI from './media/di-ui.webp';
 
 const dissertation = 'https://s3-eu-north-1.amazonaws.com/zudissertationbucket/Dissertation.pdf';
 
@@ -25,7 +25,7 @@ function Dissertation(props) {
       <div>
         <div  className="diss-inline-structure">
           <figure className='aspect-class'onClick={props.displayMask}>
-            <img src={dissertationUI} alt="Dissertation UI"></img>
+            <img loading="lazy" src={dissertationUI} alt="Dissertation UI"></img>
             <figcaption>Figure: The UI I created to allow the utlisation of RLHF</figcaption>
           </figure>
         </div>

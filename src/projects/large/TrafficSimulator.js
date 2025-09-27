@@ -1,4 +1,4 @@
-import trafficGif from './media/traffic.gif';
+import trafficGif from './media/traffic.webm';
 function TrafficSimulator(props) {
 
   return (
@@ -23,7 +23,10 @@ function TrafficSimulator(props) {
       </div>
       <div className='large-project-inline-structure'>
         <figure onClick={props.displayMask} className='aspect-class'>
-          <img src={trafficGif} alt="traffic gif"/>
+          <video autoPlay loop muted playsInline>
+            <source src={trafficGif} type="video/webm" />
+            Your browser does not support the video tag.
+          </video>    
           <figcaption>Figure: Gif of the Traffic Simulator running</figcaption>
         </figure>
       </div>

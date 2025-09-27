@@ -1,5 +1,5 @@
 
-import squarePaintGif from './media/square-paint-tree.gif';
+import squarePaintWebm from './media/square-paint-tree.webm';
 
 function SquarePaint(props) {
   return (
@@ -12,7 +12,10 @@ function SquarePaint(props) {
     
       <div className='large-project-inline-structure'>
         <figure onClick={props.displayMask} className='aspect-class'>
-          <img src={squarePaintGif} alt="squarepaint gif"/>
+          <video autoPlay loop muted playsInline>
+            <source src={squarePaintWebm} type="video/webm" />
+            Your browser does not support the video tag.
+          </video>          
           <figcaption>Figure: Gif of the SquarePaint in use</figcaption>
         </figure>
       </div>

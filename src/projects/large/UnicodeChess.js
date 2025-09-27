@@ -1,4 +1,4 @@
-import scholarsGif from './media/scholars.gif';
+import scholarsGif from './media/scholars.webm';
 function UnicodeChess(props) {
 
   return (
@@ -30,8 +30,10 @@ function UnicodeChess(props) {
       </div>
       <div className='project-inline-structure'>
         <figure onClick={props.displayMask} className='aspect-class'>
-          <img src={scholarsGif} alt="scholars gif"/>
-          <figcaption>Figure: Gif of Chess implemented in C</figcaption>
+          <video autoPlay loop muted playsInline>
+            <source src={scholarsGif} type="video/webm" />
+            Your browser does not support the video tag.
+          </video>            <figcaption>Figure: Gif of Chess implemented in C</figcaption>
         </figure>
       </div>
       

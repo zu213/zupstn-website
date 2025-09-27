@@ -1,7 +1,7 @@
-import assembly from './media/assembly.gif';
-import c from './media/c.gif';
-import d from './media/d.gif';
-import rust from './media/rust.gif';
+import assembly from './media/assembly.webm';
+import c from './media/c.webm';
+import d from './media/d.webm';
+import rust from './media/rust.webm';
 
 function Snowstorm(props) {
   return (
@@ -16,25 +16,37 @@ function Snowstorm(props) {
 
       <div className='tight-project-inline-structure'>
         <figure className='aspect-class' onClick={props.displayMask}>
-          <img src={c} alt="Snow C"/>
+          <video autoPlay loop muted playsInline>
+            <source src={c} type="video/webm" />
+            Your browser does not support the video tag.
+          </video>  
           <figcaption>Figure: Snow programmed in C</figcaption>
         </figure>
       </div>
       <div className='tight-project-inline-structure'>
         <figure className='aspect-class' onClick={props.displayMask}>
-          <img src={d} alt="Snow D"/>
+          <video autoPlay loop muted playsInline>
+            <source src={d} type="video/webm" />
+            Your browser does not support the video tag.
+          </video>  
           <figcaption>Figure: Snow programmed in D</figcaption>
         </figure>
       </div>
       <div className='tight-project-inline-structure'>
         <figure className='aspect-class' onClick={props.displayMask}>
-          <img src={rust} alt="Snow Rust"/>
+          <video autoPlay loop muted playsInline>
+            <source src={rust} type="video/webm" />
+            Your browser does not support the video tag.
+          </video>  
           <figcaption>Figure: Snow programmed in Rust</figcaption>
         </figure>
       </div>
       <div className='tight-project-inline-structure'>
         <figure className='aspect-class'  onClick={props.displayMask}>
-          <img src={assembly} alt="Snow Assembly"/>
+          <video autoPlay loop muted playsInline>
+            <source src={assembly} type="video/webm" />
+            Your browser does not support the video tag.
+          </video>  
           <figcaption>Figure: Snow programmed in Assembly</figcaption>
         </figure>
       </div>
