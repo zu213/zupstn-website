@@ -1,6 +1,11 @@
 /* me page */
 
 .myself {
+  max-width: 1000px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+
   .text-holder {
     padding: 1.5vh 7% 1vh;
     text-align: left;

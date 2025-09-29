@@ -5,7 +5,7 @@ function ZachLang(props) {
   return (
     <div>
       <div>
-        <a href="https://github.com/zu213/zach-lang" className="small-link" target="_blank" rel="noreferrer">Repo</a>
+        <a href="https://github.com/zu213/zach-lang" className="small-link" target="_blank" rel="noreferrer">Repository</a>
         <br/>
       </div>
       <div className='large-project-inline-structure left-align top-padding indent-mask'>

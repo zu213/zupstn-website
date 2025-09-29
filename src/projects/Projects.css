@@ -1,3 +1,9 @@
+.large-projects-subpage, .small-projects-subpage {
+  max-width: 1100px;
+  margin: 0 auto;  /* centers horizontally */
+  position: relative;
+}
+
 /* Large project */
 
 .project-title {
@@ -197,6 +203,10 @@
     width: 95%;
     padding-left: 2.5%;
     position: relative;
+  }
+
+  .medium-project-inline-structure {
+    width: 60%;
   }
 
   .large-project-inline-structure {

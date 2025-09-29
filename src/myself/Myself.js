@@ -14,7 +14,6 @@ function Me() {
   
       <div  className="text-holder">
         <div className='sub-title'>
-            Who am I?
         </div>
   
         <br/>

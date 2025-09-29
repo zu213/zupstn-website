@@ -29,7 +29,7 @@ function LargeProjects() {
   };
 
   return (
-    <div>
+    <div className="large-projects-subpage">
       <hr/>
       {mask && <div className='overlay' onClick={hideMask}></div>}
       <div>

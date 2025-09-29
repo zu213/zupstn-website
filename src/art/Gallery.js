@@ -128,6 +128,8 @@ function GalleryPage ({ images }) {
           <img src={currentOverlay} alt="overlay" className="overlay-content" />
         </div>
       )}
+      <div className='bottom-boundary'>
+      </div>
     </div>
   );};
 

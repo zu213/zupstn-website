@@ -105,3 +105,10 @@
     width: min-content;
   }
 }
+
+.bottom-boundary {
+  min-height: 100px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
