@@ -1,4 +1,5 @@
 
+import squarePaintMP4 from './media/square-paint-tree.mp4';
 import squarePaintWebm from './media/square-paint-tree.webm';
 
 function SquarePaint(props) {
@@ -14,6 +15,7 @@ function SquarePaint(props) {
         <figure onClick={props.displayMask} className='aspect-class'>
           <video autoPlay loop muted playsInline>
             <source src={squarePaintWebm} type="video/webm" />
+            <source src={squarePaintMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>          
           <figcaption>Figure: Gif of the SquarePaint in use</figcaption>

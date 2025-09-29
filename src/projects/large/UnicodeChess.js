@@ -1,3 +1,4 @@
+import scholarsMP4 from './media/scholars.mp4';
 import scholarsGif from './media/scholars.webm';
 function UnicodeChess(props) {
 
@@ -32,6 +33,7 @@ function UnicodeChess(props) {
         <figure onClick={props.displayMask} className='aspect-class'>
           <video autoPlay loop muted playsInline>
             <source src={scholarsGif} type="video/webm" />
+            <source src={scholarsMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>            <figcaption>Figure: Gif of Chess implemented in C</figcaption>
         </figure>

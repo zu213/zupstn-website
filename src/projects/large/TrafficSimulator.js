@@ -1,3 +1,4 @@
+import trafficMP4 from './media/traffic.mp4';
 import trafficGif from './media/traffic.webm';
 function TrafficSimulator(props) {
 
@@ -25,6 +26,7 @@ function TrafficSimulator(props) {
         <figure onClick={props.displayMask} className='aspect-class'>
           <video autoPlay loop muted playsInline>
             <source src={trafficGif} type="video/webm" />
+            <source src={trafficMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>    
           <figcaption>Figure: Gif of the Traffic Simulator running</figcaption>

@@ -1,4 +1,4 @@
-
+import sudowoodoMP4 from './media/sudowoodo.mp4';
 import sudowoodo from './media/sudowoodo.webm';
 
 function BouncingLogo(props) {
@@ -8,6 +8,7 @@ function BouncingLogo(props) {
         <figure onClick={props.displayMask}>
           <video className='sudowoodo' autoPlay loop muted playsInline>
             <source src={sudowoodo} type="video/webm" />
+            <source src={sudowoodoMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video> 
           <figcaption>Figure: Gif of bouncing logo</figcaption>

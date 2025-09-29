@@ -1,6 +1,10 @@
+import assemblyMP4 from './media/assembly.mp4';
 import assembly from './media/assembly.webm';
+import cMP4 from './media/c.mp4';
 import c from './media/c.webm';
+import dMP4 from './media/d.mp4';
 import d from './media/d.webm';
+import rustMP4 from './media/rust.mp4';
 import rust from './media/rust.webm';
 
 function Snowstorm(props) {
@@ -18,6 +22,7 @@ function Snowstorm(props) {
         <figure className='aspect-class' onClick={props.displayMask}>
           <video autoPlay loop muted playsInline>
             <source src={c} type="video/webm" />
+            <source src={cMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>  
           <figcaption>Figure: Snow programmed in C</figcaption>
@@ -27,6 +32,7 @@ function Snowstorm(props) {
         <figure className='aspect-class' onClick={props.displayMask}>
           <video autoPlay loop muted playsInline>
             <source src={d} type="video/webm" />
+            <source src={dMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>  
           <figcaption>Figure: Snow programmed in D</figcaption>
@@ -36,6 +42,7 @@ function Snowstorm(props) {
         <figure className='aspect-class' onClick={props.displayMask}>
           <video autoPlay loop muted playsInline>
             <source src={rust} type="video/webm" />
+            <source src={rustMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>  
           <figcaption>Figure: Snow programmed in Rust</figcaption>
@@ -45,6 +52,7 @@ function Snowstorm(props) {
         <figure className='aspect-class'  onClick={props.displayMask}>
           <video autoPlay loop muted playsInline>
             <source src={assembly} type="video/webm" />
+            <source src={assemblyMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>  
           <figcaption>Figure: Snow programmed in Assembly</figcaption>
