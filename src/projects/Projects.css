@@ -119,7 +119,9 @@
   z-index: 100;
   position: fixed;
   height: auto !important;
-  width: 40% !important;
+  width: auto !important;
+  max-height: 80vh;
+  max-width: 50vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
