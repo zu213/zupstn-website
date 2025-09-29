@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import BouncingLogo from './small/BouncingLogo.js';
 import FruitLips from './small/FruitLips.js';
+import HotkeyHelp from './small/HotkeyHelp.js';
 import LLMCompare from './small/LLMCompare.js';
 import NPMBusiness from './small/NPMBusiness.js';
 import Peer2Peer from './small/Peer2Peer.js';
@@ -32,6 +33,13 @@ function SmallProjects() {
       <hr/>
       {mask && <div className='overlay' onClick={hideMask}></div>}
       <div className='project-grid'>
+        <div className='project-grid-element'>
+          <div className='project-title'>
+            LLM Compare
+          </div>
+          <HotkeyHelp displayMask={displayMask}/>
+        </div>
+
         <div className='project-grid-element'>
           <div className='project-title'>
             LLM Compare

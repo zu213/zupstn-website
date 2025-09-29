@@ -9,6 +9,7 @@ import SpotifyRoulette from './large/SpotifyRoulette.js';
 import SquarePaint from './large/SquarePaint.js';
 import TrafficSimulator from './large/TrafficSimulator.js';
 import UnicodeChess from './large/UnicodeChess.js';
+import ZachLang from './large/ZachLang.js';
 
 function LargeProjects() {
 
@@ -33,12 +34,22 @@ function LargeProjects() {
       {mask && <div className='overlay' onClick={hideMask}></div>}
       <div>
         <div className='project-title'>
+            Zach Lang
+        </div>
+        <hr className='limited-hr'/>
+        <ZachLang displayMask={displayMask}/>
+      </div>
+
+      <hr/>
+      <div>
+        <div className='project-title'>
             ShortStorey
         </div>
         <hr className='limited-hr'/>
         <ShortStorey displayMask={displayMask}/>
       </div>
 
+      <hr/>
       <div>
         <div className='project-title'>
             SquarePaint
