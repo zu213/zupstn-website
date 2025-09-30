@@ -36,7 +36,7 @@ function SmallProjects() {
         <div className='project-grid'>
           <div className='project-grid-element'>
             <div className='project-title'>
-              LLM Compare
+              Hotkey Help
             </div>
             <HotkeyHelp displayMask={displayMask}/>
           </div>

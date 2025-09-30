@@ -1,4 +1,4 @@
-
+import comparePNG from './media/compare.png';
 import compare from './media/compare.webp';
 
 function LLMCompare(props) {
@@ -6,7 +6,10 @@ function LLMCompare(props) {
     <div>
       <div>
         <figure onClick={props.displayMask}>
-          <img src={compare} alt="llm compare tabs"/>
+          <picture>
+            <source srcSet={compare} type="image/webp" />
+            <img src={comparePNG} alt="llm compare tabs" />
+          </picture>
           <figcaption>Figure: Tab system of LLM compare</figcaption>
         </figure>
       </div>

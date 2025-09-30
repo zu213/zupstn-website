@@ -1,4 +1,5 @@
 
+import peer2peerPNG from './media/peer.png';
 import peer2peer from './media/peer.webp';
 
 function Peer2Peer(props) {
@@ -6,7 +7,10 @@ function Peer2Peer(props) {
     <div>
       <div>
         <figure onClick={props.displayMask}>
-          <img src={peer2peer} alt="Peer in action"/>
+          <picture>
+            <source srcSet={peer2peer} type="image/webp" />
+            <img src={peer2peerPNG} alt="Peer in action" />
+          </picture>
           <figcaption>Figure: Messaging via a setup peer connection</figcaption>
         </figure>
       </div>

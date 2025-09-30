@@ -1,4 +1,6 @@
+import contextMenuPNG from './media/ccc_contextmenu.png';
 import contextMenu from './media/ccc_contextmenu.webp';
+import dragScreenPNG from './media/ccc_dragscreen.png';
 import dragScreen from './media/ccc_dragscreen.webp';
 
 function ChromeContextControl(props) {
@@ -12,7 +14,10 @@ function ChromeContextControl(props) {
 
       <div className='wide-project-inline-structure'>
         <figure onClick={props.displayMask}>
-          <img src={dragScreen} alt="home page"/>
+          <picture>
+            <source srcSet={dragScreen} type="image/webp" />
+            <img src={dragScreenPNG} alt="home page" />
+          </picture>
           <figcaption>Figure: Chrome Context Control home page</figcaption>
         </figure>
       </div>
@@ -35,7 +40,10 @@ function ChromeContextControl(props) {
 
       <div className='wide-project-inline-structure'>
         <figure onClick={props.displayMask}>
-          <img src={contextMenu} className='white-border' alt="new context menu"/>
+          <picture className='white-border'>
+            <source srcSet={contextMenu} type="image/webp" />
+            <img src={contextMenuPNG} alt="new context menu" />
+          </picture>
           <figcaption>Figure: New modified context menu</figcaption>
         </figure>
       </div>

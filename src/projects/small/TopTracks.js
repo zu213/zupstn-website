@@ -1,12 +1,17 @@
 
+import topTracksPNG from './media/toptracks.png';
 import topTracks from './media/toptracks.webp';
+
 
 function TopTracks(props) {
   return (
     <div>
       <div>
         <figure onClick={props.displayMask}>
-          <img className='top-tracks-image' src={topTracks} alt="top tracks graphic"/>
+          <picture className='top-tracks-image'>
+            <source srcSet={topTracks} type="image/webp" />
+            <img src={topTracksPNG} alt="top tracks graphic" />
+          </picture>
           <figcaption>Figure: Graphic to display user's top tracks</figcaption>
         </figure>
       </div>

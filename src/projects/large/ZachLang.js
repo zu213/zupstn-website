@@ -1,3 +1,4 @@
+import compilerDiagramPNG from './media/zachlang.png';
 import compilerDiagram from './media/zachlang.webp';
 
 function ZachLang(props) {
@@ -37,7 +38,10 @@ function ZachLang(props) {
       </div>
       <div className='medium-project-inline-structure'>
         <figure onClick={props.displayMask}>
-          <img src={compilerDiagram} alt="Zach Lang compiler diagram"/>
+          <picture>
+            <source srcSet={compilerDiagram} type="image/webp" />
+            <img src={compilerDiagramPNG} alt="Zach Lang compiler diagram" />
+          </picture>
           <figcaption>Figure: How the compiler in Zach Lang works under the hood.</figcaption>
         </figure>
       </div>

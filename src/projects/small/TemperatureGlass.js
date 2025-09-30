@@ -1,4 +1,4 @@
-
+import tempGlassPNG from './media/tempglass.png';
 import tempGlass from './media/tempglass.webp';
 
 function TemperatureGlass(props) {
@@ -6,7 +6,10 @@ function TemperatureGlass(props) {
     <div>
       <div>
         <figure onClick={props.displayMask}>
-          <img src={tempGlass} alt="Temperature glass overlay"/>
+          <picture>
+            <source srcSet={tempGlass} type="image/webp" />
+            <img src={tempGlassPNG} alt="Temperature glass overlay" />
+          </picture>
           <figcaption>Figure: Picture of the overlay</figcaption>
         </figure>
       </div>

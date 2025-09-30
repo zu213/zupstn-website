@@ -1,4 +1,4 @@
-
+import hotkeyHelpPNG from './media/hotkeyhelp.png';
 import hotkeyHelp from './media/hotkeyhelp.webp';
 
 function HotkeyHelp(props) {
@@ -6,7 +6,10 @@ function HotkeyHelp(props) {
     <div>
       <div>
         <figure onClick={props.displayMask}>
-          <img className='top-tracks-image' src={hotkeyHelp} alt="hotkey help printout"/>
+          <picture>
+            <source srcSet={hotkeyHelp} type="image/webp" />
+            <img src={hotkeyHelpPNG} alt="hotkey help printout" />
+          </picture>
           <figcaption>Figure: Graphic to display user's top tracks</figcaption>
         </figure>
       </div>

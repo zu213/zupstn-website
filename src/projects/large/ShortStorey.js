@@ -1,5 +1,8 @@
+import profilePagePNG from './media/profilePage.png';
 import profilePage from './media/profilePage.webp';
+import ratingsPagePNG from './media/ratingsPage.png';
 import ratingsPage from './media/ratingsPage.webp';
+import storiesPagePNG from './media/storiesPage.png';
 import storiesPage from './media/storiesPage.webp';
 
 function ShortStorey(props) {
@@ -13,19 +16,28 @@ function ShortStorey(props) {
 
       <div className='tight-project-inline-structure laptop'>
         <figure onClick={props.displayMask}>
-          <img src={storiesPage} alt="Stories Page"/>
+          <picture>
+            <source srcSet={storiesPage} type="image/webp" />
+            <img src={storiesPagePNG} alt="Stories Page" />
+          </picture>
           <figcaption>Figure: Main stories navigation page</figcaption>
         </figure>
       </div>
       <div className='tight-project-inline-structure laptop'>
         <figure onClick={props.displayMask}>
-          <img src={ratingsPage} alt="Ratings page"/>
+          <picture>
+            <source srcSet={ratingsPage} type="image/webp" />
+            <img src={ratingsPagePNG} alt="Ratings page" />
+          </picture>
           <figcaption>Figure: Page to review where ratings came from</figcaption>
         </figure>
       </div>
       <div className='tight-project-inline-structure laptop'>
         <figure onClick={props.displayMask}>
-          <img src={profilePage} alt="Profile page"/>
+          <picture>
+            <source srcSet={profilePage} type="image/webp" />
+            <img src={profilePagePNG} alt="Profile page" />
+          </picture>
           <figcaption>Figure: Profile page including stories and account details</figcaption>
         </figure>
       </div>

@@ -1,4 +1,4 @@
-
+import npmcardPNG from './media/npmcard.png';
 import npmcard from './media/npmcard.webp';
 
 function NPMBusiness(props) {
@@ -6,7 +6,10 @@ function NPMBusiness(props) {
     <div>
       <div>
         <figure onClick={props.displayMask} className=''>
-          <img src={npmcard} alt="npm business card"/>
+          <picture>
+            <source srcSet={npmcard} type="image/webp" />
+            <img src={npmcardPNG} alt="npm business card" />
+          </picture>
           <figcaption>Figure: The business card in the terminal</figcaption>
         </figure>
       </div>

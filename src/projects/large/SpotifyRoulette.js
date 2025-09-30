@@ -1,4 +1,6 @@
+import guess2PNG from './media/guess2.png';
 import guess2 from './media/guess2.webp';
+import joinPNG from'./media/join.png';
 import join from'./media/join.webp';
 
 
@@ -11,14 +13,20 @@ function SpotifyRoulette(props) {
       </div>
       <div>
         <div className='tight-project-inline-structure'>
-          <figure>
-            <img src={join} onClick={props.displayMask} alt="joining screen"/>
+          <figure onClick={props.displayMask}>
+            <picture>
+              <source srcSet={join} type="image/webp" />
+              <img src={joinPNG} alt="joining screen" />
+            </picture>
             <figcaption>Figure: Joining a game fo Spotify Roulette</figcaption>
           </figure>
         </div>
         <div className='tight-project-inline-structure'>
-          <figure>
-            <img src={guess2} onClick={props.displayMask} alt="guessing screen"/>
+          <figure onClick={props.displayMask}>
+            <picture>
+              <source srcSet={guess2} type="image/webp" />
+              <img src={guess2PNG} alt="guessing screen"/>
+            </picture>
             <figcaption>Figure: Playing a game of Spotify Roulette</figcaption>
           </figure>
         </div>

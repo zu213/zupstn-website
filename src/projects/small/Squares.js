@@ -1,4 +1,4 @@
-
+import squaresPNG from './media/squares.png';
 import squares from './media/squares.webp';
 
 function Squares(props) {
@@ -6,7 +6,10 @@ function Squares(props) {
     <div>
       <div>
         <figure onClick={props.displayMask}>
-          <img src={squares} alt="368 Squares game"/>
+          <picture>
+            <source srcSet={squares} type="image/webp" />
+            <img src={squaresPNG} alt="368 Squares game" />
+          </picture>
           <figcaption>Figure: Screenshot of the 368 Squares game</figcaption>
         </figure>
       </div>
