@@ -1,4 +1,4 @@
-
+import fruitLipsPNG from './media/fruitlips.png';
 import fruitLips from './media/fruitlips.webp';
 
 function FruitLips(props) {
@@ -6,7 +6,10 @@ function FruitLips(props) {
     <div>
       <div>
         <figure onClick={props.displayMask}>
-          <img src={fruitLips} alt="Fruit lips webpage"/>
+          <picture>
+            <source srcSet={fruitLips} type="image/webp" />
+            <img src={fruitLipsPNG} alt="Fruit lips webpage" />
+          </picture>
           <figcaption>Figure: Fruit lips webpage</figcaption>
         </figure>
       </div>
