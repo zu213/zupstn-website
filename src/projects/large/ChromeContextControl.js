@@ -40,9 +40,9 @@ function ChromeContextControl(props) {
 
       <div className='wide-project-inline-structure'>
         <figure onClick={props.displayMask}>
-          <picture className='white-border'>
-            <source srcSet={contextMenu} type="image/webp" />
-            <img src={contextMenuPNG} alt="new context menu" />
+          <picture>
+            <source srcSet={contextMenu} type="image/webp" className='white-border' />
+            <img src={contextMenuPNG} alt="new context menu" className='white-border' />
           </picture>
           <figcaption>Figure: New modified context menu</figcaption>
         </figure>
