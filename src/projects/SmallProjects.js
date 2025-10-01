@@ -22,6 +22,10 @@ function SmallProjects() {
     setMaskItem(null);
   };
 
+  function isIOS() {
+    return /iP(hone|od|ad)/.test(navigator.userAgent);
+  }
+
   const displayMask = (e) =>{
     setMask(true);
     e.target.classList.add('overlay-mask');
@@ -73,7 +77,7 @@ function SmallProjects() {
             <div className='project-title'>
               Bouncing logo
             </div>
-            <BouncingLogo displayMask={displayMask}/>
+            <BouncingLogo displayMask={displayMask} isIOS={isIOS}/>
           </div>
 
 

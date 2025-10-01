@@ -32,10 +32,13 @@ function UnicodeChess(props) {
       <div className='project-inline-structure'>
         <figure onClick={props.displayMask} className='aspect-class'>
           <video autoPlay loop muted playsInline>
-            <source src={scholarsGif} type="video/webm" />
+            {!props.isIOS() &&
+              <source src={scholarsGif} type="video/webm" />
+            }
             <source src={scholarsMP4} type="video/mp4" />
             Your browser does not support the video tag.
-          </video>            <figcaption>Figure: Gif of Chess implemented in C</figcaption>
+          </video>
+          <figcaption>Figure: Gif of Chess implemented in C</figcaption>
         </figure>
       </div>
       

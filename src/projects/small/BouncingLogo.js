@@ -1,13 +1,20 @@
+import { useAutoPauseVideo } from '../../util/useAutoPauseVideo';
+
 import sudowoodoMP4 from './media/sudowoodo.mp4';
 import sudowoodo from './media/sudowoodo.webm';
 
 function BouncingLogo(props) {
+  // only used here for now.
+  const videoRef = useAutoPauseVideo();
+
   return (
     <div>
       <div>
         <figure onClick={props.displayMask}>
-          <video className='sudowoodo' autoPlay loop muted playsInline>
-            <source src={sudowoodo} type="video/webm" />
+          <video ref={videoRef} className='sudowoodo' autoPlay loop muted playsInline>
+            {!props.isIOS() &&
+              <source src={sudowoodo} type="video/webm" />
+            }
             <source src={sudowoodoMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video> 

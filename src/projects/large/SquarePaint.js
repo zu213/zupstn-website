@@ -14,7 +14,9 @@ function SquarePaint(props) {
       <div className='large-project-inline-structure'>
         <figure onClick={props.displayMask} className='aspect-class'>
           <video autoPlay loop muted playsInline>
-            <source src={squarePaintWebm} type="video/webm" />
+            {!props.isIOS() &&
+              <source src={squarePaintWebm} type="video/webm" />
+            }
             <source src={squarePaintMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>          

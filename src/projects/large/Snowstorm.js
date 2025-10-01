@@ -15,13 +15,12 @@ function Snowstorm(props) {
         <br/>
       </div>
 
-        Note: GIF's can take a while to load!
-      <br />
-
       <div className='tight-project-inline-structure'>
         <figure className='aspect-class' onClick={props.displayMask}>
           <video autoPlay loop muted playsInline>
-            <source src={c} type="video/webm" />
+            {!props.isIOS() &&
+              <source src={c} type="video/webm" />
+            }
             <source src={cMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>  
@@ -31,7 +30,9 @@ function Snowstorm(props) {
       <div className='tight-project-inline-structure'>
         <figure className='aspect-class' onClick={props.displayMask}>
           <video autoPlay loop muted playsInline>
-            <source src={d} type="video/webm" />
+            {!props.isIOS() &&
+              <source src={d} type="video/webm" />
+            }
             <source src={dMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>  
@@ -41,7 +42,9 @@ function Snowstorm(props) {
       <div className='tight-project-inline-structure'>
         <figure className='aspect-class' onClick={props.displayMask}>
           <video autoPlay loop muted playsInline>
-            <source src={rust} type="video/webm" />
+            {!props.isIOS() &&
+              <source src={rust} type="video/webm" />
+            }
             <source src={rustMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>  
@@ -51,7 +54,9 @@ function Snowstorm(props) {
       <div className='tight-project-inline-structure'>
         <figure className='aspect-class'  onClick={props.displayMask}>
           <video autoPlay loop muted playsInline>
-            <source src={assembly} type="video/webm" />
+            {!props.isIOS() &&
+              <source src={assembly} type="video/webm" />
+            }
             <source src={assemblyMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>  

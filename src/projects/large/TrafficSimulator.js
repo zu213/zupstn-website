@@ -25,7 +25,9 @@ function TrafficSimulator(props) {
       <div className='large-project-inline-structure'>
         <figure onClick={props.displayMask} className='aspect-class'>
           <video autoPlay loop muted playsInline>
-            <source src={trafficGif} type="video/webm" />
+            {!props.isIOS() &&
+              <source src={trafficGif} type="video/webm" />
+            }
             <source src={trafficMP4} type="video/mp4" />
             Your browser does not support the video tag.
           </video>    

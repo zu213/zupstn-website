@@ -16,6 +16,10 @@ function LargeProjects() {
   var [mask, setMask] = useState(false);
   var [maskItem, setMaskItem] = useState(null);
 
+  function isIOS() {
+    return /iP(hone|od|ad)/.test(navigator.userAgent);
+  }
+
   const hideMask =() => {
     setMask(false);
     maskItem.classList.remove('overlay-mask');
@@ -55,7 +59,7 @@ function LargeProjects() {
             SquarePaint
         </div>
         <hr className='limited-hr'/>
-        <SquarePaint displayMask={displayMask}/>
+        <SquarePaint displayMask={displayMask} isIOS={isIOS}/>
       </div>
 
       <hr/>
@@ -65,7 +69,7 @@ function LargeProjects() {
             Traffic Simulator
         </div>
         <hr className='limited-hr'/>
-        <TrafficSimulator displayMask={displayMask}/>
+        <TrafficSimulator displayMask={displayMask} isIOS={isIOS}/>
       </div>
 
       <hr/>
@@ -83,7 +87,7 @@ function LargeProjects() {
             Snowstorm
         </div>
         <hr className='limited-hr'/>
-        <Snowstorm displayMask={displayMask}/>
+        <Snowstorm displayMask={displayMask} isIOS={isIOS}/>
       </div>
 
       <hr/>
@@ -101,7 +105,7 @@ function LargeProjects() {
             Unicode Chess
         </div>
         <hr className='limited-hr'/>
-        <UnicodeChess displayMask={displayMask}/>
+        <UnicodeChess displayMask={displayMask} isIOS={isIOS}/>
       </div>
 
       <hr/>
