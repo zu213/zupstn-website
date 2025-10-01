@@ -124,10 +124,10 @@
   background-color: black;
   z-index: 100;
   position: fixed;
-  height: auto !important;
-  width: auto !important;
-  max-height: 80vh;
-  max-width: 50vw;
+  height: auto;
+  width: auto;
+  max-height: min(70%, 500px) !important;
+  max-width: min(80%, 800px) !important;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -217,7 +217,8 @@
   }
 
   .overlay-mask {
-    width: 90% !important;
+    max-height: min(80%, 300px) !important;
+    max-width: min(80%, 300px) !important;
   }
 
   .indent-mask {
