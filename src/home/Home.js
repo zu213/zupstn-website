@@ -4,6 +4,8 @@ import './Home.css';
 import { asciiArtBig, asciiGif } from '../util/asciiArt.js';
 import { BreadcrumbLink } from '../util/Breadcrumbs.js';
 
+import { defaultRoad } from './default-road.js';
+
 //static consts
 const validRoutes = ['/me', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary'];
 const taglineTextOptions = ['- Try "curl https://zupstn.com/hypno.sh | bash"', '- Try "npx zachupstone"'];
@@ -18,7 +20,7 @@ function Home() {
   const [isHovered, setIsHovered] = useState(false);
   const [chosenLink, setChosenLink] = useState(null);
   const roadContainer = useRef(null);
-  const [roadFrames, setRoadFrames] = useState(false);
+  const [roadFrames, setRoadFrames] = useState(defaultRoad);
 
   useEffect(() => {
     async function getRoadFrames() { 
