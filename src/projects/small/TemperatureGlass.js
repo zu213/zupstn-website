@@ -5,7 +5,7 @@ function TemperatureGlass(props) {
   return (
     <div>
       <div>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(tempGlass)}>
           <picture>
             <source srcSet={tempGlass} type="image/webp" />
             <img src={tempGlassPNG} alt="Temperature glass overlay" />

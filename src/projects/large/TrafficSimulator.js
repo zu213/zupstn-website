@@ -4,6 +4,7 @@ function TrafficSimulator(props) {
 
   return (
     <div>
+      <header className='page-header'>Traffic Simulator</header>
       <div>
         <a href="https://github.com/zu213/traffic-sim" className="small-link" target="_blank" rel="noreferrer">Repo</a> |&nbsp;
         <a href="/exes/traffic.exe" className="small-link" download>Windows Download</a>
@@ -23,7 +24,7 @@ function TrafficSimulator(props) {
         <b>gcc</b>.
       </div>
       <div className='large-project-inline-structure'>
-        <figure onClick={props.displayMask} className='aspect-class'>
+        <figure onClick={props.displayMask} className='aspect-class no-aspect'>
           <video autoPlay loop muted playsInline>
             {!props.isIOS() &&
               <source src={trafficGif} type="video/webm" />
@@ -35,7 +36,6 @@ function TrafficSimulator(props) {
         </figure>
       </div>
     </div>
-
   );
 }
 

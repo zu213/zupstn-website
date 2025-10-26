@@ -5,6 +5,7 @@ import squarePaintWebm from './media/square-paint-tree.webm';
 function SquarePaint(props) {
   return (
     <div>
+      <header className='page-header'>Square Paint</header>
       <div>
         <a href="https://github.com/zu213/square-paint" className="small-link" target="_blank" rel="noreferrer">Repo</a> |&nbsp;
         <a href="/exes/SquarePaint.exe" className="small-link" download>Windows Download</a>

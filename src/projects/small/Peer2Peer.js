@@ -6,7 +6,7 @@ function Peer2Peer(props) {
   return (
     <div>
       <div>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(peer2peer)}>
           <picture>
             <source srcSet={peer2peer} type="image/webp" />
             <img src={peer2peerPNG} alt="Peer in action" />

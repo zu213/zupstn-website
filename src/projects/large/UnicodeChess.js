@@ -4,6 +4,7 @@ function UnicodeChess(props) {
 
   return (
     <div>
+      <header className='page-header'>Unicode Chess</header>
       <div>
         <a href="https://github.com/zu213/unicode-chess" className="small-link" target="_blank" rel="noreferrer">Repo</a> |&nbsp;
         <a href="/exes/chess.exe" className="small-link" download>Windows Download</a>

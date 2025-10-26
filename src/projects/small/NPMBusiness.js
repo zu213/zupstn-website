@@ -5,7 +5,7 @@ function NPMBusiness(props) {
   return (
     <div>
       <div>
-        <figure onClick={props.displayMask} className=''>
+        <figure onClick={() => props.displayMask(npmcard)}>
           <picture>
             <source srcSet={npmcard} type="image/webp" />
             <img src={npmcardPNG} alt="npm business card" />

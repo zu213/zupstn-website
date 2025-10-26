@@ -13,12 +13,9 @@ import TopTracks from './small/TopTracks.js';
 
 function SmallProjects() {
 
-  var [mask, setMask] = useState(false);
   var [maskItem, setMaskItem] = useState(null);
 
   const hideMask =() => {
-    setMask(false);
-    maskItem.classList.remove('overlay-mask');
     setMaskItem(null);
   };
 
@@ -26,15 +23,19 @@ function SmallProjects() {
     return /iP(hone|od|ad)/.test(navigator.userAgent);
   }
 
-  const displayMask = (e) =>{
-    setMask(true);
-    e.target.classList.add('overlay-mask');
-    setMaskItem(e.target);
+  const displayMask = (img) =>{
+    setMaskItem(img);
   };
 
   return (
     <div>
-      {mask && <div className='overlay' onClick={hideMask}></div>}
+      {maskItem && (
+        <div>
+          <div className="overlay" onClick={hideMask}>
+          </div>
+          <img src={maskItem} alt="overlay" className="overlay-content" />
+        </div>
+      )}
       <div className="small-projects-subpage">
         <hr/>
         <div className='project-grid'>

@@ -5,6 +5,7 @@ function ZachLang(props) {
 
   return (
     <div>
+      <header className='page-header'>Zach Lang</header>
       <div>
         <a href="https://github.com/zu213/zach-lang" className="small-link" target="_blank" rel="noreferrer">Repository</a>
         <br/>

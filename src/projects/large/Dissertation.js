@@ -10,9 +10,9 @@ const dissertation = 'https://s3-eu-north-1.amazonaws.com/zudissertationbucket/D
 function Dissertation(props) {
   return (
     <div>
+      <header className='page-header'>Dissertation</header>
       <div className="disssub-title" >
           Human Involvement Can Improve Current Image Synthesis Methods within the Domain of Art
-        <br />
       </div>
       <div>
         <a href={dissertation} className="small-link" download="Zachary Upstone Dissertation">PDF</a>

@@ -94,13 +94,13 @@ function App() {
             <Route path='/glossary' element={<Glossary/>} />
             <Route path='/related-links' element={<RelatedLinks/>} />
             {largeProjects.map(project => 
-              <Route path={`/${project.route}`} element={<project.page displayMask={displayMask} isIOS={isIOS} />} />
+              <Route key={project.route} path={`/${project.route}`} element={<project.page displayMask={displayMask} isIOS={isIOS} />} />
             )}
             <Route path='*' element={<NotFound/>} />
           </Routes>
         </BackButtonProvider>
       </BreadcrumbProvider>
-      <div className={`footer ${noFooter.includes(location.pathname) ? 'none' : ''}`}>
+      <div className={`none footer ${noFooter.includes(location.pathname) ? 'none' : ''}`}>
         <hr />
         <div>
           2025 Zachary Upstone. All rights reserved.

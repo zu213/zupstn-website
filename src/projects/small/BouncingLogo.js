@@ -10,7 +10,7 @@ function BouncingLogo(props) {
   return (
     <div>
       <div>
-        <figure onClick={props.displayMask}>
+        <figure>
           <video ref={videoRef} className='sudowoodo' autoPlay loop muted playsInline>
             {!props.isIOS() &&
               <source src={sudowoodo} type="video/webm" />

@@ -5,7 +5,7 @@ function Squares(props) {
   return (
     <div>
       <div>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(squares)}>
           <picture>
             <source srcSet={squares} type="image/webp" />
             <img src={squaresPNG} alt="368 Squares game" />

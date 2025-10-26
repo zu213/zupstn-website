@@ -5,7 +5,7 @@ function LLMCompare(props) {
   return (
     <div>
       <div>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(compare)}>
           <picture>
             <source srcSet={compare} type="image/webp" />
             <img src={comparePNG} alt="llm compare tabs" />

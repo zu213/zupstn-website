@@ -5,7 +5,7 @@ function FruitLips(props) {
   return (
     <div>
       <div>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(fruitLips)}>
           <picture>
             <source srcSet={fruitLips} type="image/webp" />
             <img src={fruitLipsPNG} alt="Fruit lips webpage" />

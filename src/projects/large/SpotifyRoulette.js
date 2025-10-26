@@ -7,6 +7,7 @@ import join from'./media/join.webp';
 function SpotifyRoulette(props) {
   return (
     <div>
+      <header className='page-header'>Spotify Roulette</header>
       <div>
         <a href="https://github.com/zu213/spotify-roulette" className="small-link" target="_blank" rel="noreferrer">Repository</a>
         <br/>

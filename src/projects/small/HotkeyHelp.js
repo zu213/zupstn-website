@@ -5,7 +5,7 @@ function HotkeyHelp(props) {
   return (
     <div>
       <div className='small-figure-container'>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(hotkeyHelp)}>
           <picture>
             <source srcSet={hotkeyHelp} type="image/webp" />
             <img src={hotkeyHelpPNG} alt="hotkey help printout" />

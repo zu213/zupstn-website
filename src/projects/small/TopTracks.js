@@ -7,7 +7,7 @@ function TopTracks(props) {
   return (
     <div>
       <div>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(topTracks)}>
           <picture className='top-tracks-image'>
             <source srcSet={topTracks} type="image/webp" />
             <img src={topTracksPNG} alt="top tracks graphic" />
