@@ -14,8 +14,16 @@
   height: 4vh;
 }
 
+.project-card-title {
+  font-size: large;
+}
+
 .limited-hr {
   width: 80%;
+}
+
+.large-projects-subpage hr {
+  margin-bottom: 15px;
 }
 
 .project-inline-structure {
@@ -60,11 +68,6 @@
   padding-top: 2vw;
 }
 
-.small-project-figure {
-  width: 90%;
-  padding: 5%;
-}
-
 .inline-list {
   padding: 1% 2% 1% 5%;
   display: inline-block;
@@ -79,17 +82,125 @@
   }
 }
 
+.tag-holder {
+  padding: 10px 5px;
+  height: fit-content;
+}
+
+.tag {
+  margin: 3px;
+  padding: 6px 10px;
+  display: inline-block;
+  border-radius: 25px;
+}
+
+.tag.blue {
+  border: 2px solid rgb(41 107 231);
+  color: rgb(41 107 231);
+}
+
+.tag.red {
+  border: 2px solid rgb(252 116 62);
+  color: rgb(252 116 62);
+}
+
+.tag.green {
+  border: 2px solid rgb(0 173 87);
+  color: rgb(0 173 87);
+}
+
+.tag.purple {
+  border: 2px solid rgb(145 73 212);
+  color: rgb(145 73 212);
+}
+
+.tag.yellow {
+  border: 2px solid rgb(238 225 112);
+  color: rgb(238 225 112);
+}
+
+.card-gradient {
+  aspect-ratio: 1;
+  width: 80%;
+  margin: 5% 10%;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-gradient.turquoise {
+  background: linear-gradient(90deg, rgb(42 123 155) 0%, rgb(87 199 133) 50%, rgb(237 221 83) 100%);
+}
+
+.card-gradient.sunset {
+  background: linear-gradient(90deg,rgb(131 58 180) 0%, rgb(253 29 29) 50%, rgb(252 176 69) 100%);
+}
+
+.card-gradient.grey {
+  background: linear-gradient(90deg,rgb(184 182 185) 0%, rgb(92 89 89) 50%, rgb(61 61 60) 100%);
+}
+
+.card-gradient.chrome {
+  background: linear-gradient(90deg,rgb(224 228 14) 0%, rgb(82 189 49) 50%, rgb(240 87 49) 100%);
+}
+
+.card-gradient.green {
+  background: linear-gradient(90deg,rgb(71 209 59) 0%, rgb(72 146 59) 50%, rgb(4 36 6) 100%);
+}
+
+.card-gradient.pink {
+  background: linear-gradient(90deg,rgb(80 19 247) 0%, rgb(177 84 231) 50%, rgb(228 118 182) 100%);
+}
+
+.card-gradient svg {
+  width: 30%;
+  height: 30%;
+}
+
 /* small projects */
 
 .project-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  align-items: stretch;
 }
 
 .project-grid-element {
-  padding: 3% 8%;
+  padding: 8% 3%;
+  margin: 0 5%;
   font-size: small;
+  border-radius: 25px;
+  background-color: rgb(55 50 79 / 20%);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+  transition: all 0.2s ease-in-out;
+}
+
+.small-figure-container {
+  width: 90%;
+  margin: 5%;
+}
+
+.small-figure-container figure {
+  margin: 0;
+  padding: 0;
+}
+
+.large-projects-subpage .project-grid-element:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.large-projects-subpage .project-grid-element a:hover {
+  color: unset;
+  text-shadow: none;
+}
+
+.large-projects-subpage .project-grid-element:active {
+  transform: scale(0.95);
 }
 
 .project-grid .project-title {

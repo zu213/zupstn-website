@@ -13,6 +13,7 @@ root.render(
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+    <link rel="preload" href="SevenSegmentRegular.woff2" as="font" type="font/woff2" crossorigin></link>
     
     <HashRouter>
       <meta name="description" content="Zach Upstone's personal website" />

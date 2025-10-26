@@ -1,124 +1,60 @@
 import './Projects.css';
-import { useState } from 'react';
 
-import ChromeContextControl from './large/ChromeContextControl.js';
-import Dissertation from './large/Dissertation.js';
-import ShortStorey from './large/ShortStorey.js';
-import Snowstorm from './large/Snowstorm.js';
-import SpotifyRoulette from './large/SpotifyRoulette.js';
-import SquarePaint from './large/SquarePaint.js';
-import TrafficSimulator from './large/TrafficSimulator.js';
-import UnicodeChess from './large/UnicodeChess.js';
-import ZachLang from './large/ZachLang.js';
+import ChromeContextControlCard from './large/cards/ChromeContextControlCard.js';
+import DissertationCard from './large/cards/DissertationCard.js';
+import ShortStoreyCard from './large/cards/ShortStoreyCard.js';
+import SnowstormCard from './large/cards/SnowstormCard.js';
+import SpotifyRouletteCard from './large/cards/SpotifyRouletteCard.js';
+import SquarePaintCard from './large/cards/SquarePaintCard.js';
+import TrafficSimulatorCard from './large/cards/TrafficSimulatorCard.js';
+import UnicodeChessCard from './large/cards/UnicodeChessCard.js';
+import ZachLangCard from './large/cards/ZachLangCard.js';
 
 function LargeProjects() {
-
-  var [mask, setMask] = useState(false);
-  var [maskItem, setMaskItem] = useState(null);
-
-  function isIOS() {
-    return /iP(hone|od|ad)/.test(navigator.userAgent);
-  }
-
-  const hideMask =() => {
-    setMask(false);
-    maskItem.classList.remove('overlay-mask');
-    setMaskItem(null);
-  };
-
-  const displayMask = (e) =>{
-    setMask(true);
-    e.target.classList.add('overlay-mask');
-    setMaskItem(e.target);
-  };
 
   return (
     <div className="large-projects-subpage">
       <hr/>
-      {mask && <div className='overlay' onClick={hideMask}></div>}
-      <div>
-        <div className='project-title'>
-            Zach Lang
+      <div className='project-grid'>
+        <div className='project-grid-element'>
+          <ZachLangCard/>
         </div>
-        <hr className='limited-hr'/>
-        <ZachLang displayMask={displayMask}/>
-      </div>
 
-      <hr/>
-      <div>
-        <div className='project-title'>
-            ShortStorey
+        <div className='project-grid-element'>
+          <ShortStoreyCard />
         </div>
-        <hr className='limited-hr'/>
-        <ShortStorey displayMask={displayMask}/>
-      </div>
 
-      <hr/>
-      <div>
-        <div className='project-title'>
-            SquarePaint
+        <div className='project-grid-element'>
+          <SquarePaintCard />
         </div>
-        <hr className='limited-hr'/>
-        <SquarePaint displayMask={displayMask} isIOS={isIOS}/>
-      </div>
 
-      <hr/>
-      <div className={`mask ${mask ? 'opaque': ''}`} onClick={hideMask}></div>
-      <div>
-        <div className='project-title'>
-            Traffic Simulator
+        <div className='project-grid-element'>
+          <TrafficSimulatorCard />
         </div>
-        <hr className='limited-hr'/>
-        <TrafficSimulator displayMask={displayMask} isIOS={isIOS}/>
-      </div>
 
-      <hr/>
-      <div>
-        <div className='project-title'>
-            Chrome Context Control
+        <div className='project-grid-element'>
+          <ChromeContextControlCard />
         </div>
-        <hr className='limited-hr'/>
-        <ChromeContextControl displayMask={displayMask}/>
-      </div>
 
-      <hr/>
-      <div>
-        <div className='project-title'>
-            Snowstorm
+        <div className='project-grid-element'>
+          <SnowstormCard />
         </div>
-        <hr className='limited-hr'/>
-        <Snowstorm displayMask={displayMask} isIOS={isIOS}/>
-      </div>
 
-      <hr/>
-      <div>
-        <div className='project-title'>
-            Spotify Roulette
-        </div>
-        <hr className='limited-hr'/>
-        <SpotifyRoulette displayMask={displayMask} />
-      </div>
 
-      <hr/>
-      <div>
-        <div className='project-title'>
-            Unicode Chess
+        <div className='project-grid-element'>
+          <SpotifyRouletteCard />
         </div>
-        <hr className='limited-hr'/>
-        <UnicodeChess displayMask={displayMask} isIOS={isIOS}/>
-      </div>
 
-      <hr/>
-      <div>
-        <div className='project-title'>
-            My Dissertation
+        <div className='project-grid-element'>
+          <UnicodeChessCard />
         </div>
-        <hr className='limited-hr'/>
-        <Dissertation displayMask={displayMask}/>
-      </div>
-      
+
+        <div className='project-grid-element'>
+          <DissertationCard />
+        </div>
+
+      </div>      
     </div>
-
   );
 }
 

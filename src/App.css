@@ -43,6 +43,24 @@
   font-size: 17px;
 }
 
+.footer {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: rgb(212 212 212);
+}
+
+.footer hr {
+  width: 100%;
+  display: block;
+}
+
+.footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75px;
+}
+
 .subsub-title {
   font-weight: bold;
 }
@@ -106,9 +124,6 @@
   }
 }
 
-.bottom-boundary {
-  min-height: 100px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+.none {
+  display: none;
 }

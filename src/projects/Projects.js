@@ -39,8 +39,6 @@ function Projects() {
         <button className='switch-button' ref={smallProjectsButton} onClick={toSP}>Small</button>
       </div>
       <PageComponent />
-      <div className='bottom-boundary'>
-      </div>
     </div>
   );
 }
