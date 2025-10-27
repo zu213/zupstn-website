@@ -2,6 +2,11 @@
 
 .image-category {
   position: relative;
+  max-width: 1440px;
+}
+
+.image-category hr {
+  width: 84%;
 }
 
 .image-row {
@@ -13,10 +18,11 @@
   text-align: left;
   margin-left: 7%;
   margin-right: 7%;
-  scrollbar-color: rgb(57 55 69) rgb(28 27 35);
-  scrollbar-width: thin;
-  overflow-x: scroll;
-  -ms-overflow-style: scrollbar;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: stretch;
 }
 
 .scoll-pane::-webkit-scrollbar {
@@ -27,30 +33,41 @@
   object-fit: contain;
   width: auto;
   height: 150px;
-  display: inline-block;
-  padding: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: rgb(70 64 96);
+  margin: 15px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  transform-origin: center center;
 }
+
+.image-column:hover {
+  background-color: rgb(55 50 79);
+}
+
 
 .image-column img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  padding: 5px;
 }
 
 .art-subtitle {
   text-align: left;
   margin-left: 7%;
   margin-top: 1%;
-  font-size: 1.1em;
+  font-size: large;
+  padding: 5px;
   text-decoration: none;
 }
 
 .overlay-content {
-  position: fixed;
   width: 25vw;
   height: auto;
-  top: 15%;
-  left: 37.5%;
   overflow: hidden;
   z-index: 100;
   opacity: 1;
@@ -98,8 +115,6 @@
 
   .overlay-content {
     width: 60%;
-    top: 15%;
-    left: 20%;
   }
 }
 
@@ -239,6 +254,17 @@
 
   .art-table-too-short {
     display: block;
+  }
+}
+
+@media only screen and (width <= 1000px) {
+  .image-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+
+  .image-column {
+    height: auto;
   }
 }
 

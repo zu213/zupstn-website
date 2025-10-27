@@ -1,70 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 function GalleryPage ({ images }) {
   const [currentOverlay, setCurrentOverlay] = useState(null);
-  const rowRefs = useRef([]);
-  const scrollInterval = useRef(null);
-
-  useEffect(() => {
-    rowRefs.current.forEach((row, _) => {
-      if (!row) return;
-      const imgs = Array.from(row.querySelectorAll('img'));
-      let loadedCount = 0;
-
-      const onLoad = () => {
-        loadedCount++;
-        if (loadedCount === imgs.length) {
-          checkToHideButtons(row);
-        }
-      };
-
-      imgs.forEach(img => {
-        if (img.complete) {
-          onLoad();
-        } else {
-          img.addEventListener('load', onLoad);
-          img.addEventListener('error', onLoad);
-        }
-      });
-
-      return () => {
-        imgs.forEach(img => {
-          img.removeEventListener('load', onLoad);
-          img.removeEventListener('error', onLoad);
-        });
-      };
-    });
-  }, [images]);
-
-
-  const scrollRowLeft = (e, scrollBy) => {
-    e.stopPropagation();
-    stopScrolling();
-    const rowElement = e.currentTarget.nextSibling;
-    rowElement.scrollLeft -= scrollBy;
-    checkToHideButtons(rowElement);
-    scrollInterval.current = setInterval(() => {
-      rowElement.scrollLeft -= scrollBy;
-      checkToHideButtons(rowElement);
-    }, 75);
-  };
-
-  const scrollRowRight = (e, scrollBy) => {
-    e.stopPropagation();
-    stopScrolling();
-    const rowElement = e.currentTarget.previousSibling;
-    rowElement.scrollLeft += scrollBy;
-    checkToHideButtons(rowElement);
-    scrollInterval.current = setInterval(() => {
-      rowElement.scrollLeft += scrollBy;
-      checkToHideButtons(rowElement);
-    }, 75);
-  };
-
-
-  const stopScrolling = () => {
-    clearInterval(scrollInterval.current);
-  };
 
   // function related to overlaying iamge on gallery view
   function overlayImage(e) {
@@ -87,17 +24,8 @@ function GalleryPage ({ images }) {
           <div className="art-subtitle">
             {rowName}
           </div>
-          <div 
-            className="left-button hidden"
-            onMouseDown={(e) => scrollRowLeft(e, 30)}
-            onMouseUp={stopScrolling}
-            onMouseLeave={stopScrolling}>
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="20" r="19" stroke="#00000000" strokeWidth="2" fill="#ffffffee" />
-              <path d="M24 12l-8 8 8 8" stroke="#606060" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
-          <div className="image-row" ref={el => rowRefs.current[rowIndex] = el}>
+          <hr />
+          <div className="image-row">
             {   
               rowImages.map((image, index) => (
                 <div className="image-column" key={`image-${index}`}>
@@ -106,46 +34,23 @@ function GalleryPage ({ images }) {
               ))
             }
           </div>
-          <div 
-            className="right-button hidden"
-            onMouseDown={(e) => scrollRowRight(e, 30)}
-            onMouseUp={stopScrolling}
-            onMouseLeave={stopScrolling}>
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="20" r="19" stroke="#00000000" strokeWidth="2" fill="#ffffffee" />
-              <path d="M16 12l8 8-8 8" stroke="#606060" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
         </div>
       )
       )}
       <br />
 
       {currentOverlay && (
-        <div>
+        <div className='overlay-container'>
           <div className="overlay" onClick={removeOverlay}>
+            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#c8c8c8ff"/>
+            </svg>
           </div>
           <img src={currentOverlay} alt="overlay" className="overlay-content" />
         </div>
       )}
     </div>
-  );};
-
-const checkToHideButtons = (el) => {
-  if(el.nextSibling){
-    if(el.scrollLeft + el.clientWidth >= el.scrollWidth - 1){
-      el.nextSibling.classList.add('hidden');
-    }else if(el.nextSibling.classList.contains('hidden')){
-      el.nextSibling.classList.remove('hidden');
-    }
-  }
-  if(el.previousSibling){
-    if(el.scrollLeft  < 1) {
-      el.previousSibling.classList.add('hidden');
-    }else if(el.previousSibling.classList.contains('hidden')){
-      el.previousSibling.classList.remove('hidden');
-    }
-  }
+  );
 };
 
 export default GalleryPage;
