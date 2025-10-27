@@ -3,9 +3,9 @@ import fruitLips from './media/fruitlips.webp';
 
 function FruitLips(props) {
   return (
-    <div>
+    <div onClick={() => props.displayMask(fruitLips)}>
       <div>
-        <figure onClick={() => props.displayMask(fruitLips)}>
+        <figure>
           <picture>
             <source srcSet={fruitLips} type="image/webp" />
             <img src={fruitLipsPNG} alt="Fruit lips webpage" />

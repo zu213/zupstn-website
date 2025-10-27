@@ -4,9 +4,9 @@ import peer2peer from './media/peer.webp';
 
 function Peer2Peer(props) {
   return (
-    <div>
+    <div onClick={() => props.displayMask(peer2peer)}>
       <div>
-        <figure onClick={() => props.displayMask(peer2peer)}>
+        <figure>
           <picture>
             <source srcSet={peer2peer} type="image/webp" />
             <img src={peer2peerPNG} alt="Peer in action" />

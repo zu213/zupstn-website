@@ -30,7 +30,7 @@ function SmallProjects() {
   return (
     <div>
       {maskItem && (
-        <div>
+        <div className='overlay-container'>
           <div className="overlay" onClick={hideMask}>
           </div>
           <img src={maskItem} alt="overlay" className="overlay-content" />

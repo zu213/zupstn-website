@@ -3,9 +3,9 @@ import compare from './media/compare.webp';
 
 function LLMCompare(props) {
   return (
-    <div>
+    <div  onClick={() => props.displayMask(compare)}>
       <div>
-        <figure onClick={() => props.displayMask(compare)}>
+        <figure>
           <picture>
             <source srcSet={compare} type="image/webp" />
             <img src={comparePNG} alt="llm compare tabs" />

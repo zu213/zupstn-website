@@ -3,9 +3,9 @@ import tempGlass from './media/tempglass.webp';
 
 function TemperatureGlass(props) {
   return (
-    <div>
+    <div onClick={() => props.displayMask(tempGlass)}>
       <div>
-        <figure onClick={() => props.displayMask(tempGlass)}>
+        <figure>
           <picture>
             <source srcSet={tempGlass} type="image/webp" />
             <img src={tempGlassPNG} alt="Temperature glass overlay" />

@@ -5,9 +5,9 @@ import topTracks from './media/toptracks.webp';
 
 function TopTracks(props) {
   return (
-    <div>
+    <div onClick={() => props.displayMask(topTracks)}>
       <div>
-        <figure onClick={() => props.displayMask(topTracks)}>
+        <figure>
           <picture className='top-tracks-image'>
             <source srcSet={topTracks} type="image/webp" />
             <img src={topTracksPNG} alt="top tracks graphic" />

@@ -3,9 +3,9 @@ import npmcard from './media/npmcard.webp';
 
 function NPMBusiness(props) {
   return (
-    <div>
+    <div onClick={() => props.displayMask(npmcard)}>
       <div>
-        <figure onClick={() => props.displayMask(npmcard)}>
+        <figure>
           <picture>
             <source srcSet={npmcard} type="image/webp" />
             <img src={npmcardPNG} alt="npm business card" />

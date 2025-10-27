@@ -3,9 +3,9 @@ import squares from './media/squares.webp';
 
 function Squares(props) {
   return (
-    <div>
+    <div onClick={() => props.displayMask(squares)}>
       <div>
-        <figure onClick={() => props.displayMask(squares)}>
+        <figure>
           <picture>
             <source srcSet={squares} type="image/webp" />
             <img src={squaresPNG} alt="368 Squares game" />
