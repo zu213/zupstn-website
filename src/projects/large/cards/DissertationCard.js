@@ -18,7 +18,7 @@ function DissertationCard() {
         Human Involvement Can Improve Current Image Synthesis Methods within the Domain of Art.
       </div>
       <div className='tag-holder'>
-        <span className='tag blue'>Python</span><span className='tag red'>AI</span><span className='tag green'>RLHF</span><span className='tag purple'>pytorch</span>
+        <span className='tag blue'>Python</span><span className='tag red'>AI</span><span className='tag green'>RLHF</span><span className='tag purple'>Pytorch</span>
       </div>
     </BreadcrumbLink>
 

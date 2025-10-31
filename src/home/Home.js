@@ -7,7 +7,7 @@ import { BreadcrumbLink } from '../util/Breadcrumbs.js';
 import { defaultRoad } from './default-road.js';
 
 //static consts
-const validRoutes = ['/me', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary'];
+const validRoutes = ['/me', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary', '/zach-lang', '/shortstorey', '/square-paint', '/traffic-simulator', '/chrome-context-control', '/snowstorm', '/spotify-roulette', '/unicode-chess', '/dissertation'];
 const taglineTextOptions = ['- Try "curl https://zupstn.com/hypno.sh | bash"', '- Try "npx zachupstone"'];
 const taglineChoice = Math.floor(Math.random() * taglineTextOptions.length);
 // one in a hundered chance of being tessa
@@ -111,7 +111,7 @@ function Home() {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 to={chosenLink}
-                className='small-link'
+                className='small-link feeling-lucky'
               >I'm feeling lucky</BreadcrumbLink>
             </div>
           </div>

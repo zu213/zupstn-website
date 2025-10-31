@@ -154,6 +154,10 @@
   min-width: 100%;
 }
 
+.feeling-lucky {
+  font-size: large;
+}
+
 .feeling-lucky-inline {
   display: none;
 }

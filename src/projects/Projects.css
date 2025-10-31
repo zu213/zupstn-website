@@ -93,31 +93,38 @@
   padding: 6px 10px;
   display: inline-block;
   border-radius: 25px;
+  filter: brightness(2);
 }
 
 .tag.blue {
-  border: 2px solid rgb(41 107 231);
-  color: rgb(41 107 231);
+  color: #00b0ff;
+  border: 2px solid #00b0ff;
+  box-shadow: 
+    0 0 2px #00b0ff;
 }
 
 .tag.red {
-  border: 2px solid rgb(252 116 62);
-  color: rgb(252 116 62);
+  color: #fd0f17;
+  border: 2px solid #fd0f17;
+  box-shadow: 0 0 2px #fd0f17;
 }
 
 .tag.green {
-  border: 2px solid rgb(0 173 87);
-  color: rgb(0 173 87);
+  color: rgb(0 255 47);
+  border: 2px solid rgb(0 255 47);
+  box-shadow: 0 0 2px rgb(0 255 47);
 }
 
 .tag.purple {
-  border: 2px solid rgb(145 73 212);
-  color: rgb(145 73 212);
+  color: #d900ff;
+  border: 2px solid #d900ff;
+  box-shadow: 0 0 2px #d900ff;
 }
 
 .tag.yellow {
-  border: 2px solid rgb(238 225 112);
-  color: rgb(238 225 112);
+  color: #fff800;
+  border: 2px solid #fff800;
+  box-shadow: 0 0 2px #fff800;
 }
 
 .card-gradient {

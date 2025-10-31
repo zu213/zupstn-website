@@ -98,7 +98,7 @@ export function DropBreadcrumbs() {
         if(!crumb) return '';
 
         const to = crumb === '/' ? '/' : (crumb.startsWith('/') ? crumb : `/${crumb}`);
-        const label = crumb === '/' ? `${idx === 0 ? '' : '/'}Home` : processCrumbString(crumb).slice(1);
+        const label = crumb === '/' ? `${idx === 0 ? '' : '/'}Home` : processCrumbString(crumb);
 
         return (
           <span className='link-coloured' key={key}>
@@ -149,9 +149,8 @@ function processCrumbString(crumb) {
   if (!crumb) return '';
   if(crumb === '/cv') return '/CV';
 
-  return crumb.replace(
-    /([a-zA-Z])/,
-    (match) => match.toUpperCase()
-  );
+  return crumb
+    .replace(/(^|[-/])([a-zA-Z])/g, (match, before, letter) => before + letter.toUpperCase())
+    .slice(1);
 }
 
