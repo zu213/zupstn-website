@@ -13,6 +13,10 @@
   text-decoration: underline;
 }
 
+.link-coloured {
+  color: rgb(254 75 120);
+}
+
 .small-link {
   text-shadow:
     0 0 10px rgb(254 75 120),

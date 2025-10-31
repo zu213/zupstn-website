@@ -89,8 +89,8 @@ export function DropBreadcrumbs() {
 
         if (crumb === '...') {
           return (
-            <span className="small-link" key={key}>
-              /&hellip;
+            <span className="link-coloured" key={key}>
+              &hellip;→
             </span>
           );
         }
@@ -98,10 +98,10 @@ export function DropBreadcrumbs() {
         if(!crumb) return '';
 
         const to = crumb === '/' ? '/' : (crumb.startsWith('/') ? crumb : `/${crumb}`);
-        const label = crumb === '/' ? `${idx === 0 ? '' : '/'}Home` : processCrumbString(crumb);
+        const label = crumb === '/' ? `${idx === 0 ? '' : '/'}Home` : processCrumbString(crumb).slice(1);
 
         return (
-          <span key={key}>
+          <span className='link-coloured' key={key}>
             <Link
               className={`small-link ${crumbsDisabled ? 'disabled' : ''}`}
               to={crumbsDisabled ? '#' : to}
@@ -109,6 +109,7 @@ export function DropBreadcrumbs() {
             >
               {label}
             </Link>
+            {idx < processedCrumbs.length - 1 && '→'}
           </span>
         );
       })}
