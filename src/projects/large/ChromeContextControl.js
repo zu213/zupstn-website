@@ -13,7 +13,7 @@ function ChromeContextControl(props) {
       </div>
 
       <div className='wide-project-inline-structure'>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(dragScreen)}>
           <picture>
             <source srcSet={dragScreen} type="image/webp" />
             <img src={dragScreenPNG} alt="home page" />
@@ -39,7 +39,7 @@ function ChromeContextControl(props) {
       </div>
 
       <div className='wide-project-inline-structure'>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(contextMenu)}>
           <picture>
             <source srcSet={contextMenu} type="image/webp" className='white-border' />
             <img src={contextMenuPNG} alt="new context menu" className='white-border' />

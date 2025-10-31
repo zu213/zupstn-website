@@ -33,8 +33,6 @@ import NotFound from './util/NotFound.js';
 
 // main app
 function App() {
-
-  const [mask, setMask] = useState(false);
   const [maskItem, setMaskItem] = useState(null);
 
   const noFooter = ['/', '/me', '/gallery'];
@@ -54,8 +52,6 @@ function App() {
   ];
 
   const hideMask =() => {
-    setMask(false);
-    maskItem.classList.remove('overlay-mask');
     setMaskItem(null);
   };
 
@@ -64,15 +60,36 @@ function App() {
   }
 
   const displayMask = (e) =>{
-    setMask(true);
-    e.target.classList.add('overlay-mask');
-    setMaskItem(e.target);
+    setMaskItem(e);
+  };
+
+  const maskFormat = () => {
+    if(typeof maskItem !== 'string') {
+      return null;
+    } else if(maskItem.endsWith('.webp') || maskItem.endsWith('.png')) {
+      return 'picture';
+    } else if(maskItem.endsWith('.webm') || maskItem.endsWith('.mp4')) {
+      return 'video';
+    } else {
+      return null;
+    }
   };
 
 
   return(
     <div id="all" className='app'>
-      {mask && <div className='overlay' onClick={hideMask}></div>}
+      {maskItem && (
+        <div className='overlay-container'>
+          <div className="overlay" onClick={hideMask}>
+          </div>
+          { maskFormat()
+            ? maskFormat() === 'picture'
+              ? <img src={maskItem} alt="overlay" className="overlay-content" />
+              : <video className="overlay-content" autoPlay loop muted playsInline><source src={maskItem} type="video/webm" />Your browser does not support the video tag.</video>  
+            : ''
+          }
+        </div>
+      )}
       <BreadcrumbProvider>
         <BackButtonProvider>
           <BackButton />

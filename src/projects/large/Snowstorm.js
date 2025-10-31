@@ -17,7 +17,7 @@ function Snowstorm(props) {
       </div>
 
       <div className='tight-project-inline-structure'>
-        <figure className='aspect-class' onClick={props.displayMask}>
+        <figure className='aspect-class' onClick={() => props.displayMask(c)}>
           <video autoPlay loop muted playsInline>
             {!props.isIOS() &&
               <source src={c} type="video/webm" />
@@ -29,7 +29,7 @@ function Snowstorm(props) {
         </figure>
       </div>
       <div className='tight-project-inline-structure'>
-        <figure className='aspect-class' onClick={props.displayMask}>
+        <figure className='aspect-class' onClick={() => props.displayMask(d)}>
           <video autoPlay loop muted playsInline>
             {!props.isIOS() &&
               <source src={d} type="video/webm" />
@@ -41,7 +41,7 @@ function Snowstorm(props) {
         </figure>
       </div>
       <div className='tight-project-inline-structure'>
-        <figure className='aspect-class' onClick={props.displayMask}>
+        <figure className='aspect-class' onClick={() => props.displayMask(rust)}>
           <video autoPlay loop muted playsInline>
             {!props.isIOS() &&
               <source src={rust} type="video/webm" />
@@ -53,7 +53,7 @@ function Snowstorm(props) {
         </figure>
       </div>
       <div className='tight-project-inline-structure'>
-        <figure className='aspect-class'  onClick={props.displayMask}>
+        <figure className='aspect-class'  onClick={() => props.displayMask(assembly)}>
           <video autoPlay loop muted playsInline>
             {!props.isIOS() &&
               <source src={assembly} type="video/webm" />

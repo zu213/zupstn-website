@@ -31,7 +31,7 @@ function UnicodeChess(props) {
 
       </div>
       <div className='project-inline-structure'>
-        <figure onClick={props.displayMask} className='aspect-class'>
+        <figure onClick={() => props.displayMask(scholarsGif)} className='aspect-class'>
           <video autoPlay loop muted playsInline>
             {!props.isIOS() &&
               <source src={scholarsGif} type="video/webm" />

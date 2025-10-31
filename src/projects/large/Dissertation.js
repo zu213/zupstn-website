@@ -25,7 +25,7 @@ function Dissertation(props) {
         
       <div>
         <div  className="diss-inline-structure">
-          <figure className='aspect-class'onClick={props.displayMask}>
+          <figure className='aspect-class'onClick={() => props.displayMask(dissertationUI)}>
             <picture>
               <source srcSet={dissertationUI} type="image/webp" />
               <img src={dissertationUIPNG} alt="Dissertation UI" />

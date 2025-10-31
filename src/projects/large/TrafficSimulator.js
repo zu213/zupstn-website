@@ -24,7 +24,7 @@ function TrafficSimulator(props) {
         <b>gcc</b>.
       </div>
       <div className='large-project-inline-structure'>
-        <figure onClick={props.displayMask} className='aspect-class no-aspect'>
+        <figure onClick={() => props.displayMask(trafficGif)} className='aspect-class no-aspect'>
           <video autoPlay loop muted playsInline>
             {!props.isIOS() &&
               <source src={trafficGif} type="video/webm" />

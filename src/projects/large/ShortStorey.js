@@ -16,7 +16,7 @@ function ShortStorey(props) {
       <br />
 
       <div className='tight-project-inline-structure laptop'>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(storiesPage)}>
           <picture>
             <source srcSet={storiesPage} type="image/webp" />
             <img src={storiesPagePNG} alt="Stories Page" />
@@ -25,7 +25,7 @@ function ShortStorey(props) {
         </figure>
       </div>
       <div className='tight-project-inline-structure laptop'>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(ratingsPage)}>
           <picture>
             <source srcSet={ratingsPage} type="image/webp" />
             <img src={ratingsPagePNG} alt="Ratings page" />
@@ -34,7 +34,7 @@ function ShortStorey(props) {
         </figure>
       </div>
       <div className='tight-project-inline-structure laptop'>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(profilePage)}>
           <picture>
             <source srcSet={profilePage} type="image/webp" />
             <img src={profilePagePNG} alt="Profile page" />

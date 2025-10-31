@@ -10,7 +10,7 @@
   left: 4%;
   position: absolute;
   display: inline-block;
-  z-index: 999;
+  z-index: 98;
 }
 
 @media only screen and (width <= 520px) {

@@ -14,7 +14,7 @@ function SpotifyRoulette(props) {
       </div>
       <div>
         <div className='tight-project-inline-structure'>
-          <figure onClick={props.displayMask}>
+          <figure onClick={() => props.displayMask(join)}>
             <picture>
               <source srcSet={join} type="image/webp" />
               <img src={joinPNG} alt="joining screen" />
@@ -23,7 +23,7 @@ function SpotifyRoulette(props) {
           </figure>
         </div>
         <div className='tight-project-inline-structure'>
-          <figure onClick={props.displayMask}>
+          <figure onClick={() => props.displayMask(guess2)}>
             <picture>
               <source srcSet={guess2} type="image/webp" />
               <img src={guess2PNG} alt="guessing screen"/>

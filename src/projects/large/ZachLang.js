@@ -38,7 +38,7 @@ function ZachLang(props) {
         </ol>
       </div>
       <div className='medium-project-inline-structure'>
-        <figure onClick={props.displayMask}>
+        <figure onClick={() => props.displayMask(compilerDiagram)}>
           <picture>
             <source srcSet={compilerDiagram} type="image/webp" />
             <img src={compilerDiagramPNG} alt="Zach Lang compiler diagram" />
