@@ -1,5 +1,6 @@
 import './Projects.css';
-import { useState } from 'react';
+
+import { useMask } from '../util/Mask.js';
 
 import BouncingLogo from './small/BouncingLogo.js';
 import FruitLips from './small/FruitLips.js';
@@ -13,29 +14,15 @@ import TopTracks from './small/TopTracks.js';
 
 function SmallProjects() {
 
-  var [maskItem, setMaskItem] = useState(null);
-
-  const hideMask =() => {
-    setMaskItem(null);
-  };
+  const { displayMask, MaskOverlay } = useMask();
 
   function isIOS() {
     return /iP(hone|od|ad)/.test(navigator.userAgent);
   }
 
-  const displayMask = (img) =>{
-    setMaskItem(img);
-  };
-
   return (
     <div>
-      {maskItem && (
-        <div className='overlay-container'>
-          <div className="overlay" onClick={hideMask}>
-          </div>
-          <img src={maskItem} alt="overlay" className="overlay-content" />
-        </div>
-      )}
+      {MaskOverlay()}
       <div className="small-projects-subpage">
         <hr/>
         <div className='project-grid'>

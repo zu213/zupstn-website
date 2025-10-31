@@ -29,11 +29,12 @@ import Projects from './projects/Projects.js';
 import { FruitLips, FruitLips2, Squares, LLMCompare } from './submodules/submodules.js';
 import { BackButton, BackButtonProvider } from './util/BackButtons.js';
 import { BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
+import { useMask } from './util/Mask.js';
 import NotFound from './util/NotFound.js';
 
 // main app
 function App() {
-  const [maskItem, setMaskItem] = useState(null);
+  const { displayMask, MaskOverlay } = useMask();
 
   const noFooter = ['/', '/me', '/gallery'];
 
@@ -51,45 +52,13 @@ function App() {
     {route: 'zach-lang', page: ZachLang}
   ];
 
-  const hideMask =() => {
-    setMaskItem(null);
-  };
-
   function isIOS() {
     return /iP(hone|od|ad)/.test(navigator.userAgent);
   }
 
-  const displayMask = (e) =>{
-    setMaskItem(e);
-  };
-
-  const maskFormat = () => {
-    if(typeof maskItem !== 'string') {
-      return null;
-    } else if(maskItem.endsWith('.webp') || maskItem.endsWith('.png')) {
-      return 'picture';
-    } else if(maskItem.endsWith('.webm') || maskItem.endsWith('.mp4')) {
-      return 'video';
-    } else {
-      return null;
-    }
-  };
-
-
   return(
     <div id="all" className='app'>
-      {maskItem && (
-        <div className='overlay-container'>
-          <div className="overlay" onClick={hideMask}>
-          </div>
-          { maskFormat()
-            ? maskFormat() === 'picture'
-              ? <img src={maskItem} alt="overlay" className="overlay-content" />
-              : <video className="overlay-content" autoPlay loop muted playsInline><source src={maskItem} type="video/webm" />Your browser does not support the video tag.</video>  
-            : ''
-          }
-        </div>
-      )}
+      {MaskOverlay()}
       <BreadcrumbProvider>
         <BackButtonProvider>
           <BackButton />
@@ -100,8 +69,8 @@ function App() {
             <Route exact path='/' element={<Home/>} />
             <Route path='/me' element={<Me/>} />
             <Route path='/cv' element={<CV/>} />
-            <Route path='/projects' element={<Projects/>} />
-            <Route path='/gallery' element={<Art/>} />
+            <Route path='/projects' element={<Projects displayMask={displayMask}/>} />
+            <Route path='/gallery' element={<Art displayMask={displayMask}/>} />
             <Route path='/charts' element={<Charts/>} />
             <Route path='/dissertation-tool' element={<DissertationTool/>} />
             <Route path='/fruit-lips' element={<FruitLips/>} />
