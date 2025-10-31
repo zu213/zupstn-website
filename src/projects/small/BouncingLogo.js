@@ -8,7 +8,7 @@ function BouncingLogo(props) {
   const videoRef = useAutoPauseVideo();
 
   return (
-    <div>
+    <div onClick={() => props.displayMask(sudowoodo)}>
       <div>
         <figure>
           <video ref={videoRef} className='sudowoodo' autoPlay loop muted playsInline>

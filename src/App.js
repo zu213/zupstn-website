@@ -1,11 +1,7 @@
 
 // Normal imports
-import { useState } from 'react';
-
 import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
-
-// Util import
 
 // Page imports
 import Art from './art/Art.js';
