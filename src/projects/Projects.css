@@ -232,20 +232,6 @@
 
 /* general */
 
-.overlay-mask {
-  background-color: black;
-  z-index: 100;
-  position: fixed;
-  height: auto;
-  width: auto;
-  max-height: min(70%, 500px) !important;
-  max-width: min(80%, 800px) !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 1;
-}
-
 .aspect-class {
   aspect-ratio: 7/5;
 }
@@ -330,11 +316,6 @@
     width: 95%;
     padding-left: 2.5%;
     position: relative;
-  }
-
-  .overlay-mask {
-    max-height: min(80%, 300px) !important;
-    max-width: min(80%, 300px) !important;
   }
 
   .indent-mask {
