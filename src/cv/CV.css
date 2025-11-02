@@ -1,29 +1,31 @@
 /* cv page */
 .cv-page {
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   min-height: 40vh;
+  max-width: 50rem;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .cv-page-links {
   height: 4vh;
   padding-bottom: 2vh;
   vertical-align: middle;
+  text-align: center;
+}
+
+.cv {
+  padding: 10px;
+}
+
+.cv-title {
+  text-align: center;
 }
 
 .cv-page-links a img {
   aspect-ratio: 1;
   height: 1.5vh;
   width: 1.5vh;
-}
-
-.pdf-viewer {
-  padding-top: 20px;
-  width: 70%;
-  height: calc(84vh - 20px);
-}
-
-.to-load {
-  display: none;
 }
 
 .download-image {
@@ -34,61 +36,47 @@
   display: none;
 }
 
-.error-message {
-  padding: 10vh;
-}
-
 .safari-cv {
   display: none;
 }
 
-.loader {
-  display: block;
-  left: calc(50% - 24px);
-  top: 10vh;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  position: relative;
-  animation: rotate 1s linear infinite;
+.cv-skills-list {
+  text-align: left;
 }
 
-.loader::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  animation: prix-clip-fix 2s linear infinite;
+.cv-skills-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+.cv-experience-job-title, .cv-experience-job-subtitle, .cv-education-instance-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;            
 }
 
-@keyframes prix-clip-fix {
-  0% {
-    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
-  }
+.cv-experience div hr {
+  margin: 10px;
+}
 
-  25% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
-  }
+.cv-experience-job-title span, .cv-experience-job-subtitle span, .cv-education-instance-title span {
+  padding: 0 10px;
+}
 
-  50% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
-  }
+.cv-education-instance-info {
+  padding: 0 20px;
+}
 
-  75% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-  }
+.cv-experience-job-info {
+  margin: 0;
+}
 
-  100% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
-  }
+.cv-education div hr {
+  margin: 10px;
+}
+
+.cv-projects-info {
+  padding: 0 20px;
 }
 
 @media only screen and (width <= 500px) {
@@ -111,16 +99,7 @@
   }
 }
 
-/* Safari 7.1+ */
-
-_::-webkit-full-page-media,
-_:future,
-:root .safari-cv {
-  display: block;
-}
-
-_::-webkit-full-page-media,
-_:future,
-:root .pdf-viewer {
-  display: none;
+h2 {
+  text-align: left;
+  padding-left: 10px;
 }

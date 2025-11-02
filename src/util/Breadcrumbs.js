@@ -147,7 +147,7 @@ function useBackButton(popHandler) {
 
 function processCrumbString(crumb) {
   if (!crumb) return '';
-  if(crumb === '/cv') return '/CV';
+  if(crumb === '/cv') return 'CV';
 
   return crumb
     .replace(/(^|[-/])([a-zA-Z])/g, (match, before, letter) => before + letter.toUpperCase())
