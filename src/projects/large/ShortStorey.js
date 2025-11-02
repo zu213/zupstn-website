@@ -8,7 +8,7 @@ import storiesPage from './media/storiesPage.webp';
 function ShortStorey(props) {
   return (
     <div>
-      <header className='page-header'>Traffic Simulator</header>
+      <header className='page-header'>Short Storey</header>
       <div>
         <a href="https://github.com/zu213/shortstorey-full" className="small-link" target="_blank" rel="noreferrer">Repository</a>
         <br/>

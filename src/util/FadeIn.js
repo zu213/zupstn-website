@@ -11,7 +11,7 @@ export default function FadeInSection({ children }) {
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.2 } // 20% visible
+      { threshold: 0.3 }
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -23,7 +23,7 @@ export default function FadeInSection({ children }) {
       ref={ref}
       initial={{ opacity: 0, y: 40 }}
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      transition={{ duration: 0.75, ease: 'easeOut' }}
     >
       {children}
     </motion.div>

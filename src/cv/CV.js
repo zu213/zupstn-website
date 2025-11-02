@@ -54,7 +54,7 @@ function CV() {
                 </div>
                 <div className='cv-experience-job-subtitle'>
                   <span>Product Developer</span>
-                  <span>Nov 2024 - Present</span>
+                  <span><i>Nov 2024 - Present</i></span>
                 </div>
                 <ul>
                   <li>Modernised front-end code with <b>Vue</b>, eliminating legacy tech debt between native and web, fixing
@@ -77,7 +77,7 @@ function CV() {
                 </div>
                 <div className='cv-experience-job-subtitle'>
                   <span>Student Software Developer</span>
-                  <span>Jul 2022 - Jun 2023</span>
+                  <span><i>Jul 2022 - Jun 2023</i></span>
                 </div>
                 <ul>
                   <li>Developed new product features using <b>Angular</b>, including an OS updates page and inter-
@@ -106,10 +106,10 @@ function CV() {
               <div className='cv-education-instance'>
                 <div className='cv-education-instance-title'>
                   <span><b>University of Bath</b></span>
-                  <span>2020 - 2024</span>
+                  <span><i>2020 - 2024</i></span>
                 </div>
                 <div className='cv-education-instance-info'>
-                  Computer Science BSc - First Class Honours - Overall grade – 74.51%
+                  <i>Computer Science BSc(Hons) - First Class Honours - Overall grade – 74.51%</i>
                   <ul>
                     <li>Units including: Final year project (Dissertation), Logic and semantics of programming languages,
                       Entrepreneurship, Reinforcement learning, Advanced graphics processing.</li>
@@ -124,14 +124,14 @@ function CV() {
               <div className='cv-education-instance'>
                 <div className='cv-education-instance-title'>
                   <span><b>Chesham Grammar School</b></span>
-                  <span>2013 - 2020</span>
+                  <span><i>2013 - 2020</i></span>
                 </div>
                 <div className='cv-education-instance-info'>
                   <div>
                     <b>A level</b>: Further Mathematics (A), Mathematics (A*), Computer Science (A), Physics (A).
                   </div>
                   <div>
-                    <b>GCSEs</b>: 4 grade 9’s, 2 grade 8’s, 3 grade 6’s, 1 grade 5, 1 grade A
+                    <b>GCSE</b>: 4 grade 9’s, 2 grade 8’s, 3 grade 6’s, 1 grade 5, 1 grade A
                   </div>
                 </div>
               </div>
