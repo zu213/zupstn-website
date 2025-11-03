@@ -14,7 +14,7 @@ export function useMask() {
 
   const maskFormat = () => {
     if (typeof maskItem !== 'string') return null;
-    if (maskItem.endsWith('.webp') || maskItem.endsWith('.png')) return 'picture';
+    if (maskItem.endsWith('.webp') || maskItem.endsWith('.png') || maskItem.endsWith('.jpg')) return 'picture';
     if (maskItem.endsWith('.webm') || maskItem.endsWith('.mp4')) return 'video';
     return null;
   };
