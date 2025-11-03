@@ -83,50 +83,6 @@
   }
 }
 
-.tag-holder {
-  padding: 10px 5px;
-  height: fit-content;
-}
-
-.tag {
-  margin: 3px;
-  padding: 6px 10px;
-  display: inline-block;
-  border-radius: 25px;
-  filter: brightness(2);
-}
-
-.tag.blue {
-  color: #00b0ff;
-  border: 2px solid #00b0ff;
-  box-shadow: 
-    0 0 2px #00b0ff;
-}
-
-.tag.red {
-  color: #fd0f17;
-  border: 2px solid #fd0f17;
-  box-shadow: 0 0 2px #fd0f17;
-}
-
-.tag.green {
-  color: rgb(0 255 47);
-  border: 2px solid rgb(0 255 47);
-  box-shadow: 0 0 2px rgb(0 255 47);
-}
-
-.tag.purple {
-  color: #d900ff;
-  border: 2px solid #d900ff;
-  box-shadow: 0 0 2px #d900ff;
-}
-
-.tag.yellow {
-  color: #fff800;
-  border: 2px solid #fff800;
-  box-shadow: 0 0 2px #fff800;
-}
-
 .card-gradient {
   aspect-ratio: 1;
   width: 80%;

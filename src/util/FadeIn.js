@@ -11,7 +11,7 @@ export default function FadeInSection({ children }) {
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.3 }
+      { threshold: 0.24 }
     );
 
     if (ref.current) observer.observe(ref.current);

@@ -11,6 +11,7 @@ function RelatedLinks() {
           <div className='link'> <a href='https://unknownevent.com' target='_blank' rel='noreferrer'>UnknownEvent.com</a></div>
           <div className='link'> <a href='https://www.angelpunzel.com' target='_blank' rel='noreferrer'>Angelpunzel.com</a></div>
           <div className='link'> <a href='https://s3-eu-north-1.amazonaws.com/zudissertationbucket/Dissertation.pdf' className="small-link" download="Zachary Upstone Dissertation">Dissertation</a></div>
+          <div className='link'> <a href='https://www.etsy.com/uk/shop/SprayDesignsGB' target='_blank' rel='noreferrer'>My Etsy</a></div>
         </div>
         <div className='links-container'>
           <div className="link"> <a href="https://github.com/zu213" target="_blank" rel="noreferrer">Github</a></div>

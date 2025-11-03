@@ -1,6 +1,6 @@
 /* cv page */
 .cv-page {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   min-height: 40vh;
   max-width: 50rem;
   text-align: left;
@@ -9,13 +9,8 @@
 
 .cv-page-links {
   height: 4vh;
-  padding-bottom: 2vh;
   vertical-align: middle;
   text-align: center;
-}
-
-.cv {
-  padding: 10px;
 }
 
 .cv-title {
@@ -49,26 +44,66 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.cv-experience-job-title, .cv-experience-job-subtitle, .cv-education-instance-title {
+.cv .tag-holder {
+  text-align: left;
+  padding: 2px;
+  padding-top: 4px;
+}
+
+.cv ul li {
+  padding: 2px 0;
+}
+
+.cv-experience-job-title, .cv-experience-job-subtitle, .cv-education-instance-title, .cv-education-instance-subtitle {
   display: flex;
   justify-content: space-between;
   align-items: center;            
+}
+
+.cv-experience-job-subtitle, .cv-education-instance-subtitle {
+  font-style: italic;
 }
 
 .cv-experience div hr {
   margin: 10px;
 }
 
+.cv-experience-job ul {
+  margin: 0.5rem;
+}
+
 .cv-experience-job-title span, .cv-experience-job-subtitle span, .cv-education-instance-title span {
-  padding: 0 10px;
+  padding: 2px 10px;
+}
+
+.cv-experience-job-title span:last-of-type,
+.cv-experience-job-subtitle span:last-of-type,
+.cv-education-instance-title span:last-of-type,
+.cv-education-instance-subtitle span:last-of-type {
+  text-align: right;
 }
 
 .cv-education-instance, .cv-experience-job {
   padding-bottom: 1rem;
 }
 
+.cv-education-instance-title {
+  padding: 2px 0;
+}
+
+.cv-education-instance-subtitle {
+  text-align: left;
+  padding: 6px;
+  padding-bottom: 2px;
+}
+
 .cv-education-instance-info {
-  padding: 0 20px;
+  padding: 3px 20px;
+}
+
+.cv-education-instance-info ul {
+  margin: 0.5rem;
+  margin-left: calc(0.5rem - 20px);;
 }
 
 .cv-experience-job-info {
@@ -92,8 +127,13 @@
     display: block;
   }
 
-  .cv-page {
-    padding-top: 10vh;
+  .cv {
+    padding: 0 10px;
+  }
+
+  ul {
+    padding-left: 1rem;
+    margin-left: 0;
   }
 }
 
