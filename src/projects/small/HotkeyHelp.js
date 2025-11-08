@@ -4,7 +4,7 @@ import hotkeyHelp from './media/hotkeyhelp.webp';
 function HotkeyHelp(props) {
   return (
     <div onClick={() => props.displayMask(hotkeyHelp)}>
-      <div className='small-figure-container'>
+      <div>
         <figure>
           <picture>
             <source srcSet={hotkeyHelp} type="image/webp" />

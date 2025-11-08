@@ -1,4 +1,4 @@
-import './Projects.css';
+import './SmallProjects.css';
 
 import { useMask } from '../util/Mask.js';
 

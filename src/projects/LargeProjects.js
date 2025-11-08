@@ -1,4 +1,5 @@
 import './Projects.css';
+import './ProjectCards.css';
 
 import ChromeContextControlCard from './large/cards/ChromeContextControlCard.js';
 import DissertationCard from './large/cards/DissertationCard.js';

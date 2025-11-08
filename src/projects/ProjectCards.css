@@ -1,0 +1,40 @@
+.card-gradient {
+  aspect-ratio: 1;
+  width: 80%;
+  margin: 5% 10%;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-gradient.turquoise {
+  background: linear-gradient(90deg, rgb(42 123 155) 0%, rgb(87 199 133) 50%, rgb(237 221 83) 100%);
+}
+
+.card-gradient.sunset {
+  background: linear-gradient(90deg,rgb(131 58 180) 0%, rgb(253 29 29) 50%, rgb(252 176 69) 100%);
+}
+
+.card-gradient.grey {
+  background: linear-gradient(90deg,rgb(184 182 185) 0%, rgb(92 89 89) 50%, rgb(61 61 60) 100%);
+}
+
+.card-gradient.chrome {
+  background: linear-gradient(90deg,rgb(224 228 14) 0%, rgb(82 189 49) 50%, rgb(240 87 49) 100%);
+}
+
+.card-gradient.green {
+  background: linear-gradient(90deg,rgb(71 209 59) 0%, rgb(72 146 59) 50%, rgb(4 36 6) 100%);
+}
+
+.card-gradient.pink {
+  background: linear-gradient(90deg,rgb(80 19 247) 0%, rgb(177 84 231) 50%, rgb(228 118 182) 100%);
+}
+
+.card-gradient svg {
+  width: 30%;
+  height: 30%;
+}
