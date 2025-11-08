@@ -17,7 +17,7 @@ export function BreadcrumbProvider({ children }) {
   const [crumbsDisabled, setCrumbsDisabled] = useState(false);
 
   useEffect(() => {
-    const path = window.location.hash.split('#')[1]; // or location.hash if using HashRouter
+    const path = window.location.hash.split('#')[1];
     setBreadcrumbsList((prev) => path !== '/' && prev.length < 2  ?  [...prev, path] : prev);
   }, []);
 
@@ -98,7 +98,7 @@ export function DropBreadcrumbs() {
         if(!crumb) return '';
 
         const to = crumb === '/' ? '/' : (crumb.startsWith('/') ? crumb : `/${crumb}`);
-        const label = crumb === '/' ? `${idx === 0 ? '' : '/'}Home` : processCrumbString(crumb);
+        const label = crumb === '/' ? 'Home' : processCrumbString(crumb);
 
         return (
           <span className='link-coloured' key={key}>
