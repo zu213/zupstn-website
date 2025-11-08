@@ -1,5 +1,9 @@
 /* gallery view */
 
+.gallery-page {
+  padding-bottom: 50px;
+}
+
 .image-category {
   position: relative;
   max-width: 1440px;
