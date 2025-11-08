@@ -32,7 +32,7 @@ function SpotifyRoulette(props) {
           </figure>
         </div>
         <div className='project-inline-structure left-align'>
-            I developed a <b>multiplayer game</b> using the  <a href="https://developer.spotify.com/documentation/web-api" className="small-link">Spotify API</a>, where players guess each other’s favorite songs.
+            I developed a <b>multiplayer game</b> using the  <a href="https://developer.spotify.com/documentation/web-api" className="small-link">Spotify API</a> and <b>Websockets</b>, where players guess each other’s favorite songs.
 
           <ul>
             <li>One player creates a table, and others join.</li>
@@ -43,7 +43,7 @@ function SpotifyRoulette(props) {
 
             The game is built with:
           <ul>
-            <li><b>Express.js</b> – Handles the backend, managing active tables with heartbeat signals.</li>
+            <li><b>Express.js</b> – Handles the backend, managing active tables with pings from websockets.</li>
             <li><b>React</b> – Powers the frontend providing a UI for user to interact with.</li>
           </ul>
         </div>

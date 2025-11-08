@@ -9,7 +9,7 @@ function SquarePaintCard() {
   return (
     <BreadcrumbLink to='/square-paint'>
       <div className='project-card-title'>
-        SquarePaintCard
+        Square Paint
       </div>
       <div className='card-gradient pink'>
         <FontAwesomeIcon icon={faSquare} />

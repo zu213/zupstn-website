@@ -12,7 +12,7 @@ function SquarePaint(props) {
         <br/>
       </div>
     
-      <div className='large-project-inline-structure'>
+      <div className='large-project-inline-structure squarepaint'>
         <figure onClick={() => props.displayMask(squarePaintWebm)} className='aspect-class'>
           <video autoPlay loop muted playsInline>
             {!props.isIOS() &&

@@ -292,3 +292,15 @@
 .white-border {
   outline: white solid 1px;
 }
+
+.squarepaint {
+  max-height: 68vh;
+}
+
+.zachlang img{
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, 0);
+  max-height: 68vh;
+  width: auto;
+}

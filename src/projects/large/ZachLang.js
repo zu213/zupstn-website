@@ -24,10 +24,6 @@ function ZachLang(props) {
           <li>Tagged functions declare tags on their parameters. At compile time the compiler checks if the provided variable carries the expected tag.</li>
         </ul>
         <br />
-        Zach Lang’s compiler processes the input <code>.zl</code> file as a string.
-        This keeps the compiler lightweight and easy to extend.
-        This allows me to process the code without the compiler actually understanding it keeping the compiler small.
-        <br />
         <br />
           The process works as follows:
         <ol>
@@ -37,7 +33,7 @@ function ZachLang(props) {
           <li><b>Reconstruction</b> - Once tags are validated and removed, the stripped tokens are rejoined recursively (via <code>recursiveJoin</code>) into valid JavaScript. This can be as simple as joining with newline characters.</li>
         </ol>
       </div>
-      <div className='medium-project-inline-structure'>
+      <div className='medium-project-inline-structure zachlang'>
         <figure onClick={() => props.displayMask(compilerDiagram)}>
           <picture>
             <source srcSet={compilerDiagram} type="image/webp" />

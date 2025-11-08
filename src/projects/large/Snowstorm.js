@@ -68,8 +68,7 @@ function Snowstorm(props) {
       <div className='snow-text'>
           Starting as an exploration of graphics in <b>Assembly</b>, where I experimented with rendering basic visuals
           at a low level. I then expanded this exploration to multiple languages, including some I had never used
-          before. Each required setting up a local environment and finding the most direct way to manipulate 
-          graphics.
+          before.
         <br/>
         <ul className='snowList'>
           <li>
@@ -90,13 +89,7 @@ function Snowstorm(props) {
           </li>
 
           <li>
-            <b>D</b>: Leveraged the <i>dub package system</i> for GDI support without manual linking.
-              Since D doesn’t automate system messages, I implemented a <i>manual timer</i> to trigger updates.
-              It uses <code>CreateWindowExW</code>, similar to C.
-          </li>
-
-          <li>
-              Additionally I have written code Snow code for <b>C++</b> and <b>ada</b>, this can be found in repo 
+              Additionally I have written code Snow code for <b>D</b>, <b>C++</b> and <b>ada</b>, this can be found in repo 
               but I have yet to record gifs for each .exe, both rely on GDI to produce windows.
           </li>
         </ul>
