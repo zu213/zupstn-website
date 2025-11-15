@@ -146,7 +146,7 @@
 .road-animation {
   background: transparent;
   text-align: left;
-  line-height: 1rem;
+  line-height: 0.8rem;
   -webkit-line-clamp: 50;
   line-clamp: 50;
   white-space: pre;
