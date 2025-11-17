@@ -25,6 +25,10 @@ function LLMCompare(props) {
         <br />
         Currently stalled due to all of the API's (except Claude) requiring paid tier for any use.
       </div>
+
+      <div className='tag-holder'>
+        <span className='tag yellow'>Vanilla JS</span><span className='tag purple'>LLM</span>
+      </div>
     </div>
 
   );

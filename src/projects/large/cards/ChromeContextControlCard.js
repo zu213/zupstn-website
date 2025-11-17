@@ -18,7 +18,7 @@ function ChromeContextControlCard() {
         Control Chrome's right-click menu, rearranging existing items and adding custom worker options.
       </div>
       <div className='tag-holder'>
-        <span className='tag purple'>Chrome</span><span className='tag red'>Vanilla JS</span>
+        <span className='tag purple'>Chrome</span><span className='tag yellow'>Vanilla JS</span>
       </div>
     </BreadcrumbLink>
 

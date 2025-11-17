@@ -19,10 +19,14 @@ function NPMBusiness(props) {
     
      
       <div>
-        A npm package that echo's my personal business card.
+        A <b>NPM</b> package that echo's my personal business card.
         <br />
         <br />
         Utilises the <a href="https://github.com/chalk/chalk" className="small-link" target="_blank" rel="noreferrer">Chalk</a> library to make a nice visual in the terminal, inspired by <a href="https://github.com/bnb/bitandbang" className="small-link" target="_blank" rel="noreferrer">bitandbang</a>.
+      </div>
+
+      <div className='tag-holder'>
+        <span className='tag red'>NPM</span><span className='tag purple'>Chalk</span>
       </div>
     </div>
 

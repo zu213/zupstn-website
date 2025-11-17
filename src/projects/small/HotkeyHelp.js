@@ -24,6 +24,10 @@ function HotkeyHelp(props) {
         This can be triggered with the commaned <code>key-help</code> or <code>ctrl + x + h</code> once installed. It retains the input buffer allowing it to be called mid command.
         It can also be installed via <code>npx hotkey-help</code>.
       </div>
+
+      <div className='tag-holder'>
+        <span className='tag green'>Shell</span><span className='tag red'>NPM</span>
+      </div>
     </div>
 
   );

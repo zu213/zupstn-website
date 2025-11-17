@@ -26,6 +26,10 @@ function Squares(props) {
         The premise of the game is to get rid of all 368 squares. Squares are removed by having three or more in a row.
         However, if you are no longer able to place squares in the grid you lose.
       </div>
+
+      <div className='tag-holder'>
+        <span className='tag yellow'>Vanilla JS</span>
+      </div>
     </div>
 
   );

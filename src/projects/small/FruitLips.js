@@ -19,10 +19,13 @@ function FruitLips(props) {
          | <a href="https://zupstn.com/#/fruit-lips2" className="small-link">Website 2</a>
       </div>
     
-     
       <div>
         A small js project to animate speaking. Requires the browser to have <i>SpeechRecognition</i> for the microphone feature to work,
          Chrome has this by default, however, Firefox does not.
+      </div>
+
+      <div className='tag-holder'>
+        <span className='tag yellow'>Vanilla JS</span>
       </div>
     </div>
 

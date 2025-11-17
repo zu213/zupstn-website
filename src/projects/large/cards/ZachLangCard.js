@@ -18,7 +18,7 @@ function ZachLangCard() {
         My own web language which utilises types that are only strict wehn you declare them to be.
       </div>
       <div className='tag-holder'>
-        <span className='tag red'>Vanilla JS</span>
+        <span className='tag green'>Compiler</span><span className='tag yellow'>Vanilla JS</span>
       </div>
     </BreadcrumbLink>
 

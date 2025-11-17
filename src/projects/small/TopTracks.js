@@ -26,6 +26,10 @@ function TopTracks(props) {
         <br />
         This allows me to display them in markdown files easily such as on my Github profile page. It utilises the Spotify API and Vercel.
       </div>
+
+      <div className='tag-holder'>
+        <span className='tag orange'>Vercel</span><span className='tag yellow'>Vanilla JS</span>
+      </div>
     </div>
 
   );

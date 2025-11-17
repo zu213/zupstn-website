@@ -18,7 +18,7 @@ function ShortStoreyCard() {
         A complete Vue CRUD app for sharing and rating short storys.
       </div>
       <div className='tag-holder'>
-        <span className='tag green'>Vue</span><span className='tag yellow'>Fastify</span><span className='tag purple'>Prisma</span>
+        <span className='tag green'>Vue</span><span className='tag blue'>Fastify</span><span className='tag purple'>Prisma</span>
       </div>
     </BreadcrumbLink>
 

@@ -8,6 +8,7 @@ import HotkeyHelp from './small/HotkeyHelp.js';
 import LLMCompare from './small/LLMCompare.js';
 import NPMBusiness from './small/NPMBusiness.js';
 import Peer2Peer from './small/Peer2Peer.js';
+import SongShare from './small/SongShare.js';
 import Squares from './small/Squares.js';
 import TemperatureGlass from './small/TemperatureGlass.js';
 import TopTracks from './small/TopTracks.js';
@@ -26,6 +27,13 @@ function SmallProjects() {
       <div className="small-projects-subpage">
         <hr/>
         <div className='project-grid'>
+          <div className='project-grid-element'>
+            <div className='project-title'>
+              Songshare
+            </div>
+            <SongShare displayMask={displayMask}/>
+          </div>
+
           <div className='project-grid-element'>
             <div className='project-title'>
               Hotkey Help

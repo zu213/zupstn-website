@@ -20,6 +20,10 @@ function TemperatureGlass(props) {
       <div>
         Small C# project that on startup adds an overlay that reports the CPU tempreature live. It fetches this data via <i>OpenHardwareMonitorLib.dll</i>.
       </div>
+
+      <div className='tag-holder'>
+        <span className='tag green'>C#</span>
+      </div>
     </div>
 
   );

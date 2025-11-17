@@ -29,6 +29,10 @@ function BouncingLogo(props) {
       <div>
         Small C# project that displays a bouncing logo when a computer sleeps, much like the old school dvd logo.
       </div>
+
+      <div className='tag-holder'>
+        <span className='tag green'>C#</span>
+      </div>
     </div>
 
   );

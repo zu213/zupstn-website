@@ -25,6 +25,10 @@ function Peer2Peer(props) {
         <br />
         Each user can setup there server and is given a port number. This port can then be accessed by other user's to send them messages bypassing the main server.
       </div>
+
+      <div className='tag-holder'>
+        <span className='tag blue'>Electron</span><span className='tag yellow'>Vanilla JS</span>
+      </div>
     </div>
 
   );
