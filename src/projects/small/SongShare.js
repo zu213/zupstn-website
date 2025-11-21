@@ -14,7 +14,7 @@ function SongShare(props) {
         </figure>
       </div>
       <div className='small-repo-link'>
-        <a href="https://github.com/zu213/square-paint" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;
+        <a href="https://github.com/zu213/song-share" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;
       </div>
     
       <div>
