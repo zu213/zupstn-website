@@ -173,9 +173,9 @@
 }
 
 .tag.green {
-  color: rgb(0 255 47);
-  border: 2px solid rgb(0 255 47);
-  box-shadow: 0 0 2px rgb(0 255 47);
+  color: #00ff2f;
+  border: 2px solid #00ff2f;
+  box-shadow: 0 0 2px #00ff2f;
 }
 
 .tag.purple {
@@ -191,9 +191,9 @@
 }
 
 .tag.orange {
-  color: rgb(255 90 0);
-  border: 2px solid rgb(255 90 0);
-  box-shadow: 0 0 2px rgb(255 90 0);
+  color: rgb(230 80 0);
+  border: 2px solid rgb(230 80 0);
+  box-shadow: 0 0 2px rgb(230 80 0);
 }
 
 @media only screen and (width <= 600px) {
