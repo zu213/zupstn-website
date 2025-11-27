@@ -1,6 +1,8 @@
 import './Projects.css';
 import './ProjectCards.css';
 
+import FadeInSection from '../util/FadeIn';
+ 
 import ChromeContextControlCard from './large/cards/ChromeContextControlCard.js';
 import DissertationCard from './large/cards/DissertationCard.js';
 import ShortStoreyCard from './large/cards/ShortStoreyCard.js';
@@ -11,48 +13,66 @@ import TrafficSimulatorCard from './large/cards/TrafficSimulatorCard.js';
 import UnicodeChessCard from './large/cards/UnicodeChessCard.js';
 import ZachLangCard from './large/cards/ZachLangCard.js';
 
+
 function LargeProjects() {
 
   return (
     <div className="large-projects-subpage">
       <hr/>
       <div className='project-grid'>
-        <div className='project-grid-element'>
-          <ZachLangCard/>
-        </div>
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <ZachLangCard/>
+          </div>
+        </FadeInSection>
 
-        <div className='project-grid-element'>
-          <ShortStoreyCard />
-        </div>
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <ShortStoreyCard />
+          </div>
+        </FadeInSection>
 
-        <div className='project-grid-element'>
-          <SquarePaintCard />
-        </div>
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <SquarePaintCard />
+          </div>
+        </FadeInSection>
 
-        <div className='project-grid-element'>
-          <TrafficSimulatorCard />
-        </div>
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <TrafficSimulatorCard />
+          </div>
+        </FadeInSection>
 
-        <div className='project-grid-element'>
-          <ChromeContextControlCard />
-        </div>
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <ChromeContextControlCard />
+          </div>
+        </FadeInSection>
 
-        <div className='project-grid-element'>
-          <SnowstormCard />
-        </div>
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <SnowstormCard />
+          </div>
+        </FadeInSection>
 
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <SpotifyRouletteCard />
+          </div>
+        </FadeInSection>
 
-        <div className='project-grid-element'>
-          <SpotifyRouletteCard />
-        </div>
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <UnicodeChessCard />
+          </div>
+        </FadeInSection>
 
-        <div className='project-grid-element'>
-          <UnicodeChessCard />
-        </div>
-
-        <div className='project-grid-element'>
-          <DissertationCard />
-        </div>
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <DissertationCard />
+          </div>
+        </FadeInSection>
 
       </div>      
     </div>

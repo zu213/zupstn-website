@@ -1,5 +1,6 @@
 import './SmallProjects.css';
 
+import FadeInSection from '../util/FadeIn';
 import { useMask } from '../util/Mask.js';
 
 import BouncingLogo from './small/BouncingLogo.js';
@@ -27,76 +28,95 @@ function SmallProjects() {
       <div className="small-projects-subpage">
         <hr/>
         <div className='project-grid'>
-          <div className='project-grid-element'>
-            <div className='project-title'>
-              Songshare
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                Songshare
+              </div>
+              <SongShare displayMask={displayMask}/>
             </div>
-            <SongShare displayMask={displayMask}/>
-          </div>
+          </FadeInSection>
 
-          <div className='project-grid-element'>
-            <div className='project-title'>
-              Hotkey Help
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                Hotkey Help
+              </div>
+              <HotkeyHelp displayMask={displayMask}/>
             </div>
-            <HotkeyHelp displayMask={displayMask}/>
-          </div>
+          </FadeInSection>
 
-          <div className='project-grid-element'>
-            <div className='project-title'>
-              LLM Compare
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                LLM Compare
+              </div>
+              <LLMCompare displayMask={displayMask}/>
             </div>
-            <LLMCompare displayMask={displayMask}/>
-          </div>
+          </FadeInSection>
 
-          <div className='project-grid-element'>
-            <div className='project-title'>
-              Top tracks
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                Top tracks
+              </div>
+              <TopTracks displayMask={displayMask}/>
             </div>
-            <TopTracks displayMask={displayMask}/>
-          </div>
+          </FadeInSection>
 
-          <div className='project-grid-element'>
-            <div className='project-title'>
-              NPM business card
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                NPM business card
+              </div>
+              <NPMBusiness displayMask={displayMask}/>
             </div>
-            <NPMBusiness displayMask={displayMask}/>
-          </div>
+          </FadeInSection>
 
-          <div className='project-grid-element'>
-            <div className='project-title'>
-              368 Squares
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                368 Squares
+              </div>
+              <Squares displayMask={displayMask}/>
             </div>
-            <Squares displayMask={displayMask}/>
-          </div>
+          </FadeInSection>
 
-          <div className='project-grid-element'>
-            <div className='project-title'>
-              Bouncing logo
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                Bouncing logo
+              </div>
+              <BouncingLogo displayMask={displayMask} isIOS={isIOS}/>
             </div>
-            <BouncingLogo displayMask={displayMask} isIOS={isIOS}/>
-          </div>
+          </FadeInSection>
 
-
-          <div className='project-grid-element'>
-            <div className='project-title'>
-              Tempreature glass
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                Tempreature glass
+              </div>
+              <TemperatureGlass displayMask={displayMask}/>
             </div>
-            <TemperatureGlass displayMask={displayMask}/>
-          </div>
+          </FadeInSection>
 
-          <div className='project-grid-element'>
-            <div className='project-title'>
-              FruitLips
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                FruitLips
+              </div>
+              <FruitLips displayMask={displayMask}/>
             </div>
-            <FruitLips displayMask={displayMask}/>
-          </div>
+          </FadeInSection>
 
-          <div className='project-grid-element'>
-            <div className='project-title'>
-              Peer 2 Peer messaging
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                Peer 2 Peer messaging
+              </div>
+              <Peer2Peer displayMask={displayMask}/>
             </div>
-            <Peer2Peer displayMask={displayMask}/>
-          </div>
+          </FadeInSection>
 
         </div>      
       </div>
