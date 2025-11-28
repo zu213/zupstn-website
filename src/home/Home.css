@@ -140,7 +140,6 @@
   position: absolute;
   transform: translate(calc(-50% - 1rem), 0);
   overflow: hidden;
-  width: 40rem;
 }
 
 .road-animation {
