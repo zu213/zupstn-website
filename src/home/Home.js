@@ -64,6 +64,10 @@ function Home() {
       frame = (frame + 1) % roadFrames.length;
     }, 200);
 
+    if(roadContainer.current && roadFrames.length > 1) {
+      roadContainer.current.classList.add('pop-in');
+    }
+
     return () => clearInterval(interval);
   }, [roadFrames]);
 

@@ -151,6 +151,22 @@
   white-space: pre;
   text-overflow: clip;
   min-width: 100%;
+  opacity: 0;
+}
+
+.pop-in {
+  animation: appear 2.5s ease both;
+  animation-delay: 0.01s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .feeling-lucky {
