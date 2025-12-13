@@ -131,6 +131,7 @@
 
   &:disabled {
     background-color: rgb(75 68 109);
+    cursor: not-allowed;
   }
 
 }
