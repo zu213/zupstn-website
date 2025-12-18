@@ -7,7 +7,7 @@ export function FruitLips() {
       <iframe 
         title='fruit-lips'
         className='fruitLips'
-        src="./fruit-lips/fruit-lips.html"
+        src="./fruit-lips/src/fruit-lips.html"
         width="100%"
         height="100%"
       />
@@ -17,11 +17,11 @@ export function FruitLips() {
 
 export function FruitLips2() {
   return (
-    <div className='fruit-lips-container'>
+    <div className='fruit-lips2-container'>
       <iframe 
         title='fruit-lips'
         className='fruitLips'
-        src="./fruit-lips/fruit-lips2.html"
+        src="./fruit-lips/src2/fruit-lips2.html"
         width="100%"
         height="100%"
       />
