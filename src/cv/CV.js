@@ -198,7 +198,7 @@ function CV() {
             <h2>Achievements</h2>
             <hr />
             <ul>
-              <li>AWS Certified Cloud practioner</li>
+              <li>AWS Certified Cloud practitioner</li>
               <li>Gold DofE</li>
               <li>Volunteered at WorkAid for 18 months</li>
             </ul>
