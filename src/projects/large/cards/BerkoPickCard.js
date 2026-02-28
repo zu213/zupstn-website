@@ -9,7 +9,7 @@ function BerkoPickCard() {
   return (
     <BreadcrumbLink to='/berko-pick'>
       <div className='project-card-title'>
-        Zach Lang
+        Berko Litter Pick
       </div>
       <div className='card-gradient grey'>
         <FontAwesomeIcon icon={faTrash} />
