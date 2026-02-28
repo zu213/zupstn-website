@@ -45,7 +45,7 @@
 
 .search-links-left, .search-links-right {
   display: inline-block;
-  font-size: 2.5vw;
+  font-size: 2.25vw;
   position: absolute;
 }
 
@@ -81,6 +81,7 @@
 .big-ascii-art {
   font-size: 3px;
   white-space: pre-line;
+  display: none;
 }
 
 .tag-line {
@@ -174,6 +175,10 @@
 }
 
 .feeling-lucky-inline {
+  display: block;
+}
+
+.art-holder {
   display: none;
 }
 

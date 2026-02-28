@@ -93,9 +93,9 @@
 
 .project-grid-element {
   padding: 8% 3%;
-  margin: 0 5%;
+  margin: 15px 6%;
   font-size: small;
-  height: 86%;
+  height: 80%;
   display: flex;        /* or block if you prefer */
   flex-direction: column;
   border-radius: 25px;

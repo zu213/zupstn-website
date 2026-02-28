@@ -11,6 +11,7 @@ import Glossary from './glossary/Glossary.js';
 import RelatedLinks from './glossary/RelatedLinks.js';
 import Home from './home/Home.js';
 import Me from './myself/Myself.js';
+import BerkoPick from './projects/large/BerkoPick.js';
 import ChromeContextControl from './projects/large/ChromeContextControl.js';
 import Dissertation from './projects/large/Dissertation.js';
 import DissertationTool from './projects/large/DissertationTool.js';
@@ -45,7 +46,8 @@ function App() {
     {route: 'traffic-simulator', page: TrafficSimulator},
     {route: 'square-paint', page: SquarePaint},
     {route: 'shortstorey', page: ShortStorey},
-    {route: 'zach-lang', page: ZachLang}
+    {route: 'zach-lang', page: ZachLang},
+    {route: 'berko-pick', page: BerkoPick},
   ];
 
   function isIOS() {
