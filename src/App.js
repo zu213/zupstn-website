@@ -22,6 +22,7 @@ import SpotifyRoulette from './projects/large/SpotifyRoulette.js';
 import SquarePaint from './projects/large/SquarePaint.js';
 import TrafficSimulator from './projects/large/TrafficSimulator.js';
 import UnicodeChess from './projects/large/UnicodeChess.js';
+import WalkAnywhere from './projects/large/WalkAnywhere.js';
 import ZachLang from './projects/large/ZachLang.js';
 import Projects from './projects/Projects.js';
 import { FruitLips, FruitLips2, Squares, LLMCompare } from './submodules/submodules.js';
@@ -51,6 +52,7 @@ function App() {
     {route: 'shortstorey', page: ShortStorey},
     {route: 'zach-lang', page: ZachLang},
     {route: 'berko-pick', page: BerkoPick},
+    {route: 'walkanywhere', page: WalkAnywhere},
   ];
 
   function isIOS() {

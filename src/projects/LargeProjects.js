@@ -4,6 +4,7 @@ import './ProjectCards.css';
 import FadeInSection from '../util/FadeIn';
  
 import BerkoPickCard from './large/cards/BerkoPickCard.js';
+import WalkAnywhereCard from './large/cards/WalkAnywhereCard.js';
 import ChromeContextControlCard from './large/cards/ChromeContextControlCard.js';
 import DissertationCard from './large/cards/DissertationCard.js';
 import ShortStoreyCard from './large/cards/ShortStoreyCard.js';
@@ -21,6 +22,12 @@ function LargeProjects() {
     <div className="large-projects-subpage">
       <hr/>
       <div className='project-grid'>
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <WalkAnywhereCard/>
+          </div>
+        </FadeInSection>
+
         <FadeInSection>
           <div className='project-grid-element'>
             <BerkoPickCard/>

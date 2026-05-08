@@ -10,6 +10,8 @@ import LLMCompare from './small/LLMCompare.js';
 import NPMBusiness from './small/NPMBusiness.js';
 import Peer2Peer from './small/Peer2Peer.js';
 import SongShare from './small/SongShare.js';
+import SRank from './small/SRank.js';
+import SwipeDelete from './small/SwipeDelete.js';
 import Squares from './small/Squares.js';
 import TemperatureGlass from './small/TemperatureGlass.js';
 import TopTracks from './small/TopTracks.js';
@@ -28,6 +30,24 @@ function SmallProjects() {
       <div className="small-projects-subpage">
         <hr/>
         <div className='project-grid'>
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                S Rank
+              </div>
+              <SRank displayMask={displayMask}/>
+            </div>
+          </FadeInSection>
+
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                Swipe Delete
+              </div>
+              <SwipeDelete displayMask={displayMask}/>
+            </div>
+          </FadeInSection>
+
           <FadeInSection>
             <div className='project-grid-element'>
               <div className='project-title'>

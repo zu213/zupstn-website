@@ -34,6 +34,13 @@
   vertical-align: top;
 }
 
+.quarter-inline-structure {
+  display: inline-block;
+  width: 18%;
+  padding: 0.2vw;
+  vertical-align: top;
+}
+
 .large-project-inline-structure {
   width: 54%;
   display: inline-block;

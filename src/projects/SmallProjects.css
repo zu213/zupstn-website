@@ -3,6 +3,19 @@
   margin-bottom: 7px;
 }
 
+.small-phone-img img {
+  width: 60%;
+  height: auto;
+}
+
+.small-phone-img.large img {
+  width: 70%;
+}
+
+.small-phone-img.small img {
+  width: 52%;
+}
+
 .sudowoodo {
   height: 100%;
   width: 100%;
