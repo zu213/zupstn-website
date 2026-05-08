@@ -1,6 +1,7 @@
 
 // Normal imports
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 
 // Page imports
@@ -33,9 +34,11 @@ import NotFound from './util/NotFound.js';
 function App() {
   const { displayMask, MaskOverlay } = useMask();
 
-  const noFooter = ['/', '/me', '/gallery'];
+  const noFooter = ['/', '/me'];
+  const [galleryTableView, setGalleryTableView] = useState(false);
 
   const location = useLocation();
+  const hideFooter = noFooter.includes(location.pathname) || (location.pathname === '/gallery' && galleryTableView);
 
   const largeProjects = [
     {route: 'dissertation', page: Dissertation},
@@ -68,7 +71,7 @@ function App() {
             <Route path='/me' element={<Me/>} />
             <Route path='/cv' element={<CV/>} />
             <Route path='/projects' element={<Projects displayMask={displayMask}/>} />
-            <Route path='/gallery' element={<Art displayMask={displayMask}/>} />
+            <Route path='/gallery' element={<Art displayMask={displayMask} onViewChange={setGalleryTableView}/>} />
             <Route path='/charts' element={<Charts/>} />
             <Route path='/dissertation-tool' element={<DissertationTool/>} />
             <Route path='/fruit-lips' element={<FruitLips/>} />
@@ -84,10 +87,17 @@ function App() {
           </Routes>
         </BackButtonProvider>
       </BreadcrumbProvider>
-      <div className={`none footer ${noFooter.includes(location.pathname) ? 'none' : ''}`}>
+      <div className={`footer ${hideFooter ? 'none' : ''}`}>
         <hr />
-        <div>
-          2025 Zachary Upstone. All rights reserved.
+        <nav className='footer-nav'>
+          <Link to='/me'>About</Link>
+          <Link to='/projects'>Projects</Link>
+          <Link to='/gallery'>Gallery</Link>
+          <Link to='/cv'>CV</Link>
+          <Link to='/glossary'>Glossary</Link>
+        </nav>
+        <div className='footer-copy'>
+          2026 Zachary Upstone.
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ const imagesInit = importAll(
 );
 
 // main page
-function Art() {
+function Art({ _, onViewChange }) {
   var [images, setImages] = useState(imagesInit);
   var [artPage, setPage] = useState(<GalleryPage images={images} />);
   const galleryButton = useRef(null);
@@ -42,7 +42,8 @@ function Art() {
     setPage(<GalleryPage images={images} />);
     disableGalleryButton(true);
     tableButton.current.disabled = false;
-    tableButton.current.style.removeProperty('background');  
+    tableButton.current.style.removeProperty('background');
+    onViewChange(false);
   };
 
   const disableGalleryButton = (disabled) => {
@@ -59,6 +60,7 @@ function Art() {
     disableGalleryButton(false);
     tableButton.current.disabled = true;
     tableButton.current.style.background = 'rgb(55 50 79);';
+    onViewChange(true);
   };
 
   return (
