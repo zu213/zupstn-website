@@ -1,5 +1,5 @@
 html, body, #root, .root {
-  height: 100vh;
+  min-height: 100dvh;
   margin: 0;
   overflow: hidden auto;
   scrollbar-gutter: stable;
@@ -21,7 +21,7 @@ body {
   background-color: rgb(37 35 47);
   color: white;
   text-align: center;
-  font-size: 14.5px;
+  font-size: 15px;
   background-image: repeating-linear-gradient(
     to bottom,
     rgb(255 255 255 / 3%) 1px,
@@ -110,7 +110,7 @@ button:hover {
 
 button:active {
   transform: scale(0.98);
-  box-shadow: 0 0 10px rgb(255 0 204 / 50%);
+  box-shadow: 0 0 10px rgb(254 75 120 / 50%);
 }
 
 @media only screen and (width <= 420px) {

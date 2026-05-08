@@ -45,4 +45,8 @@
 
 .subsub-title {
   text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: rgb(200 190 220);
+  margin: 0.5rem 0;
 }

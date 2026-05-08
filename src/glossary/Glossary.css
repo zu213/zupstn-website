@@ -1,7 +1,8 @@
 /* link page */
 
 .link-title {
-  font-size: x-large;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
 }
 
 .links-list-container {
@@ -13,7 +14,7 @@
 .links-container {
   display: inline-block;
   text-align: left;
-  font-size: larger;
+  font-size: 1.1rem;
 }
 
 .link {

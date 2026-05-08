@@ -8,15 +8,15 @@
 /* Large project */
 
 .project-title {
-  font-size: large;
+  font-size: 1rem;
   text-align: left;
   padding: 1% 0 1% 10%;
-  text-decoration: underline;
   height: 4vh;
 }
 
 .project-card-title {
-  font-size: large;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
 }
 
 .limited-hr {
@@ -96,17 +96,20 @@
   margin: 15px 6%;
   font-size: small;
   height: 80%;
-  display: flex;        /* or block if you prefer */
+  display: flex;
   flex-direction: column;
-  border-radius: 25px;
-  background-color: rgb(55 50 79 / 20%);
-  box-shadow: 0 10px 20px rgb(0 0 0 / 50%);
+  border-radius: 10px;
+  background-color: rgb(55 50 79 / 25%);
+  border: 1px solid rgb(100 90 140 / 20%);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 35%);
   transition: all 0.2s ease-in-out;
 }
 
 .large-projects-subpage .project-grid-element:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
   z-index: 1;
+  border-color: rgb(100 90 140 / 45%);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 45%);
 }
 
 .large-projects-subpage .project-grid-element a:hover {
@@ -115,7 +118,7 @@
 }
 
 .large-projects-subpage .project-grid-element:active {
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 
 .project-grid .project-title {

@@ -98,12 +98,13 @@
 .speech-bubble {
   position: relative;
   left: 20%;
-  background: #c0baba;
+  background: rgb(55 50 79);
+  border: 1px solid rgb(100 90 140 / 50%);
   border-radius: 0.5em;
   padding: 15px 30px;
   max-width: 250px;
   font-size: 1vw;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 30%);
   margin: 20px;
 
   .upright {
@@ -127,7 +128,7 @@
   width: 0;
   height: 0;
   border: 20px solid transparent;
-  border-top-color: #a49d9d;
+  border-top-color: rgb(55 50 79);
   border-bottom: 0;
   border-left: 0;
   margin-left: -10px;

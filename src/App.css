@@ -44,7 +44,8 @@
 }
 
 .sub-title {
-  font-size: 17px;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
 }
 
 .footer {
@@ -66,8 +67,9 @@
 }
 
 .page-header {
-  height: 8vh;
-  font-size: x-large;
+  padding: 1.5vh 0 1vh;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
 }
 
 .disabled {
@@ -119,7 +121,7 @@
 .switch-button {
   margin: 5px;
   width: fit-content;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.2s ease;
   box-shadow: none;
   padding: 9px 18px;
   color: white;
@@ -127,11 +129,16 @@
 
   &:hover {
     box-shadow: none;
+    transform: none;
+    background-color: rgb(65 60 92);
   }
 
   &:disabled {
-    background-color: rgb(75 68 109);
-    cursor: not-allowed;
+    background-color: rgb(80 73 118);
+    color: rgb(254 75 120);
+    cursor: default;
+    transform: none;
+    box-shadow: inset 0 0 0 1px rgb(254 75 120 / 30%);
   }
 
 }
@@ -154,47 +161,49 @@
 
 .tag {
   margin: 3px;
-  padding: 6px 10px;
+  padding: 5px 9px;
   display: inline-block;
-  border-radius: 25px;
-  filter: brightness(2);
+  border-radius: 4px;
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  opacity: 0.88;
 }
 
 .tag.blue {
-  color: #00b0ff;
-  border: 2px solid #00b0ff;
-  box-shadow: 
-    0 0 2px #00b0ff;
+  color: rgb(130 190 255);
+  border: 1px solid rgb(100 160 230 / 60%);
+  background: rgb(100 160 230 / 10%);
 }
 
 .tag.red {
-  color: #fd0f17;
-  border: 2px solid #fd0f17;
-  box-shadow: 0 0 2px #fd0f17;
+  color: rgb(255 130 130);
+  border: 1px solid rgb(230 100 100 / 60%);
+  background: rgb(230 100 100 / 10%);
 }
 
 .tag.green {
-  color: #00ff2f;
-  border: 2px solid #00ff2f;
-  box-shadow: 0 0 2px #00ff2f;
+  color: rgb(100 210 140);
+  border: 1px solid rgb(70 190 110 / 60%);
+  background: rgb(70 190 110 / 10%);
 }
 
 .tag.purple {
-  color: #d900ff;
-  border: 2px solid #d900ff;
-  box-shadow: 0 0 2px #d900ff;
+  color: rgb(210 150 255);
+  border: 1px solid rgb(190 120 240 / 60%);
+  background: rgb(190 120 240 / 10%);
 }
 
 .tag.yellow {
-  color: #fff800;
-  border: 2px solid #fff800;
-  box-shadow: 0 0 2px #fff800;
+  color: rgb(240 210 100);
+  border: 1px solid rgb(220 190 80 / 60%);
+  background: rgb(220 190 80 / 10%);
 }
 
 .tag.orange {
-  color: rgb(230 80 0);
-  border: 2px solid rgb(230 80 0);
-  box-shadow: 0 0 2px rgb(230 80 0);
+  color: rgb(255 170 90);
+  border: 1px solid rgb(230 140 60 / 60%);
+  background: rgb(230 140 60 / 10%);
 }
 
 @media only screen and (width <= 600px) {
