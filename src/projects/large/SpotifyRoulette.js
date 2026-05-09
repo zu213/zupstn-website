@@ -19,7 +19,7 @@ function SpotifyRoulette(props) {
               <source srcSet={join} type="image/webp" />
               <img src={joinPNG} alt="joining screen" />
             </picture>
-            <figcaption>Figure: Joining a game fo Spotify Roulette</figcaption>
+            <figcaption>Figure: Joining a game of Spotify Roulette</figcaption>
           </figure>
         </div>
         <div className='tight-project-inline-structure'>
@@ -32,19 +32,26 @@ function SpotifyRoulette(props) {
           </figure>
         </div>
         <div className='project-inline-structure left-align'>
-            I developed a <b>multiplayer game</b> using the  <a href="https://developer.spotify.com/documentation/web-api" className="small-link">Spotify API</a> and <b>Websockets</b>, where players guess each other’s favorite songs.
+          A <b>multiplayer party game</b> built with the <a href="https://developer.spotify.com/documentation/web-api" className="small-link">Spotify API</a> and <b>WebSockets</b>,
+          where players try to guess whose song is whose from each other’s Spotify top tracks.
 
+          <br /><br />
+
+          <b>How it works:</b>
           <ul>
-            <li>One player creates a table, and others join.</li>
-            <li>The game fetches each player’s top 50 songs from Spotify.</li>
-            <li>A song is chosen at random, and players must guess who it belongs to before time runs out.</li>
-            <li>As the song plays in the background, hints (like artist, release year, or album cover) are gradually revealed.</li>
+            <li>One player creates a game and shares the table code with others, who join from their own devices.</li>
+            <li>Once everyone has joined, the host starts the game — a random player is selected and one of their top Spotify tracks is distributed to all players.</li>
+            <li>The song plays while details (artist, release year, album cover) are <b>gradually revealed</b> as hints.</li>
+            <li>Players race to guess who the song belongs to — the earlier the correct guess, the higher the score.</li>
+            <li>After the countdown, the correct answer is revealed and the next round begins.</li>
           </ul>
 
-            The game is built with:
+          <b>Tech stack:</b>
           <ul>
-            <li><b>Express.js</b> – Handles the backend, managing active tables with pings from websockets.</li>
-            <li><b>React</b> – Powers the frontend providing a UI for user to interact with.</li>
+            <li><b>Express.js</b> – Backend server managing active game tables and WebSocket connections.</li>
+            <li><b>WebSockets</b> – Real-time communication between all players for song distribution and guess synchronisation.</li>
+            <li><b>React</b> – Frontend UI handling Spotify OAuth login, game lobbies, and the guessing interface.</li>
+            <li><b>Spotify API</b> – Fetches each player’s top tracks and streams audio during gameplay.</li>
           </ul>
         </div>
       </div>
