@@ -1,6 +1,6 @@
 
 // Normal imports
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 
@@ -40,6 +40,11 @@ function App() {
 
   const location = useLocation();
   const hideFooter = noFooter.includes(location.pathname) || (location.pathname === '/gallery' && galleryTableView);
+
+  useEffect(() => {
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [location.key]);
 
   const largeProjects = [
     {route: 'dissertation', page: Dissertation},

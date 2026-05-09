@@ -149,7 +149,7 @@ function DissertationTool() {
   }
 
   return (
-    <div>
+    <div className='project-page'>
       <div className='diss-container'>
         <div className="page-header">
           Dissertation tool <br />  

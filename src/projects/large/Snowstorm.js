@@ -9,7 +9,7 @@ import rust from './media/rust.webm';
 
 function Snowstorm(props) {
   return (
-    <div>
+    <div className='project-page'>
       <header className='page-header'>Snowstorm</header>
       <div>
         <a href="https://github.com/zu213/snowstorm" className="small-link" target="_blank" rel="noreferrer">Repository</a>

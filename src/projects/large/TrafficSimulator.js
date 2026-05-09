@@ -3,7 +3,7 @@ import trafficGif from './media/traffic.webm';
 function TrafficSimulator(props) {
 
   return (
-    <div>
+    <div className='project-page'>
       <header className='page-header'>Traffic Simulator</header>
       <div>
         <a href="https://github.com/zu213/traffic-sim" className="small-link" target="_blank" rel="noreferrer">Repo</a> |&nbsp;

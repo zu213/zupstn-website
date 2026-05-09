@@ -54,7 +54,7 @@ function CV() {
                 </div>
                 <div className='cv-experience-job-subtitle'>
                   <span>Product Developer</span>
-                  <span className='date'>Nov 2024 - Present</span>
+                  <span className='date'>Oct 2024 - Present</span>
                 </div>
                 <div className='tag-holder'>
                   <span className='tag green'>Vue</span>

@@ -4,7 +4,7 @@ import squarePaintWebm from './media/square-paint-tree.webm';
 
 function SquarePaint(props) {
   return (
-    <div>
+    <div className='project-page'>
       <header className='page-header'>Square Paint</header>
       <div>
         <a href="https://github.com/zu213/square-paint" className="small-link" target="_blank" rel="noreferrer">Repo</a> |&nbsp;

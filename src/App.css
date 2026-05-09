@@ -250,6 +250,10 @@
   }
 }
 
+.project-page {
+  min-height: 100vh;
+}
+
 .none {
   display: none;
 }

@@ -6,7 +6,7 @@ import litterPickPickedPNG from './media/litterpickmarkpicked.webp';
 function BerkoPick(props) {
 
   return (
-    <div>
+    <div className='project-page'>
       <header className='page-header'>Berko Litter Pick</header>
       <div>
         <a href="https://github.com/zu213/litter-pick" className="small-link" target="_blank" rel="noreferrer">Repository</a>

@@ -3,7 +3,7 @@ import scholarsGif from './media/scholars.webm';
 function UnicodeChess(props) {
 
   return (
-    <div>
+    <div className='project-page'>
       <header className='page-header'>Unicode Chess</header>
       <div>
         <a href="https://github.com/zu213/unicode-chess" className="small-link" target="_blank" rel="noreferrer">Repo</a> |&nbsp;

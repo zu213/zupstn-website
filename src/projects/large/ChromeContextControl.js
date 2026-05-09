@@ -6,7 +6,7 @@ import dragScreen from './media/ccc_dragscreen.webp';
 function ChromeContextControl(props) {
 
   return (
-    <div>
+    <div className='project-page'>
       <header className='page-header'>Chrome Context Control</header>
       <div>
         <a href="https://github.com/zu213/chrome-context-control" className="small-link" target="_blank" rel="noreferrer">Repository</a>

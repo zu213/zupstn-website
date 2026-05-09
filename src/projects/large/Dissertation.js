@@ -9,7 +9,7 @@ const dissertation = 'https://s3-eu-north-1.amazonaws.com/zudissertationbucket/D
 
 function Dissertation(props) {
   return (
-    <div>
+    <div className='project-page'>
       <header className='page-header'>Dissertation</header>
       <div className="disssub-title" >
           Human Involvement Can Improve Current Image Synthesis Methods within the Domain of Art

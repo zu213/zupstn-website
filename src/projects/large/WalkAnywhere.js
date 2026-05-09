@@ -7,7 +7,7 @@ import steps from './media/walkanywhere_steps.png';
 function WalkAnywhere(props) {
 
   return (
-    <div>
+    <div className='project-page'>
       <header className='page-header'>WalkAnywhere</header>
       <div>
         <a href="https://github.com/zu213/walkanywhere" className="small-link" target="_blank" rel="noreferrer">Repository</a>
