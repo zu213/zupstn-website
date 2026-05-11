@@ -10,3 +10,5 @@
 *.pth
 *.map
 __target__/*
+
+/scripts/add-project.mjs

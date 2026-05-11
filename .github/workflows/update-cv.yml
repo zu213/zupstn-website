@@ -1,0 +1,43 @@
+name: Update CV page from PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/documents/CV_short.pdf'
+
+jobs:
+  update-cv:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pdftotext
+        run: sudo apt-get install -y poppler-utils
+
+      - name: Run CV update script
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: node scripts/update-cv.mjs
+
+      - name: Commit updated CV.js
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/cv/CV.js
+          if git diff --cached --quiet; then
+            echo "No changes to CV.js — PDF content matches existing page."
+          else
+            git commit -m "chore: sync CV.js with updated CV_short.pdf"
+            git push
+          fi

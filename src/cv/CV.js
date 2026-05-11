@@ -17,23 +17,24 @@ function CV() {
         <h1 className='cv-title'>
           Zachary Upstone
         </h1>
+        <h2>Email | GitHub | LinkedIn | Website</h2>
 
         <FadeInSection>
           <hr />
           <div className='cv-skills'>
-            <h2>Skills</h2>
+            <h2>SKILLS</h2>
             <hr />
 
             <div className='cv-skills-lists'>
               <ul className='cv-skills-list'>
+                <li><b>Native</b>: Swift, SwiftUI, Objective-C, Java, Kotlin</li>
                 <li><b>Frontend</b>: Vue, Angular, React, TypeScript</li>
-                <li><b>Backend</b>: REST API’s, PHP, Express, Fastify</li>
-                <li><b>Other languages</b>: Python, C++, C, C#</li>
+                <li><b>Backend</b>: REST API’s, PHP, Express</li>
               </ul>
               <ul className='cv-skills-list'>
-                <li><b>Native</b>: Swift, SwiftUI, Objective-C, Java, Kotlin</li>
                 <li><b>Testing</b>: Pest, Gherkin, Selenium</li>
-                <li><b>Tools</b>: Docker, Git, Jira, Bitbucket, CI/CD, AWS</li>
+                <li><b>Other languages</b>: Python, C++, C, C#</li>
+                <li><b>Tools</b>: Docker, Git, Jira, Bitbucket, CI/CD</li>
               </ul>
             </div>
           </div>
@@ -43,7 +44,7 @@ function CV() {
           <hr />
           <div className='cv-experience'>
             <h2>
-              Experience
+              EXPERIENCE
             </h2>
             <hr />
             <FadeInSection>
@@ -63,10 +64,9 @@ function CV() {
                   <span className='tag orange'>Objective-C</span>
                   <span className='tag blue'>Kotlin</span>
                   <span className='tag blue'>Java</span>
-                  <span className='tag purple'>PHP</span>
                 </div>
                 <ul>
-                  <li>Modernised front-end code, eliminating legacy tech debt between native and web, fixing
+                  <li>Modernised front-end code with Vue, eliminating legacy tech debt between native and web, fixing
                     bugs, improving maintainability, and collaborating with designers to refine UI/UX.
                   </li>
                   <li>Enhanced native applications by integrating new SDKs and leading feature development from concept
@@ -89,16 +89,15 @@ function CV() {
                   <span className='date'>Jul 2022 - Jun 2023</span>
                 </div>
                 <div className='tag-holder'>
-                  <span className='tag red'>Angular</span>
                   <span className='tag yellow'>Selenium</span>
                   <span className='tag green'>Gherkin</span>
                 </div>
                 <ul>
-                  <li>Developed new product features from ideation to deployment, including an OS updates page and interactive product tour,
-                   while debugging and supporting QA sprints in an Agile environment.
+                  <li>Developed new product features using version control (Git), including an OS updates page and interactive product tour,
+                    while debugging and supporting QA sprints in an Agile environment.
                   </li>
-                  <li>Contributed to the QA team by writing automated unit, API, and UI tests,
-                    reducing manual testing effort while automating test upload via Zephyr.
+                  <li>Contributed to the QA team by writing automated unit, API, and UI tests with Gherkin and Selenium,
+                    reducing manual testing effort while automating test upload via Zephyr with Python.
                   </li>
                   <li>Performed manual testing and coordinated QA sprint tasks, collaborating across teams to meet release
                     deadlines and maintain quality standards.
@@ -188,17 +187,15 @@ function CV() {
               </div>
             </FadeInSection>
           </div>
-
-
         </FadeInSection>
 
         <FadeInSection>
           <hr />
           <div className='cv-achievements'>
-            <h2>Achievements</h2>
+            <h2>ACHIEVEMENTS</h2>
             <hr />
             <ul>
-              <li>AWS Certified Cloud practitioner</li>
+              <li>AWS Certified Cloud Practioner</li>
               <li>Gold DofE</li>
               <li>Volunteered at WorkAid for 18 months</li>
             </ul>
@@ -208,7 +205,7 @@ function CV() {
         <FadeInSection>
           <hr />
           <div className='cv-projects'>
-            <h2> Projects</h2>
+            <h2> PROJECTS</h2>
             <hr />
             <div className='cv-projects-info'>Find my projects <BreadcrumbLink className='small-link' to='/projects'>here</BreadcrumbLink>.</div>
           </div>

@@ -3,7 +3,7 @@ import './Glossary.css';
 
 function Glossary() {
   return (
-    <div>
+    <div className='glossary'>
       <div className='page-header'>Page links</div>
       <div className='links-list-container'>
         <div className='links-container'>
