@@ -17,7 +17,6 @@ function CV() {
         <h1 className='cv-title'>
           Zachary Upstone
         </h1>
-        <h2>Email | GitHub | LinkedIn | Website</h2>
 
         <FadeInSection>
           <hr />
@@ -91,6 +90,7 @@ function CV() {
                 <div className='tag-holder'>
                   <span className='tag yellow'>Selenium</span>
                   <span className='tag green'>Gherkin</span>
+                  <span className='tag blue'>Python</span>
                 </div>
                 <ul>
                   <li>Developed new product features using version control (Git), including an OS updates page and interactive product tour,
