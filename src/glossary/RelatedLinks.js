@@ -2,7 +2,7 @@ import './Glossary.css';
 
 function RelatedLinks() {
   return (
-    <div>
+    <div className='related-links'>
       <div className='page-header'>Related links</div>
       <div className='links-list-container'>
         <div className='links-container'>
