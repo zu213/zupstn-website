@@ -18,7 +18,7 @@ function RelatedLinks() {
           <div className='link'> <a href='https://www.linkedin.com/in/zachary-upstone-076218214/' target='_blank' rel='noreferrer'>LinkedIn</a></div>
           <div className="link"> <a href="https://www.pugpig.com/" target='_blank' rel='noreferrer'>Pugpig</a></div>
           <div className="link"> <a href="https://www.kontron-americas.com/" target='_blank' rel='noreferrer'>BSQUARE</a></div>
-          <div className='link'> <a href='https://github-readme-stats.vercel.app/api/top-langs/?username=zu213&langs_count=10&theme=radical&layout=donut-vertical' target='_blank' rel='noreferrer'>Top Languages</a></div>
+          <div className='link'> <a href='https://camo.githubusercontent.com/2729c89c3422980c8037a7690d19eb5a90d4ee22b86b57b23d98d140ec5cc9b3/68747470733a2f2f6769746875622d726561646d652d73746174732d6663756a6d6f66766d2d6863617a2d656e6f74737075732d70726f6a656374732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f6c616e67735f636f756e743d3130267468656d653d7261646963616c266c61796f75743d646f6e75742d766572746963616c26757365726e616d653d7a75323133' target='_blank' rel='noreferrer'>Top Languages</a></div>
         </div>
       </div>
     </div>
