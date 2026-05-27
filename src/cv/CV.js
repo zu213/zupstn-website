@@ -26,14 +26,12 @@ function CV() {
 
             <div className='cv-skills-lists'>
               <ul className='cv-skills-list'>
-                <li><b>Native</b>: Swift, SwiftUI, Objective-C, Java, Kotlin</li>
                 <li><b>Frontend</b>: Vue, Angular, React, TypeScript</li>
-                <li><b>Backend</b>: REST API’s, PHP, Express</li>
+                <li><b>Backend</b>: PHP, Express</li>
               </ul>
               <ul className='cv-skills-list'>
-                <li><b>Testing</b>: Pest, Gherkin, Selenium</li>
-                <li><b>Other languages</b>: Python, C++, C, C#</li>
-                <li><b>Tools</b>: Docker, Git, Jira, Bitbucket, CI/CD</li>
+                <li><b>Native</b>: Swift, SwiftUI, Objective-C, Java, Kotlin</li>
+                <li><b>Tools</b>: Docker, Git, Jira, Bitbucket, Selenium</li>
               </ul>
             </div>
           </div>
@@ -65,15 +63,11 @@ function CV() {
                   <span className='tag blue'>Java</span>
                 </div>
                 <ul>
-                  <li>Modernised front-end code with Vue, eliminating legacy tech debt between native and web, fixing
-                    bugs, improving maintainability, and collaborating with designers to refine UI/UX.
-                  </li>
-                  <li>Enhanced native applications by integrating new SDKs and leading feature development from concept
-                    to delivery, including user-facing improvements such as app Toasts to improve feature discovery.
-                  </li>
-                  <li>Managed theming, localisation, and content for 100+ newspapers and magazines to reduce the need
-                    for custom code, while maintaining an automated test suite to ensure consistent, high-quality releases.
-                  </li>
+                  <li>Overhauled the iOS codebase to support Liquid Glass across older devices and diverse publication themes.</li>
+                  <li>Led migration of the web codebase to TypeScript, reducing legacy tech debt, fixing bugs, and collaborating with designers to refine UI/UX.</li>
+                  <li>Enhanced native applications by integrating varied SDKs in a reusable and maintainable way.</li>
+                  <li>Owned feature development from concept to delivery and success measurement, including a Personalisation feature and app Toasts.</li>
+                  <li>Managed theming, localisation, and content for 100+ newspapers and magazines to reduce the need for custom code, while maintaining an automated test suite to ensure consistent, high-quality releases.</li>
                 </ul>
               </div>
             </FadeInSection>
@@ -93,15 +87,8 @@ function CV() {
                   <span className='tag blue'>Python</span>
                 </div>
                 <ul>
-                  <li>Developed new product features using version control (Git), including an OS updates page and interactive product tour,
-                    while debugging and supporting QA sprints in an Agile environment.
-                  </li>
-                  <li>Contributed to the QA team by writing automated unit, API, and UI tests with Gherkin and Selenium,
-                    reducing manual testing effort while automating test upload via Zephyr with Python.
-                  </li>
-                  <li>Performed manual testing and coordinated QA sprint tasks, collaborating across teams to meet release
-                    deadlines and maintain quality standards.
-                  </li>
+                  <li>Developed new product features using version control, including an OS updates page and interactive product tour, while debugging and supporting QA sprints in an Agile environment.</li>
+                  <li>Contributed to the QA team by writing automated unit, API, and UI tests with Gherkin and Selenium, reducing manual testing effort while automating test upload via Zephyr with Python.</li>
                 </ul>
               </div>
             </FadeInSection>
