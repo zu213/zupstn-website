@@ -29,6 +29,20 @@ export function FruitLips2() {
   );
 }
 
+export function FruitLips3() {
+  return (
+    <div className='fruit-lips3-container'>
+      <iframe 
+        title='fruit-lips'
+        className='fruitLips'
+        src="./fruit-lips/src3/fruit-lips.html"
+        width="100%"
+        height="100%"
+      />
+    </div>
+  );
+}
+
 export function Squares() {
   return (
     <div className='squares-container'>

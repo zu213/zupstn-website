@@ -1,6 +1,7 @@
 
 // Normal imports
 import { useState, useEffect } from 'react';
+
 import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 
@@ -25,7 +26,7 @@ import UnicodeChess from './projects/large/UnicodeChess.js';
 import WalkAnywhere from './projects/large/WalkAnywhere.js';
 import ZachLang from './projects/large/ZachLang.js';
 import Projects from './projects/Projects.js';
-import { FruitLips, FruitLips2, Squares, LLMCompare } from './submodules/submodules.js';
+import { FruitLips, FruitLips2, FruitLips3, Squares, LLMCompare } from './submodules/submodules.js';
 import { BackButton, BackButtonProvider } from './util/BackButtons.js';
 import { BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
 import { useMask } from './util/Mask.js';
@@ -83,6 +84,7 @@ function App() {
             <Route path='/dissertation-tool' element={<DissertationTool/>} />
             <Route path='/fruit-lips' element={<FruitLips/>} />
             <Route path='/fruit-lips2' element={<FruitLips2/>} />
+            <Route path='/fruit-lips3' element={<FruitLips3/>} />
             <Route path='/368squares' element={<Squares/>} />
             <Route path='/llm-compare' element={<LLMCompare/>} />
             <Route path='/glossary' element={<Glossary/>} />
