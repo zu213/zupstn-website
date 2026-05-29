@@ -84,7 +84,7 @@ function App() {
             <Route path='/dissertation-tool' element={<DissertationTool/>} />
             <Route path='/fruit-lips' element={<FruitLips/>} />
             <Route path='/fruit-lips2' element={<FruitLips2/>} />
-            <Route path='/fruit-lips3' element={<FruitLips3/>} />
+            <Route path='/apple-interface' element={<FruitLips3/>} />
             <Route path='/368squares' element={<Squares/>} />
             <Route path='/llm-compare' element={<LLMCompare/>} />
             <Route path='/glossary' element={<Glossary/>} />
