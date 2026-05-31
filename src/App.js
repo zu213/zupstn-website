@@ -28,7 +28,7 @@ import ZachLang from './projects/large/ZachLang.js';
 import Projects from './projects/Projects.js';
 import { FruitLips, FruitLips2, FruitLips3, Squares, LLMCompare } from './submodules/submodules.js';
 import { BackButton, BackButtonProvider } from './util/BackButtons.js';
-import { BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
+import { BreadcrumbLink, BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
 import { useMask } from './util/Mask.js';
 import NotFound from './util/NotFound.js';
 
@@ -94,21 +94,21 @@ function App() {
             )}
             <Route path='*' element={<NotFound/>} />
           </Routes>
+          <div className={`footer ${hideFooter ? 'none' : ''}`}>
+            <hr />
+            <nav className='footer-nav'>
+              <BreadcrumbLink to='/me'>About</BreadcrumbLink>
+              <BreadcrumbLink to='/projects'>Projects</BreadcrumbLink>
+              <BreadcrumbLink to='/gallery'>Gallery</BreadcrumbLink>
+              <BreadcrumbLink to='/cv'>CV</BreadcrumbLink>
+              <BreadcrumbLink to='/glossary'>Glossary</BreadcrumbLink>
+            </nav>
+            <div className='footer-copy'>
+              2026 Zachary Upstone.
+            </div>
+          </div>
         </BackButtonProvider>
       </BreadcrumbProvider>
-      <div className={`footer ${hideFooter ? 'none' : ''}`}>
-        <hr />
-        <nav className='footer-nav'>
-          <Link to='/me'>About</Link>
-          <Link to='/projects'>Projects</Link>
-          <Link to='/gallery'>Gallery</Link>
-          <Link to='/cv'>CV</Link>
-          <Link to='/glossary'>Glossary</Link>
-        </nav>
-        <div className='footer-copy'>
-          2026 Zachary Upstone.
-        </div>
-      </div>
     </div>
   );
 }
