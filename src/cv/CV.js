@@ -10,7 +10,9 @@ function CV() {
       <div className='cv-page-links'>
         <a className="small-link" href="/documents/CV_short.pdf" download="Zachary Upstone CV">
           PDF Download <img className="download-image" src={download} alt="Download"></img>
-        </a>
+        </a> &nbsp;| &nbsp;
+        <a className="small-link" href="https://www.linkedin.com/in/zachary-upstone-076218214/" target="_blank" rel="noreferrer">LinkedIn</a> &nbsp; | &nbsp;
+        <a className="small-link" href="https://github.com/zu213" target="_blank" rel="noreferrer">Github</a> 
       </div>
 
       <div className='cv'>

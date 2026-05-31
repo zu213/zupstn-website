@@ -100,7 +100,7 @@ function Home() {
           <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
         </div>
         <div>
-          <a href="https://www.linkedin.com/in/zachary-upstone-076218214/"  target="_blank" rel="noreferrer">LinkedIn</a>
+          <BreadcrumbLink to="/glossary">Glossary</BreadcrumbLink>
         </div>
         <div className='feeling-lucky-inline'>
           <BreadcrumbLink className='small-link' to={chosenLink}>I'm feeling lucky</BreadcrumbLink>

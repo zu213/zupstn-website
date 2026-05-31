@@ -36,7 +36,7 @@ import NotFound from './util/NotFound.js';
 function App() {
   const { displayMask, MaskOverlay } = useMask();
 
-  const noFooter = ['/', '/me'];
+  const noFooter = ['/', '/me', '/fruit-lips', '/apple-interface'];
   const [galleryTableView, setGalleryTableView] = useState(false);
 
   const location = useLocation();
