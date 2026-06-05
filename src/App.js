@@ -2,7 +2,7 @@
 // Normal imports
 import { useState, useEffect } from 'react';
 
-import { Link, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 
 // Page imports
@@ -26,7 +26,7 @@ import UnicodeChess from './projects/large/UnicodeChess.js';
 import WalkAnywhere from './projects/large/WalkAnywhere.js';
 import ZachLang from './projects/large/ZachLang.js';
 import Projects from './projects/Projects.js';
-import { FruitLips, FruitLips2, FruitLips3, Squares, LLMCompare } from './submodules/submodules.js';
+import { FruitLips, FruitLips2, FruitLips3, Squares, LLMCompare, BerkoLitterPick } from './submodules/submodules.js';
 import { BackButton, BackButtonProvider } from './util/BackButtons.js';
 import { BreadcrumbLink, BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
 import { useMask } from './util/Mask.js';
@@ -36,7 +36,7 @@ import NotFound from './util/NotFound.js';
 function App() {
   const { displayMask, MaskOverlay } = useMask();
 
-  const noFooter = ['/', '/me', '/fruit-lips', '/apple-interface'];
+  const noFooter = ['/', '/me', '/fruit-lips', '/apple-interface', '/berko-litter-pick'];
   const [galleryTableView, setGalleryTableView] = useState(false);
 
   const location = useLocation();
@@ -87,6 +87,7 @@ function App() {
             <Route path='/apple-interface' element={<FruitLips3/>} />
             <Route path='/368squares' element={<Squares/>} />
             <Route path='/llm-compare' element={<LLMCompare/>} />
+            <Route path='/berko-litter-pick' element={<BerkoLitterPick/>} />
             <Route path='/glossary' element={<Glossary/>} />
             <Route path='/related-links' element={<RelatedLinks/>} />
             {largeProjects.map(project => 

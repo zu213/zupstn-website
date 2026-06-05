@@ -11,14 +11,14 @@ function WalkAnywhereCard() {
       <div className='project-card-title'>
         WalkAnywhere
       </div>
-      <div className='card-gradient turquoise'>
+      <div className='card-gradient sunset'>
         <FontAwesomeIcon icon={faPersonWalking} />
       </div>
       <div>
         An iOS walking route tracker. Plan custom routes on a map, then use your HealthKit steps to progress along them.
       </div>
       <div className='tag-holder'>
-        <span className='tag orange'>Swift</span><span className='tag blue'>SwiftUI</span><span className='tag purple'>HealthKit</span><span className='tag green'>MapKit</span>
+        <span className='tag orange'>SwiftUI</span><span className='tag purple'>HealthKit</span><span className='tag green'>MapKit</span>
       </div>
     </BreadcrumbLink>
   );

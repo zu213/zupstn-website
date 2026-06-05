@@ -71,3 +71,16 @@ export function LLMCompare() {
     </div>
   );
 }
+
+export function BerkoLitterPick() {
+  return (
+    <div className='berko-litter-pick-container'>
+      <iframe 
+        title='berko-litter-pick'
+        src="./litter-pick/frontend/public/index.html"
+        width="100%"
+        height="100%"
+      />
+    </div>
+  );
+}
