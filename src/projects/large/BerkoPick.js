@@ -2,6 +2,7 @@ import litterPickMap from './media/litterpickmap.png';
 import litterPickMapPNG from './media/litterpickmap.webp';
 import litterPickPicked from './media/litterpickmarkpicked.png';
 import litterPickPickedPNG from './media/litterpickmarkpicked.webp';
+import { BreadcrumbLink } from '../../util/Breadcrumbs.js';
 
 function BerkoPick(props) {
 
@@ -10,6 +11,8 @@ function BerkoPick(props) {
       <header className='page-header'>Berko Litter Pick</header>
       <div>
         <a href="https://github.com/zu213/litter-pick" className="small-link" target="_blank" rel="noreferrer">Repository</a>
+        &nbsp;|&nbsp;
+        <BreadcrumbLink className="small-link" to="/berko-litter-pick">Demo</BreadcrumbLink>
         <br/>
       </div>
       <div>
