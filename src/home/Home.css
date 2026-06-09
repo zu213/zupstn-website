@@ -201,6 +201,7 @@
 @media only screen and (width <= 750px) {
   .road-animation {
     line-height: 10px;
+    min-width: unset;
   }
 
   .road-container {

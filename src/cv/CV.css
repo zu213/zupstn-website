@@ -118,6 +118,16 @@
   padding: 0 20px;
 }
 
+@media only screen and (width <= 520px) {
+  .cv-page-links {
+    padding-top: 5vh;
+  }
+
+  .cv-title {
+    margin-top: 1vh;
+  }
+}
+
 @media only screen and (width <= 500px) {
   .pdf-viewer {
     display: none;
