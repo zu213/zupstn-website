@@ -49,7 +49,7 @@ export function Squares() {
       <iframe 
         title='368Squares'
         className='368Squares'
-        src="./squares/squares.html"
+        src="./squares/frontend/squares.html"
         width="100%"
         height="100%"
       />

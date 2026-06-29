@@ -4,10 +4,6 @@ import listview from './media/srank_listview.png';
 function SRank(props) {
   return (
     <div>
-      <div className='small-repo-link'>
-        <a href="https://github.com/zu213/s-rank" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;
-      </div>
-
       <div className='small-phone-img large' onClick={() => props.displayMask(listview)}>
         <figure>
           <picture>
@@ -15,6 +11,10 @@ function SRank(props) {
           </picture>
           <figcaption>Figure: Ranked list view</figcaption>
         </figure>
+      </div>
+
+      <div className='small-repo-link' onClick={e => e.stopPropagation()}>
+        <a href="https://github.com/zu213/s-rank" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;
       </div>
 
       <div>

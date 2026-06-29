@@ -1,5 +1,6 @@
 import squaresPNG from './media/squares.png';
 import squares from './media/squares.webp';
+import { BreadcrumbLink } from '../../util/Breadcrumbs';
 
 function Squares(props) {
   return (
@@ -13,9 +14,9 @@ function Squares(props) {
           <figcaption>Figure: Screenshot of the 368 Squares game</figcaption>
         </figure>
       </div>
-      <div className='small-repo-link'>
+      <div className='small-repo-link' onClick={e => e.stopPropagation()}>
         <a href="https://github.com/zu213/square-paint" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;
-         | <a href="https://zupstn.com/#/368squares" className="small-link">Website</a>
+         | <BreadcrumbLink to="/368squares" className="small-link">Website</BreadcrumbLink>
       </div>
     
      

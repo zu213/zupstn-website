@@ -4,10 +4,6 @@ import swiperight from './media/swipedelete_right.png';
 function SwipeDelete(props) {
   return (
     <div>
-      <div className='small-repo-link'>
-        <a href="https://github.com/zu213/swipe-delete-app" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;
-      </div>
-
       <div className='small-phone-img small' onClick={() => props.displayMask(swiperight)}>
         <figure>
           <picture>
@@ -15,6 +11,10 @@ function SwipeDelete(props) {
           </picture>
           <figcaption>Figure: Swipe left to delete</figcaption>
         </figure>
+      </div>
+
+      <div className='small-repo-link' onClick={e => e.stopPropagation()}>
+        <a href="https://github.com/zu213/swipe-delete-app" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;
       </div>
 
       <div>

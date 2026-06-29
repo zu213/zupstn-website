@@ -13,7 +13,7 @@ function HotkeyHelp(props) {
           <figcaption>Figure: Graphic to display user's top tracks</figcaption>
         </figure>
       </div>
-      <div className='small-repo-link'>
+      <div className='small-repo-link' onClick={e => e.stopPropagation()}>
         <a href="https://github.com/zu213/key-help" className="small-link" target="_blank" rel="noreferrer">Repository</a>
       </div>
      

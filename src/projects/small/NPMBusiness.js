@@ -13,7 +13,7 @@ function NPMBusiness(props) {
           <figcaption>Figure: The business card in the terminal</figcaption>
         </figure>
       </div>
-      <div className='small-repo-link'>
+      <div className='small-repo-link' onClick={e => e.stopPropagation()}>
         <a href="https://github.com/zu213/zachupstone-card" className="small-link" target="_blank" rel="noreferrer">Repository</a>
       </div>
     

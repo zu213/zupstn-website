@@ -13,7 +13,7 @@ function TemperatureGlass(props) {
           <figcaption>Figure: Picture of the overlay</figcaption>
         </figure>
       </div>
-      <div className='small-repo-link'>
+      <div className='small-repo-link' onClick={e => e.stopPropagation()}>
         <a href="https://github.com/zu213/temperature-glass" className="small-link" target="_blank" rel="noreferrer">Repository</a>
       </div>
     

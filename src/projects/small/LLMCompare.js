@@ -1,5 +1,6 @@
 import comparePNG from './media/compare.png';
 import compare from './media/compare.webp';
+import { BreadcrumbLink } from '../../util/Breadcrumbs';
 
 function LLMCompare(props) {
   return (
@@ -13,9 +14,9 @@ function LLMCompare(props) {
           <figcaption>Figure: Tab system of LLM compare</figcaption>
         </figure>
       </div>
-      <div className='small-repo-link'>
+      <div className='small-repo-link' onClick={e => e.stopPropagation()}>
         <a href="https://github.com/zu213/llm-compare" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;
-         | <a href="https://zupstn.com/#/llm-compare" className="small-link">Website</a>
+         | <BreadcrumbLink to="/llm-compare" className="small-link">Website</BreadcrumbLink>
       </div>
     
      
