@@ -10,5 +10,5 @@
 *.pth
 *.map
 __target__/*
-
+*.DS_Store
 /scripts/add-project.mjs

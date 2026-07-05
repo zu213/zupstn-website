@@ -3,8 +3,8 @@ import './ProjectCards.css';
 
 import FadeInSection from '../util/FadeIn';
  
+import AppleInterfaceCard from './large/cards/AppleInterfaceCard.js';
 import BerkoPickCard from './large/cards/BerkoPickCard.js';
-import WalkAnywhereCard from './large/cards/WalkAnywhereCard.js';
 import ChromeContextControlCard from './large/cards/ChromeContextControlCard.js';
 import DissertationCard from './large/cards/DissertationCard.js';
 import ShortStoreyCard from './large/cards/ShortStoreyCard.js';
@@ -13,6 +13,7 @@ import SpotifyRouletteCard from './large/cards/SpotifyRouletteCard.js';
 import SquarePaintCard from './large/cards/SquarePaintCard.js';
 import TrafficSimulatorCard from './large/cards/TrafficSimulatorCard.js';
 import UnicodeChessCard from './large/cards/UnicodeChessCard.js';
+import WalkAnywhereCard from './large/cards/WalkAnywhereCard.js';
 import ZachLangCard from './large/cards/ZachLangCard.js';
 
 
@@ -61,6 +62,12 @@ function LargeProjects() {
         <FadeInSection>
           <div className='project-grid-element'>
             <ChromeContextControlCard />
+          </div>
+        </FadeInSection>
+
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <AppleInterfaceCard />
           </div>
         </FadeInSection>
 
