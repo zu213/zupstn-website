@@ -10,3 +10,6 @@
 [submodule "public/litter-pick"]
 	path = public/litter-pick
 	url = https://github.com/zu213/litter-pick
+[submodule "public/shortstorey"]
+	path = public/shortstorey
+	url = https://github.com/zu213/shortstorey-full

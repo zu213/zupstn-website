@@ -7,7 +7,7 @@ import { BreadcrumbLink } from '../../../util/Breadcrumbs';
 
 function ShortStoreyCard() {
   return (
-    <BreadcrumbLink to='/shortstorey'>
+    <BreadcrumbLink to='/shortstorey-info'>
       <div className='project-card-title'>
         ShortStorey
       </div>

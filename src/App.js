@@ -18,7 +18,7 @@ import BerkoPick from './projects/large/BerkoPick.js';
 import ChromeContextControl from './projects/large/ChromeContextControl.js';
 import Dissertation from './projects/large/Dissertation.js';
 import DissertationTool from './projects/large/DissertationTool.js';
-import ShortStorey from './projects/large/ShortStorey.js';
+import ShortStoreyInfo from './projects/large/ShortStoreyInfo.js';
 import Snowstorm from './projects/large/Snowstorm.js';
 import SpotifyRoulette from './projects/large/SpotifyRoulette.js';
 import SquarePaint from './projects/large/SquarePaint.js';
@@ -27,7 +27,7 @@ import UnicodeChess from './projects/large/UnicodeChess.js';
 import WalkAnywhere from './projects/large/WalkAnywhere.js';
 import ZachLang from './projects/large/ZachLang.js';
 import Projects from './projects/Projects.js';
-import { FruitLips, FruitLips2, FruitLips3, Squares, LLMCompare, BerkoLitterPick } from './submodules/submodules.js';
+import { FruitLips, FruitLips2, FruitLips3, ShortStorey, Squares, LLMCompare, BerkoLitterPick } from './submodules/submodules.js';
 import { BackButton, BackButtonProvider } from './util/BackButtons.js';
 import { BreadcrumbLink, BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
 import { useMask } from './util/Mask.js';
@@ -37,7 +37,7 @@ import NotFound from './util/NotFound.js';
 function App() {
   const { displayMask, MaskOverlay } = useMask();
 
-  const noFooter = ['/', '/me', '/fruit-lips', '/apple-interface', '/berko-litter-pick'];
+  const noFooter = ['/', '/me', '/fruit-lips', '/apple-interface', '/berko-litter-pick', '/shortstorey'];
   const [galleryTableView, setGalleryTableView] = useState(false);
 
   const location = useLocation();
@@ -56,7 +56,7 @@ function App() {
     {route: 'chrome-context-control', page: ChromeContextControl},
     {route: 'traffic-simulator', page: TrafficSimulator},
     {route: 'square-paint', page: SquarePaint},
-    {route: 'shortstorey', page: ShortStorey},
+    {route: 'shortstorey-info', page: ShortStoreyInfo},
     {route: 'zach-lang', page: ZachLang},
     {route: 'berko-pick', page: BerkoPick},
     {route: 'walkanywhere', page: WalkAnywhere},
@@ -92,6 +92,7 @@ function App() {
             <Route path='/berko-litter-pick' element={<BerkoLitterPick/>} />
             <Route path='/glossary' element={<Glossary/>} />
             <Route path='/related-links' element={<RelatedLinks/>} />
+            <Route path='/shortstorey' element={<ShortStorey/>} />
             {largeProjects.map(project => 
               <Route key={project.route} path={`/${project.route}`} element={<project.page displayMask={displayMask} isIOS={isIOS} />} />
             )}

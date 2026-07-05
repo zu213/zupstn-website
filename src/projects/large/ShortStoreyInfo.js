@@ -1,3 +1,4 @@
+import { BreadcrumbLink } from '../../util/Breadcrumbs';
 import profilePagePNG from './media/profilePage.png';
 import profilePage from './media/profilePage.webp';
 import ratingsPagePNG from './media/ratingsPage.png';
@@ -5,12 +6,13 @@ import ratingsPage from './media/ratingsPage.webp';
 import storiesPagePNG from './media/storiesPage.png';
 import storiesPage from './media/storiesPage.webp';
 
-function ShortStorey(props) {
+function ShortStoreyInfo(props) {
   return (
     <div className='project-page'>
       <header className='page-header'>Short Storey</header>
       <div>
-        <a href="https://github.com/zu213/shortstorey-full" className="small-link" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/shortstorey-full" className="small-link" target="_blank" rel="noreferrer">Repository</a> |&nbsp;
+        <BreadcrumbLink to='/shortstorey' className="small-link">Demo</BreadcrumbLink>
         <br/>
       </div>
       <br />
@@ -98,4 +100,4 @@ function ShortStorey(props) {
   );
 }
 
-export default ShortStorey;
+export default ShortStoreyInfo;
