@@ -25,6 +25,7 @@ function Glossary() {
           <div className='link'> <BreadcrumbLink to="/368squares">/368squares</BreadcrumbLink></div>
           <div className='link'> <BreadcrumbLink to="/llm-compare">/llm-compare</BreadcrumbLink></div>
           <div className='link'> <BreadcrumbLink to="/berko-litter-pick">/berko-litter-pick</BreadcrumbLink></div>
+          <div className='link'> <BreadcrumbLink to="/shortstorey">/shortstorey</BreadcrumbLink></div>
         </div>
       </div>
     </div>
