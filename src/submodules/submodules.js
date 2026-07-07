@@ -49,7 +49,7 @@ export function ShortStorey() {
       <iframe 
         title='shortstorey'
         className='shortStorey'
-        src="./shortstorey/frontend/dist/index.html"
+        src="./shortstorey-full/frontend/dist/index.html"
         width="100%"
         height="100%"
       />
