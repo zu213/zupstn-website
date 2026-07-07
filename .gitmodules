@@ -13,3 +13,6 @@
 [submodule "public/spotify-roulette"]
 	path = public/spotify-roulette
 	url = https://github.com/zu213/spotify-roulette
+[submodule "public/shortstorey-full"]
+	path = public/shortstorey-full
+	url = https://github.com/zu213/shortstorey-full
