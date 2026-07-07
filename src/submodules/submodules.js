@@ -57,6 +57,20 @@ export function ShortStorey() {
   );
 }
 
+export function SpotifyRouletteIframe() {
+  return (
+    <div className='spotify-roulette-container'>
+      <iframe 
+        title='spotify-roulette'
+        className='spotifyRoulette'
+        src="./spotify-roulette/frontend/build/index.html"
+        width="100%"
+        height="100%"
+      />
+    </div>
+  );
+}
+
 export function Squares() {
   return (
     <div className='squares-container'>

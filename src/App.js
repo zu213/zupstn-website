@@ -27,7 +27,7 @@ import UnicodeChess from './projects/large/UnicodeChess.js';
 import WalkAnywhere from './projects/large/WalkAnywhere.js';
 import ZachLang from './projects/large/ZachLang.js';
 import Projects from './projects/Projects.js';
-import { FruitLips, FruitLips2, FruitLips3, ShortStorey, Squares, LLMCompare, BerkoLitterPick } from './submodules/submodules.js';
+import { FruitLips, FruitLips2, FruitLips3, ShortStorey, SpotifyRouletteIframe, Squares, LLMCompare, BerkoLitterPick } from './submodules/submodules.js';
 import { BackButton, BackButtonProvider } from './util/BackButtons.js';
 import { BreadcrumbLink, BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
 import { useMask } from './util/Mask.js';
@@ -37,7 +37,7 @@ import NotFound from './util/NotFound.js';
 function App() {
   const { displayMask, MaskOverlay } = useMask();
 
-  const noFooter = ['/', '/me', '/fruit-lips', '/apple-interface', '/berko-litter-pick', '/shortstorey'];
+  const noFooter = ['/', '/me', '/fruit-lips', '/apple-interface', '/berko-litter-pick', '/shortstorey', '/spotify-roulette'];
   const [galleryTableView, setGalleryTableView] = useState(false);
 
   const location = useLocation();
@@ -93,6 +93,7 @@ function App() {
             <Route path='/glossary' element={<Glossary/>} />
             <Route path='/related-links' element={<RelatedLinks/>} />
             <Route path='/shortstorey' element={<ShortStorey/>} />
+            <Route path='/spotify-roulette' element={<SpotifyRouletteIframe/>} />
             {largeProjects.map(project => 
               <Route key={project.route} path={`/${project.route}`} element={<project.page displayMask={displayMask} isIOS={isIOS} />} />
             )}
