@@ -63,7 +63,7 @@ export function SpotifyRouletteIframe() {
       <iframe 
         title='spotify-roulette'
         className='spotifyRoulette'
-        src="./spotify-roulette/frontend/build/index.html"
+        src={'./spotify-roulette/frontend/build/index.html' + window.location.search}
         width="100%"
         height="100%"
       />

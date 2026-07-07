@@ -37,7 +37,7 @@ import NotFound from './util/NotFound.js';
 function App() {
   const { displayMask, MaskOverlay } = useMask();
 
-  const noFooter = ['/', '/me', '/fruit-lips', '/apple-interface', '/berko-litter-pick', '/shortstorey', '/spotify-roulette'];
+  const noFooter = ['/', '/me', '/fruit-lips', '/apple-interface', '/berko-litter-pick', '/shortstorey', '/spotify-roulette-demo'];
   const [galleryTableView, setGalleryTableView] = useState(false);
 
   const location = useLocation();
@@ -93,7 +93,7 @@ function App() {
             <Route path='/glossary' element={<Glossary/>} />
             <Route path='/related-links' element={<RelatedLinks/>} />
             <Route path='/shortstorey' element={<ShortStorey/>} />
-            <Route path='/spotify-roulette' element={<SpotifyRouletteIframe/>} />
+            <Route path='/spotify-roulette-demo' element={<SpotifyRouletteIframe/>} />
             {largeProjects.map(project => 
               <Route key={project.route} path={`/${project.route}`} element={<project.page displayMask={displayMask} isIOS={isIOS} />} />
             )}
