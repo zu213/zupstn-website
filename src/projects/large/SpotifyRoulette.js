@@ -1,3 +1,5 @@
+import { BreadcrumbLink } from '../../util/Breadcrumbs';
+
 import guess2PNG from './media/guess2.png';
 import guess2 from './media/guess2.webp';
 import joinPNG from'./media/join.png';
@@ -10,6 +12,7 @@ function SpotifyRoulette(props) {
       <header className='page-header'>Spotify Roulette</header>
       <div>
         <a href="https://github.com/zu213/spotify-roulette" className="small-link" target="_blank" rel="noreferrer">Repository</a>
+        <BreadcrumbLink to='/spotify-roulette-demo' className="small-link">Demo</BreadcrumbLink>
         <br/>
       </div>
       <div>

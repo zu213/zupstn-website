@@ -1,4 +1,5 @@
 import { BreadcrumbLink } from '../../util/Breadcrumbs';
+
 import profilePagePNG from './media/profilePage.png';
 import profilePage from './media/profilePage.webp';
 import ratingsPagePNG from './media/ratingsPage.png';
