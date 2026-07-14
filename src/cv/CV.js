@@ -28,12 +28,10 @@ function CV() {
 
             <div className='cv-skills-lists'>
               <ul className='cv-skills-list'>
-                <li><b>Frontend</b>: Vue, Angular, React, TypeScript</li>
-                <li><b>Backend</b>: PHP, Express</li>
+                <li><b>Frontend</b>: Vue, React, Angular, HTML, CSS</li>
               </ul>
               <ul className='cv-skills-list'>
-                <li><b>Native</b>: Swift, SwiftUI, Objective-C, Java, Kotlin</li>
-                <li><b>Tools</b>: Docker, Git, Jira, Bitbucket, Selenium</li>
+                <li><b>Backend</b>: Node.js, Express, Fastify</li>
               </ul>
             </div>
           </div>
@@ -58,18 +56,16 @@ function CV() {
                 </div>
                 <div className='tag-holder'>
                   <span className='tag green'>Vue</span>
-                  <span className='tag orange'>Swift</span>
-                  <span className='tag orange'>SwiftUI</span>
-                  <span className='tag orange'>Objective-C</span>
-                  <span className='tag blue'>Kotlin</span>
-                  <span className='tag blue'>Java</span>
+                  <span className='tag blue'>TypeScript</span>
+                  <span className='tag blue'>React</span>
+                  <span className='tag blue'>Angular</span>
                 </div>
                 <ul>
-                  <li>Overhauled the iOS codebase to support Liquid Glass across older devices and diverse publication themes.</li>
-                  <li>Led migration of the web codebase to TypeScript, reducing legacy tech debt, fixing bugs, and collaborating with designers to refine UI/UX.</li>
-                  <li>Enhanced native applications by integrating varied SDKs in a reusable and maintainable way.</li>
-                  <li>Owned feature development from concept to delivery and success measurement, including a Personalisation feature and app Toasts.</li>
-                  <li>Managed theming, localisation, and content for 100+ newspapers and magazines to reduce the need for custom code, while maintaining an automated test suite to ensure consistent, high-quality releases.</li>
+                  <li>Led migration of multiple production codebases from JavaScript to TypeScript, improving type safety, reducing future maintenance costs and enabling safer feature development.</li>
+                  <li>Improved the platform’s theming and localisation architecture to support 100+ publications with minimal custom code, while maintaining a robust automated test suite for safe, repeatable releases.</li>
+                  <li>Delivered customer-facing features from discovery to post-release analysis, including personalised Followed Topics timelines and toast notifications that increased feature discovery by X%.</li>
+                  <li>Implemented a redesigned subscription journey alongside designers and QA, increasing subscription conversions by X%.</li>
+                  <li>Modernised the iOS application to support Apple’s new Liquid Glass design system across legacy devices and highly customised publication themes.</li>
                 </ul>
               </div>
             </FadeInSection>
@@ -80,17 +76,17 @@ function CV() {
                   <span>Trowbridge, UK</span>
                 </div>
                 <div className='cv-experience-job-subtitle'>
-                  <span>Student Software Developer</span>
+                  <span>Software Developer</span>
                   <span className='date'>Jul 2022 - Jun 2023</span>
                 </div>
                 <div className='tag-holder'>
                   <span className='tag yellow'>Selenium</span>
-                  <span className='tag green'>Gherkin</span>
                   <span className='tag blue'>Python</span>
+                  <span className='tag green'>Gherkin</span>
                 </div>
                 <ul>
-                  <li>Developed new product features using version control, including an OS updates page and interactive product tour, while debugging and supporting QA sprints in an Agile environment.</li>
-                  <li>Contributed to the QA team by writing automated unit, API, and UI tests with Gherkin and Selenium, reducing manual testing effort while automating test upload via Zephyr with Python.</li>
+                  <li>Delivered new product features, including an OS updates dashboard and interactive onboarding experience, while supporting debugging and QA throughout Agile development cycles.</li>
+                  <li>Expanded the automated testing suite with unit, API and UI tests using Gherkin and Selenium, and automated Zephyr test uploads with Python.</li>
                 </ul>
               </div>
             </FadeInSection>
@@ -184,8 +180,7 @@ function CV() {
             <h2>ACHIEVEMENTS</h2>
             <hr />
             <ul>
-              <li>AWS Certified Cloud Practioner</li>
-              <li>Gold DofE</li>
+              <li>AWS Certified Cloud Practitioner</li>
               <li>Volunteered at WorkAid for 18 months</li>
             </ul>
           </div>
