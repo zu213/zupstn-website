@@ -119,7 +119,9 @@ Rules:
 - Use link-coloured span for grades and scores
 - If the PDF adds new sections not currently in the file, add them using the same patterns
 - If the PDF removes content that was in the old file, remove it
-- Keep as many skills as you can remember, always include Swift, SwiftUI, Objective-C, Kotlin, Vue,  TypeScript
+- Keep as many skills as you can remember, always include Swift, SwiftUI, Objective-C, Kotlin, Vue,  TypeScript minimum for the Pugpig role.
+- Don't remove existing skill tags
+- Highlight any statistics or percentages in the PDF with <span className='link-coloured'>...</span>
 - Don't add or edit the Projects section at the bottom — it should remain unchanged and is not sourced from the PDF
 - Don't remove detail only add new details, move details or you can remove sectiosn / points if they are fully removed / not mnetioend in the pdf at all
 - Ignore any content in the PDF that is not relevant to the CV (e.g. page numbers, headers/footers, etc.)

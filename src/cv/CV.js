@@ -39,14 +39,17 @@ function CV() {
                 <div className='tag-holder'>
                   <span className='tag green'>Vue</span>
                   <span className='tag blue'>TypeScript</span>
-                  <span className='tag blue'>React</span>
-                  <span className='tag red'>Angular</span>
+                  <span className='tag orange'>Swift</span>
+                  <span className='tag orange'>SwiftUI</span>
+                  <span className='tag orange'>Objective-C</span>
+                  <span className='tag blue'>Kotlin</span>
+                  <span className='tag blue'>Java</span>
                 </div>
                 <ul>
                   <li>Led migration of multiple production codebases from JavaScript to TypeScript, improving type safety, reducing future maintenance costs and enabling safer feature development.</li>
-                  <li>Improved the platform’s theming and localisation architecture to support 100+ publications with minimal custom code, while maintaining a robust automated test suite for safe, repeatable releases.</li>
-                  <li>Delivered customer-facing features from discovery to post-release analysis, including personalised Followed Topics timelines and toast notifications that increased feature discovery by 30%.</li>
-                  <li>Implemented a redesigned subscription flow alongside designers and QA, increasing subscription conversions by 17%.</li>
+                  <li>Improved the platform’s theming and localisation architecture to support <span className='link-coloured'>100+</span> publications with minimal custom code, while maintaining a robust automated test suite for safe, repeatable releases.</li>
+                  <li>Delivered customer-facing features from discovery to post-release analysis, including personalised Followed Topics timelines and toast notifications that increased feature discovery by  <span className='link-coloured'>30%</span>.</li>
+                  <li>Implemented a redesigned subscription flow alongside designers and QA, increasing subscription conversions by  <span className='link-coloured'>17%</span>.</li>
                   <li>Modernised the iOS application to support Apple’s new Liquid Glass design system across legacy devices and highly customised publication themes.</li>
                 </ul>
               </div>
@@ -62,8 +65,10 @@ function CV() {
                   <span className='date'>Jul 2022 - Jun 2023</span>
                 </div>
                 <div className='tag-holder'>
+                  <span className='tag red'>Angular</span>
+                  <span className='tag blue'>TypeScript</span>
                   <span className='tag yellow'>Selenium</span>
-                  <span className='tag blue'>Python</span>
+                  <span className='tag green'>Gherkin</span>
                 </div>
                 <ul>
                   <li>Delivered new product features, including an OS updates dashboard and interactive onboarding experience, while supporting debugging and QA throughout Agile development cycles.</li>
@@ -92,8 +97,10 @@ function CV() {
                 </div>
                 <div className='tag-holder'>
                   <span className='tag blue'>Python</span>
+                  <span className='tag red'>PyTorch</span>
                   <span className='tag yellow'>C</span>
                   <span className='tag green'>C++</span>
+                  <span className='tag blue'>Python</span>
                 </div>
                 <div className='cv-education-instance-info'>
                   Units including:
@@ -160,6 +167,9 @@ function CV() {
           <div className='cv-achievements'>
             <h2>ACHIEVEMENTS</h2>
             <hr />
+            <div className='tag-holder'>
+              <span className='tag yellow'>AWS</span>
+            </div>
             <ul>
               <li>AWS Certified Cloud Practitioner</li>
               <li>Volunteered at WorkAid for 18 months</li>
