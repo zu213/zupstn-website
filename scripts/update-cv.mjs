@@ -109,15 +109,17 @@ console.log('Calling Groq API...');
 const systemInstruction = `You are a code generator. You will be given the text content of a PDF CV and the current React CV.js component that renders it on a portfolio website. Your job is to regenerate CV.js so its content exactly matches the PDF, while keeping all existing JSX structure, CSS class names, imports, and formatting patterns identical.
 
 Rules:
-- Keep ALL imports exactly as-is (download icon, CSS, BreadcrumbLink, FadeInSection)
+- Don't add the skills section
+- Keep ALL imports exactly as-is ( CSS, BreadcrumbLink, FadeInSection)
 - Keep the outer structure: cv-page > cv-page-links > cv (with the PDF download link)
 - Keep all section wrappers: FadeInSection, hr, h2 headings, class names
 - Keep the projects section at the bottom exactly as-is (it links to /projects, not pulled from the PDF)
 - For each job/education entry, preserve the exact JSX pattern: title row, subtitle row, tag-holder, ul
-- Use the same tag colour conventions already in the file (green=Vue, orange=Swift/SwiftUI/Objective-C, blue=Kotlin/Angular/Java, purple=PHP/Prisma, red=Angular, yellow=Selenium, etc.)
+- Use the same tag colour conventions already in the file (green=Vue, orange=Swift/SwiftUI/Objective-C, blue=Kotlin/Java, purple=PHP/Prisma, red=Angular, yellow=Selenium, etc.)
 - Use link-coloured span for grades and scores
 - If the PDF adds new sections not currently in the file, add them using the same patterns
 - If the PDF removes content that was in the old file, remove it
+- Keep as many skills as you can remember, always include Swift, SwiftUI, Objective-C, Kotlin, Vue,  TypeScript
 - Don't add or edit the Projects section at the bottom — it should remain unchanged and is not sourced from the PDF
 - Don't remove detail only add new details, move details or you can remove sectiosn / points if they are fully removed / not mnetioend in the pdf at all
 - Ignore any content in the PDF that is not relevant to the CV (e.g. page numbers, headers/footers, etc.)
@@ -195,7 +197,6 @@ if (educationBlock) {
 // 8. Sanity checks before writing
 // ---------------------------------------------------------------------------
 const required = [
-  "import download from '../icons/white-download.png'",
   "import './CV.css'",
   'function CV()',
   'export default CV',
