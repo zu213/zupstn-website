@@ -21,23 +21,6 @@ function CV() {
 
         <FadeInSection>
           <hr />
-          <div className='cv-skills'>
-            <h2>SKILLS</h2>
-            <hr />
-
-            <div className='cv-skills-lists'>
-              <ul className='cv-skills-list'>
-                <li><b>Frontend</b>: Vue, React, Angular, HTML, CSS</li>
-              </ul>
-              <ul className='cv-skills-list'>
-                <li><b>Backend</b>: Node.js, Express, Fastify</li>
-              </ul>
-            </div>
-          </div>
-        </FadeInSection>
-
-        <FadeInSection>
-          <hr />
           <div className='cv-experience'>
             <h2>
               EXPERIENCE
@@ -57,13 +40,13 @@ function CV() {
                   <span className='tag green'>Vue</span>
                   <span className='tag blue'>TypeScript</span>
                   <span className='tag blue'>React</span>
-                  <span className='tag blue'>Angular</span>
+                  <span className='tag red'>Angular</span>
                 </div>
                 <ul>
                   <li>Led migration of multiple production codebases from JavaScript to TypeScript, improving type safety, reducing future maintenance costs and enabling safer feature development.</li>
                   <li>Improved the platform’s theming and localisation architecture to support 100+ publications with minimal custom code, while maintaining a robust automated test suite for safe, repeatable releases.</li>
-                  <li>Delivered customer-facing features from discovery to post-release analysis, including personalised Followed Topics timelines and toast notifications that increased feature discovery by X%.</li>
-                  <li>Implemented a redesigned subscription journey alongside designers and QA, increasing subscription conversions by X%.</li>
+                  <li>Delivered customer-facing features from discovery to post-release analysis, including personalised Followed Topics timelines and toast notifications that increased feature discovery by 30%.</li>
+                  <li>Implemented a redesigned subscription flow alongside designers and QA, increasing subscription conversions by 17%.</li>
                   <li>Modernised the iOS application to support Apple’s new Liquid Glass design system across legacy devices and highly customised publication themes.</li>
                 </ul>
               </div>
@@ -81,7 +64,6 @@ function CV() {
                 <div className='tag-holder'>
                   <span className='tag yellow'>Selenium</span>
                   <span className='tag blue'>Python</span>
-                  <span className='tag green'>Gherkin</span>
                 </div>
                 <ul>
                   <li>Delivered new product features, including an OS updates dashboard and interactive onboarding experience, while supporting debugging and QA throughout Agile development cycles.</li>
