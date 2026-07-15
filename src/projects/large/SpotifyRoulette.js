@@ -11,7 +11,7 @@ function SpotifyRoulette(props) {
     <div className='project-page'>
       <header className='page-header'>Spotify Roulette</header>
       <div>
-        <a href="https://github.com/zu213/spotify-roulette" className="small-link" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/spotify-roulette" className="small-link" target="_blank" rel="noreferrer">Repository</a>&nbsp;|&nbsp;
         <BreadcrumbLink to='/spotify-roulette-demo' className="small-link">Demo</BreadcrumbLink>
         <br/>
       </div>
