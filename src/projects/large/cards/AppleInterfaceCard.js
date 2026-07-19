@@ -15,7 +15,7 @@ function AppleInterfaceCard() {
         <FontAwesomeIcon icon={faFaceLaugh} />
       </div>
       <div>
-        An Interactive JS art piece, with several iterations.
+        An collabarative interactive art piece made in JS, with several iterations leading to a small Vercel and Upstash backend.
       </div>
       <div className='tag-holder'>
         <span className='tag yellow'>Vanilla JS</span>

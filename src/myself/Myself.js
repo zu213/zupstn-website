@@ -19,7 +19,7 @@ function Me() {
         <FadeInSection>
           <div className='subsub-title'>
             <hr />
-              Product Developer
+              Developer
             <hr />
           </div>
             My <a className="small-link" href="https://github.com/zu213" target="_blank" rel="noreferrer">GitHub</a> contains many of my personal projects, several of which are featured on the&nbsp;

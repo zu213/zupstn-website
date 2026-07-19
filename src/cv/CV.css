@@ -15,6 +15,7 @@
 
 .cv-title {
   text-align: center;
+  font-size: 2.2rem;
 }
 
 .cv-page-links a img {
@@ -116,6 +117,10 @@
 
 .cv-projects-info {
   padding: 0 20px;
+}
+
+.cv-achievements ul {
+  margin-top: 2px;
 }
 
 @media only screen and (width <= 520px) {

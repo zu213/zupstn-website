@@ -51,13 +51,17 @@ function AppleInterface(props) {
       </div>
 
       <div className='snow-text'>
-        An interactive art experiment built with <b>Vanilla JavaScript</b>. The Apple Interface
+        An interactive art experiment built with <b>Vanilla JavaScript</b> in collaboration with a local woodturner. The Apple Interface
         is the third iteration of the Fruit Lips project, each exploring different visual and
         interactive ideas through canvas-based animation and user input.
         <br />
         <br />
-        The project runs entirely in the browser with no dependencies, using the HTML5 Canvas
-        API to render and animate graphics in real time based on user interaction.
+        The project explores animating speech in JS, I investigated how animation is performed and mapped these too frames.
+        Thorughout the project how the frames were shown changed, it started off with static pngs, then css animations using coordinate grids before becoming a 
+        mix between the two for the final project. The first two iterations also allow viewers to interacti with speech (only in-built for some browsers).
+        <br />
+        <br />
+        The projects final iteration has an past input board that uses a small Vercel backend and Upstash NoSQL database.
       </div>
     </div>
   );

@@ -44,6 +44,7 @@ function CV() {
                   <span className='tag orange'>Objective-C</span>
                   <span className='tag blue'>Kotlin</span>
                   <span className='tag blue'>Java</span>
+                  <span className='tag purple'>PHP</span>
                 </div>
                 <ul>
                   <li>Led migration of multiple production codebases from JavaScript to TypeScript, improving type safety, reducing future maintenance costs and enabling safer feature development.</li>
@@ -93,7 +94,7 @@ function CV() {
                   <span><i>2020 - 2024</i></span>
                 </div>
                 <div className='cv-education-instance-subtitle'>
-                  <span>Computer Science BSc(Hons)</span><span> First Class Honours - 74.51%</span>
+                  <span>Computer Science BSc(Hons)</span><span> First Class Honours - <span className='link-coloured'>74.51%</span></span>
                 </div>
                 <div className='tag-holder'>
                   <span className='tag blue'>Python</span>
