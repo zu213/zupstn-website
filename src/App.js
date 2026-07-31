@@ -27,6 +27,7 @@ import UnicodeChess from './projects/large/UnicodeChess.js';
 import WalkAnywhere from './projects/large/WalkAnywhere.js';
 import ZachLang from './projects/large/ZachLang.js';
 import Projects from './projects/Projects.js';
+import Disco from './random/Disco.js';
 import { FruitLips, FruitLips2, FruitLips3, ShortStorey, SpotifyRouletteIframe, Squares, LLMCompare, BerkoLitterPick } from './submodules/submodules.js';
 import { BackButton, BackButtonProvider } from './util/BackButtons.js';
 import { BreadcrumbLink, BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
@@ -94,6 +95,7 @@ function App() {
             <Route path='/related-links' element={<RelatedLinks/>} />
             <Route path='/shortstorey' element={<ShortStorey/>} />
             <Route path='/spotify-roulette-demo' element={<SpotifyRouletteIframe/>} />
+            <Route path='/disco' element={<Disco/>} />
             {largeProjects.map(project => 
               <Route key={project.route} path={`/${project.route}`} element={<project.page displayMask={displayMask} isIOS={isIOS} />} />
             )}
