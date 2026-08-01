@@ -1,10 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Disco.css';
 
 
 function Disco() {
 
   const discoContainer = useRef(null);
+  const [discoStarted, setDiscoStarted] = useState(false);
+
 
   useEffect(() => {
 
@@ -16,13 +18,17 @@ function Disco() {
       if(!discoContainer.current) return;
       discoContainer.current.style.backgroundColor = discoColours[colour];
       colour = (colour + 1) % discoColours.length;
-    }, 200);
+    }, 50);
   }, []);
 
   return (
-    <div className='disco-page'>
-      <div ref={discoContainer} className='disco-container'>
-      </div>
+    <div className={`disco-page ${discoStarted ? 'started' : ''}`}>
+      {discoStarted ?
+        <div ref={discoContainer} className='disco-container'></div>
+        : <div className='disco-start-container'>
+          <button className='disco-start-button' onClick={() => setDiscoStarted(true)}>Start Disco</button>
+        </div>
+      }
 
     </div>
   );
