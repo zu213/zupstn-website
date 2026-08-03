@@ -9,12 +9,23 @@
   top: 0;
   background-color: rgb(34 1 75);
 
-  .started {
-    background-color: white;
+
+
+  .disco-square {
+    margin: 0;
+    padding: 0;
   }
 }
 
+.started {
+  padding: 20px;
+  background-color: white;
+}
+
 .disco-container {
+  padding: 20px;
+  display: grid;
+  gap: 20px;
   width: 100%;
   height: 100%;
 }

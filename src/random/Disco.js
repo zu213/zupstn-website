@@ -3,9 +3,25 @@ import './Disco.css';
 
 
 function Disco() {
-
+  const discoSquares = useRef([]);
   const discoContainer = useRef(null);
   const [discoStarted, setDiscoStarted] = useState(false);
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+
+
+  var squareSize;
+  if(w < h) {
+    squareSize = w / 3;
+  } else {
+    squareSize = h / 3;
+  }
+
+  const w100 = Math.floor(w / squareSize);
+  const h100 = Math.floor(h / squareSize);
+
+  const squares = h100 * w100;
+
 
   function generateColour() {
     // we want a colour in a specific range i.e. the total is at least ff but lower than like dd + dd + dd
@@ -35,17 +51,31 @@ function Disco() {
       generatedDiscoColours.push(generateColour());
     }
 
+    console.log(h, w, h100, w100, squares, discoContainer.current);
+    if(discoContainer.current) {
+      discoContainer.current.style.gridTemplateColumns = `repeat(${w100}, 1fr)`;
+    }
+
     setInterval(() => {
-      if(!discoContainer.current) return;
-      discoContainer.current.style.backgroundColor = generatedDiscoColours[colour];
+      if(!discoSquares.current) return;
+      discoSquares.current.forEach((square, index) => {
+        if(square) {
+          square.style.backgroundColor = generatedDiscoColours[colour];
+        }
+      });
       colour = (colour + 1) % generatedDiscoColours.length;
-    }, 50);
-  }, []);
+
+    }, 5000);
+  }, [discoContainer]);
 
   return (
     <div className={`disco-page ${discoStarted ? 'started' : ''}`}>
       {discoStarted ?
-        <div ref={discoContainer} className='disco-container'></div>
+        <div ref={discoContainer} className='disco-container'>
+          {Array.from({ length: squares }).map((_, index) => (     
+            <div ref={el => discoSquares.current[index] = el} key={index} className='disco-square' style={{ width: `${squareSize - 40}px`, height: `${squareSize - 40}px`, backgroundColor: generateColour() }}></div>
+          ))}
+        </div>
         : <div className='disco-start-container'>
           <button className='disco-start-button' onClick={() => setDiscoStarted(true)}>Start Disco</button>
         </div>
