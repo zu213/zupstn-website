@@ -45,13 +45,12 @@ function Disco() {
   useEffect(() => {
 
     var colour = 0;
-    const discoColours = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF'];
+    // const discoColours = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF', '#00FFFF'];
     const generatedDiscoColours = [];
     for (var i = 0; i < 100; i++) {
       generatedDiscoColours.push(generateColour());
     }
 
-    console.log(h, w, h100, w100, squares, discoContainer.current);
     if(discoContainer.current) {
       discoContainer.current.style.gridTemplateColumns = `repeat(${w100}, 1fr)`;
     }
@@ -66,7 +65,7 @@ function Disco() {
       colour = (colour + 1) % generatedDiscoColours.length;
 
     }, 5000);
-  }, [discoContainer]);
+  }, [discoContainer, w100]);
 
   return (
     <div className={`disco-page ${discoStarted ? 'started' : ''}`}>
