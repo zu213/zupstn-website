@@ -10,6 +10,8 @@ function ChromeContextControl(props) {
       <header className='page-header'>Chrome Context Control</header>
       <div>
         <a href="https://github.com/zu213/chrome-context-control" className="small-link" target="_blank" rel="noreferrer">Repository</a>
+        &nbsp;|&nbsp;
+        <a href="https://chromewebstore.google.com/detail/context-control/aiabfjpekcaodlhkpchnafiffilfajcm" className="small-link" target="_blank" rel="noreferrer">Chrome Web Store</a>
         <br/>
       </div>
 
