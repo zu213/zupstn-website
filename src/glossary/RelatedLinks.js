@@ -6,7 +6,6 @@ function RelatedLinks() {
       <div className='page-header'>Related links</div>
       <div className='links-list-container'>
         <div className='links-container'>
-          <div className='link'> <a href='https://top-tracks-omega.vercel.app/api/spotify' target='_blank' rel='noreferrer'>Top Tracks</a></div>
           <div className='link'> <a href="/exes/chess.exe" download>Chess Download</a></div>
           <div className='link'> <a href='https://unknownevent.com' target='_blank' rel='noreferrer'>UnknownEvent.com</a></div>
           <div className='link'> <a href='https://www.angelpunzel.com' target='_blank' rel='noreferrer'>Angelpunzel.com</a></div>
