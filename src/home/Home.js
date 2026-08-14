@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import './Home.css';
 
+
 import { asciiArtBig, asciiGif } from '../util/asciiArt.js';
 import { BreadcrumbLink } from '../util/Breadcrumbs.js';
 
 import { defaultRoad } from './default-road.js';
+import eyes from './images/eyes2.png';
 
 //static consts
 const validRoutes = ['/me', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary', '/zach-lang', '/shortstorey', '/shortstorey-info', '/square-paint', '/traffic-simulator', '/chrome-context-control', '/snowstorm', '/spotify-roulette', '/unicode-chess', '/dissertation'];
@@ -73,68 +75,82 @@ function Home() {
 
   return (
     <div>
-      <div className="title-container">
-        <div className="title">
-          <BreadcrumbLink to="/me">
-              Zach Upstone             
-          </BreadcrumbLink>
+      <div className='home-container-interactive'>
+        <div className="title-container">
+          <div className="title">
+            <BreadcrumbLink to="/me">
+                Zach Upstone             
+            </BreadcrumbLink>
+          </div>
+          <div className='tag-line'>
+            {taglineText}
+          </div>
         </div>
-        <div className='tag-line'>
-          {taglineText}
+
+        <div className="search-links-left">
+          <div>
+            <BreadcrumbLink to="/projects">Projects</BreadcrumbLink>
+          </div>
+          <div>
+            <BreadcrumbLink to="/cv">CV</BreadcrumbLink>
+          </div>
+          <div>
+            <BreadcrumbLink to="/gallery">Gallery</BreadcrumbLink>
+          </div>
+        </div>
+        <div className="search-links-right">
+          <div>
+            <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
+          </div>
+          <div>
+            <BreadcrumbLink to="/glossary">Glossary</BreadcrumbLink>
+          </div>
+          <div className='feeling-lucky-inline'>
+            <BreadcrumbLink className='small-link' to={chosenLink}>I'm feeling lucky</BreadcrumbLink>
+          </div>
         </div>
       </div>
 
-      <div className="search-links-left">
-        <div>
-          <BreadcrumbLink to="/projects">Projects</BreadcrumbLink>
-        </div>
-        <div>
-          <BreadcrumbLink to="/cv">CV</BreadcrumbLink>
-        </div>
-        <div>
-          <BreadcrumbLink to="/gallery">Gallery</BreadcrumbLink>
-        </div>
-      </div>
-      <div className="search-links-right">
-        <div>
-          <a href="https://github.com/zu213"  target="_blank" rel="noreferrer">Github</a>
-        </div>
-        <div>
-          <BreadcrumbLink to="/glossary">Glossary</BreadcrumbLink>
-        </div>
-        <div className='feeling-lucky-inline'>
-          <BreadcrumbLink className='small-link' to={chosenLink}>I'm feeling lucky</BreadcrumbLink>
-        </div>
-      </div>
-
-      {asciiGifDisplay ?
-        <div className='art-holder'>
-          <div className="speech-bubble">
-            <div className='upright'>
-              <BreadcrumbLink 
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                to={chosenLink}
-                className='small-link feeling-lucky'
-              >I'm feeling lucky</BreadcrumbLink>
+      <div className='home-container-1'>
+        {asciiGifDisplay ?
+          <div className='art-holder'>
+            <div className="speech-bubble">
+              <div className='upright'>
+                <BreadcrumbLink 
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  to={chosenLink}
+                  className='small-link feeling-lucky'
+                >I'm feeling lucky</BreadcrumbLink>
+              </div>
+            </div>
+            <div className='ascii-art' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+              {asciiGif[currentImageIndex]}
             </div>
           </div>
-          <div className='ascii-art' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-            {asciiGif[currentImageIndex]}
+          :    
+          <div className='big-ascii-art'>
+            {asciiArtBig}
           </div>
-        </div>
-        :    
-        <div className='big-ascii-art'>
-          {asciiArtBig}
-        </div>
-      }
+        }
 
-      {roadFrames &&
-        <div className='road-container'>
-          <pre ref={roadContainer} className='road-animation'>
-          </pre>
+        {roadFrames &&
+          <div className='road-container'>
+            <pre ref={roadContainer} className='road-animation'>
+            </pre>
+          </div>
+        }
+      </div>
+
+      <div className='home-container-2'>
+        <div className='mini-gallery'>
+          {Array.from({ length: 12 }, (_, i) => (
+            <div className='mini-gallery-item' key={i}>
+              <img src={eyes} alt='test' />
+            </div>
+          ))}
         </div>
-      }
+      </div>
     </div>
   );
 }
