@@ -6,7 +6,7 @@ import { asciiArtBig, asciiGif } from '../util/asciiArt.js';
 import { BreadcrumbLink } from '../util/Breadcrumbs.js';
 
 import { defaultRoad } from './default-road.js';
-import eyes from './images/eyes2.png';
+import eyes from './images/eyes3.png';
 
 //static consts
 const validRoutes = ['/me', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary', '/zach-lang', '/shortstorey', '/shortstorey-info', '/square-paint', '/traffic-simulator', '/chrome-context-control', '/snowstorm', '/spotify-roulette', '/unicode-chess', '/dissertation'];
