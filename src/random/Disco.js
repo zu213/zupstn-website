@@ -59,12 +59,13 @@ function Disco() {
       if(!discoSquares.current) return;
       discoSquares.current.forEach((square, index) => {
         if(square) {
-          square.style.backgroundColor = generatedDiscoColours[colour];
+          const randomIndex = Math.floor(Math.random() * generatedDiscoColours.length);
+          square.style.backgroundColor = generatedDiscoColours[randomIndex];
         }
       });
       colour = (colour + 1) % generatedDiscoColours.length;
 
-    }, 5000);
+    }, 500);
   }, [discoContainer, w100]);
 
   return (
