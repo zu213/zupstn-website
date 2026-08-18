@@ -185,7 +185,8 @@
 }
 
 .home-container-1 {
-  height: calc(94vh);
+  height: 100vh;
+  bottom: 6vh;
   position: relative;
 }
 
