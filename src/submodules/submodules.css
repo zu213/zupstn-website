@@ -14,3 +14,7 @@
   touch-action: none;
   z-index: 1000;
 }
+
+.spotify-roulette-container iframe {
+  border-width: 0;
+}
