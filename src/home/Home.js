@@ -23,6 +23,26 @@ function Home() {
   const [chosenLink, setChosenLink] = useState(null);
   const roadContainer = useRef(null);
   const [roadFrames, setRoadFrames] = useState(defaultRoad);
+  const galleryRef = useRef(null);
+  const [galleryCount, setGalleryCount] = useState(12);
+
+  // Render just enough eye images (3 per row) to cover the viewport height,
+  // recomputing whenever the screen size changes.
+  useEffect(() => {
+    function fillGallery() {
+      const gallery = galleryRef.current;
+      const item = gallery?.querySelector('.mini-gallery-item');
+      if (!item) return;
+      const itemHeight = item.offsetHeight;
+      if (!itemHeight) return;
+      const rows = Math.ceil(window.innerHeight / itemHeight) + 1; // +1 so it always overshoots, never gaps
+      setGalleryCount(rows * 3);
+    }
+
+    fillGallery();
+    window.addEventListener('resize', fillGallery);
+    return () => window.removeEventListener('resize', fillGallery);
+  }, []);
 
   useEffect(() => {
     async function getRoadFrames() { 
@@ -143,8 +163,8 @@ function Home() {
       </div>
 
       <div className='home-container-2'>
-        <div className='mini-gallery'>
-          {Array.from({ length: 12 }, (_, i) => (
+        <div className='mini-gallery' ref={galleryRef}>
+          {Array.from({ length: galleryCount }, (_, i) => (
             <div className='mini-gallery-item' key={i}>
               <img src={eyes} alt='test' />
             </div>

@@ -221,7 +221,9 @@
 
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    aspect-ratio: 385 / 133;   /* matches eyes3.png so row height is stable before load */
+    object-fit: cover;
   }
 }
 

@@ -31,6 +31,18 @@ function LargeProjects() {
 
         <FadeInSection>
           <div className='project-grid-element'>
+            <SpotifyRouletteCard />
+          </div>
+        </FadeInSection>
+
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <ShortStoreyCard />
+          </div>
+        </FadeInSection>
+
+        <FadeInSection>
+          <div className='project-grid-element'>
             <BerkoPickCard/>
           </div>
         </FadeInSection>
@@ -43,7 +55,13 @@ function LargeProjects() {
 
         <FadeInSection>
           <div className='project-grid-element'>
-            <ShortStoreyCard />
+            <ChromeContextControlCard />
+          </div>
+        </FadeInSection>
+
+        <FadeInSection>
+          <div className='project-grid-element'>
+            <SnowstormCard />
           </div>
         </FadeInSection>
 
@@ -61,25 +79,7 @@ function LargeProjects() {
 
         <FadeInSection>
           <div className='project-grid-element'>
-            <ChromeContextControlCard />
-          </div>
-        </FadeInSection>
-
-        <FadeInSection>
-          <div className='project-grid-element'>
             <AppleInterfaceCard />
-          </div>
-        </FadeInSection>
-
-        <FadeInSection>
-          <div className='project-grid-element'>
-            <SnowstormCard />
-          </div>
-        </FadeInSection>
-
-        <FadeInSection>
-          <div className='project-grid-element'>
-            <SpotifyRouletteCard />
           </div>
         </FadeInSection>
 
