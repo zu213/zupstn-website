@@ -32,15 +32,6 @@ function SmallProjects() {
           <FadeInSection>
             <div className='project-grid-element'>
               <div className='project-title'>
-                S Rank
-              </div>
-              <SRank displayMask={displayMask}/>
-            </div>
-          </FadeInSection>
-
-          <FadeInSection>
-            <div className='project-grid-element'>
-              <div className='project-title'>
                 Swipe Delete
               </div>
               <SwipeDelete displayMask={displayMask}/>
@@ -59,6 +50,24 @@ function SmallProjects() {
           <FadeInSection>
             <div className='project-grid-element'>
               <div className='project-title'>
+                368 Squares
+              </div>
+              <Squares displayMask={displayMask}/>
+            </div>
+          </FadeInSection>
+
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                Peer 2 Peer messaging
+              </div>
+              <Peer2Peer displayMask={displayMask}/>
+            </div>
+          </FadeInSection>
+
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
                 Hotkey Help
               </div>
               <HotkeyHelp displayMask={displayMask}/>
@@ -68,9 +77,9 @@ function SmallProjects() {
           <FadeInSection>
             <div className='project-grid-element'>
               <div className='project-title'>
-                LLM Compare
+                S Rank
               </div>
-              <LLMCompare displayMask={displayMask}/>
+              <SRank displayMask={displayMask}/>
             </div>
           </FadeInSection>
 
@@ -86,27 +95,18 @@ function SmallProjects() {
           <FadeInSection>
             <div className='project-grid-element'>
               <div className='project-title'>
-                NPM business card
-              </div>
-              <NPMBusiness displayMask={displayMask}/>
-            </div>
-          </FadeInSection>
-
-          <FadeInSection>
-            <div className='project-grid-element'>
-              <div className='project-title'>
-                368 Squares
-              </div>
-              <Squares displayMask={displayMask}/>
-            </div>
-          </FadeInSection>
-
-          <FadeInSection>
-            <div className='project-grid-element'>
-              <div className='project-title'>
                 Bouncing logo
               </div>
               <BouncingLogo displayMask={displayMask} isIOS={isIOS}/>
+            </div>
+          </FadeInSection>
+
+          <FadeInSection>
+            <div className='project-grid-element'>
+              <div className='project-title'>
+                LLM Compare
+              </div>
+              <LLMCompare displayMask={displayMask}/>
             </div>
           </FadeInSection>
 
@@ -122,12 +122,11 @@ function SmallProjects() {
           <FadeInSection>
             <div className='project-grid-element'>
               <div className='project-title'>
-                Peer 2 Peer messaging
+                NPM business card
               </div>
-              <Peer2Peer displayMask={displayMask}/>
+              <NPMBusiness displayMask={displayMask}/>
             </div>
           </FadeInSection>
-
         </div>      
       </div>
     </div>
