@@ -92,6 +92,7 @@
   display: block;
   font-style: italic;
   text-decoration: none;
+  user-select: text;
   padding-left: 8%;
   position: relative;
 }
