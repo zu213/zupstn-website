@@ -113,7 +113,7 @@ function SmallProjects() {
           <FadeInSection>
             <div className='project-grid-element'>
               <div className='project-title'>
-                Tempreature glass
+                Temperature glass
               </div>
               <TemperatureGlass displayMask={displayMask}/>
             </div>
