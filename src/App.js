@@ -32,6 +32,7 @@ import { FruitLips, FruitLips2, FruitLips3, ShortStorey, SpotifyRouletteIframe, 
 import { BackButton, BackButtonProvider } from './util/BackButtons.js';
 import { BreadcrumbLink, BreadcrumbProvider, DropBreadcrumbs } from './util/Breadcrumbs.js';
 import { useMask } from './util/Mask.js';
+import NoiseBackground from './util/NoiseBackground.js';
 import NotFound from './util/NotFound.js';
 
 // main app
@@ -71,6 +72,7 @@ function App() {
   return(
     <div id="all" className='app'>
       {MaskOverlay()}
+      {location.pathname === '/me' && <NoiseBackground />}
       <BreadcrumbProvider>
         <BackButtonProvider>
           <BackButton />
