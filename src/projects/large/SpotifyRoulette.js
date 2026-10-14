@@ -57,6 +57,13 @@ function SpotifyRoulette(props) {
             <li><b>Spotify API</b> – Fetches each player’s top tracks and streams audio during gameplay.</li>
           </ul>
         </div>
+        <div className='project-video'>
+          <h4>Video Demo</h4>
+          <video poster="/videos/brag.jpg" preload="none" controls playsInline>
+            <source src="/videos/brag.mp4" type="video/mp4" />
+          </video>
+          <p className='video-tagline'>(yes this video is AI generated)</p>
+        </div>
       </div>
     </div>
   );

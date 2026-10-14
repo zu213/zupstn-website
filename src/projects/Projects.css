@@ -72,6 +72,29 @@
   vertical-align: top;
 }
 
+.project-video {
+  width: 80%;
+  margin: 1vw auto;
+}
+
+.project-video h4 {
+  font-size: 1.25em;
+  margin-bottom: 1em;
+}
+
+.project-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-video .video-tagline {
+  margin-top: 0.5em;
+  font-size: 0.85em;
+  font-style: italic;
+  opacity: 0.7;
+}
+
 .top-padding {
   padding-top: 2vw;
 }
@@ -201,6 +224,10 @@
 }
 
 @media only screen and (width <= 600px) {
+  .project-video {
+    width: 95%;
+  }
+
   .project-inline-structure {
     display: block;
     position: relative;
