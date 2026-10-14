@@ -1,0 +1,11 @@
+{
+  "short_name": "Zach Upstone",
+  "name": "Zach Upstone – Developer & Artist",
+  "icons": [
+    { "src": "tessa-red.png", "sizes": "224x224", "type": "image/png" }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#15091f",
+  "background_color": "#15091f"
+}

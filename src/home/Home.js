@@ -10,7 +10,7 @@ import eyes from './images/eyes3.png';
 
 //static consts
 const validRoutes = ['/me', '/projects', '/gallery','/charts','/fruit-lips','/368squares','/llm-compare','/glossary', '/zach-lang', '/shortstorey', '/shortstorey-info', '/square-paint', '/traffic-simulator', '/chrome-context-control', '/snowstorm', '/spotify-roulette', '/unicode-chess', '/dissertation'];
-const taglineTextOptions = ['- Try "curl https://zupstn.com/hypno.sh | bash"', '- Try "npx zachupstone"'];
+const taglineTextOptions = ['- Try "curl https://zachupstone.com/hypno.sh | bash"', '- Try "npx zachupstone"'];
 const taglineChoice = Math.floor(Math.random() * taglineTextOptions.length);
 // one in a hundered chance of being tessa
 const asciiGifDisplay = Math.floor(Math.random() * 100) !== 99;

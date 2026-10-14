@@ -2,15 +2,15 @@
 
 A personal website for showcasing my work and projects.
 
-Find it live at: [https://zupstn.com](https://zupstn.com) or [https://zachupstone.com](https://zachupstone.com).
+Find it live at: [https://zachupstone.com](https://zachupstone.com) (also [https://zupstn.com](https://zupstn.com)).
 
 This website is built with **Cloudflare** and integrates a backend hosted on **Google Cloud**. My dissertation is stored in an **AWS S3 bucket** and can be accessed via the site.
 
 ## Features
 
-- Presents some of my other projects I have worked on under the "<a href="https://zupstn.com/#/dissertation">Projects</a>" tab.
-- Contains a portfolio of information about me, which can be found <a href="https://zupstn.com/#/me">here</a>.
-- Displays some of my artwork <a href="https://zupstn.com/#/gallery">here</a>.
+- Presents some of my other projects I have worked on under the "<a href="https://zachupstone.com/#/dissertation">Projects</a>" tab.
+- Contains a portfolio of information about me, which can be found <a href="https://zachupstone.com/#/me">here</a>.
+- Displays some of my artwork <a href="https://zachupstone.com/#/gallery">here</a>.
 
 ## Tech Stack
 
