@@ -10,7 +10,8 @@ function WalkAnywhere(props) {
     <div className='project-page'>
       <header className='page-header'>WalkAnywhere</header>
       <div>
-        <a href="https://github.com/zu213/walkanywhere" className="small-link" target="_blank" rel="noreferrer">Repository</a>
+        <a href="https://github.com/zu213/walkanywhere-ios" className="small-link" target="_blank" rel="noreferrer">iOS Repository</a> |&nbsp;
+        <a href="https://github.com/zu213/walkanywhere-android" className="small-link" target="_blank" rel="noreferrer">Android Repository</a>
         <br/>
       </div>
 
