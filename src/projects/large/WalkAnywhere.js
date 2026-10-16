@@ -11,7 +11,8 @@ function WalkAnywhere(props) {
       <header className='page-header'>WalkAnywhere</header>
       <div>
         <a href="https://github.com/zu213/walkanywhere-ios" className="small-link" target="_blank" rel="noreferrer">iOS Repository</a> |&nbsp;
-        <a href="https://github.com/zu213/walkanywhere-android" className="small-link" target="_blank" rel="noreferrer">Android Repository</a>
+        <a href="https://github.com/zu213/walkanywhere-android" className="small-link" target="_blank" rel="noreferrer">Android Repository</a> |&nbsp;
+        <a href="https://zachupstone.com/#/walkanywhere-app" className="small-link">WalkAnywhere Website</a>
         <br/>
       </div>
 

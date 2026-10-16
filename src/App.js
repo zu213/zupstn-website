@@ -34,12 +34,13 @@ import { BreadcrumbLink, BreadcrumbProvider, DropBreadcrumbs } from './util/Brea
 import { useMask } from './util/Mask.js';
 import NoiseBackground from './util/NoiseBackground.js';
 import NotFound from './util/NotFound.js';
+import WalkAnywhereApp from './walkanywhere-app/WalkAnywhereApp.js';
 
 // main app
 function App() {
   const { displayMask, MaskOverlay } = useMask();
 
-  const noFooter = ['/', '/me', '/fruit-lips', '/apple-interface', '/berko-litter-pick', '/shortstorey', '/spotify-roulette-demo'];
+  const noFooter = ['/', '/me', '/fruit-lips', '/apple-interface', '/berko-litter-pick', '/shortstorey', '/spotify-roulette-demo', '/walkanywhere-app'];
   const [galleryTableView, setGalleryTableView] = useState(false);
 
   const location = useLocation();
@@ -98,6 +99,7 @@ function App() {
             <Route path='/shortstorey' element={<ShortStorey/>} />
             <Route path='/spotify-roulette-demo' element={<SpotifyRouletteIframe/>} />
             <Route path='/disco' element={<Disco/>} />
+            <Route path='/walkanywhere-app' element={<WalkAnywhereApp/>} />
             {largeProjects.map(project => 
               <Route key={project.route} path={`/${project.route}`} element={<project.page displayMask={displayMask} isIOS={isIOS} />} />
             )}
