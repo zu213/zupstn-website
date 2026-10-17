@@ -1,4 +1,8 @@
 import './WalkAnywhereApp.css';
+import androidCreateroute from '../projects/large/media/walkanywhere_android_createroute.png';
+import androidMainroute from '../projects/large/media/walkanywhere_android_mainroute.png';
+import androidRoutes from '../projects/large/media/walkanywhere_android_routes.png';
+import androidSteps from '../projects/large/media/walkanywhere_android_steps.png';
 import createroute from '../projects/large/media/walkanywhere_createroute.png';
 import mainroute from '../projects/large/media/walkanywhere_mainroute.png';
 import routes from '../projects/large/media/walkanywhere_routes.png';
@@ -9,10 +13,10 @@ const CONTACT_EMAIL = 'hcazenotspu+walkanywhere@gmail.com';
 const LAST_UPDATED = '16 October 2026';
 
 const screens = [
-  { caption: 'Current journey', ios: mainroute },
-  { caption: 'Saved routes', ios: routes },
-  { caption: 'Create a route', ios: createroute },
-  { caption: 'Step history', ios: steps },
+  { caption: 'Current journey', ios: mainroute, android: androidMainroute },
+  { caption: 'Saved routes', ios: routes, android: androidRoutes },
+  { caption: 'Create a route', ios: createroute, android: androidCreateroute },
+  { caption: 'Step history', ios: steps, android: androidSteps },
 ];
 
 function WalkAnywhereApp() {
@@ -50,7 +54,7 @@ function WalkAnywhereApp() {
         <div className='wa-screens'>
           {screens.map(s => (
             <figure key={s.caption}>
-              <div className='wa-placeholder'>Coming soon</div>
+              <img src={s.android} alt={`Android – ${s.caption}`} />
               <figcaption>{s.caption}</figcaption>
             </figure>
           ))}

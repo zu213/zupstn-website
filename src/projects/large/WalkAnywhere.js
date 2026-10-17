@@ -1,7 +1,11 @@
 
+import androidCreateroute from './media/walkanywhere_android_createroute.png';
+import androidMainroute from './media/walkanywhere_android_mainroute.png';
+import androidRoutes from './media/walkanywhere_android_routes.png';
+import androidSteps from './media/walkanywhere_android_steps.png';
+import createroute from './media/walkanywhere_createroute.png';
 import mainroute from './media/walkanywhere_mainroute.png';
 import routes from './media/walkanywhere_routes.png';
-import createroute from './media/walkanywhere_createroute.png';
 import steps from './media/walkanywhere_steps.png';
 
 function WalkAnywhere(props) {
@@ -60,6 +64,33 @@ function WalkAnywhere(props) {
         Key features include automatic route calculation with hybrid fallback routing, real-time progress bars,
         a collapsible drawer showing distance and step estimates, and a full route management system for editing,
         deleting, and reordering saved routes.
+      </div>
+
+      <div className='walkanywhere-android-screens'>
+        <div className='quarter-inline-structure'>
+          <figure onClick={() => props.displayMask(androidMainroute)}>
+            <img src={androidMainroute} alt="Android main route progress screen" />
+            <figcaption>Figure: Android: Current journey progress</figcaption>
+          </figure>
+        </div>
+        <div className='quarter-inline-structure'>
+          <figure onClick={() => props.displayMask(androidRoutes)}>
+            <img src={androidRoutes} alt="Android saved routes list" />
+            <figcaption>Figure: Android: Saved routes list</figcaption>
+          </figure>
+        </div>
+        <div className='quarter-inline-structure'>
+          <figure onClick={() => props.displayMask(androidCreateroute)}>
+            <img src={androidCreateroute} alt="Android create route map view" />
+            <figcaption>Figure: Android: Creating a new route</figcaption>
+          </figure>
+        </div>
+        <div className='quarter-inline-structure'>
+          <figure onClick={() => props.displayMask(androidSteps)}>
+            <img src={androidSteps} alt="Android step history view" />
+            <figcaption>Figure: Android: Step history</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   );

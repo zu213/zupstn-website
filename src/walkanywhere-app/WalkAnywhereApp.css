@@ -94,22 +94,12 @@
   text-align: center;
 }
 
-.wa-screens img,
-.wa-placeholder {
+.wa-screens img {
   display: block;
   width: 100%;
   height: auto;
   border: 1px solid var(--wa-border);
   border-radius: 16px;
-}
-
-.wa-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 9 / 19.5;
-  background: var(--wa-green-tint);
-  color: var(--wa-muted);
 }
 
 .wa-screens figcaption {
