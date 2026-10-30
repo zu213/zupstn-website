@@ -35,6 +35,9 @@
 
 .wa-logo {
   font-weight: 700;
+}
+
+.wa-logo-green {
   color: var(--wa-green);
 }
 
@@ -62,6 +65,14 @@
   max-width: 560px;
   color: var(--wa-muted);
   font-size: 1.1rem;
+}
+
+.wa-video {
+  display: block;
+  margin: 32px auto 0;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 12px;
 }
 
 .wa-section {

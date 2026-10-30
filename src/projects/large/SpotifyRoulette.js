@@ -59,8 +59,8 @@ function SpotifyRoulette(props) {
         </div>
         <div className='project-video'>
           <h4>Video Demo</h4>
-          <video poster="/videos/brag.jpg" preload="none" controls playsInline>
-            <source src="/videos/brag.mp4" type="video/mp4" />
+          <video poster="/videos/brag-spotify-roulette.jpg" preload="none" controls playsInline>
+            <source src="/videos/brag-spotify-roulette.mp4" type="video/mp4" />
           </video>
           <p className='video-tagline'>(yes this video is AI generated)</p>
         </div>

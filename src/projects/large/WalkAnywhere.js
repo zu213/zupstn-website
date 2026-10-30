@@ -92,6 +92,15 @@ function WalkAnywhere(props) {
           </figure>
         </div>
       </div>
+
+
+      <div className='project-video'>
+          <h4>Video Demo</h4>
+          <video poster="/videos/brag-walkanywhere.jpg" preload="none" controls playsInline>
+            <source src="/videos/brag-walkanywhere.mp4" type="video/mp4" />
+          </video>
+          <p className='video-tagline'>(yes this video is AI generated)</p>
+        </div>
     </div>
   );
 }

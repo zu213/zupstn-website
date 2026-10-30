@@ -23,7 +23,7 @@ function WalkAnywhereApp() {
   return (
     <div className='wa-app'>
       <nav className='wa-nav'>
-        <span className='wa-logo'>WalkAnywhere</span>
+        <span className='wa-logo'>Walk<span className='wa-logo-green'>Anywhere</span></span>
         <div className='wa-nav-links'>
           <a href='#/walkanywhere-app#features' onClick={scrollTo('features')}>Features</a>
           <a href='#/walkanywhere-app#privacy' onClick={scrollTo('privacy')}>Privacy</a>
@@ -32,11 +32,14 @@ function WalkAnywhereApp() {
       </nav>
 
       <header className='wa-hero'>
-        <h1>Walk anywhere, from wherever you are.</h1>
+        <h1>Walk <span className='wa-logo-green'>anywhere</span>, from wherever you are.</h1>
         <p>
           Plan a walking route between any two places, then let your everyday steps carry you along it.
           Walk Land&apos;s End to John o&apos; Groats without leaving town.
         </p>
+        <video className='wa-video' poster='/videos/brag-walkanywhere.jpg' preload='none' controls playsInline>
+          <source src='/videos/brag-walkanywhere.mp4' type='video/mp4' />
+        </video>
       </header>
 
       <section id='features' className='wa-section'>
